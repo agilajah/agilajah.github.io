@@ -1,3 +1,4 @@
+source: _/site
 permalink: /:title/
 markdown: kramdown
 redcarpet:
