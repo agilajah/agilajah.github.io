@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Febi Agil Ifdillah</title>
+    <description>abstract but still well-read</description>
+    <link>http://febiagil.com</link>
+    <atom:link href="http://febiagil.com/rss.xml" rel="self" type="application/rss+xml" />
+    
+    
+      <item>
+        <title>Sragen Government Website vulnerability testing using SQL Injection and XSS</title>
+        <description>&lt;p&gt;SQL Injections are one of the most common forms of attack : https://www.owasp.org/index.php/Top_10_2013-A1. SQL Injection attacks account for almost 1/3 of all attacks on Web Applications.  As per OWASP, an injection vulnerability or flaw is one that encompasses SQL, OS, and LDAP where untrusted data is sent to an interpreter through a command or query that goes unsanitized by the web application. The interpreter will then execute the code as though it was part of the developer’s original code. &lt;/p&gt;
+
+&lt;p&gt;Injection vulnerabilities can be extremely dangerous. This may lead to attackers gaining Admin Privileges on your Database so the attackers could retrieve, insert, and even delete information. &lt;/p&gt;
+
+&lt;p&gt;Another vulnerability that is listed in the top three of the OWASP is on the client-side: XSS (Cross-site Scripting) attack in which the attacker can execute malicious scripts into a web application. Instead of an attacker injecting code to cause harm on the server-side, the code is instead used to cause harm on the user side. We could simply put it as insertion of malicious Javascript code in a webpage, that can redirect page to phishing sites or fake login pages, steal your session cookie, and even worms.&lt;/p&gt;
+
+&lt;p&gt;The first step to performing an SQL injection attack is to find a vulnerable website. One of the easiest ways to find vulnerable sites is known as Google Dorking. For instance, “?search=” or “.php?q=” “inurl:pageid=” and “inurl:article.php?id=” . &lt;/p&gt;
+
+&lt;p&gt;SQL injection can work on any SQL database, but PHP-based websites are usually the best targets because they can be set up by just about anyone(i.e Wordpress).&lt;/p&gt;
+
+&lt;p&gt;In this article we will testing the vulnerability of Sragen City Government website (http://sragenkab.go.id/berita.php?id=xx), where xx is news id.&lt;/p&gt;
+
+&lt;p&gt;We could inject the website by appending “or” statement. An “or” statement in this URL would look like this :&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-html&quot; data-lang=&quot;html&quot;&gt;&lt;span class=&quot;lineno&quot;&gt;1&lt;/span&gt; http://sragenkab.go.id/berita.php?id=250 or 1=1&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;The results of this query will allows us to see all of the news item (not only news with id = 250).&lt;/p&gt;
+
+&lt;p&gt;Now, let’s try another vulnerability attack. We will leverage XSS and using JavaScript since it is fundamental to most browsing experiences. &lt;/p&gt;
+
+&lt;p&gt;In order for an XSS attack to take place the vulnerable website needs to directly include user input in its pages. The input is usually in the form of javascript, that can be stored by the application and returned to other users when they visit the page. Thereby executing the javascript in the users browsers.&lt;/p&gt;
+
+&lt;p&gt;We could also testing XSS Scripting by injecting script through URL like this:&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-html&quot; data-lang=&quot;html&quot;&gt;&lt;span class=&quot;lineno&quot;&gt;1&lt;/span&gt; http://sragenkab.go.id/berita.php?id=&amp;quot;250 &lt;span class=&quot;nt&quot;&gt;&amp;lt;h1&amp;gt;&lt;/span&gt; Ini script injeksi &lt;span class=&quot;nt&quot;&gt;&amp;lt;/h1&amp;gt;&lt;/span&gt;&amp;quot;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;For both cases (XSS and SQL injection), we succedeed in testing the website vulnerability. Click this link for complete report and details (with images).&lt;/p&gt;
+
+&lt;p&gt;There is definitely more to each of these exploit types, but I hope this general overview has given you a clearer understanding of the consequences and differences between those attacks.&lt;/p&gt;
+
+&lt;h3 id=&quot;is-your-website-or-web-applciation-vulnerable-to-sql-injection-or-cross-site-scripting&quot;&gt;Is your website or web applciation vulnerable to SQL Injection or Cross-site Scripting?&lt;/h3&gt;
+
+&lt;p&gt;Well, lets take a look at these link for a minute if you want to know: 
+* &lt;code&gt;https://www.owasp.org/index.php/Top_10_2013-A1&lt;/code&gt;
+* &lt;code&gt;https://paragonie.com/blog/2015/06/preventing-xss-vulnerabilities-in-php-everything-you-need-know&lt;/code&gt;&lt;/p&gt;
+
+</description>
+        <pubDate>Tue, 29 Nov 2016 00:00:00 +0700</pubDate>
+        <link>http://febiagil.com{ post.url }}</link>
+        <guid isPermaLink="true">http://febiagil.com/vulnerability-testing-sql-injection-xss/</guid>
+      </item>
+    
+      <item>
+        <title>ESE:Understands You, Everyday.</title>
+        <description>&lt;p&gt;Setiap dari kita menikmati keuntungan dari teknologi yang ada saat ini, bahkan walau kita tak mengerti bagaimana teknologi tersebut bekerja.&lt;/p&gt;
+
+&lt;p&gt;Internet, mesin mobil, handphone. Tidak ada satupun dari hal tersebut yang “masuk akal” tapi saat ini kita begitu ketergantungan dengan teknologi tersebut. Bahkan, saat ini rumah kita tak bisa lepas dari teknologi, Mesin cuci, microwave, dan penemuan-penemuan lainnya membuat hidup kita semakin mudah.&lt;/p&gt;
+
+&lt;p&gt;Bahkan, menurut saya, teknologi dapat menjadi teman. Bayangkan suatu teknologi yang dapat memahami kita dari gestur yang kita buat. Lalu dapat melakukan perubahan-perubahan terhadap lingkungan kita, sesuai dengan kondisi yang terjadi kepada kita pada saat itu. Misalkan, Saat Anda kepanasan dan membuat gestur yang bersesuaian, perangkat tertentu dapat secara otomatis menyalakan AC atau kipas angin yang ada di dekat Anda.&lt;/p&gt;
+
+&lt;p&gt;Hal tersebut dapat dicapai dengan memanfaatkan kinect untuk membaca gestur Anda. ESE adalah suatu produk yang saya bayangkan untuk dapat membaca gestur Anda, lalu memberikan aksi tertentu. Salah satu project yang akan saya buat nanti adalah Automasi aksi dari beberapa alat dengan memanfaatkan fitur-fitur yang ada pada kinect.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/2016/mei/ese-kinect.jpg&quot; alt=&quot;Kinect. Source : olliebray.typepad.com&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Salah satu contoh pemanfaatan ESE adalah membuat perangkat seperti lampu dapat berubah secara otomatis sesuai dengan mood Anda, bernama lampee. Juga kipas angin yang dapat menyala tanpa Anda perintahkan karena ia dapat mengerti bahwa Anda sedang kepanasan yang diberi nama Fanomatic. ESE benar-benar dapat mengerti apa yang Anda inginkan, setiap saat. &lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/2016/mei/ese-rgb-lamp.jpg&quot; alt=&quot;RGB Lamp. Source : Fritzing.org&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Alat-alat yang dibutuhkan :&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;1 Arduino&lt;/li&gt;
+  &lt;li&gt;1 Kinect&lt;/li&gt;
+  &lt;li&gt;2 XBee 1mW antenna series1&lt;/li&gt;
+  &lt;li&gt;XBee Explorer Regulated&lt;/li&gt;
+  &lt;li&gt;XBee Explorer dongle&lt;/li&gt;
+  &lt;li&gt;Strip board&lt;/li&gt;
+  &lt;li&gt;Ultra bright white, red, green, blue LED @1x&lt;/li&gt;
+  &lt;li&gt;Fan&lt;/li&gt;
+  &lt;li&gt;Resistors&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Setelah semua alat siap, beberapa hal yang harus dilakukan adalah memprogram Arduino sesuai dengan bagaimana alat yang ingin kita integrasikan dengan kinect bekerja. Untuk Lampee kita harus mengatur lampu untuk dapat berubah warna dengan memprogram Arduino, dan untuk Fanomatic pun dilakukan hal serupa dengan intruksi yang berbeda tentunya.&lt;/p&gt;
+
+&lt;p&gt;Lalu, jika sudah seleai memprogram Arduino, kita akan menggunakan NITE’s user dan skeleton tracking untuk membaca gestur dari pengguna. Kali ini, skeleton tracking harus akan melakukan tracking secara tiga dimensi untuk mengetahui di mana user berada jika diibaratkan sebagai titik pada satu ruang. Beberapa library yang akan dipakai adalah OpenGL and Serial libraries, KinectOrbit, dan Simple-OpenNI.&lt;/p&gt;
+
+&lt;h3 id=&quot;kesimpulan-sementara&quot;&gt;KESIMPULAN SEMENTARA&lt;/h3&gt;
+
+&lt;p&gt;Saat ini, ESE dalam bayangan saya dapat mengautomasi berbagai alat dan tidak terbatas hanya kipas angin dan lampu. Jika diletakkan di ruang tamu, misalnya, atau tempat lain, ESE akan membuat ruangan tersebut senyaman mungkin sesuai dengan kebutuhan Anda. Untuk saat ini, source code program dan sketch kontrol awal, dan hal lain seperti kontrol untuk lampu belum dapat saya tunjukkan. Hal-hal tersebut akan saya tulis pada catatan selanjutnya, saat project ini selesai.&lt;/p&gt;
+
+&lt;h4 id=&quot;bersambung&quot;&gt;BERSAMBUNG&lt;/h4&gt;
+</description>
+        <pubDate>Fri, 20 May 2016 00:00:00 +0700</pubDate>
+        <link>http://febiagil.com{ post.url }}</link>
+        <guid isPermaLink="true">http://febiagil.com/ese-understands-you-everyday/</guid>
+      </item>
+    
+  </channel>
+</rss>

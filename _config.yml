@@ -1,0 +1,49 @@
+permalink: /:title/
+markdown: kramdown
+redcarpet:
+  extensions: ['smart', 'superscript']
+gems:
+  - jekyll-redirect-from
+
+defaults:
+  -
+    scope:
+      path: ""
+    values:
+      lang: en
+      layout: default
+  -
+    scope:
+      path: _posts/id
+    values:
+      lang: id
+nav:
+  en:
+    logo:
+      title: "febi agil ifdillah"
+      url:   "/"
+    journal:
+      title: "journal"
+      url:   "/index.html"
+    about:
+      title: "about"
+      url:   "/about/"
+  id:
+    logo:
+      title: "febi agil ifdillah"
+      url:   "/journal/"
+    journal:
+      title: "journal"
+      url:   "/journal/"
+    about:
+      title: "tentang"
+      url:   "/tentang/"
+t:
+  en:
+    created: "Published on the"
+    author: "by"
+    description: "abstract but still well-read"
+  id:
+    created: "Dipublikasikan pada"
+    author: "oleh"
+    description: "abstract but still well-read"
