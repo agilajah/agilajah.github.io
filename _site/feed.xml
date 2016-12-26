@@ -8,6 +8,31 @@
 		<atom:link href="http://localhost:4000/feed.xml" rel="self" type="application/rss+xml" />
 		
 			<item>
+				<title>Membangun ulang situs personal</title>
+				<description>&lt;p&gt;Satu tahun yang lalu saya memutuskan untuk memindahkan kegiatan menulis saya dari platform-platform seperti blogger ataupun wordpress ke situs pribadi saya. Setelah melalui beberapa pertimbangan dan melakukan percobaan, saya rasa jekyll merupakan static site generator yang cocok untuk membangun situs pribadi. Kita dapat melakukan preview situs secara local, dan juga sistem templating yang ditawarkan memberikan kemudahan dalam proses pembangunan website. Kita juga dapat memadukannya dengan &lt;a href=&quot;http://www.github.com&quot;&gt;github&lt;/a&gt; sebagai tempat hosting.&lt;/p&gt;
+
+&lt;p&gt;Selain gratis, menggunakan github sebagai ‘platform’ hosting dan blogging memberikan banyak kemudahan. Hal yang paling menarik adalah penggunaan markdown language untuk menulis konten pada situs dan juga proses penambahan-penyuntingan konten yang sangat mudah. Untuk menerbitkan artikel, kita dapat menggunakan command-command yang ada pada git.&lt;/p&gt;
+
+&lt;p&gt;Sejak beberapa bulan ini saya menggunakan tema bernama &lt;a href=&quot;https://github.com/mmistakes/hpstr-jekyll-theme&quot;&gt;HPSTR&lt;/a&gt;. Beberapa hari terakhir saya sedang sibuk mendesain ulang &lt;a href=&quot;http://www.febiagil.com&quot;&gt;situs&lt;/a&gt; pribadi saya. Desain yang terdahulu memang tidak ada buruknya, semua tersedia dengan lengkap. Beberapa fitur standard seperti menampilkan gambar, video, dan source code pun didukung sepenuhnya. Namun saya rasa sudah saatnya ada perubahan.&lt;/p&gt;
+
+&lt;p&gt;Saya mencari inspirasi dari berbagai situs yang menurut saya  memiliki desain yang menarik. Salah satu situs yang menakjubkan, dari segi typography dan desainnya adalah situs milik &lt;a href=&quot;http://www.sylvaindurand.org/&quot;&gt;Sylvain Durand&lt;/a&gt;. Template dari situs tersebut di-open source beberapa tahun sebelumnya, namun sekarang source code nya sudah dihapus.&lt;/p&gt;
+
+&lt;p&gt;Karena tertarik dengan desain dari situs tersebut, saya coba mereplika beberapa elemen-elemen yang ada dan membuat desain yang serupa. Walaupun ada legacy code template dari situs tersebut yang beredar di internet, proses perubahan dan penyuntingan situs ternyata cukup menyulitkan karena sistem terbaru dari github sudah tidak lagi mendukung beberapa hal yang ada pada legacy code tersebut. Seperti markup processor yang sudah diubah, kemampuan multibahasa yang rusak karena perbedaan versi jekyll, dan sebagainya.&lt;/p&gt;
+
+&lt;p&gt;Saya berpikir, jika terlalu  lama di proses desain, mungkin nanti kegiatan menulis saya akan terus tertunda. Untuk itu, saya putuskan untuk tidak membuat tema situs dari awal. Melainkan mencari situs yang saya rasa cukup baik untuk dijadikan base kemudian tinggal ditambahkan fitur-fitur yang saya inginkan.&lt;/p&gt;
+
+&lt;p&gt;Setelah mencari, saya menemukan situs yang menarik perhatian saya: &lt;a href=&quot;/blog/2013/07/29/which-markdown/&quot;&gt;klik di sini&lt;/a&gt;. Situs tersebut sangat bersih dan rapi. Desain nya sangat minimal dan fokus terhadap konten. Saya rasa situs tersebut akan menjadi seed yang baik untuk dikembangkan. Kemudian saya coba untuk menghubungi pemilik situs tersebut untuk meminta kode sumber untuk dijadikan base code situs saya.&lt;/p&gt;
+
+&lt;p&gt;Untungnya, sang pemilik kode dengan senang hati mengizinkan saya menggunakan kode sumber miliknya. Dan, jadilah desain seperti sekarang ini. Belum banyak perubahan yang saya lakukan terhadap situs ini. Namun beberapa hal yang pasti akan saya ubah adalah typography dari situs ini. Untuk desain, saya pikir sudah cukup baik karena minimalis. Beberapa fitur yang akan saya tambahkan selanjutnya adalah share button, comment system, dan dukungan multibahasa.&lt;/p&gt;
+
+&lt;p&gt;Di situs terbaru ini, saya akan menulis beberapa hal dan yang paling utama adalah jurnal. Pada jurnal, saya akan mencoba menulis mulai dari opini pribadi sampai ke hal-hal yang saya pahami ataupun challenge dan progress dari beberapa project. Tujuan dari pembuatan jurnal tersebut adalah sebagai sumber bacaan yang berguna untuk mengingat suatu hal yang pernah saya pahami dan memantau kemajuan dari beberapa hal.&lt;/p&gt;
+</description>
+				<pubDate>Mon, 26 Dec 2016 00:00:00 -0500</pubDate>
+				<link>http://localhost:4000/blog/2016/12/26/Membangun-ulang-situs-personal/</link>
+				<guid isPermaLink="true">http://localhost:4000/blog/2016/12/26/Membangun-ulang-situs-personal/</guid>
+			</item>
+		
+			<item>
 				<title>Sragen Government Website vulnerability testing using SQL Injection and XSS</title>
 				<description>&lt;p&gt;SQL Injections are one of the most common forms of attack : https://www.owasp.org/index.php/Top_10_2013-A1. SQL Injection attacks account for almost 1/3 of all attacks on Web Applications.  As per OWASP, an injection vulnerability or flaw is one that encompasses SQL, OS, and LDAP where untrusted data is sent to an interpreter through a command or query that goes unsanitized by the web application. The interpreter will then execute the code as though it was part of the developer’s original code.&lt;/p&gt;
 
