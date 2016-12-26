@@ -1,50 +1,26 @@
-source: _/site
-permalink: /:title/
-markdown: kramdown
-redcarpet:
-  extensions: ['smart', 'superscript']
-gems:
-  - jekyll-redirect-from
+name: Febi Agil Ifdillah
+description: Abstract but still well-read
+url: "http://www.febiagil.com"
 
-defaults:
-  -
-    scope:
-      path: ""
-    values:
-      lang: en
-      layout: default
-  -
-    scope:
-      path: _posts/id
-    values:
-      lang: id
-nav:
-  en:
-    logo:
-      title: "febi agil ifdillah"
-      url:   "/"
-    journal:
-      title: "journal"
-      url:   "/index.html"
-    about:
-      title: "about"
-      url:   "/about/"
-  id:
-    logo:
-      title: "febi agil ifdillah"
-      url:   "/journal/"
-    journal:
-      title: "journal"
-      url:   "/journal/"
-    about:
-      title: "tentang"
-      url:   "/tentang/"
-t:
-  en:
-    created: "Published on the"
-    author: "by"
-    description: "abstract but still well-read"
-  id:
-    created: "Dipublikasikan pada"
-    author: "oleh"
-    description: "abstract but still well-read"
+# Author info
+author_name: Febi Agil Ifdillah
+author_image_path: /images/author-image.jpg
+
+# External services
+github_url: "https://github.com/agilajah"
+twitter_url: "https://twitter.com/_agilajah"
+linkedin_url: "https://linkedin.com/in/febagil"
+feed_url: "http://feeds.feedburner.com/febiagil"
+email: "febiagil20@gmail.com"
+
+# Markdown rendering
+kramdown:
+  #  smart_quotes: apos,apos,quot,quot
+  parse_block_html: true
+
+# Site settings
+permalink: /blog/:year/:month/:day/:title/
+
+# important since the site is compiled
+# on Github's servers
+timezone: America/New_York

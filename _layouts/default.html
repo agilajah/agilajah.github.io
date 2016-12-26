@@ -1,75 +1,59 @@
----
-layout: typo
----
-<!doctype html>
-<html lang="{{ page.lang }}">
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width,user-scalable=no,initial-scale=0.9">
-  <meta name="description" content="{% if page.type == 'pages' %}{{ site.t[page.lang].description }}{% else %}{{ page.excerpt | strip_html | replace: "[[", " ("  | replace: "]]", ")" }}{% endif %}">
-  <title>{{page.title | strip_html}} – Febi Agil Ifdillah</title>
-  <link rel="icon" href="/medias/design/favicon.ico" />
-  {% assign posts=site.posts | where:"date", page.date %}
-  {% for post in posts %}
-    {% if post.lang != page.lang %}
-      <link rel="alternate" hreflang="{{post.lang}}" href="{{post.url}}" />
-    {% endif %}
-  {% endfor %}
-  <link rel="alternate" href="/rss.xml" type="application/rss+xml" />
-  <style>{% capture styles %}{% include style.sass %}{% endcapture %}{{ styles | sassify }}</style>
-  <script>{% include script.js %}</script>
-</head>
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset=utf-8>
+        <meta name=viewport content="width=device-width, initial-scale=1.0">
+        <meta name=description content="{{ site.description }}">
+        
+        <title>
+          {% if page.title %}
+            {{ page.title }} | 
+          {% endif %}
+          {{ site.name }}
+        </title>
 
-<body>  
-
-<div class="nav">
-  <ul>
-    {% for menu in site.nav[page.lang] %}
-      <li><a href="{{ menu[1].url }}">{{ menu[1].title }}</a></li>
-    {% endfor %}
-    <li class="lang">
-      {% assign posts=site.posts | where:"date", page.date | sort: 'path' %}
-      {% for post in posts %}
-        <a href="{{ post.url }}" class="{{ post.lang }}">{{ post.lang }}</a>
-      {% endfor %}
-    </li>
-  </ul>
-</div>
-
-<h1>{{ page.title }}
-  {% if page.type != 'pages' %}
-  <div class="reading-time">
-    Reading time: {% include reading-time.html %}
-  </div>  
-  {% endif %}
-</h1>
-
-<div class="article">
-{% if page.type != 'pages' %}
-{% if page.comments %}  <a href="http://febiagil.com{{ page.url }}#disqus_thread">0 Comments</a>{% endif %}
-<p class="date">
-    {% include date.html date=page.date %}
-</p>
-
-{% endif %}
-
-{{ content }}
-<hr/>
-
-</div>
-
-
-
-<div class="foot">
-  {{ site.t[page.lang].created }} <span>{% include date.html date=page.date %}</span>
-  {{ site.t[page.lang].author }}  <a href="https://github.com/agilajah/">Febi Agil Ifdillah</a>.
-</div>
-
-{% include disqus.html%}
-
-<style>
-  h1{ background-image:url('data:image/jpg;base64,{%include headers/{{ page.date | date:'%Y-%m-%d' }} %}');}
-</style>
-<script id="dsq-count-scr" src="//agilajah.disqus.com/count.js" async></script>
-</body>
+        <script src=http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_HTML.js type=text/javascript></script>
+        <script>
+            MathJax.Hub.Config({
+              "HTML-CSS": {
+                linebreaks: {
+                    automatic: true,
+                    width: "70% container"
+                },
+                styles: {
+                    ".MathJax .math": {
+                        //"border": "1px solid #ccc",
+                        //"margin": "0.1em 0",
+                        //"padding": "0.3em",
+                        //"vertical-align": "middle"
+                    },
+                    ".MathJax_Display .math": {
+                        "border": "none",
+                        "padding": "0",
+                    }
+                },
+                scale: 100
+              }
+            });
+        </script>
+                
+        <link rel=stylesheet type=text/css href=/css/pure-min.css>
+        <link rel=stylesheet type=text/css href=/css/github.css>
+        <link rel=stylesheet type=text/css href=/css/styles.css>
+        <link rel=stylesheet type=text/css href=/css/font-awesome/css/font-awesome.min.css>
+        
+        <link rel=alternate type=application/rss+xml title="RSS feed for eyeshalfclosed.com" href="/feed.xml">
+    </head>
+    <body>
+        <div class="container pure-g-r">
+            <div class=pure-u-1-4>
+                {% include header.html %}
+            </div>
+            <div class=pure-u-3-4>
+                <div class=right-column>
+                    {{ content }}
+                </div>
+            </div>
+        </div>
+    </body>
 </html>
