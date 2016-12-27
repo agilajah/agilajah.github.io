@@ -8,7 +8,6 @@ layout: default
     </div>
     {% endif %}
     {% include post-meta.html %}
-    <h1 class=title-large>ini page url{{ page.url}}</h1>
     <h1 class=title-large>{{ page.title }}</h1>
     <div class=content>
         {{ content }}
@@ -22,7 +21,7 @@ layout: default
                   /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
                   var disqus_shortname = 'agilajah'; // required: replace example with your forum shortname
                   // var disqus_developer = 1; // Comment out when the site is live
-                  var disqus_identifier = "{{ page.url }}";
+                  var disqus_identifier = "http://www.febiagil.com/" + "{{ page.url }}";
 
                   /* * * DON'T EDIT BELOW THIS LINE * * */
                   (function() {
