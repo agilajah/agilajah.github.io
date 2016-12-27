@@ -5,6 +5,7 @@
         {% assign item = page %}
     {% endif %}
     <li class=publish-time><i class=icon-calendar></i>{{ item.date | date: "%B %d, %Y" }}</li>
+    <li class=comment-count><a href="{{ post.url }}index.html#disqus_thread" data-disqus-identifier="{{post.url}}"></a></li>
     {% for tag in item.tags %}
         <li>&middot;</li>
         <li><a href="/tags/#{{ tag }}-ref">#{{ tag }}</a></li>

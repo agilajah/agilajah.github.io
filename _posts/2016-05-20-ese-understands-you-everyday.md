@@ -3,7 +3,7 @@ layout: post
 title: ESE:Understands You, Everyday.
 description: "ESE is smart home kinect based project."
 tags: [kinect, smart home, mood lamp]
-
+comments: true
 ---
 
 Setiap dari kita menikmati keuntungan dari teknologi yang ada saat ini, bahkan walau kita tak mengerti bagaimana teknologi tersebut bekerja.
@@ -17,7 +17,7 @@ Hal tersebut dapat dicapai dengan memanfaatkan kinect untuk membaca gestur Anda.
 ![Kinect. Source : olliebray.typepad.com]({{ site.url }}/images/2016/mei/ese-kinect.jpg)
 {: .image-center}
 
-Salah satu contoh pemanfaatan ESE adalah membuat perangkat seperti lampu dapat berubah secara otomatis sesuai dengan mood Anda, bernama lampee. Juga kipas angin yang dapat menyala tanpa Anda perintahkan karena ia dapat mengerti bahwa Anda sedang kepanasan yang diberi nama Fanomatic. ESE benar-benar dapat mengerti apa yang Anda inginkan, setiap saat. 
+Salah satu contoh pemanfaatan ESE adalah membuat perangkat seperti lampu dapat berubah secara otomatis sesuai dengan mood Anda, bernama lampee. Juga kipas angin yang dapat menyala tanpa Anda perintahkan karena ia dapat mengerti bahwa Anda sedang kepanasan yang diberi nama Fanomatic. ESE benar-benar dapat mengerti apa yang Anda inginkan, setiap saat.
 
 ![RGB Lamp. Source : Fritzing.org]({{ site.url }}/images/2016/mei/ese-rgb-lamp.jpg)
 {: .image-center}
