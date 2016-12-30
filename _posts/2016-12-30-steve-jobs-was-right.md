@@ -1,3 +1,4 @@
+---
 layout: post
 title: Steve Jobs Was Right
 description: "Speech for the crazy ones"
