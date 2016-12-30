@@ -5,7 +5,7 @@ tags: [jekyll]
 comments: true
 ---
 
-Satu tahun yang lalu saya memutuskan untuk memindahkan kegiatan menulis saya dari platform-platform seperti blogger ataupun wordpress ke situs pribadi saya. Setelah melalui beberapa pertimbangan dan melakukan percobaan, saya rasa [jekyll](https://jekyllrb.com/) merupakan static site generator yang cocok untuk membangun situs pribadi. Kita dapat melakukan preview situs secara local, dan juga sistem templating yang ditawarkan memberikan kemudahan dalam proses pembangunan website. Kita juga dapat memadukannya dengan [github](http://www.github.com) sebagai tempat hosting.
+Satu tahun yang lalu saya memutuskan untuk memindahkan kegiatan tulis-menulis dari platform-platform seperti blogger ataupun wordpress ke situs pribadi. Setelah melalui beberapa pertimbangan dan melakukan percobaan, saya rasa [jekyll](https://jekyllrb.com/) merupakan static site generator yang cocok untuk membangun situs pribadi. Kita dapat melakukan preview situs secara local, dan juga sistem templating yang ditawarkan memberikan kemudahan dalam proses pembangunan website. Kita juga dapat memadukannya dengan [github](http://www.github.com) sebagai tempat hosting.
 
 Selain gratis, menggunakan github sebagai 'platform' hosting dan blogging memberikan banyak kemudahan. Hal yang paling menarik adalah penggunaan markdown language untuk menulis konten pada situs dan juga proses penambahan-penyuntingan konten yang sangat mudah. Untuk menerbitkan artikel, kita dapat menggunakan command-command yang ada pada git.
 
