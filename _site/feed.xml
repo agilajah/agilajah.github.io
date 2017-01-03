@@ -8,8 +8,66 @@
 		<atom:link href="http://localhost:4000/feed.xml" rel="self" type="application/rss+xml" />
 		
 			<item>
+				<title>Day 0, Reinforcement Learning Challenge - FrozenLake Environment</title>
+				<description>&lt;h2 id=&quot;introduction&quot;&gt;&lt;em&gt;Introduction&lt;/em&gt;&lt;/h2&gt;
+
+&lt;p&gt;Di tahun yang baru ini saya memiliki beberapa program yang, harapannya, dapat menunjang proses belajar saya. Salah satunya adalah &lt;strong&gt;x days challenge&lt;/strong&gt;. Di mana saya akan menantang diri saya sendiri untuk mempelajari suatu hal dalam x hari.&lt;/p&gt;
+
+&lt;p&gt;Saya tidak menspesifikasikan nilai x karena saya rasa setiap topik memiliki tingkat kesulitan tersendiri dan unik. Jika saya paksakan untuk mempelajari hal-hal (dasar) terkait topik tersebut dalam, misalnya 7 hari, 2 pekan, dan sebagainya. Saya merasa hal tersebut akan membatasi eksplorasi saya di topik tersebut. Namun, hal tersebut juga dapat membuat proses belajar saya menjadi lebih lama karena kecenderungan untuk terus mempelajari hal lain (&lt;em&gt;which is good&lt;/em&gt;), tapi akan berdampak kurang baik terhadap program ini. Karena waktu yang kita miliki terbatas, dan banyak topik yang menarik yang dapat dipelajari.&lt;/p&gt;
+
+&lt;p&gt;Untuk itu, saya putuskan untuk menentukannya sembari berjalan. Jika &lt;em&gt;goal&lt;/em&gt;s saya dalam mempelajari topik tersebut sudah tercapai, maka saya pikir saat itu juga &lt;em&gt;challenge&lt;/em&gt; tersebut sudah selesai.&lt;/p&gt;
+
+&lt;p&gt;Untuk challenge pertama yang akan saya jalani, saya memilih topik &lt;em&gt;reinforcement learning&lt;/em&gt;. Kenapa? Karena saat ini saya sedang ‘kasmaran’ dengan &lt;em&gt;Machine Learning&lt;/em&gt;, dan &lt;em&gt;reinforcement learning&lt;/em&gt; (RL) merupakan ‘aliran’ &lt;em&gt;Machine Learning&lt;/em&gt; yang paling memikat hati saya disebabkan sifatnya yang unik dibandingkan paradigma lainnya  (&lt;em&gt;supervised&lt;/em&gt;, &lt;em&gt;unsupervised learning&lt;/em&gt;).&lt;/p&gt;
+
+&lt;p&gt;Pada hari ke-0 ini (saya memulai hari dari 0), saya akan mencoba mengimplementasikan sebuah solusi dari persoalan yang diambil dari &lt;a href=&quot;http://gym.openai.com&quot;&gt;OpenAI Gym&lt;/a&gt; menggunakan bahasa python. Beberapa catatan untuk mempermudah kita dalam memahami persoalan tersebut sudah saya tulis di sini, berikut dengan kode dari solusinya jika Anda ingin langsung melihat solusi: &lt;a href=&quot;https://github.com/agilajah/xdays-reinforcementLearning/tree/master/day0-FrozenLake&quot;&gt;click here&lt;/a&gt;. Atau jika Anda ingin membaca lebih lanjut tentang persoalan dan bagaimana pendekatan yang digunakan untuk mencari solusi dari persoalan tersebut, silahkan untuk dibaca lebih lanjut.&lt;/p&gt;
+
+&lt;h2 id=&quot;frozenlake-environment&quot;&gt;&lt;em&gt;FrozenLake Environment&lt;/em&gt;&lt;/h2&gt;
+
+&lt;p&gt;&lt;img src=&quot;http://localhost:4000/images/2017/january/frozenlake.png&quot; alt=&quot;FrozenLake Environment. Source : gym.openai.com&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Lingkungan FrozenLake (FrozenLake &lt;em&gt;environment&lt;/em&gt;) merupakan salah satu &lt;em&gt;environment&lt;/em&gt; yang tersedia di &lt;a href=&quot;http://gym.openai.com&quot;&gt;OpenAI Gym&lt;/a&gt;. Terdiri dari &lt;em&gt;grid&lt;/em&gt; 4x4. Setiap block &lt;em&gt;grid&lt;/em&gt; merupakan salah satu dari: &lt;em&gt;start block&lt;/em&gt;, &lt;em&gt;*goal&lt;/em&gt; block&lt;em&gt;, *safe frozen block&lt;/em&gt;, dan &lt;em&gt;dangerous hole&lt;/em&gt;. Sasaran kita adalah untuk membuat &lt;em&gt;agent&lt;/em&gt; kita dapat bergerak dari &lt;em&gt;start block&lt;/em&gt; ke &lt;em&gt;*goal&lt;/em&gt; block* tanpa terjatuh ke lubang manapun. Namun, ada angin yang sesekali berhembus yang akan membuat &lt;em&gt;agent&lt;/em&gt; tertiup ke tempat yang tidak diinginkan.&lt;/p&gt;
+
+&lt;p&gt;Bisa jadi, kita terjatuh ke lubang! Karenanya, kinerja yang sempurna dari &lt;em&gt;agent&lt;/em&gt; di setiap waktu akan menjadi hal yang mustahil. Tetapi belajar untuk menghidari lubang dan mencapai &lt;em&gt;goal&lt;/em&gt; masih sangat memungkinkan. &lt;em&gt;reward&lt;/em&gt; yang diberikan di setiap langkah nya adalah 0, kecuali saat kita masuk ke &lt;em&gt;*goal&lt;/em&gt; block&lt;em&gt;, di mana *reward&lt;/em&gt;nya adalah 1.&lt;/p&gt;
+
+&lt;h2 id=&quot;solution&quot;&gt;&lt;em&gt;Solution&lt;/em&gt;&lt;/h2&gt;
+
+&lt;p&gt;Pada kasus ini, kita membutuhkan algoritma yang dapat belajar dengan ekspektasi &lt;em&gt;reward&lt;/em&gt; jangka panjang (karena kita hanya akan mendapatkan &lt;em&gt;reward&lt;/em&gt; saat mencapai &lt;em&gt;*goal&lt;/em&gt; block*). Untuk itu, kita akan menggunakan Q-Learning. Karena Q-learning sangat cocok untuk diterapkan pada persoalan semacam ini.&lt;/p&gt;
+
+&lt;p&gt;Pada bentuk paling sederhananya, kita dapat menggunakan lookup table atau arrays untuk menyimpan aproksimasi dari &lt;em&gt;value function&lt;/em&gt; (karena ruang kondisi dan aksi (&lt;em&gt;state&lt;/em&gt; and &lt;em&gt;action&lt;/em&gt; spaces) cukup kecil). Untuk kasus frozenlake &lt;em&gt;environment&lt;/em&gt;, kita akan membuat table nilai untuk setiap &lt;em&gt;state&lt;/em&gt; dan &lt;em&gt;action&lt;/em&gt; yang mungkin pada &lt;em&gt;environment&lt;/em&gt;, di mana &lt;em&gt;state&lt;/em&gt; adalah &lt;em&gt;row&lt;/em&gt; pada table dan &lt;em&gt;action&lt;/em&gt; adalah &lt;em&gt;column&lt;/em&gt; pada table.&lt;/p&gt;
+
+&lt;p&gt;Ada 16 &lt;em&gt;state&lt;/em&gt; yang mungkin pada lingkungan frozenlake, dan 4 buah aksi yang mungkin pada setiap &lt;em&gt;state&lt;/em&gt; tersebut. Sehingga ukuran table untuk menyimpan aproksimasi nilai dari &lt;em&gt;value function&lt;/em&gt; tersebut adalah 16x4.&lt;/p&gt;
+
+&lt;p&gt;Kita akan meng&lt;em&gt;update&lt;/em&gt; Q-table menggunakan persamaan Bellman yang menyatakan bahwa ‘&lt;em&gt;long-term&lt;/em&gt; &lt;em&gt;reward&lt;/em&gt; yang diharapkan untuk aksi yang diberikan sama dengan &lt;em&gt;immediate reward&lt;/em&gt; dari aksi saat ini dikombinasikan dengan &lt;em&gt;reward&lt;/em&gt; yang diharapkan dari aksi masa depan yang paling baik yang diambil di &lt;em&gt;state&lt;/em&gt; berikutnya’ yang dapat kita tuliskan dengan persamaan berikut :&lt;/p&gt;
+
+&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;Q(s, a) = r + γ (max(Q (s', a')))&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;di mana (s) adalah &lt;em&gt;state&lt;/em&gt; saat itu, (a) adalah aksi pada &lt;em&gt;state&lt;/em&gt; tersebut, (r) adalah &lt;em&gt;reward&lt;/em&gt;, (y) adalah discount-rate parameter, (s’) adalah &lt;em&gt;state&lt;/em&gt; selanjutnya, dan (a’) adalah aksi berkikutnya pada (s’). Discount-rate parameter digunakan untuk mempertimbangkan sebarapa penting kah &lt;em&gt;reward&lt;/em&gt; di masa mendatang jika dibandingkan dengan &lt;em&gt;reward&lt;/em&gt; saat ini.&lt;/p&gt;
+
+&lt;p&gt;Dengan meng&lt;em&gt;update&lt;/em&gt; table dengan cara seperti ini, table tersebut perlahan-lahan akan berisikan perhitungan yang cukup akurat terhadap &lt;em&gt;reward&lt;/em&gt; di masa yang akan datang untuk &lt;em&gt;state&lt;/em&gt; saat ini dan aksi di &lt;em&gt;state&lt;/em&gt; tersebut.&lt;/p&gt;
+
+&lt;p&gt;Apabila kita tinjau algoritma Q dalam konteks &lt;a href=&quot;https://en.wikipedia.org/wiki/Gradient_descent&quot;&gt;gradient descent&lt;/a&gt;, maka &lt;code class=&quot;highlighter-rouge&quot;&gt;r + γ(max(Q(s’,a’))&lt;/code&gt; adalah hal yang ingin coba kita capai. Tapi kita tahu bahwa &lt;code class=&quot;highlighter-rouge&quot;&gt;r + γ(max(Q(s’,a’))&lt;/code&gt; merupakan estimasi dengan &lt;em&gt;noise&lt;/em&gt; dari nilai Q yang sebenarnya pada area tersebut. Jadi, kita tidak akan meng&lt;em&gt;update&lt;/em&gt; &lt;em&gt;Q-table&lt;/em&gt; menggunakan persamaan tersebut melainkan menambahkan sedikit langkah untuk membuat nilai Q mendekati yang kita inginkan. Maka kita gunakan &lt;code class=&quot;highlighter-rouge&quot;&gt;Q[s,a] ←Q[s,a] + α(r+ γ * max Q[s',a'] - Q[s,a])&lt;/code&gt; atau &lt;code class=&quot;highlighter-rouge&quot;&gt;Q[s,a] ←(1-α) Q[s,a] + α(r+ γ * max Q[s',a'])&lt;/code&gt; di mana &lt;code class=&quot;highlighter-rouge&quot;&gt;α&lt;/code&gt; adalah &lt;em&gt;step-size parameter&lt;/em&gt; yang memengaruhi kecepatan belajar, atau dapat dikatakan ‘&lt;em&gt;learning rate&lt;/em&gt;’, dan &lt;code class=&quot;highlighter-rouge&quot;&gt;γ&lt;/code&gt; adalah &lt;em&gt;discount-rate parameter&lt;/em&gt;.&lt;/p&gt;
+
+</description>
+				<pubDate>Tue, 03 Jan 2017 00:00:00 -0500</pubDate>
+				<link>http://localhost:4000/blog/2017/01/03/reinforcement-learning-challenge-day-0/</link>
+				<guid isPermaLink="true">http://localhost:4000/blog/2017/01/03/reinforcement-learning-challenge-day-0/</guid>
+			</item>
+		
+			<item>
+				<title>Steve Jobs Was Right</title>
+				<description>&lt;p&gt;“Here’s to the crazy ones, the misfits, the rebels, the troublemakers, the round pegs in the square holes… the ones who see things differently — they’re not fond of rules… You can quote them, disagree with them, glorify or vilify them, but the only thing you can’t do is ignore them because they change things… they push the human race forward, and while some may see them as the crazy ones, we see genius, because the ones who are crazy enough to think that they can change the world, are the ones who do.”&lt;/p&gt;
+
+&lt;p&gt;— Steve Jobs, 1997&lt;/p&gt;
+
+</description>
+				<pubDate>Fri, 30 Dec 2016 00:00:00 -0500</pubDate>
+				<link>http://localhost:4000/blog/2016/12/30/steve-jobs-was-right/</link>
+				<guid isPermaLink="true">http://localhost:4000/blog/2016/12/30/steve-jobs-was-right/</guid>
+			</item>
+		
+			<item>
 				<title>Membangun ulang situs personal</title>
-				<description>&lt;p&gt;Satu tahun yang lalu saya memutuskan untuk memindahkan kegiatan menulis saya dari platform-platform seperti blogger ataupun wordpress ke situs pribadi saya. Setelah melalui beberapa pertimbangan dan melakukan percobaan, saya rasa &lt;a href=&quot;https://jekyllrb.com/&quot;&gt;jekyll&lt;/a&gt; merupakan static site generator yang cocok untuk membangun situs pribadi. Kita dapat melakukan preview situs secara local, dan juga sistem templating yang ditawarkan memberikan kemudahan dalam proses pembangunan website. Kita juga dapat memadukannya dengan &lt;a href=&quot;http://www.github.com&quot;&gt;github&lt;/a&gt; sebagai tempat hosting.&lt;/p&gt;
+				<description>&lt;p&gt;Satu tahun yang lalu saya memutuskan untuk memindahkan kegiatan tulis-menulis dari platform-platform seperti blogger ataupun wordpress ke situs pribadi. Setelah melalui beberapa pertimbangan dan melakukan percobaan, saya rasa &lt;a href=&quot;https://jekyllrb.com/&quot;&gt;jekyll&lt;/a&gt; merupakan static site generator yang cocok untuk membangun situs pribadi. Kita dapat melakukan preview situs secara local, dan juga sistem templating yang ditawarkan memberikan kemudahan dalam proses pembangunan website. Kita juga dapat memadukannya dengan &lt;a href=&quot;http://www.github.com&quot;&gt;github&lt;/a&gt; sebagai tempat hosting.&lt;/p&gt;
 
 &lt;p&gt;Selain gratis, menggunakan github sebagai ‘platform’ hosting dan blogging memberikan banyak kemudahan. Hal yang paling menarik adalah penggunaan markdown language untuk menulis konten pada situs dan juga proses penambahan-penyuntingan konten yang sangat mudah. Untuk menerbitkan artikel, kita dapat menggunakan command-command yang ada pada git.&lt;/p&gt;
 
