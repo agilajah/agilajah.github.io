@@ -7,7 +7,7 @@
 
         <title>
           
-            Day 0, Reinforcement Learning Challenge - FrozenLake Environment |
+            Part 0, Reinforcement Learning Challenge - FrozenLake Environment |
           
           Febi Agil Ifdillah
         </title>
@@ -113,15 +113,13 @@
         <li><a href="/tags/#Machine Learning-ref">#Machine Learning</a></li>
     
         <li>&middot;</li>
-        <li><a href="/tags/#Day-0-ref">#Day-0</a></li>
+        <li><a href="/tags/#Part-0-ref">#Part-0</a></li>
     
 </ul>
 
-    <h1 class=title-large>Day 0, Reinforcement Learning Challenge - FrozenLake Environment</h1>
+    <h1 class=title-large>Part 0, Reinforcement Learning Challenge - FrozenLake Environment</h1>
     <div class=content>
-        <h2 id="introduction"><em>Introduction</em></h2>
-
-<p>Di tahun yang baru ini saya memiliki beberapa program yang, harapannya, dapat menunjang proses belajar saya. Salah satunya adalah <strong>x days challenge</strong>. Di mana saya akan menantang diri saya sendiri untuk mempelajari suatu hal dalam x hari.</p>
+        <p>Di tahun yang baru ini saya memiliki beberapa program yang, harapannya, dapat menunjang proses belajar saya. Salah satunya adalah <strong>x days challenge</strong>. Di mana saya akan menantang diri saya sendiri untuk mempelajari suatu hal dalam x hari.</p>
 
 <p>Saya tidak menspesifikasikan nilai x karena saya rasa setiap topik memiliki tingkat kesulitan tersendiri dan unik. Jika saya paksakan untuk mempelajari hal-hal (dasar) terkait topik tersebut dalam, misalnya 7 hari, 2 pekan, dan sebagainya. Saya merasa hal tersebut akan membatasi eksplorasi saya di topik tersebut. Namun, hal tersebut juga dapat membuat proses belajar saya menjadi lebih lama karena kecenderungan untuk terus mempelajari hal lain (<em>which is good</em>), tapi akan berdampak kurang baik terhadap program ini. Karena waktu yang kita miliki terbatas, dan banyak topik yang menarik yang dapat dipelajari.</p>
 
@@ -129,31 +127,31 @@
 
 <p>Untuk challenge pertama yang akan saya jalani, saya memilih topik <em>reinforcement learning</em>. Kenapa? Karena saat ini saya sedang ‘kasmaran’ dengan <em>Machine Learning</em>, dan <em>reinforcement learning</em> (RL) merupakan ‘aliran’ <em>Machine Learning</em> yang paling memikat hati saya disebabkan sifatnya yang unik dibandingkan paradigma lainnya  (<em>supervised</em>, <em>unsupervised learning</em>).</p>
 
-<p>Pada hari ke-0 ini (saya memulai hari dari 0), saya akan mencoba mengimplementasikan sebuah solusi dari persoalan yang diambil dari <a href="http://gym.openai.com">OpenAI Gym</a> menggunakan bahasa python. Beberapa catatan untuk mempermudah kita dalam memahami persoalan tersebut sudah saya tulis di sini, berikut dengan kode dari solusinya jika Anda ingin langsung melihat solusi: <a href="https://github.com/agilajah/xdays-reinforcementLearning/tree/master/day0-FrozenLake">click here</a>. Atau jika Anda ingin membaca lebih lanjut tentang persoalan dan bagaimana pendekatan yang digunakan untuk mencari solusi dari persoalan tersebut, silahkan untuk dibaca lebih lanjut.</p>
+<p>Pada bagian ke-0 ini (saya akan memulai dari 0), saya akan mencoba mengimplementasikan sebuah solusi dari persoalan yang diambil dari <a href="http://gym.openai.com">OpenAI Gym</a> menggunakan bahasa python. Beberapa catatan untuk mempermudah kita dalam memahami persoalan tersebut sudah saya tulis di sini, berikut dengan kode dari solusinya jika Anda ingin langsung melihat solusi: <a href="https://github.com/agilajah/xdays-reinforcementLearning/tree/master/day0-FrozenLake">click here</a>. Atau jika Anda ingin membaca lebih lanjut tentang persoalan dan bagaimana pendekatan yang digunakan untuk mencari solusi dari persoalan tersebut, silahkan untuk dibaca lebih lanjut.</p>
 
 <h2 id="frozenlake-environment"><em>FrozenLake Environment</em></h2>
 
 <p><img src="http://localhost:4000/images/2017/january/frozenlake.png" alt="FrozenLake Environment. Source : gym.openai.com" /></p>
 
-<p>Lingkungan FrozenLake (FrozenLake <em>environment</em>) merupakan salah satu <em>environment</em> yang tersedia di <a href="http://gym.openai.com">OpenAI Gym</a>. Terdiri dari <em>grid</em> 4x4. Setiap block <em>grid</em> merupakan salah satu dari: <em>start block</em>, <em>*goal</em> block<em>, *safe frozen block</em>, dan <em>dangerous hole</em>. Sasaran kita adalah untuk membuat <em>agent</em> kita dapat bergerak dari <em>start block</em> ke <em>*goal</em> block* tanpa terjatuh ke lubang manapun. Namun, ada angin yang sesekali berhembus yang akan membuat <em>agent</em> tertiup ke tempat yang tidak diinginkan.</p>
+<p>Lingkungan FrozenLake (FrozenLake <em>environment</em>) merupakan salah satu <em>environment</em> yang tersedia di <a href="http://gym.openai.com">OpenAI Gym</a>. Terdiri dari <em>grid</em> 4x4. Setiap block <em>grid</em> merupakan salah satu dari: <em>start block</em>, <em>goal block</em>, <em>safe frozen block</em>, dan <em>dangerous hole</em>. Sasaran kita adalah untuk membuat <em>agent</em> kita dapat bergerak dari <em>start block</em> ke <em>goal block</em> tanpa terjatuh ke lubang manapun. Namun, ada angin yang sesekali berhembus yang akan membuat <em>agent</em> tertiup ke tempat yang tidak diinginkan.</p>
 
-<p>Bisa jadi, kita terjatuh ke lubang! Karenanya, kinerja yang sempurna dari <em>agent</em> di setiap waktu akan menjadi hal yang mustahil. Tetapi belajar untuk menghidari lubang dan mencapai <em>goal</em> masih sangat memungkinkan. <em>reward</em> yang diberikan di setiap langkah nya adalah 0, kecuali saat kita masuk ke <em>*goal</em> block<em>, di mana *reward</em>nya adalah 1.</p>
+<p>Bisa jadi, kita terjatuh ke lubang! Karenanya, kinerja yang sempurna dari <em>agent</em> di setiap waktu akan menjadi hal yang mustahil. Tetapi belajar untuk menghidari lubang dan mencapai <em>goal</em> masih sangat memungkinkan. <em>reward</em> yang diberikan di setiap langkah nya adalah 0, kecuali saat kita masuk ke <em>goal block</em>, di mana <em>reward</em>nya adalah 1.</p>
 
 <h2 id="solution"><em>Solution</em></h2>
 
-<p>Pada kasus ini, kita membutuhkan algoritma yang dapat belajar dengan ekspektasi <em>reward</em> jangka panjang (karena kita hanya akan mendapatkan <em>reward</em> saat mencapai <em>*goal</em> block*). Untuk itu, kita akan menggunakan Q-Learning. Karena Q-learning sangat cocok untuk diterapkan pada persoalan semacam ini.</p>
+<p>Pada kasus ini, kita membutuhkan algoritma yang dapat belajar dengan ekspektasi <em>reward</em> jangka panjang (karena kita hanya akan mendapatkan <em>reward</em> saat mencapai <em>goal block</em>). Untuk itu, kita akan menggunakan Q-Learning. Karena Q-learning sangat cocok untuk diterapkan pada persoalan semacam ini.</p>
 
-<p>Pada bentuk paling sederhananya, kita dapat menggunakan lookup table atau arrays untuk menyimpan aproksimasi dari <em>value function</em> (karena ruang kondisi dan aksi (<em>state</em> and <em>action</em> spaces) cukup kecil). Untuk kasus frozenlake <em>environment</em>, kita akan membuat table nilai untuk setiap <em>state</em> dan <em>action</em> yang mungkin pada <em>environment</em>, di mana <em>state</em> adalah <em>row</em> pada table dan <em>action</em> adalah <em>column</em> pada table.</p>
+<p>Pada bentuk paling sederhana dari <em>Reinforcement Learning</em>, kita dapat menggunakan <em>lookup table</em> atau <em>arrays</em> untuk menyimpan aproksimasi dari <em>value function</em> (karena ruang kondisi dan aksi (<em>state</em> and <em>action</em> <em>spaces</em>) cukup kecil). Untuk kasus frozenlake <em>environment</em>, kita akan membuat <em>table</em> nilai untuk setiap <em>state</em> dan <em>action</em> yang mungkin pada <em>environment</em>, di mana <em>state</em> adalah <em>row</em> pada <em>table</em> dan <em>action</em> adalah <em>column</em> pada <em>table</em>.</p>
 
-<p>Ada 16 <em>state</em> yang mungkin pada lingkungan frozenlake, dan 4 buah aksi yang mungkin pada setiap <em>state</em> tersebut. Sehingga ukuran table untuk menyimpan aproksimasi nilai dari <em>value function</em> tersebut adalah 16x4.</p>
+<p>Ada 16 <em>state</em> yang mungkin pada lingkungan frozenlake, dan 4 buah aksi yang mungkin pada setiap <em>state</em> tersebut. Sehingga ukuran <em>table</em> untuk menyimpan aproksimasi nilai dari <em>value function</em> tersebut adalah 16x4.</p>
 
-<p>Kita akan meng<em>update</em> Q-table menggunakan persamaan Bellman yang menyatakan bahwa ‘<em>long-term</em> <em>reward</em> yang diharapkan untuk aksi yang diberikan sama dengan <em>immediate reward</em> dari aksi saat ini dikombinasikan dengan <em>reward</em> yang diharapkan dari aksi masa depan yang paling baik yang diambil di <em>state</em> berikutnya’ yang dapat kita tuliskan dengan persamaan berikut :</p>
+<p>Kita akan meng<em>update</em> Q-<em>table</em> menggunakan persamaan Bellman yang menyatakan bahwa ‘<em>long-term</em> <em>reward</em> yang diharapkan untuk aksi yang diberikan sama dengan <em>immediate reward</em> dari aksi saat ini dikombinasikan dengan <em>reward</em> yang diharapkan dari aksi masa depan yang paling baik yang diambil di <em>state</em> berikutnya’ yang dapat kita tuliskan dengan persamaan berikut :</p>
 
 <p><code class="highlighter-rouge">Q(s, a) = r + γ (max(Q (s', a')))</code></p>
 
-<p>di mana (s) adalah <em>state</em> saat itu, (a) adalah aksi pada <em>state</em> tersebut, (r) adalah <em>reward</em>, (y) adalah discount-rate parameter, (s’) adalah <em>state</em> selanjutnya, dan (a’) adalah aksi berkikutnya pada (s’). Discount-rate parameter digunakan untuk mempertimbangkan sebarapa penting kah <em>reward</em> di masa mendatang jika dibandingkan dengan <em>reward</em> saat ini.</p>
+<p>di mana (s) adalah <em>state</em> saat itu, (a) adalah aksi pada <em>state</em> tersebut, (r) adalah <em>reward</em>, (y) adalah discount-rate parameter, (s’) adalah <em>state</em> selanjutnya, dan (a’) adalah aksi berikutnya pada (s’). Discount-rate parameter digunakan untuk mempertimbangkan sebarapa penting kah <em>reward</em> di masa mendatang jika dibandingkan dengan <em>reward</em> saat ini.</p>
 
-<p>Dengan meng<em>update</em> table dengan cara seperti ini, table tersebut perlahan-lahan akan berisikan perhitungan yang cukup akurat terhadap <em>reward</em> di masa yang akan datang untuk <em>state</em> saat ini dan aksi di <em>state</em> tersebut.</p>
+<p>Dengan meng<em>update</em> <em>table</em> dengan cara seperti ini, <em>table</em> tersebut perlahan-lahan akan berisikan perhitungan yang cukup akurat terhadap <em>reward</em> di masa yang akan datang untuk <em>state</em> saat ini dan aksi di <em>state</em> tersebut.</p>
 
 <p>Apabila kita tinjau algoritma Q dalam konteks <a href="https://en.wikipedia.org/wiki/Gradient_descent">gradient descent</a>, maka <code class="highlighter-rouge">r + γ(max(Q(s’,a’))</code> adalah hal yang ingin coba kita capai. Tapi kita tahu bahwa <code class="highlighter-rouge">r + γ(max(Q(s’,a’))</code> merupakan estimasi dengan <em>noise</em> dari nilai Q yang sebenarnya pada area tersebut. Jadi, kita tidak akan meng<em>update</em> <em>Q-table</em> menggunakan persamaan tersebut melainkan menambahkan sedikit langkah untuk membuat nilai Q mendekati yang kita inginkan. Maka kita gunakan <code class="highlighter-rouge">Q[s,a] ←Q[s,a] + α(r+ γ * max Q[s',a'] - Q[s,a])</code> atau <code class="highlighter-rouge">Q[s,a] ←(1-α) Q[s,a] + α(r+ γ * max Q[s',a'])</code> di mana <code class="highlighter-rouge">α</code> adalah <em>step-size parameter</em> yang memengaruhi kecepatan belajar, atau dapat dikatakan ‘<em>learning rate</em>’, dan <code class="highlighter-rouge">γ</code> adalah <em>discount-rate parameter</em>.</p>
 
@@ -161,9 +159,9 @@
     </div>
     <div class="share-page">
     Share this on &rarr;
-    <a href="https://twitter.com/intent/tweet?text=Day 0, Reinforcement Learning Challenge - FrozenLake Environment&url=http://localhost:4000/blog/2017/01/03/reinforcement-learning-challenge-day-0/&via=&related=" rel="nofollow" target="_blank" title="Share on Twitter">Twitter</a>
-    <a href="https://facebook.com/sharer.php?u=http://localhost:4000/blog/2017/01/03/reinforcement-learning-challenge-day-0/" rel="nofollow" target="_blank" title="Share on Facebook">Facebook</a>
-    <a href="https://plus.google.com/share?url=http://localhost:4000/blog/2017/01/03/reinforcement-learning-challenge-day-0/" rel="nofollow" target="_blank" title="Share on Google+">Google+</a>
+    <a href="https://twitter.com/intent/tweet?text=Part 0, Reinforcement Learning Challenge - FrozenLake Environment&url=http://localhost:4000/blog/2017/01/03/reinforcement-learning-challenge-part-0/&via=&related=" rel="nofollow" target="_blank" title="Share on Twitter">Twitter</a>
+    <a href="https://facebook.com/sharer.php?u=http://localhost:4000/blog/2017/01/03/reinforcement-learning-challenge-part-0/" rel="nofollow" target="_blank" title="Share on Facebook">Facebook</a>
+    <a href="https://plus.google.com/share?url=http://localhost:4000/blog/2017/01/03/reinforcement-learning-challenge-part-0/" rel="nofollow" target="_blank" title="Share on Google+">Google+</a>
 </div>
 
 
@@ -174,7 +172,7 @@
                   /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
                   var disqus_shortname = 'agilajah'; // required: replace example with your forum shortname
                   // var disqus_developer = 1; // Comment out when the site is live
-                  var disqus_identifier = "http://www.febiagil.com/" + "/blog/2017/01/03/reinforcement-learning-challenge-day-0/";
+                  var disqus_identifier = "http://www.febiagil.com/" + "/blog/2017/01/03/reinforcement-learning-challenge-part-0/";
 
                   /* * * DON'T EDIT BELOW THIS LINE * * */
                   (function() {
@@ -193,6 +191,8 @@
   
     <a class="prev" href="/blog/2016/12/30/steve-jobs-was-right/">&laquo; Steve Jobs Was Right</a>
   
+  
+    <a class="next" href="/blog/2017/01/05/reinforcement-learning-challenge-part-1/">Part 1, Reinforcement Learning Challenge - Multi-armed Bandits Problem &raquo;</a>
   
 </div>
 

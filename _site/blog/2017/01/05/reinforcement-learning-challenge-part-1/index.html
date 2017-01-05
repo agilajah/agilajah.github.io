@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset=utf-8>
+        <meta name=viewport content="width=device-width, initial-scale=1.0">
+        <meta name=description content="Abstract but still well-read">
+
+        <title>
+          
+            Part 1, Reinforcement Learning Challenge - Multi-armed Bandits Problem |
+          
+          Febi Agil Ifdillah
+        </title>
+
+        <script src=http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_HTML.js type=text/javascript></script>
+        <script>
+            MathJax.Hub.Config({
+              "HTML-CSS": {
+                linebreaks: {
+                    automatic: true,
+                    width: "70% container"
+                },
+                styles: {
+                    ".MathJax .math": {
+                        //"border": "1px solid #ccc",
+                        //"margin": "0.1em 0",
+                        //"padding": "0.3em",
+                        //"vertical-align": "middle"
+                    },
+                    ".MathJax_Display .math": {
+                        "border": "none",
+                        "padding": "0",
+                    }
+                },
+                scale: 100
+              }
+            });
+        </script>
+
+        <script type="text/javascript">
+          /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+          var disqus_shortname = 'agilajah'; // required: replace example with your forum shortname
+          // var disqus_developer = 1; // Comment out when the site is live
+
+          /* * * DON'T EDIT BELOW THIS LINE * * */
+          (function () {
+            var s = document.createElement('script'); s.async = true;
+            s.type = 'text/javascript';
+            s.src = 'http://' + disqus_shortname + '.disqus.com/count.js';
+            (document.getElementsByTagName('HEAD')[0] || document.getElementsByTagName('BODY')[0]).appendChild(s);
+          }());
+        </script>
+        <script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-89520017-1', 'auto');
+  ga('send', 'pageview');
+</script>
+
+        <link rel=stylesheet type=text/css href=/css/pure-min.css>
+        <link rel=stylesheet type=text/css href=/css/github.css>
+        <link rel=stylesheet type=text/css href=/css/styles.css>
+        <link rel=stylesheet type=text/css href=/css/font-awesome/css/font-awesome.min.css>
+        <link rel=alternate type=application/rss+xml title="RSS feed for eyeshalfclosed.com" href="/feed.xml">
+    </head>
+    <body>
+        <div class="container pure-g-r">
+            <div class=pure-u-1-4>
+                <div class=author-info>
+    <img src="/images/author-image.jpg" class=author-image />
+    <h1 class=author-name><a href=/>Febi Agil Ifdillah</a></h1>
+    <div class=nav>
+        <a href="https://github.com/agilajah"><i class=icon-github-alt></i></a>
+        <a href="https://twitter.com/_agilajah"><i class=icon-twitter></i></a>
+        <a href="https://linkedin.com/in/febagil"><i class=icon-linkedin></a></i>
+        <a href="http://feeds.feedburner.com/febiagil"><i class=icon-rss></i></a>
+    </div>
+    <div class=home-nav>
+        <ul>
+            <li><a href="/blog/">Journal</a></li>
+            <li><a href="/projects/">Projects</a>
+                &nbsp;|&nbsp;
+                <a href="https://github.com/agilajah">Code</a>
+            </li>
+            <li>
+                <a class=resume-link href="/cv.pdf">CV</a><br/>
+                <span class=resume-update>(Updated Dec. '26)</span>
+            </li>
+        </ul>
+    </div>
+</div>
+
+            </div>
+            <div class=pure-u-3-4>
+                <div class=right-column>
+                    <div class=post>
+    
+    <ul class=post-meta>
+    
+    <li class=publish-time><i class=icon-calendar></i>January 05, 2017</li>
+    <li class=comment-count><a href="index.html#disqus_thread" data-disqus-identifier=""></a></li>
+    
+        <li>&middot;</li>
+        <li><a href="/tags/#x-days challenge-ref">#x-days challenge</a></li>
+    
+        <li>&middot;</li>
+        <li><a href="/tags/#Bandit Problem-ref">#Bandit Problem</a></li>
+    
+        <li>&middot;</li>
+        <li><a href="/tags/#Reinforcement Learning-ref">#Reinforcement Learning</a></li>
+    
+        <li>&middot;</li>
+        <li><a href="/tags/#Machine Learning-ref">#Machine Learning</a></li>
+    
+        <li>&middot;</li>
+        <li><a href="/tags/#Part-1-ref">#Part-1</a></li>
+    
+</ul>
+
+    <h1 class=title-large>Part 1, Reinforcement Learning Challenge - Multi-armed Bandits Problem</h1>
+    <div class=content>
+        <p>Sudah sekitar 4 (empat) hari saya berkutat dengan topik yang satu ini: <strong>Reinforcement Learning</strong>. <em>Reinforcement Learning</em> (RL) merupakan paradigma learning yang sangat menarik. Melalui RL banyak pencapaian-pencapaian yang tidak pernah dicapai sebelumnya seperti <a href="https://research.googleblog.com/2016/01/alphago-mastering-ancient-game-of-go.html">mengalahkan juara dunia GO</a>, <a href="http://www.nature.com/nature/journal/v518/n7540/abs/nature14236.html">belajar memainkan permainan dari ATARI</a>, dan masih banyak lagi yang lainnya.</p>
+
+<p>Berbeda dengan tipe pembelajaran lainnya, RL lebih berfokus kepada <em>goal-directed learning</em> dan interaksi yang dilakukan dengan lingkungan. <em>Feedback</em> yang diberikan kepada <em>Agent</em> bersifat evaluatif, sedangkan pada tipe pembelajaran lain, misalnya pada <em>supervised learning</em> <em>feedback</em> yang diberikan bersifat instruksional. <em>Agent</em> RL tidak diberitahu aksi mana yang benar maupun salah melainkan diberikan <em>reward signal</em> sesuai dengan aksi yang dilakukan, yang menandakan seberapa baik aksi yang telah diambil tersebut. Karenanya dibutuhkan eksplorasi dan pembelajaran yang bersifat <em>trial-and-error</em> agar <em>Agent</em> dapat bertindak sesuai dengan yang seharusnya.</p>
+
+<p>Persoalan-persoalan RL melibatkan pembelajaran terkait apa yang harus dilakukan dan bagaimana memetakan situasi-situasi ke aksi untuk memaksimalkan <em>reward signal</em>. Karena tidak adanya aksi yang “benar”, yang dapat kita beritahu kepada <em>Agent</em> pada kondisi tertentu. Semuanya menjadi lebih menantang.</p>
+
+<p>Pada <a href="http://www.febiagil.com/blog/2017/01/03/reinforcement-learning-challenge-part-0/">bagian ke-1</a> dari jurnal <strong>xdays challenge</strong> untuk RL ini, saya telah menuliskan solusi dari salah satu <em>environment</em> yang ada di <a href="http://gym.openai.com">OpenAI Gym</a>. Kali ini saya akan coba menuliskan catatan tentang apa yang saya dapatkan dalam dua hari belakangan terkait salah satu permasalahan dasar yang cukup menarik: <em>Multi-armed Bandits Problem</em>. Permasalahan ini sangat sederhana, namun dapat menjadi latihan yang baik sebagai dasar untuk memahami aspek umpan balik evaluatif dari RL.</p>
+
+<h2 id="multi-armed-bandit-problem">Multi-armed bandit problem</h2>
+
+<p><img src="http://localhost:4000/images/2017/january/multiarmedbandit.jpg" alt="Slot machines in Las Vegas. Source : http://en.wikipedia.org" /></p>
+
+<p>Andaikan kita dihadapkan pada sebuah permasalahan di mana kita memiliki beberapa pilihan, atau aksi yang berbeda. Setelah mengambil aksi atau pilihan, kita akan mendapatkan <em>reward</em> dari distribusi probabilitas yang stasioner. <em>Reward</em> tersebut bergantung kepada aksi yang kita ambil. Tujuan kita adalah untuk memaksimalkan ekspektasi jumlah <em>reward</em> dalam jangka waktu tertentu, misalkan 2500 kali pemilihan, atau <em>time-step</em>.</p>
+
+<p>Persoalan tersebut merupakan salah satu bentuk <em>k-armed bandit problem</em>, dianalogikan dari <em>slot machine</em> (<em>one-armed bandit</em>). Namun, bukannya sebuah tuas, <em>k-armed bandit problem</em> melibatkan <em>k</em> buah tuas (atau k-buah <em>slot machine</em>). Setiap aksi atau pilihan diibaratkan menarik tuas dari <em>slot machine</em> tersebut, dan <em>reward</em> yang didapatkan adalah uang yang kita dapatkan jika <em>jackpot</em> terjadi. Setelah berulang kali memilih tuas, yang perlu kita lakukan adalah memaksimalkan uang yang kita dapatkan dengan berkonsentrasi pada tuas yang membuat kita menyentuh <em>jackpot</em> lebih sering. Sehingga kita dapat memenangkan lebih banyak uang (<em>reward</em>).</p>
+
+<p>Sebelum membahas lebih lanjut, saya ingin menuliskan beberapa catatan terlebih dahulu. Ada beberapa hal yang sering muncul pada persoalan RL (bahkan menurut saya, menjadi fitur dari RL itu sendiri) adalah :</p>
+
+<ol>
+  <li>
+    <p>Aksi yang berbeda akan memberikan <em>reward</em> yang berbeda. Andaikan kita berada pada sebuah <em>dungeon</em>, apabila kita berbelok ke kanan mungkin kita akan jatuh ke jurang. Apabila kita belok ke kiri, mungkin kita akan menuju ke pintu keluar.</p>
+  </li>
+  <li>
+    <p><em>Reward</em> tertunda (tidak didapatkan saat itu juga). Saat kita berbelok ke kiri, pada contoh di atas, mungkin kita tidak akan langsung sampai di pintu keluar. Namun dengan mengambil aksi tersebut, maka kita akan menuju lebih dekat ke pintu keluar, dan pada akhirnya dapat keluar dari <em>dungeon</em> tersebut.</p>
+  </li>
+  <li>
+    <p><em>Reward</em> dari suatu aksi bergantung kepada <em>state</em> pada lingkungan. Artinya, aksi yang kita ambil pada suatu <em>state</em> di lingkungan akan memberikan <em>reward</em> yang berbeda apabila kita melakukan aksi yang sama di <em>state</em> yang berbeda. Masih pada contoh <em>dungeon</em>, berbelok ke kiri pada kasus di atas menjadi hal yang baik dan memberikan <em>reward</em> yang baik (pada akhirnya), namun saat kita dihadapkan pada pilihan yang sama (kanan atau kiri) di persimpangan yang berbeda, belum tentu memilih untuk berbelok ke kiri akan memberikan <em>reward</em> yang baik(atau lebih besar).</p>
+  </li>
+</ol>
+
+<p>Pada <em>Multi-armed bandits problem</em> (atau <em>k-armed bandit</em>), aspek nomor 2 (dua) dan 3 (tiga) dapat kita hiraukan. Sehingga kita dapat berfokus kepada aksi yang terbaik yang dapat memaksimalkan <em>reward</em>.</p>
+
+<h2 id="exploitation-vs-exploration">Exploitation vs Exploration</h2>
+
+<p>Setiap aksi pada <em>k-armed bandit problem</em> memiliki ekspektasi atau <em>mean reward</em>. Persoalan ini akan menjadi sangat mudah saat Anda tahu semua nilai yang dihasilkan jika kita mengetahui hasil dari setiap k: kita tinggal memilih tuas atau aksi mana yang memberikan <em>reward</em> tertinggi untuk setiap waktu. Untuk itu, kita asumsikan bahwa Anda tidak tahu dengan pasti nilai dari suatu aksi. Hal tersebut mendorong kita untuk mengestimasi nilai dari aksi tersebut.</p>
+
+<p>Jika kita memiliki nilai hasil estimasi terhadap suatu aksi, di <em>time-step</em> manapun, dipastikan akan ada suatu aksi yang memiliki nilai estimasi tertinggi. Saat Anda selalu memilih aksi tersebut, artinya Anda mengeksploitasi (<em>exploiting</em>) pengetahuan yang Anda miliki saat itu tentang nilai dari suatu aksi. Oleh karenanya, hal tersebut seringkali disebut <em>greedy actions</em>.</p>
+
+<p>Saat Anda mencoba opsi lain (<em>nongreedy actions</em>), maka kita sebut Anda bereksplorasi (<em>exploring</em>). Exploitasi mungkin akan menjadi pilihan logis untuk memaksimalkan <em>reward</em> pada langkah tertentu. Namun, perlu diperhatikan bahwa Anda mungkin akan mendapatkan <em>reward</em> yang lebih besar dalam jangka panjang jika melakukan eksplorasi.</p>
+
+<p>Sebut saja terdapat suatu aksi yang Anda pastikan memaksimalkan <em>reward</em> pada suatu langkah. Namun, terdapat pilihan aksi lain yang diestimasi sama baiknya, dengan ketidakpastian substansial: salah satu darinya mungkin memiliki <em>reward</em> yang lebih baik dari aksi yang Anda yakini akan menghasilkan <em>reward</em> yang maksimal pada langkah tersebut. Jika <em>time-step</em> yang kita miliki masih bersisa banyak, memilih sesuatu yang tidak pasti yang (diestimasikan) memiliki <em>reward</em> lebih tinggi menjadi pilihan yang logis. Karena Andaikan pada akhirnya kita menemukan aksi yang dimaksud tersebut, kita dapat mengeksploitasinya di waktu selanjutnya. Artinya, <em>reward</em> yang rendah akan kita dapatkan saat eksplorasi, tapi dalam jangka panjang hal tersebut memberikan <em>reward</em> yang tinggi.</p>
+
+<p>Namun, yang menjadi persoalan adalah, kita tidak dapat melakukan eksplorasi dan eksploitasi secara bersamaan (dalam satu aksi). Hal ini sering disebut konflik antara eksplorasi dan eksploitasi. Lalu, bagaimana kita menentukan apakah kita harus melakukan eksplorasi atau eksploitasi pada langkah tersebut?</p>
+
+<p>Pada kasus tertentu, penentuan apakah harus melakukan eksplorasi atau eksploitasi pada suatu langkah bergantung kepada estimasi nilai suatu aksi, ketidakpastian, dan jumlah langkah yang masih tersisa. Beberapa metode sederhana tersedia untuk melakukan <em>balancing</em> antara eksplorasi dan eksploitasi, seperti <script type="math/tex">\epsilon</script>-<em>greedy</em> yang memaksa untuk memilih <em>non-greedy action</em> secara random. Sebagian besar aksi dipilih untuk eksploitasi, namun  sesekali dilakukan eksplorasi. Katakanlah dengan kemungkinan <script type="math/tex">\epsilon</script>. Namun metode ini bergantung kepada <em>task</em> apa yang coba diselesaikan. Apabila variansi dari <em>reward</em> kecil, misalnya 0, kemungkinan metode <em>greedy</em> biasa dapat lebih baik karena tanpa melakukan eksplorasi kita sudah dapat mengetahui nilai sesungguhnya dari suatu aksi.</p>
+
+<p>Kita juga dapat menggunakan metode lain seperti <em>Upper-Confidence-Bound</em> yang memilih <em>non-greedy action</em> secara deterministik dengan cara lebih memilih aksi (<em>non-greedy</em>) yang berpeluang lebih optimal.</p>
+
+<p>Kedua metode tersebut berusaha mengestimasi nilai dari suatu aksi untuk mencoba menyeimbangkan antara eksplorasi dan eksploitasi. Namun kita masih memiliki alternatif lain seperti <em>Gradient Bandit Algorithm</em> yang mencoba ‘melabeli’ setiap aksi dengan tingkat preferensi pemilihan tertentu menggunakan distribusi <em>soft-max</em>. Aksi yang memiliki preferensi tertinggi, akan lebih sering dipilih.</p>
+
+<p>Tentu masih lebih banyak metode yang lebih canggih selain dari yang telah disebutkan diatas. Namun banyaknya asumsi yang diberikan dan juga kompleksitas yang tinggi membuat metode-metode tersebut sangat tidak praktis untuk dipakai pada <em>RL problem</em>.</p>
+
+<h2 id="epsilon-greedy">Epsilon-Greedy</h2>
+
+<p>Well, dari sekian banyak metode dan pendekatan yang ada untuk menyeimbangkan antara eksplorasi dan ekploitasi seperti yang telah disebutkan di atas saya hanya akan mengimplementasikan salah satunya saja: <script type="math/tex">\epsilon</script>-<em>greedy method</em>. Implementasi solusi tersebut akan menggunakan python.</p>
+
+<p><img src="http://localhost:4000/images/2017/january/epsilongreedy.png" alt="Epsilon-greedy method. Source : http://blog.thedataincubator.com/2016/07/multi-armed-bandits-2/" /></p>
+
+<p>Hasil dari implementasi algoritma tersebut dapat Anda akses pada tautan berikut ini: <a href="https://github.com/agilajah/xdays-reinforcementLearning/blob/master/part1-MultiArmedBandits/part1-multiArmedBandits-epsilonGreedy.ipynb">click here</a></p>
+
+<h2 id="whats-next">What’s next?</h2>
+
+<p>Catatan ini dibuat sesederhana mungkin. <em>Multi-armed bandits problem</em> yang disajikan pun bersifat <em>nonassociative</em>, di mana kita sama sekali tidak mengasosiasikan situasi dengan aksi tertentu. Banyak aspek teoritis dan hal-hal lain yang dihilangkan dari catatan ini. Selain itu, <em>task</em> yang dipresentasikan bersifat stasioner. Jika Anda tertarik untuk mempelajari lebih dalam tentang metode-metode yang disebutkan pada catatan ini, atau bahkan mempelajari persoalan bandit ini, Anda dapat mengunjungi tautan-tautan berikut:</p>
+
+<ol>
+  <li><a href="https://blogs.princeton.edu/imabandit/2016/05/11/bandit-theory-part-i/">Bandit Theory 1</a></li>
+  <li><a href="https://blogs.princeton.edu/imabandit/2016/05/13/bandit-theory-part-ii/">Bandit Theory 2</a></li>
+  <li><a href="https://medium.com/@awjuliani/super-simple-reinforcement-learning-tutorial-part-1-fd544fab149#.ez5onx8jh">Implementasi menggunakan TensorFlow</a></li>
+  <li><a href="https://github.com/bgalbraith/bandits/blob/master/notebooks/Stochastic%20Bandits%20-%20Value%20Estimation.ipynb">Implementasi metode-metode lain</a></li>
+  <li><a href="http://blog.getstream.io/introduction-contextual-bandits/">Contextual Bandits</a></li>
+</ol>
+
+
+    </div>
+    <div class="share-page">
+    Share this on &rarr;
+    <a href="https://twitter.com/intent/tweet?text=Part 1, Reinforcement Learning Challenge - Multi-armed Bandits Problem&url=http://localhost:4000/blog/2017/01/05/reinforcement-learning-challenge-part-1/&via=&related=" rel="nofollow" target="_blank" title="Share on Twitter">Twitter</a>
+    <a href="https://facebook.com/sharer.php?u=http://localhost:4000/blog/2017/01/05/reinforcement-learning-challenge-part-1/" rel="nofollow" target="_blank" title="Share on Facebook">Facebook</a>
+    <a href="https://plus.google.com/share?url=http://localhost:4000/blog/2017/01/05/reinforcement-learning-challenge-part-1/" rel="nofollow" target="_blank" title="Share on Google+">Google+</a>
+</div>
+
+
+
+    
+            <div id="disqus_thread"></div>
+              <script type="text/javascript">
+                  /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+                  var disqus_shortname = 'agilajah'; // required: replace example with your forum shortname
+                  // var disqus_developer = 1; // Comment out when the site is live
+                  var disqus_identifier = "http://www.febiagil.com/" + "/blog/2017/01/05/reinforcement-learning-challenge-part-1/";
+
+                  /* * * DON'T EDIT BELOW THIS LINE * * */
+                  (function() {
+                      var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+                      dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+                      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+                  })();
+              </script>
+        <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+        <a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+    
+
+</div>
+
+<div class="PageNavigation">
+  
+    <a class="prev" href="/blog/2017/01/03/reinforcement-learning-challenge-part-0/">&laquo; Part 0, Reinforcement Learning Challenge - FrozenLake Environment</a>
+  
+  
+</div>
+
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

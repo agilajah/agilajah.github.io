@@ -8,10 +8,88 @@
 		<atom:link href="http://localhost:4000/feed.xml" rel="self" type="application/rss+xml" />
 		
 			<item>
-				<title>Day 0, Reinforcement Learning Challenge - FrozenLake Environment</title>
-				<description>&lt;h2 id=&quot;introduction&quot;&gt;&lt;em&gt;Introduction&lt;/em&gt;&lt;/h2&gt;
+				<title>Part 1, Reinforcement Learning Challenge - Multi-armed Bandits Problem</title>
+				<description>&lt;p&gt;Sudah sekitar 4 (empat) hari saya berkutat dengan topik yang satu ini: &lt;strong&gt;Reinforcement Learning&lt;/strong&gt;. &lt;em&gt;Reinforcement Learning&lt;/em&gt; (RL) merupakan paradigma learning yang sangat menarik. Melalui RL banyak pencapaian-pencapaian yang tidak pernah dicapai sebelumnya seperti &lt;a href=&quot;https://research.googleblog.com/2016/01/alphago-mastering-ancient-game-of-go.html&quot;&gt;mengalahkan juara dunia GO&lt;/a&gt;, &lt;a href=&quot;http://www.nature.com/nature/journal/v518/n7540/abs/nature14236.html&quot;&gt;belajar memainkan permainan dari ATARI&lt;/a&gt;, dan masih banyak lagi yang lainnya.&lt;/p&gt;
 
-&lt;p&gt;Di tahun yang baru ini saya memiliki beberapa program yang, harapannya, dapat menunjang proses belajar saya. Salah satunya adalah &lt;strong&gt;x days challenge&lt;/strong&gt;. Di mana saya akan menantang diri saya sendiri untuk mempelajari suatu hal dalam x hari.&lt;/p&gt;
+&lt;p&gt;Berbeda dengan tipe pembelajaran lainnya, RL lebih berfokus kepada &lt;em&gt;goal-directed learning&lt;/em&gt; dan interaksi yang dilakukan dengan lingkungan. &lt;em&gt;Feedback&lt;/em&gt; yang diberikan kepada &lt;em&gt;Agent&lt;/em&gt; bersifat evaluatif, sedangkan pada tipe pembelajaran lain, misalnya pada &lt;em&gt;supervised learning&lt;/em&gt; &lt;em&gt;feedback&lt;/em&gt; yang diberikan bersifat instruksional. &lt;em&gt;Agent&lt;/em&gt; RL tidak diberitahu aksi mana yang benar maupun salah melainkan diberikan &lt;em&gt;reward signal&lt;/em&gt; sesuai dengan aksi yang dilakukan, yang menandakan seberapa baik aksi yang telah diambil tersebut. Karenanya dibutuhkan eksplorasi dan pembelajaran yang bersifat &lt;em&gt;trial-and-error&lt;/em&gt; agar &lt;em&gt;Agent&lt;/em&gt; dapat bertindak sesuai dengan yang seharusnya.&lt;/p&gt;
+
+&lt;p&gt;Persoalan-persoalan RL melibatkan pembelajaran terkait apa yang harus dilakukan dan bagaimana memetakan situasi-situasi ke aksi untuk memaksimalkan &lt;em&gt;reward signal&lt;/em&gt;. Karena tidak adanya aksi yang “benar”, yang dapat kita beritahu kepada &lt;em&gt;Agent&lt;/em&gt; pada kondisi tertentu. Semuanya menjadi lebih menantang.&lt;/p&gt;
+
+&lt;p&gt;Pada &lt;a href=&quot;http://www.febiagil.com/blog/2017/01/03/reinforcement-learning-challenge-part-0/&quot;&gt;bagian ke-1&lt;/a&gt; dari jurnal &lt;strong&gt;xdays challenge&lt;/strong&gt; untuk RL ini, saya telah menuliskan solusi dari salah satu &lt;em&gt;environment&lt;/em&gt; yang ada di &lt;a href=&quot;http://gym.openai.com&quot;&gt;OpenAI Gym&lt;/a&gt;. Kali ini saya akan coba menuliskan catatan tentang apa yang saya dapatkan dalam dua hari belakangan terkait salah satu permasalahan dasar yang cukup menarik: &lt;em&gt;Multi-armed Bandits Problem&lt;/em&gt;. Permasalahan ini sangat sederhana, namun dapat menjadi latihan yang baik sebagai dasar untuk memahami aspek umpan balik evaluatif dari RL.&lt;/p&gt;
+
+&lt;h2 id=&quot;multi-armed-bandit-problem&quot;&gt;Multi-armed bandit problem&lt;/h2&gt;
+
+&lt;p&gt;&lt;img src=&quot;http://localhost:4000/images/2017/january/multiarmedbandit.jpg&quot; alt=&quot;Slot machines in Las Vegas. Source : http://en.wikipedia.org&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Andaikan kita dihadapkan pada sebuah permasalahan di mana kita memiliki beberapa pilihan, atau aksi yang berbeda. Setelah mengambil aksi atau pilihan, kita akan mendapatkan &lt;em&gt;reward&lt;/em&gt; dari distribusi probabilitas yang stasioner. &lt;em&gt;Reward&lt;/em&gt; tersebut bergantung kepada aksi yang kita ambil. Tujuan kita adalah untuk memaksimalkan ekspektasi jumlah &lt;em&gt;reward&lt;/em&gt; dalam jangka waktu tertentu, misalkan 2500 kali pemilihan, atau &lt;em&gt;time-step&lt;/em&gt;.&lt;/p&gt;
+
+&lt;p&gt;Persoalan tersebut merupakan salah satu bentuk &lt;em&gt;k-armed bandit problem&lt;/em&gt;, dianalogikan dari &lt;em&gt;slot machine&lt;/em&gt; (&lt;em&gt;one-armed bandit&lt;/em&gt;). Namun, bukannya sebuah tuas, &lt;em&gt;k-armed bandit problem&lt;/em&gt; melibatkan &lt;em&gt;k&lt;/em&gt; buah tuas (atau k-buah &lt;em&gt;slot machine&lt;/em&gt;). Setiap aksi atau pilihan diibaratkan menarik tuas dari &lt;em&gt;slot machine&lt;/em&gt; tersebut, dan &lt;em&gt;reward&lt;/em&gt; yang didapatkan adalah uang yang kita dapatkan jika &lt;em&gt;jackpot&lt;/em&gt; terjadi. Setelah berulang kali memilih tuas, yang perlu kita lakukan adalah memaksimalkan uang yang kita dapatkan dengan berkonsentrasi pada tuas yang membuat kita menyentuh &lt;em&gt;jackpot&lt;/em&gt; lebih sering. Sehingga kita dapat memenangkan lebih banyak uang (&lt;em&gt;reward&lt;/em&gt;).&lt;/p&gt;
+
+&lt;p&gt;Sebelum membahas lebih lanjut, saya ingin menuliskan beberapa catatan terlebih dahulu. Ada beberapa hal yang sering muncul pada persoalan RL (bahkan menurut saya, menjadi fitur dari RL itu sendiri) adalah :&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;
+    &lt;p&gt;Aksi yang berbeda akan memberikan &lt;em&gt;reward&lt;/em&gt; yang berbeda. Andaikan kita berada pada sebuah &lt;em&gt;dungeon&lt;/em&gt;, apabila kita berbelok ke kanan mungkin kita akan jatuh ke jurang. Apabila kita belok ke kiri, mungkin kita akan menuju ke pintu keluar.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;em&gt;Reward&lt;/em&gt; tertunda (tidak didapatkan saat itu juga). Saat kita berbelok ke kiri, pada contoh di atas, mungkin kita tidak akan langsung sampai di pintu keluar. Namun dengan mengambil aksi tersebut, maka kita akan menuju lebih dekat ke pintu keluar, dan pada akhirnya dapat keluar dari &lt;em&gt;dungeon&lt;/em&gt; tersebut.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;em&gt;Reward&lt;/em&gt; dari suatu aksi bergantung kepada &lt;em&gt;state&lt;/em&gt; pada lingkungan. Artinya, aksi yang kita ambil pada suatu &lt;em&gt;state&lt;/em&gt; di lingkungan akan memberikan &lt;em&gt;reward&lt;/em&gt; yang berbeda apabila kita melakukan aksi yang sama di &lt;em&gt;state&lt;/em&gt; yang berbeda. Masih pada contoh &lt;em&gt;dungeon&lt;/em&gt;, berbelok ke kiri pada kasus di atas menjadi hal yang baik dan memberikan &lt;em&gt;reward&lt;/em&gt; yang baik (pada akhirnya), namun saat kita dihadapkan pada pilihan yang sama (kanan atau kiri) di persimpangan yang berbeda, belum tentu memilih untuk berbelok ke kiri akan memberikan &lt;em&gt;reward&lt;/em&gt; yang baik(atau lebih besar).&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;Pada &lt;em&gt;Multi-armed bandits problem&lt;/em&gt; (atau &lt;em&gt;k-armed bandit&lt;/em&gt;), aspek nomor 2 (dua) dan 3 (tiga) dapat kita hiraukan. Sehingga kita dapat berfokus kepada aksi yang terbaik yang dapat memaksimalkan &lt;em&gt;reward&lt;/em&gt;.&lt;/p&gt;
+
+&lt;h2 id=&quot;exploitation-vs-exploration&quot;&gt;Exploitation vs Exploration&lt;/h2&gt;
+
+&lt;p&gt;Setiap aksi pada &lt;em&gt;k-armed bandit problem&lt;/em&gt; memiliki ekspektasi atau &lt;em&gt;mean reward&lt;/em&gt;. Persoalan ini akan menjadi sangat mudah saat Anda tahu semua nilai yang dihasilkan jika kita mengetahui hasil dari setiap k: kita tinggal memilih tuas atau aksi mana yang memberikan &lt;em&gt;reward&lt;/em&gt; tertinggi untuk setiap waktu. Untuk itu, kita asumsikan bahwa Anda tidak tahu dengan pasti nilai dari suatu aksi. Hal tersebut mendorong kita untuk mengestimasi nilai dari aksi tersebut.&lt;/p&gt;
+
+&lt;p&gt;Jika kita memiliki nilai hasil estimasi terhadap suatu aksi, di &lt;em&gt;time-step&lt;/em&gt; manapun, dipastikan akan ada suatu aksi yang memiliki nilai estimasi tertinggi. Saat Anda selalu memilih aksi tersebut, artinya Anda mengeksploitasi (&lt;em&gt;exploiting&lt;/em&gt;) pengetahuan yang Anda miliki saat itu tentang nilai dari suatu aksi. Oleh karenanya, hal tersebut seringkali disebut &lt;em&gt;greedy actions&lt;/em&gt;.&lt;/p&gt;
+
+&lt;p&gt;Saat Anda mencoba opsi lain (&lt;em&gt;nongreedy actions&lt;/em&gt;), maka kita sebut Anda bereksplorasi (&lt;em&gt;exploring&lt;/em&gt;). Exploitasi mungkin akan menjadi pilihan logis untuk memaksimalkan &lt;em&gt;reward&lt;/em&gt; pada langkah tertentu. Namun, perlu diperhatikan bahwa Anda mungkin akan mendapatkan &lt;em&gt;reward&lt;/em&gt; yang lebih besar dalam jangka panjang jika melakukan eksplorasi.&lt;/p&gt;
+
+&lt;p&gt;Sebut saja terdapat suatu aksi yang Anda pastikan memaksimalkan &lt;em&gt;reward&lt;/em&gt; pada suatu langkah. Namun, terdapat pilihan aksi lain yang diestimasi sama baiknya, dengan ketidakpastian substansial: salah satu darinya mungkin memiliki &lt;em&gt;reward&lt;/em&gt; yang lebih baik dari aksi yang Anda yakini akan menghasilkan &lt;em&gt;reward&lt;/em&gt; yang maksimal pada langkah tersebut. Jika &lt;em&gt;time-step&lt;/em&gt; yang kita miliki masih bersisa banyak, memilih sesuatu yang tidak pasti yang (diestimasikan) memiliki &lt;em&gt;reward&lt;/em&gt; lebih tinggi menjadi pilihan yang logis. Karena Andaikan pada akhirnya kita menemukan aksi yang dimaksud tersebut, kita dapat mengeksploitasinya di waktu selanjutnya. Artinya, &lt;em&gt;reward&lt;/em&gt; yang rendah akan kita dapatkan saat eksplorasi, tapi dalam jangka panjang hal tersebut memberikan &lt;em&gt;reward&lt;/em&gt; yang tinggi.&lt;/p&gt;
+
+&lt;p&gt;Namun, yang menjadi persoalan adalah, kita tidak dapat melakukan eksplorasi dan eksploitasi secara bersamaan (dalam satu aksi). Hal ini sering disebut konflik antara eksplorasi dan eksploitasi. Lalu, bagaimana kita menentukan apakah kita harus melakukan eksplorasi atau eksploitasi pada langkah tersebut?&lt;/p&gt;
+
+&lt;p&gt;Pada kasus tertentu, penentuan apakah harus melakukan eksplorasi atau eksploitasi pada suatu langkah bergantung kepada estimasi nilai suatu aksi, ketidakpastian, dan jumlah langkah yang masih tersisa. Beberapa metode sederhana tersedia untuk melakukan &lt;em&gt;balancing&lt;/em&gt; antara eksplorasi dan eksploitasi, seperti &lt;script type=&quot;math/tex&quot;&gt;\epsilon&lt;/script&gt;-&lt;em&gt;greedy&lt;/em&gt; yang memaksa untuk memilih &lt;em&gt;non-greedy action&lt;/em&gt; secara random. Sebagian besar aksi dipilih untuk eksploitasi, namun  sesekali dilakukan eksplorasi. Katakanlah dengan kemungkinan &lt;script type=&quot;math/tex&quot;&gt;\epsilon&lt;/script&gt;. Namun metode ini bergantung kepada &lt;em&gt;task&lt;/em&gt; apa yang coba diselesaikan. Apabila variansi dari &lt;em&gt;reward&lt;/em&gt; kecil, misalnya 0, kemungkinan metode &lt;em&gt;greedy&lt;/em&gt; biasa dapat lebih baik karena tanpa melakukan eksplorasi kita sudah dapat mengetahui nilai sesungguhnya dari suatu aksi.&lt;/p&gt;
+
+&lt;p&gt;Kita juga dapat menggunakan metode lain seperti &lt;em&gt;Upper-Confidence-Bound&lt;/em&gt; yang memilih &lt;em&gt;non-greedy action&lt;/em&gt; secara deterministik dengan cara lebih memilih aksi (&lt;em&gt;non-greedy&lt;/em&gt;) yang berpeluang lebih optimal.&lt;/p&gt;
+
+&lt;p&gt;Kedua metode tersebut berusaha mengestimasi nilai dari suatu aksi untuk mencoba menyeimbangkan antara eksplorasi dan eksploitasi. Namun kita masih memiliki alternatif lain seperti &lt;em&gt;Gradient Bandit Algorithm&lt;/em&gt; yang mencoba ‘melabeli’ setiap aksi dengan tingkat preferensi pemilihan tertentu menggunakan distribusi &lt;em&gt;soft-max&lt;/em&gt;. Aksi yang memiliki preferensi tertinggi, akan lebih sering dipilih.&lt;/p&gt;
+
+&lt;p&gt;Tentu masih lebih banyak metode yang lebih canggih selain dari yang telah disebutkan diatas. Namun banyaknya asumsi yang diberikan dan juga kompleksitas yang tinggi membuat metode-metode tersebut sangat tidak praktis untuk dipakai pada &lt;em&gt;RL problem&lt;/em&gt;.&lt;/p&gt;
+
+&lt;h2 id=&quot;epsilon-greedy&quot;&gt;Epsilon-Greedy&lt;/h2&gt;
+
+&lt;p&gt;Well, dari sekian banyak metode dan pendekatan yang ada untuk menyeimbangkan antara eksplorasi dan ekploitasi seperti yang telah disebutkan di atas saya hanya akan mengimplementasikan salah satunya saja: &lt;script type=&quot;math/tex&quot;&gt;\epsilon&lt;/script&gt;-&lt;em&gt;greedy method&lt;/em&gt;. Implementasi solusi tersebut akan menggunakan python.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;http://localhost:4000/images/2017/january/epsilongreedy.png&quot; alt=&quot;Epsilon-greedy method. Source : http://blog.thedataincubator.com/2016/07/multi-armed-bandits-2/&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Hasil dari implementasi algoritma tersebut dapat Anda akses pada tautan berikut ini: &lt;a href=&quot;https://github.com/agilajah/xdays-reinforcementLearning/blob/master/part1-MultiArmedBandits/part1-multiArmedBandits-epsilonGreedy.ipynb&quot;&gt;click here&lt;/a&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;whats-next&quot;&gt;What’s next?&lt;/h2&gt;
+
+&lt;p&gt;Catatan ini dibuat sesederhana mungkin. &lt;em&gt;Multi-armed bandits problem&lt;/em&gt; yang disajikan pun bersifat &lt;em&gt;nonassociative&lt;/em&gt;, di mana kita sama sekali tidak mengasosiasikan situasi dengan aksi tertentu. Banyak aspek teoritis dan hal-hal lain yang dihilangkan dari catatan ini. Selain itu, &lt;em&gt;task&lt;/em&gt; yang dipresentasikan bersifat stasioner. Jika Anda tertarik untuk mempelajari lebih dalam tentang metode-metode yang disebutkan pada catatan ini, atau bahkan mempelajari persoalan bandit ini, Anda dapat mengunjungi tautan-tautan berikut:&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;&lt;a href=&quot;https://blogs.princeton.edu/imabandit/2016/05/11/bandit-theory-part-i/&quot;&gt;Bandit Theory 1&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://blogs.princeton.edu/imabandit/2016/05/13/bandit-theory-part-ii/&quot;&gt;Bandit Theory 2&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://medium.com/@awjuliani/super-simple-reinforcement-learning-tutorial-part-1-fd544fab149#.ez5onx8jh&quot;&gt;Implementasi menggunakan TensorFlow&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/bgalbraith/bandits/blob/master/notebooks/Stochastic%20Bandits%20-%20Value%20Estimation.ipynb&quot;&gt;Implementasi metode-metode lain&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://blog.getstream.io/introduction-contextual-bandits/&quot;&gt;Contextual Bandits&lt;/a&gt;&lt;/li&gt;
+&lt;/ol&gt;
+
+</description>
+				<pubDate>Thu, 05 Jan 2017 00:00:00 -0500</pubDate>
+				<link>http://localhost:4000/blog/2017/01/05/reinforcement-learning-challenge-part-1/</link>
+				<guid isPermaLink="true">http://localhost:4000/blog/2017/01/05/reinforcement-learning-challenge-part-1/</guid>
+			</item>
+		
+			<item>
+				<title>Part 0, Reinforcement Learning Challenge - FrozenLake Environment</title>
+				<description>&lt;p&gt;Di tahun yang baru ini saya memiliki beberapa program yang, harapannya, dapat menunjang proses belajar saya. Salah satunya adalah &lt;strong&gt;x days challenge&lt;/strong&gt;. Di mana saya akan menantang diri saya sendiri untuk mempelajari suatu hal dalam x hari.&lt;/p&gt;
 
 &lt;p&gt;Saya tidak menspesifikasikan nilai x karena saya rasa setiap topik memiliki tingkat kesulitan tersendiri dan unik. Jika saya paksakan untuk mempelajari hal-hal (dasar) terkait topik tersebut dalam, misalnya 7 hari, 2 pekan, dan sebagainya. Saya merasa hal tersebut akan membatasi eksplorasi saya di topik tersebut. Namun, hal tersebut juga dapat membuat proses belajar saya menjadi lebih lama karena kecenderungan untuk terus mempelajari hal lain (&lt;em&gt;which is good&lt;/em&gt;), tapi akan berdampak kurang baik terhadap program ini. Karena waktu yang kita miliki terbatas, dan banyak topik yang menarik yang dapat dipelajari.&lt;/p&gt;
 
@@ -19,38 +97,38 @@
 
 &lt;p&gt;Untuk challenge pertama yang akan saya jalani, saya memilih topik &lt;em&gt;reinforcement learning&lt;/em&gt;. Kenapa? Karena saat ini saya sedang ‘kasmaran’ dengan &lt;em&gt;Machine Learning&lt;/em&gt;, dan &lt;em&gt;reinforcement learning&lt;/em&gt; (RL) merupakan ‘aliran’ &lt;em&gt;Machine Learning&lt;/em&gt; yang paling memikat hati saya disebabkan sifatnya yang unik dibandingkan paradigma lainnya  (&lt;em&gt;supervised&lt;/em&gt;, &lt;em&gt;unsupervised learning&lt;/em&gt;).&lt;/p&gt;
 
-&lt;p&gt;Pada hari ke-0 ini (saya memulai hari dari 0), saya akan mencoba mengimplementasikan sebuah solusi dari persoalan yang diambil dari &lt;a href=&quot;http://gym.openai.com&quot;&gt;OpenAI Gym&lt;/a&gt; menggunakan bahasa python. Beberapa catatan untuk mempermudah kita dalam memahami persoalan tersebut sudah saya tulis di sini, berikut dengan kode dari solusinya jika Anda ingin langsung melihat solusi: &lt;a href=&quot;https://github.com/agilajah/xdays-reinforcementLearning/tree/master/day0-FrozenLake&quot;&gt;click here&lt;/a&gt;. Atau jika Anda ingin membaca lebih lanjut tentang persoalan dan bagaimana pendekatan yang digunakan untuk mencari solusi dari persoalan tersebut, silahkan untuk dibaca lebih lanjut.&lt;/p&gt;
+&lt;p&gt;Pada bagian ke-0 ini (saya akan memulai dari 0), saya akan mencoba mengimplementasikan sebuah solusi dari persoalan yang diambil dari &lt;a href=&quot;http://gym.openai.com&quot;&gt;OpenAI Gym&lt;/a&gt; menggunakan bahasa python. Beberapa catatan untuk mempermudah kita dalam memahami persoalan tersebut sudah saya tulis di sini, berikut dengan kode dari solusinya jika Anda ingin langsung melihat solusi: &lt;a href=&quot;https://github.com/agilajah/xdays-reinforcementLearning/tree/master/day0-FrozenLake&quot;&gt;click here&lt;/a&gt;. Atau jika Anda ingin membaca lebih lanjut tentang persoalan dan bagaimana pendekatan yang digunakan untuk mencari solusi dari persoalan tersebut, silahkan untuk dibaca lebih lanjut.&lt;/p&gt;
 
 &lt;h2 id=&quot;frozenlake-environment&quot;&gt;&lt;em&gt;FrozenLake Environment&lt;/em&gt;&lt;/h2&gt;
 
 &lt;p&gt;&lt;img src=&quot;http://localhost:4000/images/2017/january/frozenlake.png&quot; alt=&quot;FrozenLake Environment. Source : gym.openai.com&quot; /&gt;&lt;/p&gt;
 
-&lt;p&gt;Lingkungan FrozenLake (FrozenLake &lt;em&gt;environment&lt;/em&gt;) merupakan salah satu &lt;em&gt;environment&lt;/em&gt; yang tersedia di &lt;a href=&quot;http://gym.openai.com&quot;&gt;OpenAI Gym&lt;/a&gt;. Terdiri dari &lt;em&gt;grid&lt;/em&gt; 4x4. Setiap block &lt;em&gt;grid&lt;/em&gt; merupakan salah satu dari: &lt;em&gt;start block&lt;/em&gt;, &lt;em&gt;*goal&lt;/em&gt; block&lt;em&gt;, *safe frozen block&lt;/em&gt;, dan &lt;em&gt;dangerous hole&lt;/em&gt;. Sasaran kita adalah untuk membuat &lt;em&gt;agent&lt;/em&gt; kita dapat bergerak dari &lt;em&gt;start block&lt;/em&gt; ke &lt;em&gt;*goal&lt;/em&gt; block* tanpa terjatuh ke lubang manapun. Namun, ada angin yang sesekali berhembus yang akan membuat &lt;em&gt;agent&lt;/em&gt; tertiup ke tempat yang tidak diinginkan.&lt;/p&gt;
+&lt;p&gt;Lingkungan FrozenLake (FrozenLake &lt;em&gt;environment&lt;/em&gt;) merupakan salah satu &lt;em&gt;environment&lt;/em&gt; yang tersedia di &lt;a href=&quot;http://gym.openai.com&quot;&gt;OpenAI Gym&lt;/a&gt;. Terdiri dari &lt;em&gt;grid&lt;/em&gt; 4x4. Setiap block &lt;em&gt;grid&lt;/em&gt; merupakan salah satu dari: &lt;em&gt;start block&lt;/em&gt;, &lt;em&gt;goal block&lt;/em&gt;, &lt;em&gt;safe frozen block&lt;/em&gt;, dan &lt;em&gt;dangerous hole&lt;/em&gt;. Sasaran kita adalah untuk membuat &lt;em&gt;agent&lt;/em&gt; kita dapat bergerak dari &lt;em&gt;start block&lt;/em&gt; ke &lt;em&gt;goal block&lt;/em&gt; tanpa terjatuh ke lubang manapun. Namun, ada angin yang sesekali berhembus yang akan membuat &lt;em&gt;agent&lt;/em&gt; tertiup ke tempat yang tidak diinginkan.&lt;/p&gt;
 
-&lt;p&gt;Bisa jadi, kita terjatuh ke lubang! Karenanya, kinerja yang sempurna dari &lt;em&gt;agent&lt;/em&gt; di setiap waktu akan menjadi hal yang mustahil. Tetapi belajar untuk menghidari lubang dan mencapai &lt;em&gt;goal&lt;/em&gt; masih sangat memungkinkan. &lt;em&gt;reward&lt;/em&gt; yang diberikan di setiap langkah nya adalah 0, kecuali saat kita masuk ke &lt;em&gt;*goal&lt;/em&gt; block&lt;em&gt;, di mana *reward&lt;/em&gt;nya adalah 1.&lt;/p&gt;
+&lt;p&gt;Bisa jadi, kita terjatuh ke lubang! Karenanya, kinerja yang sempurna dari &lt;em&gt;agent&lt;/em&gt; di setiap waktu akan menjadi hal yang mustahil. Tetapi belajar untuk menghidari lubang dan mencapai &lt;em&gt;goal&lt;/em&gt; masih sangat memungkinkan. &lt;em&gt;reward&lt;/em&gt; yang diberikan di setiap langkah nya adalah 0, kecuali saat kita masuk ke &lt;em&gt;goal block&lt;/em&gt;, di mana &lt;em&gt;reward&lt;/em&gt;nya adalah 1.&lt;/p&gt;
 
 &lt;h2 id=&quot;solution&quot;&gt;&lt;em&gt;Solution&lt;/em&gt;&lt;/h2&gt;
 
-&lt;p&gt;Pada kasus ini, kita membutuhkan algoritma yang dapat belajar dengan ekspektasi &lt;em&gt;reward&lt;/em&gt; jangka panjang (karena kita hanya akan mendapatkan &lt;em&gt;reward&lt;/em&gt; saat mencapai &lt;em&gt;*goal&lt;/em&gt; block*). Untuk itu, kita akan menggunakan Q-Learning. Karena Q-learning sangat cocok untuk diterapkan pada persoalan semacam ini.&lt;/p&gt;
+&lt;p&gt;Pada kasus ini, kita membutuhkan algoritma yang dapat belajar dengan ekspektasi &lt;em&gt;reward&lt;/em&gt; jangka panjang (karena kita hanya akan mendapatkan &lt;em&gt;reward&lt;/em&gt; saat mencapai &lt;em&gt;goal block&lt;/em&gt;). Untuk itu, kita akan menggunakan Q-Learning. Karena Q-learning sangat cocok untuk diterapkan pada persoalan semacam ini.&lt;/p&gt;
 
-&lt;p&gt;Pada bentuk paling sederhananya, kita dapat menggunakan lookup table atau arrays untuk menyimpan aproksimasi dari &lt;em&gt;value function&lt;/em&gt; (karena ruang kondisi dan aksi (&lt;em&gt;state&lt;/em&gt; and &lt;em&gt;action&lt;/em&gt; spaces) cukup kecil). Untuk kasus frozenlake &lt;em&gt;environment&lt;/em&gt;, kita akan membuat table nilai untuk setiap &lt;em&gt;state&lt;/em&gt; dan &lt;em&gt;action&lt;/em&gt; yang mungkin pada &lt;em&gt;environment&lt;/em&gt;, di mana &lt;em&gt;state&lt;/em&gt; adalah &lt;em&gt;row&lt;/em&gt; pada table dan &lt;em&gt;action&lt;/em&gt; adalah &lt;em&gt;column&lt;/em&gt; pada table.&lt;/p&gt;
+&lt;p&gt;Pada bentuk paling sederhana dari &lt;em&gt;Reinforcement Learning&lt;/em&gt;, kita dapat menggunakan &lt;em&gt;lookup table&lt;/em&gt; atau &lt;em&gt;arrays&lt;/em&gt; untuk menyimpan aproksimasi dari &lt;em&gt;value function&lt;/em&gt; (karena ruang kondisi dan aksi (&lt;em&gt;state&lt;/em&gt; and &lt;em&gt;action&lt;/em&gt; &lt;em&gt;spaces&lt;/em&gt;) cukup kecil). Untuk kasus frozenlake &lt;em&gt;environment&lt;/em&gt;, kita akan membuat &lt;em&gt;table&lt;/em&gt; nilai untuk setiap &lt;em&gt;state&lt;/em&gt; dan &lt;em&gt;action&lt;/em&gt; yang mungkin pada &lt;em&gt;environment&lt;/em&gt;, di mana &lt;em&gt;state&lt;/em&gt; adalah &lt;em&gt;row&lt;/em&gt; pada &lt;em&gt;table&lt;/em&gt; dan &lt;em&gt;action&lt;/em&gt; adalah &lt;em&gt;column&lt;/em&gt; pada &lt;em&gt;table&lt;/em&gt;.&lt;/p&gt;
 
-&lt;p&gt;Ada 16 &lt;em&gt;state&lt;/em&gt; yang mungkin pada lingkungan frozenlake, dan 4 buah aksi yang mungkin pada setiap &lt;em&gt;state&lt;/em&gt; tersebut. Sehingga ukuran table untuk menyimpan aproksimasi nilai dari &lt;em&gt;value function&lt;/em&gt; tersebut adalah 16x4.&lt;/p&gt;
+&lt;p&gt;Ada 16 &lt;em&gt;state&lt;/em&gt; yang mungkin pada lingkungan frozenlake, dan 4 buah aksi yang mungkin pada setiap &lt;em&gt;state&lt;/em&gt; tersebut. Sehingga ukuran &lt;em&gt;table&lt;/em&gt; untuk menyimpan aproksimasi nilai dari &lt;em&gt;value function&lt;/em&gt; tersebut adalah 16x4.&lt;/p&gt;
 
-&lt;p&gt;Kita akan meng&lt;em&gt;update&lt;/em&gt; Q-table menggunakan persamaan Bellman yang menyatakan bahwa ‘&lt;em&gt;long-term&lt;/em&gt; &lt;em&gt;reward&lt;/em&gt; yang diharapkan untuk aksi yang diberikan sama dengan &lt;em&gt;immediate reward&lt;/em&gt; dari aksi saat ini dikombinasikan dengan &lt;em&gt;reward&lt;/em&gt; yang diharapkan dari aksi masa depan yang paling baik yang diambil di &lt;em&gt;state&lt;/em&gt; berikutnya’ yang dapat kita tuliskan dengan persamaan berikut :&lt;/p&gt;
+&lt;p&gt;Kita akan meng&lt;em&gt;update&lt;/em&gt; Q-&lt;em&gt;table&lt;/em&gt; menggunakan persamaan Bellman yang menyatakan bahwa ‘&lt;em&gt;long-term&lt;/em&gt; &lt;em&gt;reward&lt;/em&gt; yang diharapkan untuk aksi yang diberikan sama dengan &lt;em&gt;immediate reward&lt;/em&gt; dari aksi saat ini dikombinasikan dengan &lt;em&gt;reward&lt;/em&gt; yang diharapkan dari aksi masa depan yang paling baik yang diambil di &lt;em&gt;state&lt;/em&gt; berikutnya’ yang dapat kita tuliskan dengan persamaan berikut :&lt;/p&gt;
 
 &lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;Q(s, a) = r + γ (max(Q (s', a')))&lt;/code&gt;&lt;/p&gt;
 
-&lt;p&gt;di mana (s) adalah &lt;em&gt;state&lt;/em&gt; saat itu, (a) adalah aksi pada &lt;em&gt;state&lt;/em&gt; tersebut, (r) adalah &lt;em&gt;reward&lt;/em&gt;, (y) adalah discount-rate parameter, (s’) adalah &lt;em&gt;state&lt;/em&gt; selanjutnya, dan (a’) adalah aksi berkikutnya pada (s’). Discount-rate parameter digunakan untuk mempertimbangkan sebarapa penting kah &lt;em&gt;reward&lt;/em&gt; di masa mendatang jika dibandingkan dengan &lt;em&gt;reward&lt;/em&gt; saat ini.&lt;/p&gt;
+&lt;p&gt;di mana (s) adalah &lt;em&gt;state&lt;/em&gt; saat itu, (a) adalah aksi pada &lt;em&gt;state&lt;/em&gt; tersebut, (r) adalah &lt;em&gt;reward&lt;/em&gt;, (y) adalah discount-rate parameter, (s’) adalah &lt;em&gt;state&lt;/em&gt; selanjutnya, dan (a’) adalah aksi berikutnya pada (s’). Discount-rate parameter digunakan untuk mempertimbangkan sebarapa penting kah &lt;em&gt;reward&lt;/em&gt; di masa mendatang jika dibandingkan dengan &lt;em&gt;reward&lt;/em&gt; saat ini.&lt;/p&gt;
 
-&lt;p&gt;Dengan meng&lt;em&gt;update&lt;/em&gt; table dengan cara seperti ini, table tersebut perlahan-lahan akan berisikan perhitungan yang cukup akurat terhadap &lt;em&gt;reward&lt;/em&gt; di masa yang akan datang untuk &lt;em&gt;state&lt;/em&gt; saat ini dan aksi di &lt;em&gt;state&lt;/em&gt; tersebut.&lt;/p&gt;
+&lt;p&gt;Dengan meng&lt;em&gt;update&lt;/em&gt; &lt;em&gt;table&lt;/em&gt; dengan cara seperti ini, &lt;em&gt;table&lt;/em&gt; tersebut perlahan-lahan akan berisikan perhitungan yang cukup akurat terhadap &lt;em&gt;reward&lt;/em&gt; di masa yang akan datang untuk &lt;em&gt;state&lt;/em&gt; saat ini dan aksi di &lt;em&gt;state&lt;/em&gt; tersebut.&lt;/p&gt;
 
 &lt;p&gt;Apabila kita tinjau algoritma Q dalam konteks &lt;a href=&quot;https://en.wikipedia.org/wiki/Gradient_descent&quot;&gt;gradient descent&lt;/a&gt;, maka &lt;code class=&quot;highlighter-rouge&quot;&gt;r + γ(max(Q(s’,a’))&lt;/code&gt; adalah hal yang ingin coba kita capai. Tapi kita tahu bahwa &lt;code class=&quot;highlighter-rouge&quot;&gt;r + γ(max(Q(s’,a’))&lt;/code&gt; merupakan estimasi dengan &lt;em&gt;noise&lt;/em&gt; dari nilai Q yang sebenarnya pada area tersebut. Jadi, kita tidak akan meng&lt;em&gt;update&lt;/em&gt; &lt;em&gt;Q-table&lt;/em&gt; menggunakan persamaan tersebut melainkan menambahkan sedikit langkah untuk membuat nilai Q mendekati yang kita inginkan. Maka kita gunakan &lt;code class=&quot;highlighter-rouge&quot;&gt;Q[s,a] ←Q[s,a] + α(r+ γ * max Q[s',a'] - Q[s,a])&lt;/code&gt; atau &lt;code class=&quot;highlighter-rouge&quot;&gt;Q[s,a] ←(1-α) Q[s,a] + α(r+ γ * max Q[s',a'])&lt;/code&gt; di mana &lt;code class=&quot;highlighter-rouge&quot;&gt;α&lt;/code&gt; adalah &lt;em&gt;step-size parameter&lt;/em&gt; yang memengaruhi kecepatan belajar, atau dapat dikatakan ‘&lt;em&gt;learning rate&lt;/em&gt;’, dan &lt;code class=&quot;highlighter-rouge&quot;&gt;γ&lt;/code&gt; adalah &lt;em&gt;discount-rate parameter&lt;/em&gt;.&lt;/p&gt;
 
 </description>
 				<pubDate>Tue, 03 Jan 2017 00:00:00 -0500</pubDate>
-				<link>http://localhost:4000/blog/2017/01/03/reinforcement-learning-challenge-day-0/</link>
-				<guid isPermaLink="true">http://localhost:4000/blog/2017/01/03/reinforcement-learning-challenge-day-0/</guid>
+				<link>http://localhost:4000/blog/2017/01/03/reinforcement-learning-challenge-part-0/</link>
+				<guid isPermaLink="true">http://localhost:4000/blog/2017/01/03/reinforcement-learning-challenge-part-0/</guid>
 			</item>
 		
 			<item>
