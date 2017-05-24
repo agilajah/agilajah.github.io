@@ -18,6 +18,7 @@ Astrophysics, Machine Learning, Design, and all the things related to AI and com
 
 ### News
 
-None.
+* *05.16.17* -- Got accepted as Software Engineering Intern at  [Kata.ai](http://kata.ai)
+* *03.08.17* -- Our Line Bot, Leptons, chosen as Finalist for [Line Developer Challenge Indonesia 2017]( http://at-blog.line.me/id/archives/DevChallengeWinners.html).   
 
 [1]: http://www.itb.ac.id/
