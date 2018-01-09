@@ -17,10 +17,9 @@ I'd love to blazing my own trails and taking on whatever project is most fascina
 Astrophysics, Machine Learning, Design, and all the things related to AI and computer are my interests.
 
 ### News
-* *11.23.17* -- Awarded as a 2nd Winner in (Indonesia Developer Summit Hackathon)[https://www.codepolitan.com/keseruan-dalam-indonesia-developer-summit-5a28d4b386c02]
+* *11.23.17* -- Awarded as a 2nd Winner in [Indonesia Developer Summit Hackathon](https://www.codepolitan.com/keseruan-dalam-indonesia-developer-summit-5a28d4b386c02)
 * *11.19.17* -- Awarded as a Best Student (Team) in Facebook Developer Circle: Bandung Hackathon
-* *11.04.17* -- Awarded as a 1st Winner of Data Mining Competition in [Gemastik 2017](https://gemastik.ui.ac.id). Held by Indonesia Ministry of Research and Higher Education. [click here for the news](https://www.ristekdikti.go.id/itb-berhasil-raih-peringkat-2-pada-ajang-gemastik-2017/)
-* *05.16.17* -- Got accepted as Software Engineering Intern at  [Kata.ai](http://kata.ai)
+* *11.04.17* -- Awarded as a 1st Winner of Data Mining Competition in [Gemastik 2017](https://gemastik.ui.ac.id). Held by Indonesia Ministry of Research and Higher Education. [news](https://www.ristekdikti.go.id/itb-berhasil-raih-peringkat-2-pada-ajang-gemastik-2017/)
 * *05.16.17* -- Got accepted as Software Engineering Intern at  [Kata.ai](http://kata.ai)
 * *03.08.17* -- Our Line Bot, Leptons, chosen as Finalist for [Line Developer Challenge Indonesia 2017]( http://at-blog.line.me/id/archives/DevChallengeWinners.html).   
 
