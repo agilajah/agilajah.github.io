@@ -6,7 +6,7 @@ permalink: /
 ---
 
 {: style="margin-top:0; margin-bottom: 0;"}
-I am a third year student at [Bandung Institute of Technology's][1] School of Electrical Engineering and Informatics, and majoring Informatics/Computer Science.
+I am a final year student of [Bandung Institute of Technology's][1] School of Electrical Engineering and Informatics, and majoring Informatics/Computer Science.
 
 I am passionately curious, vowed that I'd live and I'd learn. Knowing very well about what I want, I am going to keep trying things and keep learning to pursue my mission, and I take responsibility for everything that has happened to me up to this point.
 
