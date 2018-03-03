@@ -15,7 +15,9 @@ I always believe in the concept of intrinsic motivation, the idea that things ar
 Astrophysics, Machine Learning, Design, and all the things related to AI and computer are my interests.
 
 ### News
-* *18 Feb 2018* -- Our team, Neurafarm, awarded as the 3rd Winner of Business Plan Competition in the 7th University of Indonesia Studentpreneurs.
+* *02 Mar 2018* -- Our team, Taleus, chosen as the finalist of Microsoft Imagine Cup 2018 Indonesia [News](https://imagine.microsoft.com/en-us/Country/ID)
+* *20 Feb 2018* -- Our team, Taleus, selected as the semi-finalist of Microsoft Imagine Cup 2018 Indonesia [News](https://imagine.microsoft.com/en-us/Country/ID)
+* *17 Feb 2018* -- Our team, Neurafarm, awarded as the 3rd Winner of Business Plan Competition in the 7th University of Indonesia Studentpreneurs.
 * *05 Feb 2018* -- Got accepted as a Part Time (Machine Learning) Engineer at Prosa.ai
 * *23 Nov 2017* -- Awarded as the 2nd Winner in [Indonesia Developer Summit Hackathon](https://www.codepolitan.com/keseruan-dalam-indonesia-developer-summit-5a28d4b386c02).
 * *19 Nov 2017* -- Awarded as the Best Student (Team) in Facebook Developer Circle: Bandung Hackathon.
