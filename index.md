@@ -15,6 +15,8 @@ I always believe in the concept of intrinsic motivation, the idea that things ar
 Astrophysics, Machine Learning, Design, and all the things related to AI and computer are my interests.
 
 ### News
+
+* *07 May 2018* -- Got invited to  Asia MSP Summit in Taipei, Taiwan (June). Thank you, Microsoft!
 * *02 May 2018* -- Got selected as a Software Engineer Intern at Microsoft Indonesia
 * *16 Mar 2018* -- Taleus proceed to Microsoft Imagine Cup 2018 Asia-Pacific Finals after got a wild card.  
 * *13 Mar 2018* -- Neurafarm's product - Dr. Tania received the Gold Prize in World Invention and Technology  Expo (WINTEX) 2018 in Bandung Insitute of Technology. 
