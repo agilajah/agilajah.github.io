@@ -1,12 +1,12 @@
 ---
 layout: post
-title: On Generative Modelling Part 1
-description: "A series where we talk about generative modelling and its application. It is the first instalment of the series."
+title: On Generative Modelling Part 1 - Introduction
+description: "A series where we can discuss about generative modelling and its application. It is the first instalment of the series."
 tags: [Machine Learning, On Generative Modelling]
 comments: true
 ---
 
-**Disclaimer:** This article was originally published on my LinkedIn ([click here](https://www.linkedin.com/pulse/generative-modeling-febi-agil-ifdillah/)) on November January 30, 2018. 
+**Disclaimer:** This article was originally published on my LinkedIn ([click here](https://www.linkedin.com/pulse/generative-modeling-febi-agil-ifdillah/)) on January 30, 2018. 
 
 ![Google’s self-driving car passes 700,000 accident-free miles, can now avoid cyclists, stop at railroad crossings. Source: https://googleblog.blogspot.co.id/2014/04/the-latest-chapter-for-self-driving-car.html]({{site.url }}/images/2018/july/generative-modelling-1-cover.jpeg)
 
@@ -14,7 +14,7 @@ comments: true
 > “What I cannot create, I do not understand.”  —Richard Feynman
 >
 
-##Introduction
+## Introduction
 
 Almost a year ago, I told my friends that I want to build a system that could act like an architect (for my final-year project). Given our imagination of a building, the architect can create some designs that meet our criteria. In order to do that, I had to build a system that can understand the information given to it which usually in the form of text. Then the system will use this information to create some 3D models of the building.
 
@@ -82,11 +82,10 @@ Full article can be found [here](https://arxiv.org/abs/1610.06918).
 
 ## References
 
-[1] Wu, J., Zhang, C., Xue, T., Freeman, B. and Tenenbaum, J., 2016. Learning a probabilistic latent space of object shapes via 3d generative-adversarial modeling. In Advances in Neural Information Processing Systems (pp. 82-90).
-[2] Bishop, C.M., 2006. Pattern recognition and machine learning (information science and statistics) Springer-Verlag New York. Inc. Secaucus, NJ, USA.
-[3] Goodfellow, I., Pouget-Abadie, J., Mirza, M., Xu, B., Warde-Farley, D., Ozair, S., Courville, A. and Bengio, Y., 2014. Generative adversarial nets. In Advances in neural information processing systems (pp. 2672-2680).
-[4] Goodfellow, I., 2016. NIPS 2016 tutorial: Generative adversarial networks. arXiv preprint arXiv:1701.00160.
-[5] Santana, E. and Hotz, G., 2016. Learning a driving simulator. arXiv preprint arXiv:1608.01230.
-[6] Kingma, D.P. and Welling, M., 2013. Auto-encoding variational bayes. arXiv preprint arXiv:1312.6114.
-[7] Abadi, M. and Andersen, D.G., 2016. Learning to protect communications with adversarial neural cryptography. arXiv preprint arXiv:1610.06918.
-
+* [1] Wu, J., Zhang, C., Xue, T., Freeman, B. and Tenenbaum, J., 2016. Learning a probabilistic latent space of object shapes via 3d generative-adversarial modeling. In Advances in Neural Information Processing Systems (pp. 82-90).
+* [2] Bishop, C.M., 2006. Pattern recognition and machine learning (information science and statistics) Springer-Verlag New York. Inc. Secaucus, NJ, USA.
+* [3] Goodfellow, I., Pouget-Abadie, J., Mirza, M., Xu, B., Warde-Farley, D., Ozair, S., Courville, A. and Bengio, Y., 2014. Generative adversarial nets. In Advances in neural information processing systems (pp. 2672-2680).
+* [4] Goodfellow, I., 2016. NIPS 2016 tutorial: Generative adversarial networks. arXiv preprint arXiv:1701.00160.
+* [5] Santana, E. and Hotz, G., 2016. Learning a driving simulator. arXiv preprint arXiv:1608.01230.
+* [6] Kingma, D.P. and Welling, M., 2013. Auto-encoding variational bayes. arXiv preprint arXiv:1312.6114.
+* [7] Abadi, M. and Andersen, D.G., 2016. Learning to protect communications with adversarial neural cryptography. arXiv preprint arXiv:1610.06918.

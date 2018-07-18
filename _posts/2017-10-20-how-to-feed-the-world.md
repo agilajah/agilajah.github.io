@@ -42,7 +42,7 @@ We know that what we built is far from perfect, but the approach of training dee
 
 1. http://www.fao.org/news/story/en/item/280489/icode/
 
-2. https://aglifesciences.tamu.edu/rootbiome/wp-content/uploads/sites/38/2015/06/2016-Ficke-et-al-CropLosses-FoodSecurity-Research-gate.pdf
+2.https://aglifesciences.tamu.edu/rootbiome/wp-content/uploads/sites/38/2015/06/2016-Ficke-et-al-CropLosses-FoodSecurity-Research-gate.pdf
 
 3. http://www.fao.org/docrep/014/am859e/am859e01.pdf
 
