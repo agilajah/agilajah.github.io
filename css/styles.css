@@ -78,7 +78,7 @@ th {
 }
 
 td {
-    padding 0.4em 0 0 10px;
+    padding: 0.4em 0 0 10px;
 }
 
 thead {
@@ -118,6 +118,7 @@ p code, ul code {
     border-radius: 95px;
     height: 70px;
     width: 70px;
+    white-space:nowrap
 }
 
 .author-name {
