@@ -118,7 +118,6 @@ p code, ul code {
     border-radius: 95px;
     height: 70px;
     width: 70px;
-    white-space:nowrap
 }
 
 .author-name {
@@ -172,7 +171,7 @@ p code, ul code {
 }
 
 .right-column {
-    max-width: 40em;
+    max-width: 50em;
     padding: 0 4em;
 }
 
