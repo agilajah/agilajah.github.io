@@ -101,13 +101,13 @@ Pretty simple, right?
 As for Bob + Alice's loss function, we will also compute a similar thing: the absolute decryption error. But with an additional term that signifies how well Eve is currently decrypting the message, so we have:
 
 \begin{align}
-N/2 - LEve)^2 / (N/2)^2
+\frac{(N/2 - LEve)^2}{(N/2)^2}
 \end{align}
 
 Putting all these together, we have:
 
 \begin{align}
-LossBob = LossBob + (N/2 - LEve)^2 / (N/2)^2
+LossBob = LossBob + \frac{(N/2 - LEve)^2}{(N/2)^2}
 \end{align}
 
 ### Training Process
