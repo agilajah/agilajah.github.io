@@ -6,7 +6,9 @@ tags: [Machine Learning, Visual Search]
 comments: true
 ---
 
-**Disclaimer:** This article was originally published on my LinkedIn on November 26, 2017. 
+![Cynthia Logo. Source: Private Gallery]({{ site.url }}/images/2018/july/cynthia-cover.jpeg)
+
+**Disclaimer:** This article was originally published on my LinkedIn ([click here](https://www.linkedin.com/pulse/cynthia-like-snap-febi-agil-ifdillah/)) on November 26, 2017. 
 
 TL;DR Cynthia is a Deep Learning based visual search engine that is used for an android application called Cynthia (we were running out of name, so...) that we handed in for Indonesia Developer Summit Hackathon 2017. Cynthia was designed for discovery and programmed to enhance customer shopping experience through visual search capability.
 
@@ -20,7 +22,10 @@ To me, this process of describing items is **painful** sometimes. So I wonder wh
 
 ## Visual Search Technology
 
+
 > How can it be that in 2017 I see something that I really like and can't just tap it and get it?
+
+
 
 Well, that's just a hypothetical question but you get it..
 
