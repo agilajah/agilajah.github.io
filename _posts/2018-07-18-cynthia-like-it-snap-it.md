@@ -8,7 +8,7 @@ comments: true
 
 **Disclaimer:** This article was originally published on my LinkedIn ([click here](https://www.linkedin.com/pulse/cynthia-like-snap-febi-agil-ifdillah/)) on November 26, 2017. 
 
-![Cynthia Cover. Source: Private Gallery]({{ site.url }}/images/2018/july/cynthia-cover.jpeg)
+![Cynthia Cover. Source: Personal Gallery]({{ site.url }}/images/2018/july/cynthia-cover.jpeg)
 
 TL;DR Cynthia is a Deep Learning based visual search engine that is used for an android application called Cynthia (we were running out of name, so...) that we handed in for Indonesia Developer Summit Hackathon 2017. Cynthia was designed for discovery and programmed to enhance customer shopping experience through visual search capability.
 
@@ -51,7 +51,7 @@ Most Internet users have come across a recommender system in one way or another.
 
 These systems play an important role in such highly rated Internet sites as Amazon.com, YouTube, Netflix, Yahoo, Tripadvisor, Last.fm, and IMDb. It is also widely used in eCommerce system like in this picture:
 
-![Recommendation in eCommerce1. Source: Private Gallery]({{ site.url }}/images/2018/july/cynthia-1.jpeg)
+![Recommendation in eCommerce1. Source: Personal Gallery]({{ site.url }}/images/2018/july/cynthia-1.jpeg)
 
 But sometimes we found it fails to do the job. In the picture above, let's say I want to buy a mouse. As a customer who needed a mouse, I expect the site to recommend me some more mouse to consider. But if you look at the items presented below the product thumbnail, there are several unrelated (at least for me) items like LED TV, or a mini electric fan instead.
 
