@@ -28,7 +28,7 @@ The authors started the study by asking a question, "Is it possible for a neural
 
 Why do we want to do that? One might wonder.
 
-![Why??. Source: http://knowyourmeme.com/memes/y-tho]({{site.url }}/images/2018/july/generative-modelling-2-1.jpeg "Why??. Source: http://knowyourmeme.com/memes/y-tho]")
+![Why??. Source: http://knowyourmeme.com/memes/y-tho]({{site.url }}/images/2018/july/generative-modelling-2-1.jpeg "Why??. Source: http://knowyourmeme.com/memes/y-tho")
 
 It seems to me that the authors were just trying to 'show' us that neural networks can learn such a task. As neural networks are applied to increasingly complex tasks, they are often trained to meet end-to-end objectives that go beyond simple functional specifications. Be it to generate realistic images like the one we've discussed in the previous post or even to solve a multi-agent problem[2]. Now they want to train neural networks to protect information because why not? right?
 
@@ -104,7 +104,7 @@ As for Bob + Alice's loss function, we will also compute a similar thing: the ab
 \frac{(N/2 - LEve)^2}{(N/2)^2}
 \end{align}
 
-Putting all these together, we have:
+Putting these all together, we have:
 
 \begin{align}
 LossBob = LossBob + \frac{(N/2 - LEve)^2}{(N/2)^2}

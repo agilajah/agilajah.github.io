@@ -1,6 +1,6 @@
 ---
 layout: post
-title: On Generative Modelling Part 1 - Introduction
+title: On Generative Modelling Part 1 - Driving Simulator
 description: "A series where we can discuss about generative modelling and its application. It is the first instalment of the series."
 tags: [Machine Learning, On Generative Modelling]
 comments: true
@@ -11,9 +11,12 @@ comments: true
 **Disclaimer:** This article was originally published on my LinkedIn ([click here](https://www.linkedin.com/pulse/generative-modeling-febi-agil-ifdillah/)) on January 30, 2018. 
 
 
+
 >
-> “What I cannot create, I do not understand.”  —Richard Feynman
+> “What I cannot create, I do not understand.”  — Richard Feynman
 >
+
+
 
 ## Introduction
 
@@ -79,7 +82,7 @@ After training the autoencoder, an RNN model is trained to learn to predict code
 
 Link: [Learning to Protect Communications with Adversarial Neural Cryptography](https://arxiv.org/abs/1610.06918)
 
-Full article can be found [here](https://arxiv.org/abs/1610.06918).
+Full article can be found [here](http://febiagil.me/blog/2018/07/18/generative-modelling-2-adversarial-neural-cryptography/).
 
 ## References
 
