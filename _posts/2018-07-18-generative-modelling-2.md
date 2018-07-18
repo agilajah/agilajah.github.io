@@ -92,17 +92,23 @@ So, these are the last things we need: the loss functions. In this setup, we hav
 
 Eve’s loss function is the absolute difference between the message vector **P** and her attempt at decrypting it, called **PEve**. The loss then backpropagated through the weights in the Eve network to update her weights. The loss function can be written down like this:
 
-$LEve = abs(P - PEve)$
+\begin{align}
+LEve = abs(P - PEve)
+\end{align}
 
 Pretty simple, right?
 
 As for Bob + Alice's loss function, we will also compute a similar thing: the absolute decryption error. But with an additional term that signifies how well Eve is currently decrypting the message, so we have:
 
-$(N/2 - LEve)^2 / (N/2)^2$
+\begin{align}
+N/2 - LEve)^2 / (N/2)^2
+\end{align}
 
 Putting all these together, we have:
 
-$LossBob = LossBob + (N/2 - LEve)^2 / (N/2)^2$
+\begin{align}
+LossBob = LossBob + (N/2 - LEve)^2 / (N/2)^2
+\end{align}
 
 ### Training Process
 
