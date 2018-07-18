@@ -8,7 +8,10 @@ comments: true
 
 **Disclaimer:** This article was originally published on my LinkedIn ([click here](https://www.linkedin.com/pulse/facebook-developer-circle-bandung-hackathon-how-feed-world-ifdillah//)) on November 20, 2017. 
 
-![Cynthia Logo. Source: Private Gallery]({{ site.url }}/images/2017/november/tania-cover.jpeg)
+![Tania Cover. Source: JIM RICHARDSON]({{ site.url }}/images/2017/november/tania-cover.jpeg)
+
+
+*Note*: Faces of farming all around the world, small farms are playing a big role in feeding the world. These are a few of the men and women behind that effort. PHOTOGRAPHS BY JIM RICHARDSON.
 
 One thing that I loved from participating in any hackathon is that it challenges you to be as creative as you can while solving the problem that you really care about.
 
