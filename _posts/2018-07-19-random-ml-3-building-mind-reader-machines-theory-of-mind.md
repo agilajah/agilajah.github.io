@@ -128,7 +128,7 @@ Let's assume that we have a family of Partially [Observable Markov Decision Proc
 Additionally, we also have a family of agents *A* (look carefully, it's italic. To make it different from action spaces **A**):
 
 \begin{align}
-Ai = (Ωi , ωi , Ri , γi , πi))
+Ai = (Ω_i , ω_i , R_i , γ_i , π_i))
 \end{align}
 
 Where Ωi is its observation spaces, Ri and γi is its reward functions and discount factors respectively, ωi is its conditional observation functions, and last but not least is the resulting policies πi.
