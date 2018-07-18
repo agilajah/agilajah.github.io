@@ -14,7 +14,7 @@ According to FAO (Food and Agricultural Organization of the United Nations), by 
 
 Meanwhile, farmers throughout the world struggle to prevent and eradicate various diseases from their crops. It’s estimated that various pests (insects, weeds, nematodes, animals, diseases) each year cause crop yield losses of 20-40%. More precisely, there is some data that maintains that crop diseases cause average yield losses of 42% for the most important food crops. In some cases, crop diseases destroy the whole crop production.
 
-*This is ridiculous*. We can't afford to lose any food when we need more of it.
+**This is ridiculous**. We can't afford to lose any food when we need more of it.
 
 For this reason, it's extremely important for farmers to find out all they can about the crop diseases so they can manage them properly. The rapid, accurate diagnosis of disease and its management will help to reduce yield losses. But, the infrastructure for crop disease diagnostic is limited.
 
@@ -33,17 +33,17 @@ We know that what we built is far from perfect, but the approach of training dee
 
 ## References:
 
-[1] http://www.fao.org/news/story/en/item/280489/icode/
+1. http://www.fao.org/news/story/en/item/280489/icode/
 
-[2]https://aglifesciences.tamu.edu/rootbiome/wp-content/uploads/sites/38/2015/06/2016-Ficke-et-al-CropLosses-FoodSecurity-Research-gate.pdf
+2. https://aglifesciences.tamu.edu/rootbiome/wp-content/uploads/sites/38/2015/06/2016-Ficke-et-al-CropLosses-FoodSecurity-Research-gate.pdf
 
-[3] http://www.fao.org/docrep/014/am859e/am859e01.pdf
+3. http://www.fao.org/docrep/014/am859e/am859e01.pdf
 
-[4] http://www.mdpi.com/journal/agriculture/special_issues/plant_disease
+4. http://www.mdpi.com/journal/agriculture/special_issues/plant_disease
 
-[5] http://blog.agrivi.com/post/crop-diseases-the-nightmare-of-every-farmer
+5. http://blog.agrivi.com/post/crop-diseases-the-nightmare-of-every-farmer
 
-[6] https://www.ncbi.nlm.nih.gov/pubmed/27713752
+6. https://www.ncbi.nlm.nih.gov/pubmed/27713752
 
 
 
