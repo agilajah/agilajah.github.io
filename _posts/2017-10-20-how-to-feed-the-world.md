@@ -6,6 +6,10 @@ tags: [thoughts , Machine Learning]
 comments: true
 ---
 
+**Disclaimer:** This article was originally published on my LinkedIn ([click here](https://www.linkedin.com/pulse/facebook-developer-circle-bandung-hackathon-how-feed-world-ifdillah//)) on November 20, 2017. 
+
+![Cynthia Logo. Source: Private Gallery]({{ site.url }}/images/2017/november/tania-cover.jpeg)
+
 One thing that I loved from participating in any hackathon is that it challenges you to be as creative as you can while solving the problem that you really care about.
 
 Speaking of the thing I really care about, lately, I've been thinking a lot about food security, and how technology (information technology to be specific) can help us to solve this problem.
