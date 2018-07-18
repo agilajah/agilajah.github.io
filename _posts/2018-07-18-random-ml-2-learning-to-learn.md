@@ -6,7 +6,7 @@ tags: [Machine Learning, RandomML]
 comments: true
 ---
 
-![Random ML 2 Cover, Learning to learn. Source: https://memegenerator.net.]({{site.url }}/images/2018/july/random-ml-2-cover.jpeg "Random ML 2 Cover, Learning to learn. Source: https://memegenerator.net")
+![Random ML 2 Cover, Learning to learn. Source: https://memegenerator.net.]({{site.url}}/images/2018/july/random-ml-2-cover.jpeg "Random ML 2 Cover, Learning to learn. Source: https://memegenerator.net")
 
 **Disclaimer:** This article was originally published on my LinkedIn ([click here](https://www.linkedin.com/pulse/mlrand-2-learning-learn-febi-agil-ifdillah/)) on May 6, 2018.
 
