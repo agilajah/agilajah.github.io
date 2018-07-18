@@ -6,9 +6,10 @@ tags: [Machine Learning, On Generative Modelling]
 comments: true
 ---
 
+![Google’s self-driving car passes 700,000 accident-free miles, can now avoid cyclists, stop at railroad crossings. Source: https://googleblog.blogspot.co.id/2014/04/the-latest-chapter-for-self-driving-car.html]({{site.url }}/images/2018/july/generative-modelling-1-cover.jpeg "Google’s self-driving car passes 700,000 accident-free miles, can now avoid cyclists, stop at railroad crossings. Source: https://googleblog.blogspot.co.id/2014/04/the-latest-chapter-for-self-driving-car.html")
+
 **Disclaimer:** This article was originally published on my LinkedIn ([click here](https://www.linkedin.com/pulse/generative-modeling-febi-agil-ifdillah/)) on January 30, 2018. 
 
-![Google’s self-driving car passes 700,000 accident-free miles, can now avoid cyclists, stop at railroad crossings. Source: https://googleblog.blogspot.co.id/2014/04/the-latest-chapter-for-self-driving-car.html]({{site.url }}/images/2018/july/generative-modelling-1-cover.jpeg)
 
 >
 > “What I cannot create, I do not understand.”  —Richard Feynman
@@ -25,7 +26,7 @@ But it turns out that it is not an easy task to solve. I don't even understand a
 
 ## Um, generative models? What?
 
-![Neural Networks. Source: http://www.kdnuggets.com/2017/06/deep-learning-papers-reading-roadmap.html]({{ site.url }}/images/2018/july/generative-modelling-1-1.jpeg)
+![Neural Networks. Source: http://www.kdnuggets.com/2017/06/deep-learning-papers-reading-roadmap.html]({{ site.url }}/images/2018/july/generative-modelling-1-1.jpeg "Neural Networks. Source: http://www.kdnuggets.com/2017/06/deep-learning-papers-reading-roadmap.html")
 
 We use a neural network to do deep learning. A common way of describing a neural network is an approximation of some function we wish to model. There have been growing applications of deep learning in recent years. But it's currently dominated by discriminative models which try to optimize the mapping from inputs to outputs: given some data with some attributes, the model will try to 'predict' the class labels.
 
@@ -64,13 +65,13 @@ These training processes are **focused on generating video streams of a front-fa
 
 To be able to do that, the authors combine a Variational Autoencoder (VAE) and a Generative Adversarial Network (GAN) so that it can predict realistic-looking video for several frames based on previous frames.
 
-![The architecture of the networks. Source: http://arxiv.org/pdf/1608.01230.pdf]({{ site.url }}/images/2018/july/generative-modelling-1-2.jpeg)
+![The architecture of the networks. Source: http://arxiv.org/pdf/1608.01230.pdf]({{ site.url }}/images/2018/july/generative-modelling-1-2.jpeg "The architecture of the networks. Source: http://arxiv.org/pdf/1608.01230.pdf")
 
 An autoencoder is used to embed the frames into a latent space with a dimension of 2048 which had chosen experimentally. With this approach, the problem of learning transitions directly in the pixel space simplified to learning in the latent space. Hence, the authors train an autoencoder for dimensionality reduction.
 
 A generator network then receives both random samples from the latent space distribution and outputs of encoder network as inputs. The generator will try to fool the discriminator by producing real-but-fake images of the road as depicted in pictures below. As we can see, a model trained with VAE+GAN had the most visually appealing results (a) while MSE based neural networks generate blurred images (b). Odd columns show generated images, even columns show target images.
 
-![Generated images. Source: http://arxiv.org/pdf/1608.01230.pdf]({{ site.url }}/images/2018/july/generative-modelling-1-3.jpeg)
+![Generated images. Source: http://arxiv.org/pdf/1608.01230.pdf]({{ site.url }}/images/2018/july/generative-modelling-1-3.jpeg "Generated images. Source: http://arxiv.org/pdf/1608.01230.pdf]")
 
 After training the autoencoder, an RNN model is trained to learn to predict code that can be used to estimate future frames.
 

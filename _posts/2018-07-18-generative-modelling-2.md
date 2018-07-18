@@ -6,13 +6,13 @@ tags: [Machine Learning, On Generative Modelling]
 comments: true
 ---
 
-**Disclaimer:** This article was originally published on my LinkedIn ([click here](https://www.linkedin.com/pulse/generative-modelling-part-2-adversarial-neural-febi-agil-ifdillah/)) on April 17, 2018. 
+![Generative Modelling 2 Cover. Source: memegen.com]({{site.url }}/images/2018/july/generative-modelling-2-cover.jpeg "Generative Modelling 2 Cover. Source: memegen.com")
 
-![Generative Modelling 2 Cover. Source: memegen.com]({{site.url }}/images/2018/july/generative-modelling-2-cover.jpeg)
+**Disclaimer:** This article was originally published on my LinkedIn ([click here](https://www.linkedin.com/pulse/generative-modelling-part-2-adversarial-neural-febi-agil-ifdillah/)) on April 17, 2018. 
 
 **TLDR**; Using adversarial networks to decide how and what to encrypt. You have two nets communicating securely to each other and the third net wants to decipher that secure communication.
 
-##Introduction
+## Introduction
 
 This is the 2nd instalment of a new series called 'On Generative Modelling'. In this article, we will continue our discussion about generative modelling.
 
@@ -28,7 +28,7 @@ The authors started the study by asking a question, "Is it possible for a neural
 
 Why do we want to do that? One might wonder.
 
-![Why??. Source: http://knowyourmeme.com/memes/y-tho]({{site.url }}/images/2018/july/generative-modelling-2-1.jpeg "Source: http://knowyourmeme.com/memes/y-tho]")
+![Why??. Source: http://knowyourmeme.com/memes/y-tho]({{site.url }}/images/2018/july/generative-modelling-2-1.jpeg =400x340 "Why??. Source: http://knowyourmeme.com/memes/y-tho]")
 
 It seems to me that the authors were just trying to 'show' us that neural networks can learn such a task. As neural networks are applied to increasingly complex tasks, they are often trained to meet end-to-end objectives that go beyond simple functional specifications. Be it to generate realistic images like the one we've discussed in the previous post or even to solve a multi-agent problem[2]. Now they want to train neural networks to protect information because why not? right?
 
@@ -92,23 +92,23 @@ So, these are the last things we need: the loss functions. In this setup, we hav
 
 Eve’s loss function is the absolute difference between the message vector **P** and her attempt at decrypting it, called **PEve**. The loss then backpropagated through the weights in the Eve network to update her weights. The loss function can be written down like this:
 
-```
+{% highlight python linenos %}
 LEve = abs(P - PEve)
-```
+{% endhighlight %}
 
 Pretty simple, right?
 
 As for Bob + Alice's loss function, we will also compute a similar thing: the absolute decryption error. But with an additional term that signifies how well Eve is currently decrypting the message, so we have:
 
-```
+{% highlight python linenos %}
 (N/2 - LEve)^2 / (N/2)^2
-```
+{% endhighlight %}
 
 Putting all these together, we have:
 
-```
+{% highlight python linenos %}
 LossBob = LossBob + (N/2 - LEve)^2 / (N/2)^2
-```
+{% endhighlight %}
 
 ### Training Process
 
