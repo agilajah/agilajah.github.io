@@ -20,7 +20,7 @@ Astrophysics, Machine Learning, Investment, Design, and all the things related t
 * *02 May 2018* -- Got selected as a Software Engineer Intern at Microsoft Indonesia.
 * *16 Mar 2018* -- Taleus proceeded to Microsoft Imagine Cup 2018 Asia-Pacific Finals after got a wild card.  
 * *13 Mar 2018* -- Neurafarm's product - Dr. Tania received the Gold Prize in World Invention and Technology  Expo (WINTEX) 2018 in Bandung Insitute of Technology. 
-* *02 Mar 2018* -- Our team, Taleus, chosen as the finalist of Microsoft Imagine Cup 2018 Indonesia [News](https://imagine.microsoft.com/en-us/Country/ID)
+* *02 Mar 2018* -- Our team, Taleus, chosen as the finalist of Microsoft Imagine Cup 2018 Indonesia [News](https://news.microsoft.com/apac/2018/04/02/meet-the-imagine-cup-2018-asia-pacific-regional-finalists/
 * *20 Feb 2018* -- Our team, Taleus, selected as the semi-finalist of Microsoft Imagine Cup 2018 Indonesia [News](https://imagine.microsoft.com/en-us/Country/ID)
 * *17 Feb 2018* -- Our team, Neurafarm, awarded as the 3rd Winner of Business Plan Competition in the 7th University of Indonesia Studentpreneurs.
 * *05 Feb 2018* -- Accepted as a Part Time (Machine Learning) Engineer at Prosa.ai
