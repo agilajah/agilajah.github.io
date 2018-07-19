@@ -1,29 +1,20 @@
 a {
-  color: #000;
+    color: #000;
+}
+
+.title a:hover {
+  text-decoration: underline;
 }
 
 body {
-    font-family: PT Serif, Cambria, Georgia, serif;
-    padding: 0;
-    margin: 0 auto;
-    list-style-type: none;
-    font-weight: normal;
-    -webkit-text-size-adjust: none;
+    font-family: Georgia, Cambria, "Times New Roman", Times, serif;
 }
 
-h1 {
-  padding-bottom: 20px;
-}
-h1, h2 {
+h1, h2, h3, h4 {
     font-family: Arial, Verdana, sans-serif;
     line-height: 1em;
     color: #000;
 }
-
-hr {
-  color: #ccc;
-}
-
 
 i {
     vertical-align: middle;
@@ -171,7 +162,7 @@ p code, ul code {
 }
 
 .right-column {
-    max-width: 50em;
+    max-width: 40em;
     padding: 0 4em;
 }
 
@@ -208,21 +199,6 @@ p code, ul code {
     padding-bottom: 1em;
 }
 
-
-.post a {
-  color: #156f8f;
-  text-decoration: none;
-}
-
-.post a:hover {
-    color: #0c4255;
-    text-decoration: underline;
-}
-
-.title a {
-  color: #000;
-}
-
 .feature-image {
     margin-bottom: 1em;
 }
@@ -242,7 +218,6 @@ p.feature-image img {
 .title {
     letter-spacing: -1px;
     margin: 0;
-    padding-bottom: 5px;
 }
 
 .title a, .post-meta a {
@@ -268,9 +243,8 @@ p.feature-image img {
 
 .content {
     color: #333;
-    font-size: 1.35em;
-    line-height: 1.6em;
-    text-align: justify;
+    font-size: 1.2em;
+    line-height: 1.4em;
 }
 
 .highlight {
@@ -289,8 +263,6 @@ p.feature-image img {
 }
 
 .content img {
-    max-width:100%;
-    max-height:100%;
     display: block;
     margin: 0 auto;
 }
@@ -410,41 +382,4 @@ p.feature-image img {
     .resume-update {
         display: none;
     }
-}
-
-.share-page {
-    text-align: center;
-    background: $secondary-color;
-    color: $light-color;
-    padding: 8px 15px;
-    border-radius: 5px;
-    margin: 1.5 * $spacing-unit 0;
-
-    a {
-        font-weight: 700;
-        color: #fff;
-        margin-left: 10px;
-
-        &:hover {
-            border-bottom: 1px dashed #fff;
-        }
-    }
-}
-
-.PageNavigation {
-  font-size: 14px;
-  display: block;
-  width: auto;
-  overflow: hidden;
-}
-
-.PageNavigation a {
-  display: block;
-  width: 50%;
-  float: left;
-  margin: 1em 0;
-}
-
-.PageNavigation .next {
-  text-align: right;
 }
