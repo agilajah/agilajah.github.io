@@ -107,8 +107,8 @@ p code, ul code {
 
 .author-info {
     font-size: 0.9em;
-    float: right;
-    text-align: right;
+    float: left;
+    text-align: left;
     width: 165px;
 }
 
