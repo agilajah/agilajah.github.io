@@ -6,9 +6,9 @@ tags: [Machine Learning, RandomML]
 comments: true
 ---
 
-![Random ML 3 Cover, Mind Reader. Source: Google. Forgotten, sorry.]({{site.url }}/images/2018/july/random-ml-3-cover.png "Random ML 2 Cover, Learning to learn. Source: https://memegenerator.net")
-
 **Disclaimer:** This article was originally published on my LinkedIn ([click here](https://www.linkedin.com/pulse/mlrand-3-how-build-mind-reader-machine-theory-mind-ifdillah/)) on May 10, 2018.
+
+![Random ML 3 Cover, Mind Reader. Source: Google. Forgotten, sorry.]({{site.url }}/images/2018/july/random-ml-3-cover.png "Random ML 2 Cover, Learning to learn. Source: https://memegenerator.net")
 
 ## Introduction
 

@@ -6,9 +6,9 @@ tags: [Machine Learning, RandomML]
 comments: true
 ---
 
-![Random ML 4 Cover, I know the place, trust me!. Source: imgflip.com]({{site.url }}/images/2018/july/random-ml-4-cover.png "Random ML 4 Cover, I know the place, trust me!. Source: imgflip.com")
-
 **TLDR**; We could train an RNN to perform a spatial navigation task, and then study the responses of the model neurons in the RNN of which we could find many properties reminiscent of neurons in the mammalian entorhinal cortex (EC): grid cells, border cells, etc.
+
+![Random ML 4 Cover, I know the place, trust me!. Source: imgflip.com]({{site.url }}/images/2018/july/random-ml-4-cover.png "Random ML 4 Cover, I know the place, trust me!. Source: imgflip.com")
 
 ## Introduction
 
