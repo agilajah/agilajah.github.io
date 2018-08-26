@@ -16,6 +16,8 @@ Astrophysics, Machine Learning, Investment, Design, and all the things related t
 
 ### News
 
+* *09/10 August 2018* -- Neurafarm won Swiss Innovation Challenge Indonesia 2018. An international innovation competition held by Northwesterns University of Switzerland in collaboration with School of Business and Management, Bandung Institute of Technology (ITB).
+* *31 July 2018* -- Canceled my Summer Internship at Microsoft Indonesia.
 * *07 May 2018* -- Got invited to Asia MSP Summit in Taipei, Taiwan (June). Thank you, Microsoft!
 * *02 May 2018* -- Got selected as a Software Engineer Intern at Microsoft Indonesia.
 * *16 Mar 2018* -- Taleus proceeded to Microsoft Imagine Cup 2018 Asia-Pacific Finals after got a wild card. [Link](https://news.microsoft.com/apac/2018/04/02/meet-the-imagine-cup-2018-asia-pacific-regional-finalists/)  
@@ -27,6 +29,7 @@ Astrophysics, Machine Learning, Investment, Design, and all the things related t
 * *23 Nov 2017* -- Awarded as the 2nd Winner in [Indonesia Developer Summit Hackathon](https://www.codepolitan.com/keseruan-dalam-indonesia-developer-summit-5a28d4b386c02).
 * *19 Nov 2017* -- Awarded as the Best Student (Team) in Facebook Developer Circle: Bandung Hackathon.
 * *04 Nov 2017* -- Awarded as the 1st Winner of Data Mining Competition in [Gemastik 2017](https://gemastik.ui.ac.id). Held by Indonesia Ministry of Research and Higher Education. [Link](https://www.ristekdikti.go.id/itb-berhasil-raih-peringkat-2-pada-ajang-gemastik-2017/).
+* *13 August 2017* -- Co-founded Neurafarm and became its Chief Technology Officer.
 * *16 May 2017* -- Accepted as a Software Engineer Intern at  [Kata.ai](http://kata.ai).
 * *08 Mar 2017* -- Our Line Bot, Leptons, chosen as Finalist for [Line Developer Challenge Indonesia 2017]( http://at-blog.line.me/id/archives/DevChallengeWinners.html).   
 
