@@ -151,7 +151,7 @@ The character net aims to characterise a presented agent, while the goal of the 
 
 The POMDPs being used here are grid worlds with a common action space (up/down/left/right/stay) as depicted in the following figure.
 
-![The gridworld. Source: http://arxiv.org/pdf/1802.07740.pdf]({{site.url}}/images/2018/july/random-ml-3-3.png "The gridworld. Source: http://arxiv.org/pdf/1802.07740.pdf")
+![The gridworld. Source: http://arxiv.org/pdf/1802.07740.pdf]({{site.url}}/images/2018/july/random-ml-3-4.png "The gridworld. Source: http://arxiv.org/pdf/1802.07740.pdf")
 
 The Experiments
 As we all know, there are five different scenarios used by the authors to demonstrate ToMnet. But here, I just want to explore the second scenario in which we train the ToMnet to be able to infer others' goals (or 'desires').
