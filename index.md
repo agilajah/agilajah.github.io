@@ -6,7 +6,7 @@ permalink: /
 ---
 
 {: style="margin-top:0; margin-bottom: 0;"}
-An engineer, designer, storyteller, and aspiring entrepreneur. Currently a final year student of [Bandung Institute of Technology's][1] School of Electrical Engineering and Informatics, majoring in Informatics/Computer Science. I am also Co-Founder and CTO of [Neurafarm](http://neurafarm.com/) where I drive innovation strategy for the company and ensures technolgy excellence as part of Neurafarm's commitmen to provide the best precision farming technology for farmers.
+An engineer, designer, storyteller, and aspiring entrepreneur. Currently a final year student of [Bandung Institute of Technology's][1] School of Electrical Engineering and Informatics, majoring in Informatics/Computer Science. I am also Co-Founder and CTO of [Neurafarm](http://neurafarm.com/) where I drive innovation strategy for the company and ensures technolgy excellence as part of Neurafarm's commitment to provide the best precision farming technology for farmers.
 
 As a passionately curious person, I keep trying things and keep learning. I'd love to blazing my own trails and taking on whatever project is most fascinating. So long as I get to use my people skills, identify and achieve my own goals and inspire my colleagues and followers, I will be happy.
 
