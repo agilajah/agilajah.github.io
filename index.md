@@ -6,7 +6,7 @@ permalink: /
 ---
 
 {: style="margin-top:0; margin-bottom: 0;"}
-An engineer, designer, storyteller, and aspiring entrepreneur. Currently a final year student of [Bandung Institute of Technology's][1] School of Electrical Engineering and Informatics, majoring Informatics/Computer Science. 
+An engineer, designer, storyteller, and aspiring entrepreneur. Currently a final year student of [Bandung Institute of Technology's][1] School of Electrical Engineering and Informatics, majoring in Informatics/Computer Science. I am also Co-Founder and CTO of [Neurafarm](http://neurafarm.com/) where I drive innovation strategy for the company and ensures technolgy excellence as part of Neurafarm's commitmen to provide the best precision farming technology for farmers.
 
 As a passionately curious person, I keep trying things and keep learning. I'd love to blazing my own trails and taking on whatever project is most fascinating. So long as I get to use my people skills, identify and achieve my own goals and inspire my colleagues and followers, I will be happy.
 
@@ -16,6 +16,7 @@ Astrophysics, Machine Learning, Investment, Design, and all the things related t
 
 ### News
 
+* *08 September 2018* -- Neurafarm got selected as one of the 100 startups of Startup Istanbul 2018 Challenge to be on 19-22 October, in the center of the world, Istanbul.
 * *09/10 August 2018* -- Neurafarm won Swiss Innovation Challenge Indonesia 2018. An international innovation competition held by Northwesterns University of Switzerland in collaboration with School of Business and Management, Bandung Institute of Technology (ITB).
 * *31 July 2018* -- Canceled my Summer Internship at Microsoft Indonesia.
 * *07 May 2018* -- Got invited to Asia MSP Summit in Taipei, Taiwan (June). Thank you, Microsoft!
