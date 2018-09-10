@@ -16,7 +16,8 @@ Astrophysics, Machine Learning, Investment, Design, and all the things related t
 
 ### News
 
-* *08 September 2018* -- Neurafarm got selected as one of the 100 startups of Startup Istanbul 2018 Challenge to be on 19-22 October, in the center of the world, Istanbul.
+* *08 September 2018* -- Neurafarm got selected as one of the top 100 startups among 93.200 startup applications from 140 countries all over the world for Startup Istanbul 2018 Challenge to be on 19-22 October, in the center of the world, Istanbul.
+* *28 August 2018* -- Got selected as top 15 participants The Falling Walls Lab Jakarta, an event hosted by the German Academic Exchange Service (DAAD) in cooperation with the Faculty of Administrative Science Universitas Indonesia and is supported by EURAXESS, the Federal Foreign Office of Germany and the Falling Walls Foundation. (Will be presenting my idea there on 13th September)
 * *09/10 August 2018* -- Neurafarm won Swiss Innovation Challenge Indonesia 2018. An international innovation competition held by Northwesterns University of Switzerland in collaboration with School of Business and Management, Bandung Institute of Technology (ITB).
 * *31 July 2018* -- Canceled my Summer Internship at Microsoft Indonesia.
 * *07 May 2018* -- Got invited to Asia MSP Summit in Taipei, Taiwan (June). Thank you, Microsoft!
