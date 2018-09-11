@@ -6,13 +6,13 @@ permalink: /
 ---
 
 {: style="margin-top:0; margin-bottom: 0;"}
-An engineer, designer, storyteller, and aspiring entrepreneur. Currently a final year student of [Bandung Institute of Technology's][1] School of Electrical Engineering and Informatics, majoring in Informatics/Computer Science. I am also Co-Founder and CTO of [Neurafarm](http://neurafarm.com/) where I drive innovation strategy for the company and ensures technolgy excellence as part of Neurafarm's commitment to provide the best precision farming technology for farmers.
+An engineer, designer, storyteller, and aspiring entrepreneur; In a mission to provide value to masses with something I created. Currently a final year student of [Bandung Institute of Technology's][1] School of Electrical Engineering and Informatics, majoring in Informatics/Computer Science. I am also Co-Founder and CTO of [Neurafarm](http://neurafarm.com/) where I drive innovation strategy for the company and ensures technology excellence as part of Neurafarm's commitment to provide the best precision farming technology for farmers.
 
 As a passionately curious person, I keep trying things and keep learning. I'd love to blazing my own trails and taking on whatever project is most fascinating. So long as I get to use my people skills, identify and achieve my own goals and inspire my colleagues and followers, I will be happy.
 
 I always believe in the concept of intrinsic motivation, the idea that things are worth doing for my own sake, not because of some convoluted system of punishments and rewards.
 
-Astrophysics, Machine Learning, Investment, Design, and all AI/Computer related things are my interests.
+I play video games like it's my life. I watch movies like I got nothing else to do. I love reading too much, I can't say no. That's why sometimes I'd abandon my old books for a new one. Astrophysics, Design, Investment, and AI/Computer related things are my interests. 
 
 ### News
 
