@@ -147,7 +147,7 @@ Exploration is needed because there is always uncertainty about the accuracy of 
 2. Exploration at random (like epsilon-greedy algorithm does)
 3. Smart Exploration (how? here's how)
 
-We've seen that no exploration at all is bad, and randomly exploring the arms would make us end up revisit bad actions which we have confirmed in the past. We have two options to remedy this problem though. First, decrease the value of epsilon in time. Second is to explore deterministically by favouring non-greedy actions with the strong potential to be optimal. In other words, we prefer actions for which we haven't had a confident value estimation yet.
+We've seen that no exploration at all is bad, and randomly exploring the arms would make us end up revisiting bad actions which we have confirmed in the past. We have two options to remedy this problem though. First, decrease the value of epsilon in time. Second is to explore deterministically by favouring non-greedy actions with the strong potential to be optimal. In other words, we prefer actions for which we haven't had a confident value estimation yet.
 
 > It would be better to select among the non-greedy actions according to their potential for actually being optimal, taking into account both how close their estimates are to being maximal and the uncertainties in those estimates. - **Sutton & Barto, Reinforcement Learning**
 
