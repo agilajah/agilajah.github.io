@@ -31,7 +31,7 @@ I play video games like it's my life. I watch movies like I got nothing else to 
 * *23 Nov 2017* -- Awarded as the 2nd Winner in [Indonesia Developer Summit Hackathon](https://www.codepolitan.com/keseruan-dalam-indonesia-developer-summit-5a28d4b386c02).
 * *19 Nov 2017* -- Awarded as the Best Student (Team) in Facebook Developer Circle: Bandung Hackathon.
 * *04 Nov 2017* -- Awarded as the 1st Winner of Data Mining Competition in [Gemastik 2017](https://gemastik.ui.ac.id). Held by Indonesia Ministry of Research, Technology, and Higher Education. [Link](https://www.ristekdikti.go.id/itb-berhasil-raih-peringkat-2-pada-ajang-gemastik-2017/).
-* *13 August 2017* -- Co-founded Neurafarm and became its Chief Technology Officer.
+* *13 August 2017* -- Co-founded [Neurafarm](http://neurafarm.com) and became its Chief Technology Officer.
 * *16 May 2017* -- Accepted as a Software Engineer Intern at  [Kata.ai](http://kata.ai).
 * *08 Mar 2017* -- Our Line Bot, Leptons, chosen as Finalist for [Line Developer Challenge Indonesia 2017]( http://at-blog.line.me/id/archives/DevChallengeWinners.html).   
 
