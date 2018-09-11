@@ -70,9 +70,9 @@ Remember that each bandit represents an action. Let's draw up some notation. Mul
 1. We have K bandits. Let K bandits/actions labeled by the integer {1, 2, 3, .... K}. K machines will have reward probabilities **{θ1, θ2, θ3, ... θk}**.
 2. Each of the k actions has an expected or mean reward called 'value' **(μ)** given that that action is selected at a time step.
 3. **R** is a reward function. The reward of action i is a random variable **Ri** with unknown distribution and unknown expected value **μi**.
-4. **A** is set of actions, each referring to the interaction with one slot machine. We denote the action selected on time step t as **At** and the corresponding reward as **Rt**. The 'value' of an action a is the expected reward given if it is selected (see point 2 above) and denoted by q*(a) = E[Rt | At =a]. If action **At** at the time step t is on the i-th machine, then q*(At) = θi.
+4. **A** is set of actions, each referring to the interaction with one slot machine. We denote the action selected on time step t as **At** and the corresponding reward as **Rt**. The 'value' of an action a is the expected reward given if it is selected (see point 2 above) and denoted by $$q*(a) = E[Rt | At =a] $$. If action **At** at the time step t is on the i-th machine, then $$q*(At) = θi$$.
 
-Speaking of reward, you might ask: How are the rewards produced? Well, one option is to draw a reward for action i **(Rt)** at time t from a fixed distribution (a different reward distribution for each action) and each draw is independent to the other. This setting is called **stochastic** and it’s what we’ll use here.
+Speaking of reward, you might ask: How are the rewards produced? Well, one option is to draw a reward for action i (Rt) at time t from a fixed distribution (a different reward distribution for each action) and each draw is independent to the other. This setting is called **stochastic** and it’s what we’ll use here.
 
 If you look at the above definition of multi-armed bandit, it can be seen as a simplified version of [Markov Decision Process](https://en.wikipedia.org/wiki/Markov_decision_process).
 
@@ -191,15 +191,15 @@ Let's continue. For a given action a, let us consider:
 Then we have:
 
 \begin{align}
-P(Qt(a) + Ut(a) < Q(a)) ≤ e^(−2tUt(a))^2
+P(Qt(a) + Ut(a) < Q(a)) ≤ e^{(−2tUt(a))^2}
 \end{align}
 
 Recall that we want to know with high probability that the true expected payoff of an action is less than our prescribed upper bound; We want to pick a bound so that the true mean is below the sample mean + the upper confidence bound with high confidence [6].
 
-It means that $$e^(-2tUt(a))^2$$ should be a small probability. Let's say it's p. So:
+It means that $$e^{(-2tUt(a))^2}$$ should be a small probability. Let's say it's p. So:
 
 \begin{align}
-p = e^(-2Ut(a))^2
+p = e^{(-2Ut(a))^2}
 \end{align}
 
 Thus,
