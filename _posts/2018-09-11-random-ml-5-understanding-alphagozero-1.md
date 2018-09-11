@@ -180,7 +180,7 @@ Kidding. Alright, let's start over, if you insisted.
 So we have t i.i.d random variables (X1, X2, ... Xt) that are bounded by the interval [0, 1], right. The expected values are μi. X is the average of the sum of every Xi and μ = E(X) = the average of the sum of expected values. Recall that Xi is the payoff variable for a single action j. So variable X is the average payoff for action j over all the times we've selected it. The [Hoeffding inequality](https://en.wikipedia.org/wiki/Hoeffding%27s_inequality) gives an exponential upper bound on the probability that the value of deviates from its mean.
 
 \begin{align}
-P(X + u < μ) ≤ e^(−2tu)^2
+P(X + u < μ) ≤ e^{(−2tu)^2}
 \end{align}
 
 See? It's kinda hard to read. Especially for me. That's why I skipped over the details. But you insisted. LOL.
@@ -246,7 +246,7 @@ So, that's how you derive the equation. Intuitively, then the algorithm goes lik
 
 I implemented the above algorithms (including the epsilon greedy) HERE: [agilajah/multi-armed-bandits](https://github.com/agilajah/multi-armed-bandit). Note that it's only a 'toy problem' for the sake of aiding intuition. I'm aware that this isn't at all a proper implementation in terms of the code quality, lol. It's because I wanted to minimize my effort, so I was just using my old code and added UCB1 algorithm in it without huge refactoring. But I hope that you could grasp what I've been talking about by looking at that code.
 
-As expected, UCB1 produces better result. It's also 'experienced' the lowest regrets (at least if we compare it to epsilon greedy at this scenario). I feel that 'experienced' is not the right word for this. But whatever lol
+As expected, UCB1 produces better result. It's also 'experienced' lowest regrets (at least if we compare it to epsilon greedy at this scenario). I feel that 'experienced' is not the right word for this. But whatever lol
 
 ![Received rewards by UCB1 algorithm vs Epsilon Greedy with various epsilon values. Source: Personal Gallery]({{site.url }}/images/2018/september/random-ml-5-11.png "Received rewards by UCB1 algorithm vs Epsilon Greedy with various epsilon values. Source: Personal Gallery")
 
