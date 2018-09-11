@@ -6,7 +6,7 @@ tags: [Machine Learning, RandomML]
 comments: true
 ---
 
-**Disclaimer:** This article was originally published on my LinkedIn ([click here](https://www.linkedin.com/pulse/mlrand-5-understanding-alphago-zero-part-1-code-febi-agil-ifdillah/) on September 8, 2018.
+**Disclaimer:** This article was originally published on my LinkedIn [click here](https://www.linkedin.com/pulse/mlrand-5-understanding-alphago-zero-part-1-code-febi-agil-ifdillah/) on September 8, 2018.
 
 ![ML.rand() 5 Cover, Pile of linear algebra vs Grandmaster?. Source: FB Page (Nondeterministic Mems for NP Complete Teens)]({{site.url }}/images/2018/september/random-ml-5-cover.png "ML.rand() 5 Cover, Pile of linear algebra vs Grandmaster?. Source: FB Page (Nondeterministic Mems for NP Complete Teens)")
 
@@ -176,7 +176,7 @@ Kidding. Alright, let's start over, if you insisted.
 So we have t i.i.d random variables (X1, X2, ... Xt) that are bounded by the interval [0, 1], right. The expected values are μi. X is the average of the sum of every Xi and μ = E(X) = the average of the sum of expected values. Recall that Xi is the payoff variable for a single action j. So variable X is the average payoff for action j over all the times we've selected it. The [Hoeffding inequality](https://en.wikipedia.org/wiki/Hoeffding%27s_inequality) gives an exponential upper bound on the probability that the value of deviates from its mean.
 
 \begin{align}
-P(X + u < μ) ≤ e^((−2tu)^2)
+P(X + u < μ) ≤ e^(−2tu)^2
 \end{align}
 
 See? It's kinda hard to read. Especially for me. That's why I skipped over the details. But you insisted. LOL.
@@ -191,15 +191,15 @@ Let's continue. For a given action a, let us consider:
 Then we have:
 
 \begin{align}
-P(Qt(a) + Ut(a) < Q(a)) ≤ e^((−2tUt(a))^2)
+P(Qt(a) + Ut(a) < Q(a)) ≤ e^(−2tUt(a))^2
 \end{align}
 
 Recall that we want to know with high probability that the true expected payoff of an action is less than our prescribed upper bound; We want to pick a bound so that the true mean is below the sample mean + the upper confidence bound with high confidence [6].
 
-It means that $$e^((-2tUt(a))^2)$$ should be a small probability. Let's say it's p. So:
+It means that $$e^(-2tUt(a))^2$$ should be a small probability. Let's say it's p. So:
 
 \begin{align}
-p = e^((-2Ut(a))^2)
+p = e^(-2Ut(a))^2
 \end{align}
 
 Thus,
@@ -267,7 +267,7 @@ So I guess that's it for the first part of Understanding AlphaGo Zero series. It
 
 * [3] http://banditalgs.com/2016/09/18/the-upper-confidence-bound-algorithm/
 
-* [4] https://courses.cs.washington.edu/courses/cse599i/18wi/resources/lecture3/lecture3.pdf
+* [4] [Lecture at Washington Uni](https://courses.cs.washington.edu/courses/cse599i/18wi/resources/lecture3/lecture3.pdf). 
 
 * [5] Burtini, G., Loeppky, J., & Lawrence, R. (2015). A survey of online experiment design with the stochastic multi-armed bandit. arXiv preprint arXiv:1510.00757.
 
