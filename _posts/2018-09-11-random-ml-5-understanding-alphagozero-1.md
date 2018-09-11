@@ -45,7 +45,7 @@ Decision making is a challenge we all face every day. From choosing a place to e
 
 If we only investing in those already proven companies, maybe we will miss out on opportunities to yield better returns than our current prospects. But by exploring too much, we may won't make enough profit.
 
-This is what we called by exploration vs exploitation dilemma. When we explore something, we might discover unknown (better) options but we have to sacrifice the other option(s) as well. Although exploration could be a total failure, we'll gain important lessons from it. On the other hand, when we do some exploitations, we'll be confident to get what we expected but ended up losing chances that might be better for us.
+This is what we call by exploration vs exploitation dilemma. When we explore something, we might discover unknown (better) options but we have to sacrifice the other option(s) as well. Although exploration could be a total failure, we'll gain important lessons from it. On the other hand, when we do some exploitations, we'll be confident to get what we expected but ended up losing chances that might be better for us.
 
 The thing is, we operate on a daily basis with limited knowledge and little understanding of how the world (or the people, or the markets) works. So, how do we decide when to explore new things and when to take advantage (exploit) of our knowledge on something? After all, we've only got so much time in the world and one little mistake (at worst case scenario) could cost you everything. (The hell I was talking about LOL, pardon my language. Let's move on).
 
@@ -61,7 +61,7 @@ At its core, Multi-armed bandits problem is all about decision making. It is a f
 
 Anyway, this problem would be easier if we knew the expected value of each slot machine. We just have to choose a machine with the highest reward at each time. Unfortunately, slot machines don't work that way. (I know right! the same with life). So we need to estimate the unknown payout from each machine on our own. The key idea is to develop a strategy, which results in the arm with the highest reward probability to be played such that the total reward obtained is maximized.
 
-We called the algorithms whose goals are to produce a 'rule' of selecting a sequence of options that balance exploration and exploitation as **bandit algorithms**. They have now been studied for nearly a century and can be used for configuring web interfaces, dynamic pricing, ad placement, or even clinical trial design. Moreover, believe it or not, (you should though) bandit algorithms are important components of how Monte Carlo Tree Search (MCTS), a key aspect of AlphaGoZero, was originally formalized.
+The algorithms whose goals are to produce a 'rule' of selecting a sequence of options that balance exploration and exploitation is called the **bandit algorithms**. They have now been studied for nearly a century and can be used for configuring web interfaces, dynamic pricing, ad placement, or even clinical trial design. Moreover, believe it or not, (you should though) bandit algorithms are important components of how Monte Carlo Tree Search (MCTS), a key aspect of AlphaGoZero, was originally formalized.
 
 ## Let's do some formalism.
 
