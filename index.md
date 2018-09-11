@@ -12,7 +12,7 @@ As a passionately curious person, I keep trying things and keep learning. I'd lo
 
 I always believe in the concept of intrinsic motivation, the idea that things are worth doing for my own sake, not because of some convoluted system of punishments and rewards.
 
-**I play video games like it's my life. I watch movies like I got nothing else to do. I love reading too much, I can't say no. That's why sometimes I'd abandon my old books for a new one.** Astrophysics, Design, Investment, and AI/Computer related things are my interests. 
+I play video games like it's my life. I watch movies like I got nothing else to do. I love reading too much, I can't say no. That's why sometimes I'd abandon my old books for a new one. Astrophysics, Design, Investment, and AI/Computer related things are my interests. 
 
 ### News
 
