@@ -220,7 +220,7 @@ at = argmax [Qt(a) + \sqrt{-log p / 2 Nt(a)}]
 
 ## UCB1 Algorithm
 
-UCB1 is an algorithm proposed by (Auer et al 2002) for the multi-armed bandit that achieves regret that grows only logarithmically with the number of actions taken. (You guys should definitely check the original paper [HERE](https://homes.di.unimi.it/~cesabian/Pubblicazioni/ml-02.pdf) and refer to [this note](https://courses.cs.washington.edu/courses/cse599s/14sp/scribes/lecture15/lecture15_draft.pdf) for the analysis). One heuristic is to reduce the threshold p in time, as we want to make more confident bound estimation with more rewards observed. [6], Set $$p = t^-4$$ we get:
+UCB1 is an algorithm proposed by (Auer et al 2002) for the multi-armed bandit that achieves regret that grows only logarithmically with the number of actions taken. (You guys should definitely check the original paper [HERE](https://homes.di.unimi.it/~cesabian/Pubblicazioni/ml-02.pdf) and refer to [this note](https://courses.cs.washington.edu/courses/cse599s/14sp/scribes/lecture15/lecture15_draft.pdf) for the analysis). One heuristic is to reduce the threshold p in time, as we want to make more confident bound estimation with more rewards observed. [6], Set $$p = t^{-4}$$ we get:
 
 \begin{align}
 Ut(a) = \sqrt{-2 log t / Nt(a)}
