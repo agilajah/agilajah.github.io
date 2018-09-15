@@ -26,7 +26,7 @@ But believe it or not, although our sense of direction varies, all of us have an
 
 ![3D Space where we live in. Source: http://upload.wikimedia.org/wikipedia/commons/thumb/8/83/Coord_planes_color.svg/1200px-Coord_planes_color.svg.png]({{site.url }}/images/2018/july/random-ml-4-1.png "3D Space where we live in. Source: http://upload.wikimedia.org/wikipedia/commons/thumb/8/83/Coord_planes_color.svg/1200px-Coord_planes_color.svg.png")
 
-It was actually first suspected in 2005 that there is something within our brains that facilitate spatial navigation known as the Grid Cells (the suspicion is actually could be traced back to 50s). It's like a GPS system within our bodies. In fact, Grid Cells are not the only cells that enable us to navigate.
+It was actually first suspected in 2005 that there is something within our brains that facilitate spatial navigation known as the Grid Cells (the suspicion is actually could be traced back to the 50s). It's like a GPS system within our bodies. In fact, Grid Cells are not the only cells that enable us to navigate.
 
 As it is, our brains contain a spatial map of the world. What neuroscientists mean by this is that there are brain cells that fire depending on where we are and where we’re going. There are different types of these cells, each with a unique role. Together, they enable us to navigate the crazy world we live in [3]. There are at least five cells that I know of as to date:
 
