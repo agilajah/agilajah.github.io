@@ -22,11 +22,11 @@ Note: I assume that the reader is familiar with the definitions and techniques o
 
 Some people have a great sense of direction. Even after wandering around town all day, they still know exactly how to get back. And here I am. I am that kind of person who always has to open Google Maps every time I want to go someplace.
 
-But believe it or not, although our sense of direction varies, all of us have an idea of what our surroundings look like and where we are located within them; We're all poses the same capability. The question is, how do we know where we are in space? Not space 'space', but this following space:
+But believe it or not, although our sense of direction varies, all of us have an idea of what our surroundings look like and where we are located within them; We're all posses the same capability. The question is, how do we know where we are in space? Not space 'space', but this following space:
 
 ![3D Space where we live in. Source: http://upload.wikimedia.org/wikipedia/commons/thumb/8/83/Coord_planes_color.svg/1200px-Coord_planes_color.svg.png]({{site.url }}/images/2018/july/random-ml-4-1.png "3D Space where we live in. Source: http://upload.wikimedia.org/wikipedia/commons/thumb/8/83/Coord_planes_color.svg/1200px-Coord_planes_color.svg.png")
 
-It was actually first suspected in 2005 that there is something within our brains that facilitate spatial navigation known as the Grid Cells (the suspicion regarding 'something' within our brains that has something to do with navigation is actually could be traced back to 50s). It's like a GPS system within our bodies. In fact, Grid Cells are not the only cells that enable us to navigate.
+It was actually first suspected in 2005 that there is something within our brains that facilitate spatial navigation known as the Grid Cells (the suspicion is actually could be traced back to 50s). It's like a GPS system within our bodies. In fact, Grid Cells are not the only cells that enable us to navigate.
 
 As it is, our brains contain a spatial map of the world. What neuroscientists mean by this is that there are brain cells that fire depending on where we are and where we’re going. There are different types of these cells, each with a unique role. Together, they enable us to navigate the crazy world we live in [3]. There are at least five cells that I know of as to date:
 
