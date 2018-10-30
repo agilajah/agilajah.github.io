@@ -16,6 +16,7 @@ I play video games like it's my life. I watch movies like I got nothing else to 
 
 ### News
 
+* *22 October 2018* -- Neurafarm wins 2nd place in Startup Istanbul 2018 Competition. [News](http://www.startupist.com/2018/10/startup-istanbul-challenge-2018-marked-by-women/)
 * *19 September 2018* -- Neurafarm joins NVIDIA Inception Program.
 * *08 September 2018* -- Neurafarm got selected as one of the **top 100 startups among 93,200 startup** applications from **140 countries** all over the world for Startup Istanbul 2018 Challenge to be on 19-22 October, in the center of the world, Istanbul.
 * *28 August 2018* -- Got selected as top 15 participants of The Falling Walls Lab Jakarta, an event hosted by the German Academic Exchange Service (DAAD) in cooperation with the Faculty of Administrative Science Universitas Indonesia and is supported by EURAXESS, the Federal Foreign Office of Germany and the Falling Walls Foundation. (Will be presenting my idea at Universitas Indonesia on 13th September)
