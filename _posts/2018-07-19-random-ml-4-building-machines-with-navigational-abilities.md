@@ -22,11 +22,11 @@ Note: I assume that the reader is familiar with the definitions and techniques o
 
 Some people have a great sense of direction. Even after wandering around town all day, they still know exactly how to get back. And here I am. I am that kind of person who always has to open Google Maps every time I want to go someplace.
 
-But believe it or not, although our sense of direction varies, all of us have an idea of what our surroundings look like and where we are located within them; We're all poses the same capability. The question is, how do we know where we are in space? Not space 'space', but this following space:
+But believe it or not, although our sense of direction varies, all of us have an idea of what our surroundings look like and where we are located within them; We're all posses the same capability. The question is, how do we know where we are in space? Not space 'space', but this following space:
 
 ![3D Space where we live in. Source: http://upload.wikimedia.org/wikipedia/commons/thumb/8/83/Coord_planes_color.svg/1200px-Coord_planes_color.svg.png]({{site.url }}/images/2018/july/random-ml-4-1.png "3D Space where we live in. Source: http://upload.wikimedia.org/wikipedia/commons/thumb/8/83/Coord_planes_color.svg/1200px-Coord_planes_color.svg.png")
 
-It was actually first suspected in 2005 that there is something within our brains that facilitate spatial navigation known as the Grid Cells (the suspicion regarding 'something' within our brains that has something to do with navigation is actually could be traced back to 50s). It's like a GPS system within our bodies. In fact, Grid Cells are not the only cells that enable us to navigate.
+It was actually first suspected in 2005 that there is something within our brains that facilitate spatial navigation known as the Grid Cells (the suspicion is actually could be traced back to the 50s). It's like a GPS system within our bodies. In fact, Grid Cells are not the only cells that enable us to navigate.
 
 As it is, our brains contain a spatial map of the world. What neuroscientists mean by this is that there are brain cells that fire depending on where we are and where we’re going. There are different types of these cells, each with a unique role. Together, they enable us to navigate the crazy world we live in [3]. There are at least five cells that I know of as to date:
 
@@ -45,7 +45,7 @@ A team from DeepMind (Banino, A. et al, 2018) tried to find out the answer and t
 
 ![Grid cells emerged from within the NN used in the experiments. Source: DeepMind's blog]({{site.url }}/images/2018/july/random-ml-4-2.jpeg "Grid cells emerged from within the NN used in the experiments. Source: DeepMind's blog")
 
-They trained a grid cell network that consist of a recurrent layer (LSTM, 128 units), a linear layer (implements regularization, i.e Dropout with prob. of 0.5), and an output layer. At each timestep t, the grid cell net receives the egocentric linear velocity v, and the sine and cosine of its angular velocity **phi**. So the input to the LSTM layer is the vector [velocity(t), sin(phi(t)), cos(phi(t))].
+They trained a grid cell network that consists of a recurrent layer (LSTM, 128 units), a linear layer (implements regularization, i.e Dropout with prob. of 0.5), and an output layer. At each timestep t, the grid cell net receives the egocentric linear velocity v, and the sine and cosine of its angular velocity **phi**. So the input to the LSTM layer is the vector [velocity(t), sin(phi(t)), cos(phi(t))].
 
 There are two ground truths used, namely the place cell and the head-direction cell. For a given x position, place cell activations **c** were simulated by the posterior probability of each component of a mixture of two-dimensional isotropic gaussians. For a given facing angle **phi**, the head-direction cell activations **h** were represented by the posterior probability of each component of a mixture of Von Mises distributions with concentration parameter k (a fixed value of positive scalar).
 
@@ -71,7 +71,7 @@ Surprisingly (or not?), Grid-like spatial response patterns were also emerged in
 
 ![Different types of spatial responses emerged from within the trained network. Source: Cueva & Wei, 2018]({{site.url }}/images/2018/july/random-ml-4-4.png "Different types of spatial responses emerged from within the trained network. Source: Cueva & Wei, 2018")
 
-However, as opposed to DeepMind's findings where they found grid-like whose firing pattern closely resembles rodent grid cells which typically show hexagonal firing patterns across different shaped environments, the Columbia team's found a periodic firing that conformed to the shape of the enclosure (e.g rectangular grids in a square environment and triangular in a triangular environment) [4] as you can see in the above figure. But in both studies, when regularization (i.e Dropout) of the network is not used during training, the trained RNNs no longer resemble the EC.
+However, as opposed to DeepMind's findings where they found grid-like whose firing pattern closely resembles rodent grid cells which typically show hexagonal firing patterns across different shaped environments, the Columbia team found a periodic firing that conformed to the shape of the enclosure (e.g rectangular grids in a square environment and triangular in a triangular environment) [4] as you can see in the above figure. But in both studies, when regularization (i.e Dropout) of the network is not used during training, the trained RNNs no longer resemble the EC.
 
 If you're interested in a more detailed explanation of how things work + methods employed by the authors you can check the paper by DeepMind [here](https://www.nature.com/articles/s41586-018-0102-6.epdf?author_access_token=BjM-5BdGxd14c17YFA6PsdRgN0jAjWel9jnR3ZoTv0OEfySMT4t78PpPpCS7uExW3njb8Q4UlgcwRM32WwBCKZs73SThwkfI42wHhFEtJM-Y7sQxDsR1cR7_C9Kq1GwuxGJn46kzRnujvrDMGzc4TQ%3D%3D), and the Cueva & Wei, 2018 [here](https://openreview.net/pdf?id=B17JTOe0-).
 
