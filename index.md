@@ -16,13 +16,13 @@ I play video games like it's my life. I watch movies like I got nothing else to 
 
 ### News
 
-* *22 October 2018* -- Neurafarm wins 2nd place in Startup Istanbul 2018 Competition. [News](http://www.startupist.com/2018/10/startup-istanbul-challenge-2018-marked-by-women/)
-* *19 September 2018* -- Neurafarm joins NVIDIA Inception Program.
-* *08 September 2018* -- Neurafarm got selected as one of the **top 100 startups among 93,200 startup** applications from **140 countries** all over the world for Startup Istanbul 2018 Challenge to be on 19-22 October, in the center of the world, Istanbul.
-* *28 August 2018* -- Got selected as top 15 participants of The Falling Walls Lab Jakarta, an event hosted by the German Academic Exchange Service (DAAD) in cooperation with the Faculty of Administrative Science Universitas Indonesia and is supported by EURAXESS, the Federal Foreign Office of Germany and the Falling Walls Foundation. (Will be presenting my idea at Universitas Indonesia on 13th September)
-* *09/10 August 2018* -- Neurafarm won Swiss Innovation Challenge Indonesia 2018. An international innovation competition held by Northwesterns University of Switzerland in collaboration with School of Business and Management, Bandung Institute of Technology (ITB).
-* *06 August 2018* -- Received Ganesha Karya Award. It is an award presented by Bandung Institute of Technology (ITB) to recognize achievement and excellence in innovation.
-* *31 July 2018* -- Canceled my Summer Internship at Microsoft Indonesia.
+* *22 Oct 2018* -- Neurafarm wins 2nd place in Startup Istanbul 2018 Competition. [Link](http://www.startupist.com/2018/10/startup-istanbul-challenge-2018-marked-by-women/)
+* *19 Sep 2018* -- Neurafarm joins NVIDIA Inception Program.
+* *08 Sep 2018* -- Neurafarm got selected as one of the **top 100 startups among 93,200 startup** applications from **140 countries** all over the world for Startup Istanbul 2018 Challenge to be on 19-22 October, in the center of the world, Istanbul.
+* *28 Aug 2018* -- Got selected as top 15 participants of The Falling Walls Lab Jakarta, an event hosted by the German Academic Exchange Service (DAAD) in cooperation with the Faculty of Administrative Science Universitas Indonesia and is supported by EURAXESS, the Federal Foreign Office of Germany and the Falling Walls Foundation. (Will be presenting my idea at Universitas Indonesia on 13th September)
+* *09/10 Aug 2018* -- Neurafarm won Swiss Innovation Challenge Indonesia 2018. An international innovation competition held by Northwesterns University of Switzerland in collaboration with School of Business and Management, Bandung Institute of Technology (ITB).
+* *06 Aug 2018* -- Received Ganesha Karya Award. It is an award presented by Bandung Institute of Technology (ITB) to recognize achievement and excellence in innovation.
+* *31 Jul 2018* -- Canceled my Summer Internship at Microsoft Indonesia.
 * *07 May 2018* -- Got invited to Asia MSP Summit in Taipei, Taiwan (June). Thank you, Microsoft!
 * *02 May 2018* -- Got selected as a Software Engineer Intern at Microsoft Indonesia.
 * *16 Mar 2018* -- Taleus proceeded to Microsoft Imagine Cup 2018 Asia-Pacific Finals after got a wild card. [Link](https://news.microsoft.com/apac/2018/04/02/meet-the-imagine-cup-2018-asia-pacific-regional-finalists/)  
