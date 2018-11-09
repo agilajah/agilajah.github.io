@@ -29,6 +29,6 @@ That day, Ethan sat on an antique wooden chair in a big white room of a house in
 
 It had been 30 minutes since he entered the room. He had seen everything--from the beautiful scenery of Tuvalu to the breathtaking landscape of The Alps. Which also had disappeared some 20 years ago. Many people had loved the place, but none of them could protect it. Luckily, they took a lot of pictures of those places. At least, they could display the scenery at the windows and reminiscing. 
 
-“Sorry, I'm late." a woman's voice broke the silence as she entered the room and sat on an identical antique chair across to Ethan.
+“Sorry, I'm late." a woman's voice broke the silence as she waltzed into the room and sat on an identical antique chair across to Ethan.
 
 ## TO BE CONTINUED.
