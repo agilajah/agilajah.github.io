@@ -25,7 +25,9 @@ Not everyone felt depressed because of the winter solstice. Some of them were ha
 
 But Ethan White wasn't one of them. Feast and celebration weren't for someone like him, whose everything been taken away for good in the winter solstice. When others could only imagine and feared this juncture would bring about the end of the world, it was literally the end of the world for him. 
 
-That day, Ethan sat on an antique wooden chair in a big white room of a house in the centre of New York City, looking out at Mount Marcy. In the next 5 minutes, he would be staring at the Tunnel View, the iconic vista of towering Bridalveil Fall and the granite cliffs of El Capitan and Half Dome in Yosemite National Park from the exact same windows. All of which had nearly gone, replaced by something entirely new and synthetic. 
+*@*
+
+Ethan sat on an antique wooden chair in a big white room of a house in the centre of New York City, looking out at Mount Marcy. In the next 5 minutes, he would be staring at the Tunnel View, the iconic vista of towering Bridalveil Fall and the granite cliffs of El Capitan and Half Dome in Yosemite National Park from the exact same windows. All of which had nearly gone, replaced by something entirely new and synthetic. 
 
 It had been 30 minutes since he entered the room. He had seen everything--from the beautiful scenery of Tuvalu to the breathtaking landscape of The Alps. Which also had disappeared some 20 years ago. Many people had loved the place, but none of them could protect it from Global Warming. Luckily, they took a lot of pictures of those places. At least, they could display the scenery at the windows and reminiscing. 
 
