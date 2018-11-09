@@ -27,7 +27,7 @@ But Ethan White wasn't one of them. Feast and celebration weren't for someone li
 
 That day, Ethan sat on an antique wooden chair in a big white room of a house in the centre of New York City, looking out at Mount Marcy. In the next 5 minutes, he would be staring at the Tunnel View, the iconic vista of towering Bridalveil Fall and the granite cliffs of El Capitan and Half Dome in Yosemite National Park from the exact same windows. All of which had nearly gone, replaced by something entirely new and synthetic. 
 
-It had been 30 minutes since he entered the room. He had seen everything--from the beautiful scenery of Tuvalu to the breathtaking landscape of The Alps. Which also had disappeared some 20 years ago. Many people had loved the place, but none of them could protect it. Luckily, they took a lot of pictures of those places. At least, they could display the scenery at the windows and reminiscing. 
+It had been 30 minutes since he entered the room. He had seen everything--from the beautiful scenery of Tuvalu to the breathtaking landscape of The Alps. Which also had disappeared some 20 years ago. Many people had loved the place, but none of them could protect it from Global Warming. Luckily, they took a lot of pictures of those places. At least, they could display the scenery at the windows and reminiscing. 
 
 “Sorry, I'm late." a woman's voice broke the silence as she waltzed into the room and sat on an identical antique chair across to Ethan.
 
