@@ -105,7 +105,7 @@ Man, I've been saying 'interesting' for like a hundred times. But it actually is
 
 The image below summarizes their work:
 
-![Summary of Shen et al (2017). Source: http://arxiv.org/pdf/1707.05474.pdf]({{site.url }}/images/2018/july/generative-modelling-3-3.png "Summary of Shen et al (2017). Source: http://arxiv.org/pdf/1707.05474.pdf")
+![Summary of Shen et al (2017). Source: http://arxiv.org/pdf/1707.05474.pdf]({{site.url }}/images/2018/july/generative-modelling-3-4.png "Summary of Shen et al (2017). Source: http://arxiv.org/pdf/1707.05474.pdf")
 
 So basically, with this figure, Shen et al (2017) wanted us to know that[1]:
 
