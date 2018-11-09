@@ -19,7 +19,7 @@ kramdown:
   parse_block_html: true
 
 # Site settings
-permalink: /:categories/:year/:month/:day/:title/
+permalink: /blog/:year/:month/:day/:title/
 
 # important since the site is compiled
 # on Github's servers
