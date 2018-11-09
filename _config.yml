@@ -20,6 +20,7 @@ kramdown:
 
 # Site settings
 permalink: /blog/:year/:month/:day/:title/
+permalink: /story/:year/:month/:day/:title/
 
 # important since the site is compiled
 # on Github's servers
