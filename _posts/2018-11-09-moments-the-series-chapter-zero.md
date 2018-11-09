@@ -1,5 +1,5 @@
 ---
-layout: story
+layout: post
 title: Moments - Zero
 description: "What if you could relive your life over and over again?"
 tags: [Moments Series]
