@@ -32,6 +32,5 @@ Ethan sat on an antique wooden chair in an enormous white room of a house in Yon
 It had been 30 minutes since he entered the room. He had seen everything--from the beautiful scenery of Tuvalu to the breathtaking landscape of The Alps. Which also had disappeared some 20 years ago. Many people had loved the place, but none of them could protect it from Global Warming. Luckily, they took a lot of pictures of those places so people could display anything on their windows. At least, they could see it for one more time and reminisce. 
 
 “Sorry, I'm late." Woman's voice broke the silence as she waltzed into the room and sat on an identical antique chair across to Ethan.
-There was no answer. Ethan kept looking at the windows. He looked right through her as if she wasn't there.
 
 ## TO BE CONTINUED.
