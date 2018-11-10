@@ -15,7 +15,7 @@ comments: true
 >Yours,
 >Ethan, 21 December 2077
 
-The year was 2080. It was the day of the winter solstice, which means it was the shortest day of the year for the Northern Hemisphere. That day, New York City only experienced 9 hours and 15 minutes of sunlight. Although, it was still better than what people in Helsinki, Finland were facing: only 5 hours and 49 minutes of light. Alas, there was this place called Barrow in Alaska where its people hadn't had a sunrise at all since mid-November.   
+The year was 2080. It was the day of the winter solstice, which means it was the shortest day of the year for the Northern Hemisphere. That day, New York City only experienced 9 hours and 15 minutes of sunlight. Although, it was still better than what people in Helsinki, Finland were facing: only 5 hours and 49 minutes of light. Alas, it wasn't the worst of all to say the least.There was this place called Barrow in Alaska where its people hadn't even had a sunrise at all since mid-November.   
 
 The world might look pretty grim now. However, not everyone felt depressed because of the winter solstice. Some were happy like they did. After all, from now on, the days began to grow longer again. Not only that. In fact, there are more known rituals and celebrations associated with this moment than for any other time of the year. Every year, people celebrate the winter solstice in various forms. Hundreds of years ago, Romans called this day Dies Natalis Invicti Solis, the Birthday of the Unconquered Sun. And today, revellers gathered in Stonehenge to watch the sunrise on the shortest day. In Seattle, you could even celebrate at the Feast of the Winter Solstice by registering to join the Fremont Arts Council.
 
