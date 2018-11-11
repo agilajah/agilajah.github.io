@@ -33,7 +33,7 @@ As temperatures plummeted as low as -59F, US Coast Guard struggled through froze
 
 In the next 5 minutes, he would be staring at the Tunnel View, the iconic vista of towering Bridalveil Fall and the granite cliffs of El Capitan and Half Dome in Yosemite National Park from the window. All of which had actually gone, replaced by something new and artificial into a completely different place. Humankind had proven time and again that it can reshape mountains or tear them down. Not only that, now humans could make them rise, or even made entirely new ones as well.
 
-It had been 30 minutes since he entered the room. He had seen everything--from the beautiful scenery of Tuvalu to the breathtaking landscape of The Alps. Which also had disappeared some 20 years ago. Many people had loved the place, but none of them could protect it from Global Warming. Luckily, they took a lot of pictures of those places so people could display it on their windows. At least, they could see it for one more time and reminisce. 
+It had been 30 minutes since Ethan entered the room. He had seen everything--from the beautiful scenery of Tuvalu to the breathtaking landscape of The Alps. Which also had disappeared some 20 years ago. Many people had loved the place, but none of them could protect it from Global Warming. Luckily, they took a lot of pictures of those places so people could display it on their windows. At least, they could see it for one more time and reminisce. 
 
 “Sorry, I'm late." Woman's voice broke the silence as she waltzed into the room and sat on an identical antique chair across to Ethan.
 
