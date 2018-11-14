@@ -16,7 +16,7 @@ Image Source: [hybridpedagogy.org](http://hybridpedagogy.org/essential-silence/)
 
 The Woman waited for five more minutes. There was still no answer from the other side of the room. Ethan kept gazing out the window, blankly. He looked right through the Woman as if she wasn't there. Something had preoccupied him. Good. Bad. No one knew. He was so fixated on that space as if it were reeling him in. Out of this world. 
 
-"Ethan, you're with me?" the Woman asked again for the second time. She was Dr Patricia, Ethan's therapist for the last six months. And that's how the session had been going on, every once a week. No conversation, just her asking Ethan's day and how was he holding up. 
+"Ethan, you're with me?" the Woman asked again for the second time. She was Dr Patricia, Ethan's therapist for the last six months. And that's how the session had been going on, every once a week, for that amount of time. No conversation, just her asking Ethan's day and how was he holding up. 
 
 Six months. She didn't have any clue of what happened to Ethan and never once did she ask him about it. Well, except for the first four sessions. Then she learned her role.
 
