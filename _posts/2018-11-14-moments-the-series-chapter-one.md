@@ -18,7 +18,7 @@ The Woman waited for five more minutes. There was still no answer from the other
 
 "Ethan, you're with me?" the Woman asked again for the second time. She was Dr Patricia, Ethan's therapist for the last six months. And that's how the session had been going on, every once a week, for that amount of time. No conversation, just her asking Ethan's day and how was he holding up. 
 
-Six months. She didn't have any clue of what had happened to Ethan and never once did she ask him about it. Well, except for the first four sessions. Then she learned her role.
+Six months. She didn't have any clue of what had happened to Ethan and never once did she ask him about it. Well, except for the first four sessions. Then she learned her role, joined Ethan in silence for every session.
 
 Others would tell Ethan to move on, to put everything behind; to go on vacation, buy a cat, buy a dog, or buy an iguana. Anything to move his attention from whatever he had been going through and tell him that everything would be all right. 
 
