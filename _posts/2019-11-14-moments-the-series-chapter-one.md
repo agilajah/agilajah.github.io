@@ -6,7 +6,7 @@ tags: [Moments Series, Story]
 comments: true
 ---
 
-![Essential Silence. Source: Hybridpedagogy.org]({{site.url }}/images/2018/november/moment_one.png)
+![Essential Silence. Image Source: Hybridpedagogy.org]({{site.url }}/images/2018/november/moment_one.png)
 
 Image Source: [hybridpedagogy.org](http://hybridpedagogy.org/essential-silence/)
 
