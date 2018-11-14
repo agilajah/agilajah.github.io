@@ -20,7 +20,7 @@ The Woman waited for five more minutes. There was still no answer from the other
 
 Six months. She didn't have any clue of what had happened to Ethan and never once did she ask him about it. Well, except for the first four sessions. Then she learned her role.
 
-Others would tell Ethan to move on, to put everything behind; to go on vacation, buy a cat, buy a dog, or buy an iguana, anything to move his attention from whatever he had been going through and tell him that everything would be all right. 
+Others would tell Ethan to move on, to put everything behind; to go on vacation, buy a cat, buy a dog, or buy an iguana. Anything to move his attention from whatever he had been going through and tell him that everything would be all right. 
 
 However, the psychological principle has it that buried traumas must be excavated and dealt with before a patient can move on. Dr Patricia was pretty aware of that, and she really needed Ethan to speak. But who knew whether it was trauma or not? Ethan wouldn't tell anyone about anything. Though you could tell by Ethan's eyes that he was in so much pain. 
 
