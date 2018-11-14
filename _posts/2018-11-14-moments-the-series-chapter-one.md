@@ -10,9 +10,15 @@ comments: true
 
 Image Source: [hybridpedagogy.org](http://hybridpedagogy.org/essential-silence/)
 
+### Moments the Series
+
+1. Moments Zero [click here](http://febiagil.me/blog/2018/11/09/moments-the-series-chapter-zero/)
+2. Moments One (this post)
+
+
 "How was your day?" the Woman asked quietly, slightly smiled. 
 
-"Anything you wanted to talk about?" she added while she took a pen and a notebook from her purse, tried to make the conversation moving. She preferred a traditional way of note taking over the others. Although the room was equipped with sound and video recorders in each corner. Anything that can go wrong, will. That's what Murphy's Law stated, and that's what she believed: the one time you rely solely on a recorder will be the one time the recorder faults. Except there were at least 4 recorders in the room, and she used notebooks anyway.
+"Anything you wanted to talk about?" she added, tried to make the conversation moving, while she took a pen and a notebook from her purse. She preferred a traditional way of note taking over the others. Although the room was equipped with sound and video recorders in each corner. Anything that can go wrong, will. That's what Murphy's Law stated, and that's what she believed: the one time you rely solely on a recorder will be the one time the recorder faults. Except there were at least 4 recorders in the room, and she used notebooks anyway.
 
 The Woman waited for five more minutes. There was still no answer from the other side of the room. Ethan kept gazing out the window, blankly. He looked right through the Woman as if she wasn't there. Something had preoccupied him. Good. Bad. No one knew. He was so fixated on that space as if it was reeling him in. Out of this world. 
 
@@ -29,8 +35,3 @@ Dr Patricia understood the best she could do in this matter would be to give Eth
 There they were, sat in silence.
 
 ## TO BE CONTINUED.
-
-### Moments the Series
-
-1. Moments Zero [click here](http://febiagil.me/blog/2018/11/09/moments-the-series-chapter-zero/)
-2. Moments One (this post)
