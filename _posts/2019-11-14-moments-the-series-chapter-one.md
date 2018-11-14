@@ -26,6 +26,6 @@ However, the psychological principle has it that buried traumas must be excavate
 
 Dr Patricia understood her role in this matter would be to give Ethan all the space and quiet he needed. For whatever happened to him. That's all that matter. Because both of them knew that everything would never be all right again. 
 
-There they were, in silence.
+There they were, sat in silence.
 
 ## TO BE CONTINUED.
