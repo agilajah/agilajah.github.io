@@ -8,7 +8,7 @@ comments: true
 
 ![Essential Silence. Source: Hybridpedagogy.org]({{site.url }}/images/2018/november/moment_one.png)
 
-Source: [hybridpedagogy.org](http://hybridpedagogy.org/essential-silence/)
+Image Source: [hybridpedagogy.org](http://hybridpedagogy.org/essential-silence/)
 
 "How was your day?" the Woman asked quietly, slightly smiled. 
 
