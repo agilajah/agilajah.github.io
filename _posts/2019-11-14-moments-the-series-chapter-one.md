@@ -22,9 +22,9 @@ Six months. She didn't have any clue of what happened to Ethan and never once di
 
 Others would tell Ethan to move on, to put everything behind; to go on vacation, buy a cat, buy a dog, or buy an iguana, anything to move his attention from whatever he had been going through and tell him that everything would be all right. 
 
-However, the psychological principle has it that buried traumas must be excavated and dealt with before a patient can move on. Dr Patricia was pretty aware of that, and she really needed Ethan to speak. But who knew whether it was trauma or not? Ethan wouldn't tell anyone about anything. Though you could tell by Ethan's eyes that he was in pain. 
+However, the psychological principle has it that buried traumas must be excavated and dealt with before a patient can move on. Dr Patricia was pretty aware of that, and she really needed Ethan to speak. But who knew whether it was trauma or not? Ethan wouldn't tell anyone about anything. Though you could tell by Ethan's eyes that he was in so much pain. 
 
-Dr Patricia understood the best she could do in this matter would be to give Ethan all the space and quiet he needed. For whatever happened to him. That's all that matter. Because both of them knew that everything would never be all right again. 
+Dr Patricia understood the best she could do in this matter would be to give Ethan all the space and quiet he needed. For whatever happened to him. That's all that matter. Because both of them knew that everything would never be all right again, and everything she said.. none of that matter.
 
 There they were, sat in silence.
 
