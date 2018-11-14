@@ -12,7 +12,7 @@ Image Source: [hybridpedagogy.org](http://hybridpedagogy.org/essential-silence/)
 
 ### Moments the Series
 
-1. Moments Zero [click here](http://febiagil.me/blog/2018/11/09/moments-the-series-chapter-zero/)
+1. Moments Zero ([click here](http://febiagil.me/blog/2018/11/09/moments-the-series-chapter-zero/))
 2. Moments One (this post)
 
 
