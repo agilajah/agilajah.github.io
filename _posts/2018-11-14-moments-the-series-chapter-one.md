@@ -29,3 +29,8 @@ Dr Patricia understood the best she could do in this matter would be to give Eth
 There they were, sat in silence.
 
 ## TO BE CONTINUED.
+
+### Moments the Series
+
+1. Moments Zero [click here](http://febiagil.me/blog/2018/11/09/moments-the-series-chapter-zero/)
+2. Moments One (this post)
