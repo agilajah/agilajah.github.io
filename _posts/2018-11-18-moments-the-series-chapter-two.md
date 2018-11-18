@@ -17,7 +17,7 @@ comments: true
 
 Image Source: [hybridpedagogy.org](http://hybridpedagogy.org/essential-silence/)
 
-Huge chunks of ice had appeared here and there on the Hudson River, slowly fused together. Most parts of the river had already frozen solid and no sign of the freezing weather to abate any time soon. Hundreds of boats were trapped, and a lot of services were completely shut down including the infamous East River ferry service on the nearby. This was a bit of a problem because people were still relying on vessels to transport supplies to Northeast communities as much as they were sixty years ago. 
+Huge chunks of ice had appeared here and there on the Hudson River, slowly fused together. Most parts of the river had already frozen solid and no sign of the freezing weather to abate any time soon. Hundreds of ships were trapped, and a lot of services were completely shut down including the infamous East River ferry service on the nearby. This was a bit of a problem because people were still relying on vessels to transport supplies to Northeast communities as much as they were sixty years ago. 
 
 This was probably the worst winter in New York for a century. The last time the Hudson River had frozen over like that was in the 1800s which was almost 300 years ago. New Yorkers could be forgiven for wondering whether they were able to drive a car from Manhattan to New Jersey through the encrusted stream, which in fact, was quite possible. But impossible at the same time, unless they were OK with the threat of hazardous chilly wind.
 
