@@ -39,7 +39,7 @@ However, that time, Dr Patricia decided that she had had enough and spoke her mi
 
 "It is not just 'talking about your problems'; it is also working toward solutions. But I can't help you if you don't let me." Dr Patricia proceeded. "So could you...".
 
-“I’m looking out at the mountains,” Ethan interrupted. “They’ve never looked more beautiful.”
+“I’m looking out at the mountains,” Ethan interrupted. Talked about what he saw in the LED window. “They’ve never looked more beautiful.”
 
 Dr Patricia perplexed, couldn't believe what just happened.
 
