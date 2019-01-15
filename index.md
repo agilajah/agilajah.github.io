@@ -6,7 +6,7 @@ permalink: /
 ---
 
 {: style="margin-top:0; margin-bottom: 0;"}
-An engineer, designer, storyteller, and aspiring entrepreneur; In a mission to provide value to masses with something I created.  Recently graduated and received Bachelor of Science in Computer Science/Informatics from  [Bandung Institute of Technology's][1] School of Electrical Engineering and Informatics. I am also Co-Founder and CTO of [Neurafarm](http://neurafarm.com/) where I drive innovation strategy for the company and ensures technology excellence as part of Neurafarm's commitment to provide the best precision farming technology for farmers.
+An engineer, designer, storyteller, and aspiring entrepreneur; In a mission to provide value to masses with something I created.  Recently graduated and received Bachelor of Science in Computer Science/Informatics from  [Bandung Institute of Technology's][1] School of Electrical Engineering and Informatics. I am also Co-Founder, CEO & CTO of [Neurafarm](http://neurafarm.com/) where I drive innovation strategy for the company and ensures technology excellence as part of Neurafarm's commitment to provide the best precision farming technology for farmers.
 
 As a passionately curious person, I keep trying things and keep learning. I'd love to blazing my own trails and taking on whatever project is most fascinating. So long as I get to use my people skills, identify and achieve my own goals and inspire my colleagues and followers, I will be happy.
 
@@ -16,6 +16,7 @@ I play video games like it's my life. I watch movies like I got nothing else to 
 
 ### News
 
+* *10 Jan 2019* -- Appointed as Neurafarm's CEO. The previous CEO will serve as COO.
 * *22 Oct 2018* -- Neurafarm wins 2nd place in Startup Istanbul 2018 Competition. [Link](http://www.startupist.com/2018/10/startup-istanbul-challenge-2018-marked-by-women/)
 * *19 Sep 2018* -- Neurafarm joins NVIDIA Inception Program.
 * *08 Sep 2018* -- Neurafarm got selected as one of the **top 100 startups among 93,200 startup** applications from **140 countries** all over the world for Startup Istanbul 2018 Challenge to be on 19-22 October, in the center of the world, Istanbul.
