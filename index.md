@@ -16,7 +16,7 @@ I play video games like it's my life. I watch movies like I got nothing else to 
 
 ### News
 
-* *10 Jan 2019* -- Appointed as [Neurafarm](http://neurafarm.com/)'s Chief Executive Officer. The previous CEO will serve in COO role.
+* *10 Jan 2019* -- Appointed as new Chief Executive Officer of [Neurafarm](http://neurafarm.com/). The previous CEO will serve in COO role.
 * *22 Oct 2018* -- Neurafarm wins 2nd place in Startup Istanbul 2018 Competition. [Link](http://www.startupist.com/2018/10/startup-istanbul-challenge-2018-marked-by-women/)
 * *19 Sep 2018* -- Neurafarm joins NVIDIA Inception Program.
 * *08 Sep 2018* -- Neurafarm got selected as one of the **top 100 startups among 93,200 startup** applications from **140 countries** all over the world for Startup Istanbul 2018 Challenge to be on 19-22 October, in the center of the world, Istanbul.
