@@ -19,7 +19,7 @@ I play video games like it's my life. I watch movies like I got nothing else to 
 * *01 Feb 2019* -- Will represent [Neurafarm](http://neurafarm.com) in [Global Social Venture Challenge](https://gsvc.org/) - Regional Round in Bangkok, Thailand (21-23 February 2019). 
 * *10 Jan 2019* -- Appointed as new Chief Executive Officer of [Neurafarm](http://neurafarm.com/). The previous CEO will serve in COO role.
 * *22 Oct 2018* -- Neurafarm wins 2nd place in Startup Istanbul 2018 Competition. [Link](http://www.startupist.com/2018/10/startup-istanbul-challenge-2018-marked-by-women/)
-* *27 Sep 2018* -- Will represent [Neurafarm](http://neurafarm.com) in the [Swiss Innovation Challenge 2018](https://www.fhnw.ch/en/about-fhnw/swiss-challenge-entrepreneurs-programme/swiss-innovation-challenge) in Basel, Switzerland. **[News](http://www.sbm.itb.ac.id/id/the-swiss-innovation-challenge-asia-indonesia-2018.html)**
+* *27 Sep 2018* -- Will represent [Neurafarm](http://neurafarm.com) in the [Swiss Innovation Challenge 2018](https://www.fhnw.ch/en/about-fhnw/swiss-challenge-entrepreneurs-programme/swiss-innovation-challenge) in Basel, Switzerland. [Link](http://www.sbm.itb.ac.id/id/the-swiss-innovation-challenge-asia-indonesia-2018.html)
 * *19 Sep 2018* -- Neurafarm joins NVIDIA Inception Program.
 * *08 Sep 2018* -- Neurafarm got selected as one of the **top 100 startups among 93,200 startup** applications from **140 countries** all over the world for Startup Istanbul 2018 Challenge to be on 19-22 October, in the center of the world, Istanbul.
 * *28 Aug 2018* -- Got selected as top 15 participants of The Falling Walls Lab Jakarta, an event hosted by the German Academic Exchange Service (DAAD) in cooperation with the Faculty of Administrative Science Universitas Indonesia and is supported by EURAXESS, the Federal Foreign Office of Germany and the Falling Walls Foundation. (Will be presenting Dr. Tania at Universitas Indonesia on 13th September)
@@ -33,7 +33,7 @@ I play video games like it's my life. I watch movies like I got nothing else to 
 * *02 Mar 2018* -- Our team, Taleus, chosen as the finalist of Microsoft Imagine Cup 2018 Indonesia [Link](https://imagine.microsoft.com/en-us/Country/ID)
 * *20 Feb 2018* -- Our team, Taleus, selected as the semi-finalist of Microsoft Imagine Cup 2018 Indonesia [Link](https://imagine.microsoft.com/en-us/Country/ID)
 * *17 Feb 2018* -- Neurafarm got awarded as the 3rd Winner of Business Plan Competition in the 7th University of Indonesia Studentpreneurs.
-* *05 Feb 2018* -- Accepted as a Part Time (Machine Learning) Engineer at Prosa.ai
+* *05 Feb 2018* -- Accepted as a Part Time (Machine Learning) Engineer at [Prosa.ai](https://prosa.ai/).
 * *23 Nov 2017* -- Awarded as the 2nd Winner in [Indonesia Developer Summit Hackathon](https://www.codepolitan.com/keseruan-dalam-indonesia-developer-summit-5a28d4b386c02).
 * *19 Nov 2017* -- Awarded as the Best Student (Team) in Facebook Developer Circle: Bandung Hackathon.
 * *04 Nov 2017* -- Awarded as the 1st Winner of Data Mining Competition in [Gemastik 2017](https://gemastik.ui.ac.id). Held by Indonesia Ministry of Research, Technology, and Higher Education. [Link](https://www.ristekdikti.go.id/itb-berhasil-raih-peringkat-2-pada-ajang-gemastik-2017/).
