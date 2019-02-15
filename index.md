@@ -16,6 +16,7 @@ I play video games like it's my life. I watch movies like I got nothing else to 
 
 ### News
 
+* *01 Feb 2019* -- Will represent [Neurafarm](http://neurafarm.com) in [Global Social Venture Challenge](https://gsvc.org/) - Regional Round in Bangkok, Thailand (21-23 February 2019). 
 * *10 Jan 2019* -- Appointed as new Chief Executive Officer of [Neurafarm](http://neurafarm.com/). The previous CEO will serve in COO role.
 * *22 Oct 2018* -- Neurafarm wins 2nd place in Startup Istanbul 2018 Competition. [Link](http://www.startupist.com/2018/10/startup-istanbul-challenge-2018-marked-by-women/)
 * *19 Sep 2018* -- Neurafarm joins NVIDIA Inception Program.
