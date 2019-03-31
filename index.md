@@ -42,5 +42,6 @@ I play video games like it's my life. I watch movies like I got nothing else to 
 * *13 August 2017* -- Co-founded [Neurafarm](http://neurafarm.com) and became its Chief Technology Officer.
 * *16 May 2017* -- Accepted as a Software Engineer Intern at  [Kata.ai](http://kata.ai).
 * *08 Mar 2017* -- Our Line Bot, Leptons, chosen as Finalist for [Line Developer Challenge Indonesia 2017]( http://at-blog.line.me/id/archives/DevChallengeWinners.html).   
+* *26-27 Nov 2016* -- Bees team wins Kurio x UMN Hackathon 2016 with hoaxbuster project. [Link](https://toolbox.kurio.co.id/kurio-x-umn-hackathon-2016-ajang-adu-sakti-pelajar-engineer-23ccd72b897e).
 
 [1]: http://www.itb.ac.id/
