@@ -16,6 +16,7 @@ I play video games like it's my life. I watch movies like I got nothing else to 
 
 ### News
 
+* *04 Apr 2019* -- Neuratraffic is shortlisted for Bandung Datathon 2019, an event organized by Bandung City Government in collaboration with the City of Melbourne, Bloomberg Philantrophies Initiative for Global Road Safety (BIGRS), School of Business and Management ITB, The Greater Hub, and Go-Jek. 
 * *28 Mar 2019* -- Got selected for the [ChangemakerXchange](http://changemakerxchange.com/) in China on May 24th-28th 2019. ChangemakerXchange is a global collaboration platform for young social innovators to connect and develop cross-border collaborations, co-created by [Ashoka](https://www.ashoka.org/en-ID) and [Robert Bosch Stiftung](https://www.bosch-stiftung.de/en). (**My participation has yet been confirmed**)
 * *20 Feb 2019* -- Neurafarm got selected as Top 10 Indonesia in [ALIPAY-NUS Enterprise Social Innovation Challenge](https://alipaynusseachallenge.com/).
 * *01 Feb 2019* -- Will represent [Neurafarm](http://neurafarm.com) in [Global Social Venture Challenge](https://gsvc.org/) - Regional Round in Bangkok, Thailand (21-23 February 2019). 
