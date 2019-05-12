@@ -7,7 +7,7 @@ permalink: /
 
 {: style="margin-top:0; margin-bottom: 0;"}
 
-I want to leave the world better than I found it.
+I am investing in the future, forging a legacy that endures, and trying to leave the world better than I found it.
 
 An engineer, designer, storyteller, and aspiring entrepreneur; **In a mission to provide value to masses with something I created**. Currently focusing my attention on [developing technology to help farmers feed everyone on the planet](http://neurafarm.io/). Recently graduated and received Bachelor of Science in Computer Science/Informatics from  [Bandung Institute of Technology's][1] School of Electrical Engineering and Informatics. I am also Co-Founder, CEO & CTO of [Neurafarm](http://neurafarm.io/) where I drive innovation strategy for the company and ensures technology excellence as part of Neurafarm's commitment to provide the best precision farming technology for farmers.
 
