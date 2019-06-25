@@ -6,6 +6,9 @@ permalink: /
 ---
 
 {: style="margin-top:0; margin-bottom: 0;"}
+
+I am investing in the future, forging a legacy that endures, and trying to leave the world better than I found it.
+
 An engineer, designer, storyteller, and aspiring entrepreneur; **In a mission to provide value to masses with something I created**. Currently focusing my attention on [developing technology to help farmers feed everyone on the planet](http://neurafarm.io/). Recently graduated and received Bachelor of Science in Computer Science/Informatics from  [Bandung Institute of Technology's][1] School of Electrical Engineering and Informatics. I am also Co-Founder, CEO & CTO of [Neurafarm](http://neurafarm.io/) where I drive innovation strategy for the company and ensures technology excellence as part of Neurafarm's commitment to provide the best precision farming technology for farmers.
 
 As a passionately curious person, I keep trying things and keep learning. I'd love to blazing my own trails and taking on whatever project is most fascinating. So long as I get to use my people skills, identify and achieve my own goals and inspire my colleagues and followers, I will be happy.
@@ -16,7 +19,8 @@ I play video games like it's my life. I watch movies like I got nothing else to 
 
 ### News
 
-* *28 Mar 2019* -- Got selected for the [ChangemakerXchange](http://changemakerxchange.com/) in China on May 24th-28th 2019. ChangemakerXchange is a global collaboration platform for young social innovators to connect and develop cross-border collaborations, co-created by [Ashoka](https://www.ashoka.org/en-ID) and [Robert Bosch Stiftung](https://www.bosch-stiftung.de/en). (**My participation has yet been confirmed**)
+* *04 Apr 2019* -- Neuratraffic is shortlisted for Bandung Datathon 2019, an event organized by Bandung City Government in collaboration with the City of Melbourne, Bloomberg Philantrophies Initiative for Global Road Safety (BIGRS), School of Business and Management ITB, The Greater Hub, and Go-Jek. 
+* *28 Mar 2019* -- Got selected for the [ChangemakerXchange](http://changemakerxchange.com/) in China on May 24th-28th 2019. ChangemakerXchange is a global collaboration platform for young social innovators to connect and develop cross-border collaborations, co-created by [Ashoka](https://www.ashoka.org/en-ID) and [Robert Bosch Stiftung](https://www.bosch-stiftung.de/en).
 * *20 Feb 2019* -- Neurafarm got selected as Top 10 Indonesia in [ALIPAY-NUS Enterprise Social Innovation Challenge](https://alipaynusseachallenge.com/).
 * *01 Feb 2019* -- Will represent [Neurafarm](http://neurafarm.com) in [Global Social Venture Challenge](https://gsvc.org/) - Regional Round in Bangkok, Thailand (21-23 February 2019). 
 * *10 Jan 2019* -- Appointed as new Chief Executive Officer of [Neurafarm](http://neurafarm.com/). The previous CEO will serve in COO role.
@@ -42,5 +46,6 @@ I play video games like it's my life. I watch movies like I got nothing else to 
 * *13 August 2017* -- Co-founded [Neurafarm](http://neurafarm.com) and became its Chief Technology Officer.
 * *16 May 2017* -- Accepted as a Software Engineer Intern at  [Kata.ai](http://kata.ai).
 * *08 Mar 2017* -- Our Line Bot, Leptons, chosen as Finalist for [Line Developer Challenge Indonesia 2017]( http://at-blog.line.me/id/archives/DevChallengeWinners.html).   
+* *26-27 Nov 2016* -- Bees team wins Kurio x UMN Hackathon 2016 with hoaxbuster project. [Link](https://toolbox.kurio.co.id/kurio-x-umn-hackathon-2016-ajang-adu-sakti-pelajar-engineer-23ccd72b897e).
 
 [1]: http://www.itb.ac.id/
