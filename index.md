@@ -19,6 +19,10 @@ I play video games like it's my life. I watch movies like I got nothing else to 
 
 ### News
 
+* *16 October 2019* -- Neurafarm wins 3rd Place in Create@ Alibaba Cloud Startup Contest 2019. [Link](https://www.instagram.com/p/B3wWl3WgETX/?utm_source=ig_web_options_share_sheet)
+* *16 October 2019* -- Neurafarm is awarded as the Best AgTech/FoodTech Company in Indonesia by ASEAN Ricebowl Startup Awards. [Link](https://web.facebook.com/ricebowlawards/photos/a.2083431491758680/2083431938425302/?type=3&theater)
+* *16 October 2019* -- Neurafarm is graduated from [Plug and Play](https://www.plugandplaytechcenter.com/indonesia/) Accelerator Batch 5 Indonesia. [News](https://id.techinasia.com/akselerator-plug-and-play-indonesia-batch-kelima)
+* *09 May 2019* -- Neurafarm is selected for The Nextdev 2019 and wins Golden Ticket for The Nexdev Summit 2019.
 * *04 Apr 2019* -- Neuratraffic is shortlisted for Bandung Datathon 2019, an event organized by Bandung City Government in collaboration with the City of Melbourne, Bloomberg Philantrophies Initiative for Global Road Safety (BIGRS), School of Business and Management ITB, The Greater Hub, and Go-Jek. 
 * *28 Mar 2019* -- Got selected for the [ChangemakerXchange](http://changemakerxchange.com/) in China on May 24th-28th 2019. ChangemakerXchange is a global collaboration platform for young social innovators to connect and develop cross-border collaborations, co-created by [Ashoka](https://www.ashoka.org/en-ID) and [Robert Bosch Stiftung](https://www.bosch-stiftung.de/en).
 * *20 Feb 2019* -- Neurafarm got selected as Top 10 Indonesia in [ALIPAY-NUS Enterprise Social Innovation Challenge](https://alipaynusseachallenge.com/).
