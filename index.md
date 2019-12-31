@@ -9,7 +9,7 @@ permalink: /
 
 I am investing in the future, forging a legacy that endures, and trying to leave the world better than I found it.
 
-An engineer, designer, storyteller, and aspiring entrepreneur; **In a mission to provide value to masses with something I created**. Currently focusing my attention on [developing technology to help farmers feed everyone on the planet](http://neurafarm.io/). Recently graduated and received Bachelor of Science in Computer Science/Informatics from  [Bandung Institute of Technology's][1] School of Electrical Engineering and Informatics. I am also Co-Founder, CEO & CTO of [Neurafarm](http://neurafarm.io/) where I drive innovation strategy for the company and ensures technology excellence as part of Neurafarm's commitment to provide the best precision farming technology for farmers.
+An engineer, designer, storyteller, and aspiring entrepreneur; **In a mission to provide value to masses with something I created**. Currently focusing my attention on [developing technology to help farmers feed everyone on the planet](http://neurafarm.io/). I studied under full scholarship from Indonesia's Government majoring in Computer Science/Informatics at[Bandung Institute of Technology's][1] School of Electrical Engineering and Informatics. I am also Co-Founder, CEO & CTO of [Neurafarm](http://neurafarm.io/) where I drive innovation strategy for the company and ensures technology excellence as part of Neurafarm's commitment to provide the best precision farming technology for farmers.
 
 As a passionately curious person, I keep trying things and keep learning. I'd love to blazing my own trails and taking on whatever project is most fascinating. So long as I get to use my people skills, identify and achieve my own goals and inspire my colleagues and followers, I will be happy.
 
@@ -19,6 +19,10 @@ I play video games like it's my life. I watch movies like I got nothing else to 
 
 ### News
 
+* *16 October 2019* -- Neurafarm wins 3rd Place in Create@ Alibaba Cloud Startup Contest 2019. [Link](https://www.instagram.com/p/B3wWl3WgETX/?utm_source=ig_web_options_share_sheet)
+* *16 October 2019* -- Neurafarm is awarded as the Best AgTech/FoodTech Company in Indonesia by ASEAN Ricebowl Startup Awards. [Link](https://web.facebook.com/ricebowlawards/photos/a.2083431491758680/2083431938425302/?type=3&theater)
+* *16 October 2019* -- Neurafarm is graduated from [Plug and Play](https://www.plugandplaytechcenter.com/indonesia/) Accelerator Batch 5 Indonesia. [News](https://id.techinasia.com/akselerator-plug-and-play-indonesia-batch-kelima)
+* *09 May 2019* -- Neurafarm is selected for The Nextdev 2019 and wins Golden Ticket for The Nexdev Summit 2019.
 * *04 Apr 2019* -- Neuratraffic is shortlisted for Bandung Datathon 2019, an event organized by Bandung City Government in collaboration with the City of Melbourne, Bloomberg Philantrophies Initiative for Global Road Safety (BIGRS), School of Business and Management ITB, The Greater Hub, and Go-Jek. 
 * *28 Mar 2019* -- Got selected for the [ChangemakerXchange](http://changemakerxchange.com/) in China on May 24th-28th 2019. ChangemakerXchange is a global collaboration platform for young social innovators to connect and develop cross-border collaborations, co-created by [Ashoka](https://www.ashoka.org/en-ID) and [Robert Bosch Stiftung](https://www.bosch-stiftung.de/en).
 * *20 Feb 2019* -- Neurafarm got selected as Top 10 Indonesia in [ALIPAY-NUS Enterprise Social Innovation Challenge](https://alipaynusseachallenge.com/).
