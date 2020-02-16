@@ -31,7 +31,7 @@ I play video games like it's my life. I watch movies like I got nothing else to 
 * *28 Mar 2019* -- Got selected for the [ChangemakerXchange](http://changemakerxchange.com/) in China on May 24th-28th 2019. ChangemakerXchange is a global collaboration platform for young social innovators to connect and develop cross-border collaborations, co-created by [Ashoka](https://www.ashoka.org/en-ID) and [Robert Bosch Stiftung](https://www.bosch-stiftung.de/en).
 * *20 Feb 2019* -- Neurafarm got selected as Top 10 Indonesia in [ALIPAY-NUS Enterprise Social Innovation Challenge](https://alipaynusseachallenge.com/).
 * *01 Feb 2019* -- Will represent [Neurafarm](http://neurafarm.com) in [Global Social Venture Challenge](https://gsvc.org/) - Regional Round in Bangkok, Thailand (21-23 February 2019). **Update: ** Came out as Top 11 
-* *10 Jan 2019* -- Appointed as new Chief Executive Officer of [Neurafarm](http://neurafarm.com/). The previous CEO will serve in COO role.
+* *10 Jan 2019* -- Appointed as the new Chief Executive Officer of [Neurafarm](http://neurafarm.com/). The previous CEO will serve in COO role.
 * *22 Oct 2018* -- Neurafarm wins 2nd place in Startup Istanbul 2018 Competition. [Link](http://www.startupist.com/2018/10/startup-istanbul-challenge-2018-marked-by-women/)
 * *27 Sep 2018* -- Will represent [Neurafarm](http://neurafarm.com) in the [Swiss Innovation Challenge 2018](https://www.fhnw.ch/en/about-fhnw/swiss-challenge-entrepreneurs-programme/swiss-innovation-challenge) in Basel, Switzerland. [Link](http://www.sbm.itb.ac.id/id/the-swiss-innovation-challenge-asia-indonesia-2018.html)
 * *19 Sep 2018* -- Neurafarm joins NVIDIA Inception Program.
