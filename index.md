@@ -19,6 +19,9 @@ I play video games like it's my life. I watch movies like I got nothing else to 
 
 ### News
 
+* *15 January 2020* -- Neurafarm became Finalists in ASEAN Rice Bowl Startup Awards in Kuala Lumpur, Malaysia
+* *24 December 2019* -- Became speaker/facilitator at CodeNomad by [Code For Asia Society Ltd](https://codefor.asia/) in Bali.
+* *14 December 2019* -- Became speaker in [BukaMeetup x NeurIPS "Democratizing State-of-the-Art AI"](https://www.eventbrite.com/e/bukameetup-x-neurips-tickets-80823740985#) at East CC Auditorium, Bandung Institute of Technology 
 * *7 December 2019* -- Neurafarm became Top 25 of [The Nextdev 2019](https://summit.thenextdev.id/talent-scouting).
 * *16 October 2019* -- Neurafarm wins 3rd Place in Create@ Alibaba Cloud Startup Contest 2019. [Link](https://www.instagram.com/p/B3wWl3WgETX/?utm_source=ig_web_options_share_sheet)
 * *16 October 2019* -- Neurafarm is awarded as the Best AgTech/FoodTech Company in Indonesia by ASEAN Ricebowl Startup Awards. [Link](https://web.facebook.com/ricebowlawards/photos/a.2083431491758680/2083431938425302/?type=3&theater)
