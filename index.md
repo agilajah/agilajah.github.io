@@ -19,9 +19,11 @@ I play video games like it's my life. I watch movies like I got nothing else to 
 
 ### News
 
-* *15 January 2020* -- Neurafarm became Finalists in ASEAN Rice Bowl Startup Awards in Kuala Lumpur, Malaysia
-* *24 December 2019* -- Became speaker/facilitator at CodeNomad by [Code For Asia Society Ltd](https://codefor.asia/) in Bali.
-* *14 December 2019* -- Became speaker in [BukaMeetup x NeurIPS "Democratizing State-of-the-Art AI"](https://www.eventbrite.com/e/bukameetup-x-neurips-tickets-80823740985#) at East CC Auditorium, Bandung Institute of Technology 
+* *19 February 2019* -- Neurafarm is selected as Top 10 (out of 5200) in [Thought For Food Challenge 2019/2020](https://thoughtforfood.org/content-hub/thought-for-food-announces-finalists-of-the-2019-20-tff-challenge/).
+* *17 January 2020* -- Neurafarm joins TINC Program Batch 4 and will be accelerated under [Telkomsel Innovation Center](https://tinc.id/)
+* *15 January 2020* -- Neurafarm became Finalist of ASEAN Rice Bowl Startup Awards in Kuala Lumpur, Malaysia
+* *24 December 2019* -- To speak/facilitate at CodeNomad by [Code For Asia Society Ltd](https://codefor.asia/) in Bali.
+* *14 December 2019* -- To speak at [BukaMeetup x NeurIPS "Democratizing State-of-the-Art AI"](https://www.eventbrite.com/e/bukameetup-x-neurips-tickets-80823740985#) at East CC Auditorium, Bandung Institute of Technology 
 * *7 December 2019* -- Neurafarm became Top 25 of [The Nextdev 2019](https://summit.thenextdev.id/talent-scouting).
 * *16 October 2019* -- Neurafarm wins 3rd Place in Create@ Alibaba Cloud Startup Contest 2019. [Link](https://www.instagram.com/p/B3wWl3WgETX/?utm_source=ig_web_options_share_sheet)
 * *16 October 2019* -- Neurafarm is awarded as the Best AgTech/FoodTech Company in Indonesia by ASEAN Ricebowl Startup Awards. [Link](https://web.facebook.com/ricebowlawards/photos/a.2083431491758680/2083431938425302/?type=3&theater)
@@ -47,12 +49,12 @@ I play video games like it's my life. I watch movies like I got nothing else to 
 * *02 Mar 2018* -- Our team, Taleus, chosen as the finalist of Microsoft Imagine Cup 2018 Indonesia [Link](https://imagine.microsoft.com/en-us/Country/ID)
 * *20 Feb 2018* -- Our team, Taleus, selected as the semi-finalist of Microsoft Imagine Cup 2018 Indonesia [Link](https://imagine.microsoft.com/en-us/Country/ID)
 * *17 Feb 2018* -- Neurafarm got awarded as the 3rd Winner of Business Plan Competition in the 7th University of Indonesia Studentpreneurs.
-* *05 Feb 2018* -- Accepted as a Part Time (Machine Learning) Engineer at [Prosa.ai](https://prosa.ai/).
+* *05 Feb 2018* -- Accepted as Part Time (Machine Learning) Engineer at [Prosa.ai](https://prosa.ai/).
 * *23 Nov 2017* -- Awarded as the 2nd Winner in [Indonesia Developer Summit Hackathon](https://www.codepolitan.com/keseruan-dalam-indonesia-developer-summit-5a28d4b386c02).
 * *19 Nov 2017* -- Awarded as the Best Student (Team) in Facebook Developer Circle: Bandung Hackathon.
 * *04 Nov 2017* -- Awarded as the 1st Winner of Data Mining Competition in [Gemastik 2017](https://gemastik.ui.ac.id). Held by Indonesia Ministry of Research, Technology, and Higher Education. [Link](https://www.ristekdikti.go.id/itb-berhasil-raih-peringkat-2-pada-ajang-gemastik-2017/).
 * *13 August 2017* -- Co-founded [Neurafarm](http://neurafarm.com) and became its Chief Technology Officer.
-* *16 May 2017* -- Accepted as a Software Engineer Intern at  [Kata.ai](http://kata.ai).
+* *16 May 2017* -- Accepted as Software Engineer Intern at  [Kata.ai](http://kata.ai).
 * *08 Mar 2017* -- Our Line Bot, Leptons, chosen as Finalist for [Line Developer Challenge Indonesia 2017]( http://at-blog.line.me/id/archives/DevChallengeWinners.html).   
 * *26-27 Nov 2016* -- Bees team wins Kurio x UMN Hackathon 2016 with hoaxbuster project. [Link](https://toolbox.kurio.co.id/kurio-x-umn-hackathon-2016-ajang-adu-sakti-pelajar-engineer-23ccd72b897e).
 
