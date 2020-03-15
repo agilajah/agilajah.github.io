@@ -19,9 +19,12 @@ I play video games like it's my life. I watch movies like I got nothing else to 
 
 ### News
 
-* *19 February 2019* -- Neurafarm is selected as Top 10 (out of 5200) in [Thought For Food Challenge 2019/2020](https://thoughtforfood.org/content-hub/thought-for-food-announces-finalists-of-the-2019-20-tff-challenge/).
-* *17 January 2020* -- Neurafarm joins TINC Program Batch 4 and will be accelerated under [Telkomsel Innovation Center](https://tinc.id/)
-* *15 January 2020* -- Neurafarm became Finalist of ASEAN Rice Bowl Startup Awards in Kuala Lumpur, Malaysia
+* *11 March 2020* -- Neurafarm is selected as Top 50 at Cisco Global Problem Solver Challenge 2020.
+* *20 February 2020* -- Selected for the YSE (Young Social Entrepreneurs) 2020 Workshop in Singapore. [An event held by Singapore International Foundation](https://www.sif.org.sg/).
+* *19 February 2020* -- Neurafarm is selected as Top 10 (out of 5200) in [Thought For Food Challenge 2019/2020](https://thoughtforfood.org/content-hub/thought-for-food-announces-finalists-of-the-2019-20-tff-challenge/).
+* *17 January 2020* -- Neurafarm joins TINC Program Batch 4 and will be accelerated under [Telkomsel Innovation Center](https://tinc.id/).
+* *15 January 2020* -- Neurafarm became Finalist of ASEAN Rice Bowl Startup Awards in Kuala Lumpur, Malaysia.
+* *13 January 2020* -- Neurafarm is selected as Elite 150 Team for the 10th Lee Kuan Yew Global Business Plan Competition.
 * *24 December 2019* -- To speak/facilitate at CodeNomad by [Code For Asia Society Ltd](https://codefor.asia/) in Bali.
 * *14 December 2019* -- To speak at [BukaMeetup x NeurIPS "Democratizing State-of-the-Art AI"](https://www.eventbrite.com/e/bukameetup-x-neurips-tickets-80823740985#) at East CC Auditorium, Bandung Institute of Technology 
 * *7 December 2019* -- Neurafarm became Top 25 of [The Nextdev 2019](https://summit.thenextdev.id/talent-scouting).
