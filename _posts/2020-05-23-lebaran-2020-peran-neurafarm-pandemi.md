@@ -6,6 +6,8 @@ tags: [Journal]
 comments: true
 ---
 
+*Disclaimer: Artikel ini pertama kali dipublish di pmedium.com saya](https://medium.com/@febiagil/lebaran-2020-dan-peran-neurafarm-di-masa-pademi-f687687ae580) pada 23 Mei 2020.*
+
 Hi, Semoga Anda dalam keadaan sehat.
 
 Ditengah-tengah krisis yang sedang terjadi saat ini, berbagai macam sektor terkena imbasnya. Berbagai kalangan terkena dampaknya. Tak terkecuali sektor agrikultur, dan tentunya para petani sebagai penggerak industri pertanian.
@@ -72,6 +74,7 @@ Ke depannya, Neurafarm akan terus berupaya mendukung tercapainya pertanian yang 
 Terimakasih sudah membaca sampai akhir.
 
 Salam,
+
 Febi Agil Ifdillah
 CEO [Neurafarm](www.neurafarm.com)
 More Precise, More Impact
