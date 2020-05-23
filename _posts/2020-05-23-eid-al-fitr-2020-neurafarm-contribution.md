@@ -6,7 +6,7 @@ tags: [Journal]
 comments: true
 ---
 
-*Note: Clieck [here for Indonesia version](http://febiagil.me/blog/2020/05/23/lebaran-2020-peran-neurafarm-pandemi/)*
+*Note: Click [here for Indonesia version](http://febiagil.me/blog/2020/05/23/lebaran-2020-peran-neurafarm-pandemi/)*
 
 --
 
