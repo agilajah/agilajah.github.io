@@ -33,7 +33,7 @@ Data source: [Indonesia Ministry of Agriculture](https://www.pertanian.go.id/hom
 
 ## What have we (Neurafarm) done?
 
-As a smart farming startup with a vision to help achieve global food security throught technology, during this pandemic increased our [Neurafarm](www.neurafarm.com) commitment and improve our services for farmers to keep them productive during the crisis, and beyond. Some of our focus are:
+As a smart farming startup with a vision to help achieve global food security through technology, during this pandemic we have increased our [Neurafarm](www.neurafarm.com) commitment and improve our services for farmers to keep them productive during the crisis, and beyond. Some of our focus are:
 
 1. Free online consultation for darmers
 2. Access to training & experts
