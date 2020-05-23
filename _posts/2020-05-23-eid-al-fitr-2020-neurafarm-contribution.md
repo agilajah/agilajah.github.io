@@ -35,13 +35,13 @@ Data source: [Indonesia Ministry of Agriculture](https://www.pertanian.go.id/hom
 
 As a smart farming startup with a vision to help achieve global food security through technology, during this pandemic we have increased our [Neurafarm](www.neurafarm.com) commitment and improve our services for farmers to keep them productive during the crisis, and beyond. Some of our focus are:
 
-1. Free online consultation for darmers
+1. Free online consultation for farmers
 2. Access to training & experts
 3. Partnership & Digitalization
 
 ![Tiga fokus Neurafarm untuk mendukung produktivitas petani. Sumber: Neurafarm]({{site.url }}/images/2020/may/dua.png)
 
-To this date,[Neurafarm](www.neurafarm.com) has helped thousands of farmers in more than 500 consulation session, two free online classes, and partnership to support 3500+ new farmers in our community during March-May 2020 period.
+To this date,[Neurafarm](www.neurafarm.com) has helped thousands of farmers by conducting more than 500 consulation session, two free online classes, and partnerships to support 3500+ new farmers in our community during March-May 2020 period.
 
 ![Terdapat lebih dari 3500 petani tergabung dalam periode Maret-Mei 2020. Sumber: Neurafarm]({{site.url }}/images/2020/may/tiga.png)
 
