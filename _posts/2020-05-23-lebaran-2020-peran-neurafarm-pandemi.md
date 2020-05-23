@@ -13,7 +13,7 @@ Sebagai sektor yang menjadi tumpuan lebih dari 100 juta masyarakat Indonesia unt
 
 Terdapat jutaan petani di Indonesia dan sebagian besar terkena dampak negatif dari pandemi COVID-19. Mulai dari ditutupnya hotel, restoran, dan cafe, sehingga menyebabkan channel penjualan yang menyempit. Hingga menurunnya daya beli masyarakat sehingga banyak hasil lahan yang tidak tertampung.
 
-Selama dua bulan ke belakang, [Neurafarm](www.neurafarm.com) telah melakukan beberapa upaya untuk membantu petani tetap produktif di tengah pandemi guna menjaga ketahanan pangan. Pandemi semakin menyadarkan kami tentang betapa rapuhnya sistem pangan dunia saat ini, dan perlunya upaya-upaya yang lebih besar lagi untuk memastikan ketahanan pangan.
+Selama tiga bulan ke belakang, [Neurafarm](www.neurafarm.com) telah melakukan beberapa upaya untuk membantu petani tetap produktif di tengah pandemi guna menjaga ketahanan pangan. Pandemi semakin menyadarkan kami tentang betapa rapuhnya sistem pangan dunia saat ini, dan perlunya upaya-upaya yang lebih besar lagi untuk memastikan ketahanan pangan.
 Namun untuk sekarang, tim [Neurafarm](www.neurafarm.com) akan libur sampai seminggu ke depan untuk merayakan Idul Fitri. Beberapa upaya pendampingan petani tetap dilakukan walaupun tidak se-intens sebelumnya. [Neurafarm](www.neurafarm.com) berharap Anda semua senantiasa dalam keadaan sehat dan kami juga mengucapkan Selamat Hari Raya Idul Fitri bagi yang merayakannya!
 
 Sumber: [Kementerian Pertanian Indonesia](https://www.pertanian.go.id/home/?show=news&act=view&id=2564)
