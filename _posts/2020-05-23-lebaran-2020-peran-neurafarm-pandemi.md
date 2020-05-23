@@ -6,7 +6,7 @@ tags: [Journal]
 comments: true
 ---
 
-*Disclaimer: Artikel ini pertama kali dipublish di pmedium.com saya](https://medium.com/@febiagil/lebaran-2020-dan-peran-neurafarm-di-masa-pademi-f687687ae580) pada 23 Mei 2020.*
+*Disclaimer: Artikel ini pertama kali dipublish di [medium.com saya](https://medium.com/@febiagil/lebaran-2020-dan-peran-neurafarm-di-masa-pademi-f687687ae580) pada 23 Mei 2020.*
 
 Hi, Semoga Anda dalam keadaan sehat.
 
@@ -76,5 +76,7 @@ Terimakasih sudah membaca sampai akhir.
 Salam,
 
 Febi Agil Ifdillah
+
 CEO [Neurafarm](www.neurafarm.com)
+
 More Precise, More Impact
