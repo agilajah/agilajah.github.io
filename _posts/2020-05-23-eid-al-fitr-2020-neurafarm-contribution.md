@@ -16,7 +16,7 @@ Different sectors of the economy have been hit in different ways by the COVID-19
 
 Indonesia has the largest economy in Southeast Asia. As with other developing countries in Asia-Pacific, more than half its workers are in the informal sector, including farmers. More than 100 million of Indonesian are employed in the Agriculture sector*, and some 250+ million are depending on this very sector on a daily basis to fulfill the demand for food. it should be one of our top priorities to support the industry to ensure food security.
 
-There are millions of farmers in Indonesia, and the majority of them have been impacted the recent situation. A lot of hotels, restaurant, and cafe are closing down, and people lose their purchasing power, making it hard for farmers to sell their crops. 
+There are millions of farmers in Indonesia, and the majority of them have been impacted by the recent situation. A lot of hotels, restaurant, and cafe are closing down, and people lose their purchasing power, making it hard for farmers to sell their crops. 
 
 In the past three months, [Neurafarm](www.neurafarm.com) has put a lot of effort to empowering farmers to keep them productive during the crisis. If there's one thing that we all learned about this situation, it's about how fragile our lives and our systems are. Coronavirus is exposing the world's fragile food system. The COVID-19 pandemic is profoundly disrupting the global food supply at nearly every level. Those problems, and the economic destruction caused by the virus, could have a devastating impact on the ability of people across the world to access and afford food. It is in the time like this that we've finally got the chance to reflect and rethink how we grow our food.
 
