@@ -8,6 +8,8 @@ comments: true
 
 *Disclaimer: Artikel ini pertama kali dipublish di [medium.com saya](https://medium.com/@febiagil/lebaran-2020-dan-peran-neurafarm-di-masa-pademi-f687687ae580) pada 23 Mei 2020.*
 
+English version: [click here](http://febiagil.me/blog/2020/05/23/eid-al-fitr-2020-neurafarm-contribution/)
+
 Hi, Semoga Anda dalam keadaan sehat.
 
 Ditengah-tengah krisis yang sedang terjadi saat ini, berbagai macam sektor terkena imbasnya. Berbagai kalangan terkena dampaknya. Tak terkecuali sektor agrikultur, dan tentunya para petani sebagai penggerak industri pertanian.
