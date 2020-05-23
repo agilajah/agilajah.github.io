@@ -77,8 +77,8 @@ Terimakasih sudah membaca sampai akhir.
 
 Salam,
 
-Febi Agil Ifdillah
+Febi Agil Ifdillah | 
 
-CEO [Neurafarm](www.neurafarm.com)
+CEO [Neurafarm](www.neurafarm.com) | 
 
 More Precise, More Impact

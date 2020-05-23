@@ -26,15 +26,10 @@ After months of constant support for farmers, now it's time to take care of ours
 
 We hope that we could come back all fresh, and ready to serve more.
 
+
 Data source: [Indonesia Ministry of Agriculture](https://www.pertanian.go.id/home/?show=news&act=view&id=2564)
 
 ![Selamat Hari Raya Idul Fitri 1441 H. Sumber: Neurafarm]({{site.url }}/images/2020/may/satu.png)
-
-Regards,
-
-Febi Agil Ifdillah | 
-CEO [Neurafarm](www.neurafarm.com) | 
-More Precise, More Impact
 
 ## What have we (Neurafarm) done?
 
@@ -84,3 +79,9 @@ In the beginning of May, we released our first volume of our bulletin. Bulletin 
 This pandemic has change a lot of things. Including they way we work, play, and communicate. During this unprecedented situation, various new things have emerged: the so called new normal, new habit, new experiences, new insights, and of course, new problems. But we believe that along with problems, there lie opportunies. Opportunity to reflect and rethink everything, including how could we fulfill our demand for food. For the more resilient food system. 
 
 Still with the same goals, and mission. We'll continue to strive for a sustainable agriculture, where we could fulfill our demand for food without compromising our generation.
+
+Regards,
+
+Febi Agil Ifdillah | 
+CEO [Neurafarm](www.neurafarm.com) | 
+More Precise, More Impact
