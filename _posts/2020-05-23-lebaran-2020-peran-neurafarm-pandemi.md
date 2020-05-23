@@ -6,9 +6,7 @@ tags: [Journal]
 comments: true
 ---
 
-Hi,
-
-Semoga Anda dalam keadaan sehat.
+Hi, Semoga Anda dalam keadaan sehat.
 
 Ditengah-tengah krisis yang sedang terjadi saat ini, berbagai macam sektor terkena imbasnya. Berbagai kalangan terkena dampaknya. Tak terkecuali sektor agrikultur, dan tentunya para petani sebagai penggerak industri pertanian.
 Sebagai sektor yang menjadi tumpuan lebih dari 100 juta masyarakat Indonesia untuk mencari nafkah*, dan menopang ratusan juta penduduk Indonesia untuk memenuhi kebutuhan pangan sehari-hari, sudah selayaknya kita memberikan perhatian lebih kepada industri pertanian dan berbagai aktor yang terlibat di dalamnya.
@@ -18,8 +16,7 @@ Terdapat jutaan petani di Indonesia dan sebagian besar terkena dampak negatif da
 Selama dua bulan ke belakang, [Neurafarm](www.neurafarm.com) telah melakukan beberapa upaya untuk membantu petani tetap produktif di tengah pandemi guna menjaga ketahanan pangan. Pandemi semakin menyadarkan kami tentang betapa rapuhnya sistem pangan dunia saat ini, dan perlunya upaya-upaya yang lebih besar lagi untuk memastikan ketahanan pangan.
 Namun untuk sekarang, tim [Neurafarm](www.neurafarm.com) akan libur sampai seminggu ke depan untuk merayakan Idul Fitri. Beberapa upaya pendampingan petani tetap dilakukan walaupun tidak se-intens sebelumnya. [Neurafarm](www.neurafarm.com) berharap Anda semua senantiasa dalam keadaan sehat dan kami juga mengucapkan Selamat Hari Raya Idul Fitri bagi yang merayakannya!
 
-*sumber: https://www.pertanian.go.id/home/?show=news&act=view&id=2564
-
+Sumber: [Kementerian Pertanian Indonesia](https://www.pertanian.go.id/home/?show=news&act=view&id=2564)
 
 ![Selamat Hari Raya Idul Fitri 1441 H. Sumber: Neurafarm]({{site.url }}/images/2020/may/satu.png)
 
