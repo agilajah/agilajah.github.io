@@ -14,7 +14,7 @@ Hi, I hope you are well.
 
 Different sectors of the economy have been hit in different ways by the COVID-19 pandemic. Not surprisingly, with travel at a minimum and social lives put on hold, the accommodation and food services industries are among those suffering most, along with manufacturing, wholesale and retail. The global workforce are affected. Not only does COVID-19 affect the formal workers, many informal workers have been hit hard as well.
 
-Indonesia has the largest economy in Southeast Asia. As with other developing countries in Asia-Pacific, more than half its workers are in the informal sector, including farmers. More than 100 million of Indonesian are employed in the Agriculture sector, and some 250+ million are depending on this very sector on a daily basis to fulfill the demand for food. it should be one of our top priorities to support the industry to ensure food security.
+Indonesia has the largest economy in Southeast Asia. As with other developing countries in Asia-Pacific, more than half its workers are in the informal sector, including farmers. More than 100 million of Indonesian are employed in the Agriculture sector*, and some 250+ million are depending on this very sector on a daily basis to fulfill the demand for food. it should be one of our top priorities to support the industry to ensure food security.
 
 There are millions of farmers in Indonesia, and the majority of them have been impacted the recent situation. A lot of hotels, restaurant, and cafe are closing down, and people lose their purchasing power, making it hard for farmers to sell their crops. 
 
@@ -26,7 +26,7 @@ After months of constant support for farmers, now it's time to take care of ours
 
 We hope that we could come back all fresh, and ready to serve more.
 
-Sumber: [Kementerian Pertanian Indonesia](https://www.pertanian.go.id/home/?show=news&act=view&id=2564)
+Data source: [Indonesia Ministry of Agriculture](https://www.pertanian.go.id/home/?show=news&act=view&id=2564)
 
 ![Selamat Hari Raya Idul Fitri 1441 H. Sumber: Neurafarm]({{site.url }}/images/2020/may/satu.png)
 
@@ -81,6 +81,6 @@ In the beginning of May, we released our first volume of our bulletin. Bulletin 
 
 ## What's next?
 
-This pandemic has change a lot of things. Including they way we work, play, and communicate. During this unprecedented situation, various new things have emerged: the so called new normal, new habit, new experiences, new insights, and of course, new problems. But we believe that along with problemw, there lie opportunies. Opportunity to reflect and rethink everything, including how could we fulfill our demand for food. For the more resilient food system. 
+This pandemic has change a lot of things. Including they way we work, play, and communicate. During this unprecedented situation, various new things have emerged: the so called new normal, new habit, new experiences, new insights, and of course, new problems. But we believe that along with problems, there lie opportunies. Opportunity to reflect and rethink everything, including how could we fulfill our demand for food. For the more resilient food system. 
 
 Still with the same goals, and mission. We'll continue to strive for a sustainable agriculture, where we could fulfill our demand for food without compromising our generation.
