@@ -49,6 +49,8 @@ To this date,[Neurafarm](www.neurafarm.com) has helped thousands of farmers in m
 
 Dr. Tania is an AI powered apps that could help farmers to diagnose and manage plant disease effectively, connect with experts, reduce risks, and increase yield. To make it easier for us to support thousands of our users, as well as to make it easier for them to getting more help, we've updated Dr. Tania apps with UI/UX revamp, bugs fixing, and additional new features.
 
+You can download the latest version of Dr. Tania [here](bit.ly/TanyaTANIA)
+
 ![All New Dr Tania untuk mendukung kegiatan bertani. Sumber: Neurafarm]({{site.url }}/images/2020/may/empat.png)
 
 ## Two Free Online Classes Held

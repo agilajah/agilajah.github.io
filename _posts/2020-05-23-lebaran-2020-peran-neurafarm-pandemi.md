@@ -42,6 +42,8 @@ Dalam upaya tersebut, [Neurafarm](www.neurafarm.com) telah memberikan 500 lebih 
 
 Dr. Tania merupakan aplikasi yang dapat membantu para petani untuk mendeteksi penyakit tanaman hanya melalui gambar (menggunakan AI), berkonsultasi dengan ahli, mengurangi resiko, dan meningkatkan hasil lahan. Untuk mendukung ribuan pengguna Dr. Tania, [Neurafarm](www.neurafarm.com) melakukan beberapa peningkatan dan perbaikan, serta menambah beberapa fitur.
 
+Anda dapat mengunduh aplikasi terbaru Dr. Tania [di sini](bit.ly/TanyaTANIA).
+
 ![All New Dr Tania untuk mendukung kegiatan bertani. Sumber: Neurafarm]({{site.url }}/images/2020/may/empat.png)
 
 ## Dua Kelas Online Sukses Dilaksanakan
