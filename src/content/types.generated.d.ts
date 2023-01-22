@@ -43,6 +43,13 @@ declare module 'astro:content' {
 
 	const entryMap: {
 		"post": {
+"2019-12-31-year-in-review-2019.md": {
+  id: "2019-12-31-year-in-review-2019.md",
+  slug: "2019-12-31-year-in-review-2019",
+  body: string,
+  collection: "post",
+  data: InferEntrySchema<"post">
+},
 "eid-and-neurafarm-contribution-pandemic.md": {
   id: "eid-and-neurafarm-contribution-pandemic.md",
   slug: "eid-and-neurafarm-contribution-pandemic",
