@@ -43,16 +43,16 @@ declare module 'astro:content' {
 
 	const entryMap: {
 		"post": {
-"hello-world.mdx": {
-  id: "hello-world.mdx",
-  slug: "hello-world",
+"eid-and-neurafarm-contribution-pandemic.md": {
+  id: "eid-and-neurafarm-contribution-pandemic.md",
+  slug: "eid-and-neurafarm-contribution-pandemic",
   body: string,
   collection: "post",
   data: InferEntrySchema<"post">
 },
-"second-post.md": {
-  id: "second-post.md",
-  slug: "second-post",
+"lebaran-2020-peran-neurafarm.md": {
+  id: "lebaran-2020-peran-neurafarm.md",
+  slug: "lebaran-2020-peran-neurafarm",
   body: string,
   collection: "post",
   data: InferEntrySchema<"post">

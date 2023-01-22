@@ -1,15 +1,15 @@
 {
-	"name": "Astro Theme Cactus Demo",
-	"short_name": "Astro_Cactus",
-	"description": "Starter blog site for Astro",
+	"name": "Febi's Blog",
+	"short_name": "Febis_Blog",
+	"description": "Febi Agil Ifdillah's Blog",
 	"icons": [
 		{
-			"src": "/192x192.png",
+			"src": "/febi-logo-blue-192.png",
 			"sizes": "192x192",
 			"type": "image/png"
 		},
 		{
-			"src": "/512x512.png",
+			"src": "/febi-logo-blue-512.png",
 			"sizes": "512x512",
 			"type": "image/png"
 		}
