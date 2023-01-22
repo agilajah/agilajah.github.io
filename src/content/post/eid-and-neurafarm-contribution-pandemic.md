@@ -5,7 +5,7 @@ description: "Eid Al-Fitr 2020 and Neurafarm's Contribution During COVID-19"
 tags: ["journal", "blog"]
 ---
 
-_Note: Click [here for Indonesia version](http://febiagil.me/blog/2020/05/23/lebaran-2020-peran-neurafarm-pandemi/)_
+_Note: Click [here for Indonesia version](http://febiagil.me/posts/lebaran-2020-peran-neurafarm/)_
 
 --
 
@@ -27,7 +27,7 @@ We hope that we could come back all fresh, and ready to serve more.
 
 Data source: [Indonesia Ministry of Agriculture](https://www.pertanian.go.id/home/?show=news&act=view&id=2564)
 
-![Selamat Hari Raya Idul Fitri 1441 H. Sumber: Neurafarm]({{site.url }}/images/2020/may/satu.png)
+![Selamat Hari Raya Idul Fitri 1441 H. Sumber: Neurafarm](/assets/2020/may/satu.png)
 
 ## What have we (Neurafarm) done?
 
@@ -37,11 +37,11 @@ As a smart farming startup with a vision to help achieve global food security th
 2. Access to training & experts
 3. Partnership & Digitalization
 
-![Tiga fokus Neurafarm untuk mendukung produktivitas petani. Sumber: Neurafarm]({{site.url }}/images/2020/may/dua.png)
+![Tiga fokus Neurafarm untuk mendukung produktivitas petani. Sumber: Neurafarm](/assets/2020/may/dua.png)
 
 To this date,[Neurafarm](www.neurafarm.com) has helped thousands of farmers by conducting more than 500 consulation session, two free online classes, and partnerships to support 3500+ new farmers in our community during March-May 2020 period.
 
-![Terdapat lebih dari 3500 petani tergabung dalam periode Maret-Mei 2020. Sumber: Neurafarm]({{site.url }}/images/2020/may/tiga.png)
+![Terdapat lebih dari 3500 petani tergabung dalam periode Maret-Mei 2020. Sumber: Neurafarm](/assets/2020/may/tiga.png)
 
 ## All New Dr. Tania released
 
@@ -49,19 +49,19 @@ Dr. Tania is an AI powered apps that could help farmers to diagnose and manage p
 
 You can download the latest version of Dr. Tania [here](bit.ly/TanyaTANIA)
 
-![All New Dr Tania untuk mendukung kegiatan bertani. Sumber: Neurafarm]({{site.url }}/images/2020/may/empat.png)
+![All New Dr Tania untuk mendukung kegiatan bertani. Sumber: Neurafarm](/assets/2020/may/empat.png)
 
 ## Two Free Online Classes Held
 
 As our commitment for increasing farmers' knowledge, we've facilitated farmers to connect with experts and held online free classes with our initiative called "Neurafarm Learning Academy". There were more than 100 farmers who have participated on both events in total.
 
-![Kelas Online Gratis dari Neurafarm. Sumber: Neurafarm]({{site.url }}/images/2020/may/lima.png)
+![Kelas Online Gratis dari Neurafarm. Sumber: Neurafarm](/assets/2020/may/lima.png)
 
 ## Aksi Sayur donation for farmers and the local community
 
 Not only Free Online Class, in the second event, we've also held a fundraiser to support "Aksi Sayur" or "Vegetables Movement" by Mr. Karya (Farmer in Lembang), that is, collecting produce from local farmers and give it all away to the ones in need. The donations were distributed in the form of fresh vegetables packages that consist of tomato, carrot, cabbage, rice, etc each.
 
-![Dana terkumpul dan penerima manfaat dari Aksi Sayur. Sumber: Neurafarm]({{site.url }}/images/2020/may/enam.png)
+![Dana terkumpul dan penerima manfaat dari Aksi Sayur. Sumber: Neurafarm](/assets/2020/may/enam.png)
 
 74 fresh vegetables packages were distributed. Thank you for your contribution, now 74 people/family can eat fresh vegetables during Eid Al-Fitr while celebrating with their families. By contributing, not only have you helped them, you've also helped 26 farmers who have been involved in this movement.
 
@@ -71,11 +71,11 @@ We believe that a small act of kindess could create a big impact. I hope it coul
 
 In the beginning of May, we released our first volume of our bulletin. Bulletin Neurafarm consists of information, inspirations from farmers, and opinion about agriculture industry. This bulletin is available for free and can be accesed in [this link](www.issuu.com/neurafarm).
 
-![Buletin Neurafarm Edisi April. Sumber: Neurafarm]({{site.url }}/images/2020/may/tujuh.png)
+![Buletin Neurafarm Edisi April. Sumber: Neurafarm](/assets/2020/may/tujuh.png)
 
 ## What's next?
 
-This pandemic has change a lot of things. Including they way we work, play, and communicate. During this unprecedented situation, various new things have emerged: the so called new normal, new habit, new experiences, new insights, and of course, new problems. But we believe that along with problems, there lie opportunies. Opportunity to reflect and rethink everything, including how could we fulfill our demand for food. For the more resilient food system.
+This pandemic has change a lot of things. Including the way we work, play, and communicate. During this unprecedented situation, various new things have emerged: the so called new normal, new habit, new experiences, new insights, and of course, new problems. But we believe that along with problems, there lie opportunies. Opportunity to reflect and rethink everything, including how could we fulfill our demand for food. For the more resilient food system.
 
 Still with the same goals, and mission. We'll continue to strive for a sustainable agriculture, where we could fulfill our demand for food without compromising our (future) generation(s).
 
