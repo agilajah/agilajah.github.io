@@ -43,6 +43,41 @@ declare module 'astro:content' {
 
 	const entryMap: {
 		"post": {
+"2018-07-18-generative-modelling-1-driving-simulator.md": {
+  id: "2018-07-18-generative-modelling-1-driving-simulator.md",
+  slug: "2018-07-18-generative-modelling-1-driving-simulator",
+  body: string,
+  collection: "post",
+  data: InferEntrySchema<"post">
+},
+"2018-07-18-generative-modelling-2-adversarial-neural-cryptography.md": {
+  id: "2018-07-18-generative-modelling-2-adversarial-neural-cryptography.md",
+  slug: "2018-07-18-generative-modelling-2-adversarial-neural-cryptography",
+  body: string,
+  collection: "post",
+  data: InferEntrySchema<"post">
+},
+"2018-07-18-generative-modelling-3-adversarial-perturbation-elimination.md": {
+  id: "2018-07-18-generative-modelling-3-adversarial-perturbation-elimination.md",
+  slug: "2018-07-18-generative-modelling-3-adversarial-perturbation-elimination",
+  body: string,
+  collection: "post",
+  data: InferEntrySchema<"post">
+},
+"2018-08-26-generative-modelling-4-text-to-image-synthesis.md": {
+  id: "2018-08-26-generative-modelling-4-text-to-image-synthesis.md",
+  slug: "2018-08-26-generative-modelling-4-text-to-image-synthesis",
+  body: string,
+  collection: "post",
+  data: InferEntrySchema<"post">
+},
+"2018-09-11-random-ml-5-understanding-alphagozero-1.md": {
+  id: "2018-09-11-random-ml-5-understanding-alphagozero-1.md",
+  slug: "2018-09-11-random-ml-5-understanding-alphagozero-1",
+  body: string,
+  collection: "post",
+  data: InferEntrySchema<"post">
+},
 "2019-12-31-year-in-review-2019.md": {
   id: "2019-12-31-year-in-review-2019.md",
   slug: "2019-12-31-year-in-review-2019",
