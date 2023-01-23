@@ -1,6 +1,6 @@
 ---
 title: "Generative Modelling Part 1 - Driving Simulator"
-publishDate: "18 July 2018"
+publishDate: "30 January 2018"
 description: "A series where we can discuss about generative modelling and its application. It is the first instalment of the series."
 tags: ["machine-learning", "generative-modelling"]
 ---

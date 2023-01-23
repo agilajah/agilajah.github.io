@@ -1,7 +1,7 @@
 ---
 title: "Generative Modelling Part 3 - Adversarial Perturbation Elimination"
 description: "A series where we can discuss about generative modelling and its application. It is the third instalment of the series."
-publishDate: "18 July 2018"
+publishDate: "21 April 2018"
 tags: ["machine-learning", "generative-modelling"]
 ---
 

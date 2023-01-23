@@ -1,6 +1,6 @@
 ---
 title: "Generative Modelling Part 2 - Adversarial Neural Cryptography"
-publishDate: "18 July 2018"
+publishDate: "17 April 2018"
 description: "A series where we can discuss about generative modelling and its application. It is the second instalment of the series."
 tags: ["machine-learning", "generative-modelling"]
 ---

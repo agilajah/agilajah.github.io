@@ -2,7 +2,7 @@
 title: "ML.rand() Part 5 - Understanding AlphaGo Zero 1"
 publishDate: "11 September 2018"
 description: "A brand-new series where we can discuss virtually anything about Machine Learning, randomly."
-tags: ["machine-learning", "randoml"]
+tags: ["machine-learning", "random-ml"]
 ---
 
 **Disclaimer:** This article was originally published on my LinkedIn [click here](https://www.linkedin.com/pulse/mlrand-5-understanding-alphago-zero-part-1-code-febi-agil-ifdillah/) on September 8, 2018.

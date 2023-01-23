@@ -1,6 +1,6 @@
 ---
 title: "Generative Modelling Part 4 - Text to Image Synthesis"
-publishDate: "26 August 2018"
+publishDate: "15 August 2018"
 description: "A series where we can discuss about generative modelling and its application. It is the fourth instalment of the series."
 tags: ["machine-learning", "generative-modelling"]
 ---

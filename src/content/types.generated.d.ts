@@ -64,6 +64,20 @@ declare module 'astro:content' {
   collection: "post",
   data: InferEntrySchema<"post">
 },
+"2018-07-18-random-ml-1-synthetic-gradients-decoupled-neural-interfaces.md": {
+  id: "2018-07-18-random-ml-1-synthetic-gradients-decoupled-neural-interfaces.md",
+  slug: "2018-07-18-random-ml-1-synthetic-gradients-decoupled-neural-interfaces",
+  body: string,
+  collection: "post",
+  data: InferEntrySchema<"post">
+},
+"2018-07-18-random-ml-2-learning-to-learn.md": {
+  id: "2018-07-18-random-ml-2-learning-to-learn.md",
+  slug: "2018-07-18-random-ml-2-learning-to-learn",
+  body: string,
+  collection: "post",
+  data: InferEntrySchema<"post">
+},
 "2018-08-26-generative-modelling-4-text-to-image-synthesis.md": {
   id: "2018-08-26-generative-modelling-4-text-to-image-synthesis.md",
   slug: "2018-08-26-generative-modelling-4-text-to-image-synthesis",
