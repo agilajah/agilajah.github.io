@@ -99,6 +99,13 @@ declare module 'astro:content' {
   collection: "post",
   data: InferEntrySchema<"post">
 },
+"2021-10-21-software-is-feeding-the-world.md": {
+  id: "2021-10-21-software-is-feeding-the-world.md",
+  slug: "2021-10-21-software-is-feeding-the-world",
+  body: string,
+  collection: "post",
+  data: InferEntrySchema<"post">
+},
 "eid-and-neurafarm-contribution-pandemic.md": {
   id: "eid-and-neurafarm-contribution-pandemic.md",
   slug: "eid-and-neurafarm-contribution-pandemic",
