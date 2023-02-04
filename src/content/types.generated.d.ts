@@ -42,7 +42,23 @@ declare module 'astro:content' {
 	};
 
 	const entryMap: {
-		"post": {
+		"book": {
+"competing-against-luck-claython-christensen.md": {
+  id: "competing-against-luck-claython-christensen.md",
+  slug: "competing-against-luck-claython-christensen",
+  body: string,
+  collection: "book",
+  data: InferEntrySchema<"book">
+},
+"cosmic-citizens-and-moonshot-thinking-rohan-roberts.md": {
+  id: "cosmic-citizens-and-moonshot-thinking-rohan-roberts.md",
+  slug: "cosmic-citizens-and-moonshot-thinking-rohan-roberts",
+  body: string,
+  collection: "book",
+  data: InferEntrySchema<"book">
+},
+},
+"post": {
 "2018-07-18-generative-modelling-1-driving-simulator.md": {
   id: "2018-07-18-generative-modelling-1-driving-simulator.md",
   slug: "2018-07-18-generative-modelling-1-driving-simulator",

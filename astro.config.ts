@@ -11,7 +11,7 @@ import rehypeMathJax from "rehype-mathjax";
 
 // https://astro.build/config
 export default defineConfig({
-	site: "https://febiagil.agilajah.io",
+	site: "https://agilajah.github.io",
 	experimental: {
 		contentCollections: true,
 	},
