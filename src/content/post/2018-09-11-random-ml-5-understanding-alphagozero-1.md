@@ -69,9 +69,11 @@ Remember that each bandit represents an action. Let's draw up some notation. Mul
 2. Each of the k actions has an expected or mean reward called 'value' **(μ)** given that that action is selected at a time step.
 3. **R** is a reward function. The reward of action i is a random variable **Ri** with unknown distribution and unknown expected value **μi**.
 4. **A** is set of actions, each referring to the interaction with one slot machine. We denote the action selected on time step t as **At** and the corresponding reward as **Rt**. The 'value' of an action a is the expected reward given if it is selected (see point 2 above) and denoted by
+   $$
    \begin{align}
    q*(a) = E[Rt|At =a]
    \end{align}
+   $$
    If action **At** at the time step t is on the i-th machine, then $$q*(At) = θi$$.
 
 Speaking of reward, you might ask: How are the rewards produced? Well, one option is to draw a reward for action i (Rt) at time t from a fixed distribution (a different reward distribution for each action) and each draw is independent to the other. This setting is called **stochastic** and it’s what we’ll use here.
