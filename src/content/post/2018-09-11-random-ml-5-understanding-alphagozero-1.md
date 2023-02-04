@@ -156,15 +156,19 @@ The balance of the exploration and exploitation in UCB goes like this: The optim
 
 This optimism comes in the form of Upper Confidence Bound (UCB) of the reward value of an action a: **Ut(a)**. In other words, we want to know with high probability that the true expected payoff of an action is less than our prescribed upper bound :
 
+$$
 \begin{align}
 q\*(a) ≤ qt(a) + Ut(a)
 \end{align}
+$$
 
 The upper bound **Ut(a)** is a function of how many times this action has been selected so far **Nt(a)** and the larger the **Nt(a)**, the smaller the bound **Ut(a)**. At intuitive level, this term helps us avoid always playing the same arm without checking out other arms. In UCB algorithm, we always select the greediest action to maximize the upper confidence bound:
 
+$$
 \begin{align}
 at = argmax (Qt(a) + Ut(a))
 \end{align}
+$$
 
 We need an upper confidence bound to describe the largest plausible mean of each arm.
 
@@ -178,9 +182,11 @@ Kidding. Alright, let's start over, if you insisted.
 
 So we have t i.i.d random variables (X1, X2, ... Xt) that are bounded by the interval [0, 1], right. The expected values are μi. X is the average of the sum of every Xi and μ = E(X) = the average of the sum of expected values. Recall that Xi is the payoff variable for a single action j. So variable X is the average payoff for action j over all the times we've selected it. The [Hoeffding inequality](https://en.wikipedia.org/wiki/Hoeffding%27s_inequality) gives an exponential upper bound on the probability that the value of deviates from its mean.
 
+$$
 \begin{align}
 P(X + u < μ) ≤ e^{(−2tu)^2}
 \end{align}
+$$
 
 See? It's kinda hard to read. Especially for me. That's why I skipped over the details. But you insisted. LOL.
 
@@ -193,49 +199,63 @@ Let's continue. For a given action a, let us consider:
 
 Then we have:
 
+$$
 \begin{align}
 P(Qt(a) + Ut(a) < Q(a)) ≤ e^{(−2tUt(a))^2}
 \end{align}
+$$
 
 Recall that we want to know with high probability that the true expected payoff of an action is less than our prescribed upper bound; We want to pick a bound so that the true mean is below the sample mean + the upper confidence bound with high confidence [6].
 
 It means that $$e^{(-2tUt(a))^2}$$ should be a small probability. Let's say it's p. So:
 
+$$
 \begin{align}
 p = e^{(-2Ut(a))^2}
 \end{align}
+$$
 
 Thus,
 
+$$
 \begin{align}
 Ut(a) = \sqrt{-log p / 2 Nt(a)}
 \end{align}
+$$
 
 Yeah, that's how you get the **Ut(a)**. Finally, we have:
 
+$$
 \begin{align}
 at = argmax [Qt(a) + \sqrt{-log p / 2 Nt(a)}]
 \end{align}
+$$
 
 ## UCB1 Algorithm
 
 UCB1 is an algorithm proposed by (Auer et al 2002) for the multi-armed bandit that achieves regret that grows only logarithmically with the number of actions taken. (You guys should definitely check the original paper [HERE](https://homes.di.unimi.it/~cesabian/Pubblicazioni/ml-02.pdf) and refer to [this note](https://courses.cs.washington.edu/courses/cse599s/14sp/scribes/lecture15/lecture15_draft.pdf) for the analysis). One heuristic is to reduce the threshold p in time, as we want to make more confident bound estimation with more rewards observed. [6], Set $$p = t^{-4}$$ we get:
 
+$$
 \begin{align}
 Ut(a) = \sqrt{-2 log t / Nt(a)}
 \end{align}
+$$
 
 and,
 
+$$
 \begin{align}
 at = argmax[Qt(a) + Ut(a))]
 \end{align}
+$$
 
 Thus,
 
+$$
 \begin{align}
 atUCB1 = argmax[Qt(a) + \sqrt{-2 log t / Nt(a)}]
 \end{align}
+$$
 
 So, that's how you derive the equation. Intuitively, then the algorithm goes like this[2]:
 
