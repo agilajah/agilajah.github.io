@@ -101,6 +101,20 @@ declare module 'astro:content' {
   collection: "post",
   data: InferEntrySchema<"post">
 },
+"2018-07-19-random-ml-3-building-mind-reader-machines-theory-of-mind.md": {
+  id: "2018-07-19-random-ml-3-building-mind-reader-machines-theory-of-mind.md",
+  slug: "2018-07-19-random-ml-3-building-mind-reader-machines-theory-of-mind",
+  body: string,
+  collection: "post",
+  data: InferEntrySchema<"post">
+},
+"2018-07-19-random-ml-4-building-machines-with-navigational-abilities.md": {
+  id: "2018-07-19-random-ml-4-building-machines-with-navigational-abilities.md",
+  slug: "2018-07-19-random-ml-4-building-machines-with-navigational-abilities",
+  body: string,
+  collection: "post",
+  data: InferEntrySchema<"post">
+},
 "2018-08-26-generative-modelling-4-text-to-image-synthesis.md": {
   id: "2018-08-26-generative-modelling-4-text-to-image-synthesis.md",
   slug: "2018-08-26-generative-modelling-4-text-to-image-synthesis",

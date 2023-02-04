@@ -19,10 +19,10 @@ This is the 4th instalment of 'On Generative Modelling' series. If you haven't r
 
 Also check my other series called ML.Rand() series :
 
-1. [part1](http://febiagil.me/posts/2018/07/18/random-ml-1-synthetic-gradients-decoupled-neural-interfaces/), Synthetic gradients and decoupled neural interfaces
-2. [part2](http://febiagil.me/posts/2018/07/18/random-ml-2-learning-to-learn/), Learning to learn (meta-learning)
-3. [part3](http://febiagil.me/posts/2018/07/19/random-ml-3-building-mind-reader-machines-theory-of-mind/), How to build a mind-reader machine
-4. [part4](http://febiagil.me/posts/2018/07/19/random-ml-4-building-machines-with-navigational-abilities/). Building machines with navigational abilities
+1. [part1](http://febiagil.me/posts/2018-07-18-random-ml-1-synthetic-gradients-decoupled-neural-interfaces/), Synthetic gradients and decoupled neural interfaces
+2. [part2](http://febiagil.me/posts/2018-07-18-random-ml-2-learning-to-learn/), Learning to learn (meta-learning)
+3. [part3](http://febiagil.me/posts/2018-07-19-random-ml-3-building-mind-reader-machines-theory-of-mind/), How to build a mind-reader machine
+4. [part4](http://febiagil.me/posts/2018-07-19-random-ml-4-building-machines-with-navigational-abilities/). Building machines with navigational abilities
 
 In this article, we will continue our discussion about generative modelling; but now we have a special topic: text-to-image synthesis. I've been working on this very topic since a year ago for my bachelor's thesis. So I wish to take this opportunity to share and communicate what I've been doing since I started the project and the progress that I've made on the subject. Consider this as a 'simplified' write-up of my work. I hope you enjoy it.
 

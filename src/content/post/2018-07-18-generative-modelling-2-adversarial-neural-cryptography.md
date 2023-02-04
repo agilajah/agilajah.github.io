@@ -5,7 +5,7 @@ description: "A series where we can discuss about generative modelling and its a
 tags: ["machine-learning", "generative-modelling"]
 ---
 
-![Generative Modelling 2 Cover. Source: memegen.com]({{site.url }}/images/2018/july/generative-modelling-2-cover.jpeg "Generative Modelling 2 Cover. Source: memegen.com")
+![Generative Modelling 2 Cover. Source: memegen.com](/assets/2018/july/generative-modelling-2-cover.jpeg "Generative Modelling 2 Cover. Source: memegen.com")
 
 **Disclaimer:** This article was originally published on my LinkedIn ([click here](https://www.linkedin.com/pulse/generative-modelling-part-2-adversarial-neural-febi-agil-ifdillah/)) on April 17, 2018.
 
@@ -27,7 +27,7 @@ The authors started the study by asking a question, "Is it possible for a neural
 
 Why do we want to do that? One might wonder.
 
-![Why??. Source: http://knowyourmeme.com/memes/y-tho]({{site.url }}/images/2018/july/generative-modelling-2-1.jpeg "Why??. Source: http://knowyourmeme.com/memes/y-tho")
+![Why??. Source: http://knowyourmeme.com/memes/y-tho](/assets/2018/july/generative-modelling-2-1.jpeg "Why??. Source: http://knowyourmeme.com/memes/y-tho")
 
 It seems to me that the authors were just trying to 'show' us that neural networks can learn such a task. As neural networks are applied to increasingly complex tasks, they are often trained to meet end-to-end objectives that go beyond simple functional specifications. Be it to generate realistic images like the one we've discussed in the previous post or even to solve a multi-agent problem[2]. Now they want to train neural networks to protect information because why not? right?
 
@@ -47,7 +47,7 @@ But please note that this isn’t cryptography as you know it nor is it cryptogr
 
 I briefly mentioned how Comma.ai tried to attack a video prediction task by coupling a GAN with a VAE[4]. It turns out the same neural networks can also be used in our task (with different architecture of course). But now, we want to train the GAN alone without the VAE.
 
-![Generative Adversarial Networks Architecture. Source: http://www.kdnuggets.com/2017/01/generative-adversarial-networks-hot-topic-machine-learning.html]({{site.url }}/images/2018/july/generative-modelling-2-2.png "Generative Adversarial Networks Architecture. Source: http://www.kdnuggets.com/2017/01/generative-adversarial-networks-hot-topic-machine-learning.html")
+![Generative Adversarial Networks Architecture. Source: http://www.kdnuggets.com/2017/01/generative-adversarial-networks-hot-topic-machine-learning.html](/assets/2018/july/generative-modelling-2-2.png "Generative Adversarial Networks Architecture. Source: http://www.kdnuggets.com/2017/01/generative-adversarial-networks-hot-topic-machine-learning.html")
 
 Generative Adversarial Networks (GANs) [3] can be considered as the new cool kids on the block today. GANs is a branch of unsupervised machine learning implemented by a system of two neural networks competing against each other in a zero-sum game framework, namely the generator network, and the discriminator network. This could be anything, be it a sophisticated net like convolution networks or just a two-layer neural network. For more detailed information about GANs, you can learn from this [article](https://medium.com/@awjuliani/generative-adversarial-networks-explained-with-a-classic-spongebob-squarepants-episode-54deab2fce39) or come visit the original paper [here](https://papers.nips.cc/paper/5423-generative-adversarial-nets.pdf).
 
@@ -59,7 +59,7 @@ The authors set up their experiment as follows. We have three parties involved n
 
 On the other hand, Eve does not have access to this key.
 
-![The Setup. Source: The Paper]({{site.url }}/images/2018/july/generative-modelling-2-3.png "The Setup. Source: The Paper")
+![The Setup. Source: The Paper](/assets/2018/july/generative-modelling-2-3.png "The Setup. Source: The Paper")
 
 **Note: "P" stands for the plaintext (the message), and "C" stands for the ciphertext. "K" is the key.**
 
@@ -79,7 +79,7 @@ So, basically, we want to train Alice and Bob jointly to communicate successfull
 
 We chose "mix & transform" architecture in which the networks are consist of a fully connected layer followed by four 1-dimensional convolutional layers which together reduce the inputs down to an N-bit.
 
-![The Architecture. Source: http://blog.acolyer.org/2017/02/10/learning-to-protect-communications-with-adversarial-neural-cryptography/]({{site.url }}/images/2018/july/generative-modelling-2-4.jpeg "Architecture. Source: http://blog.acolyer.org/2017/02/10/learning-to-protect-communications-with-adversarial-neural-cryptography/")
+![The Architecture. Source: http://blog.acolyer.org/2017/02/10/learning-to-protect-communications-with-adversarial-neural-cryptography/](/assets/2018/july/generative-modelling-2-4.jpeg "Architecture. Source: http://blog.acolyer.org/2017/02/10/learning-to-protect-communications-with-adversarial-neural-cryptography/")
 
 Alice receives and mixes the message + the key together to produce output called 'ciphertext' with the same length as the key and the message combined, as depicted above. Then she passes the ciphertext to Bob. Both Alice and Bob have the same network architecture, but as for Bob's network, we use the ciphertext as the input and combine the key with this ciphertext instead.
 
@@ -91,23 +91,29 @@ So, these are the last things we need: the loss functions. In this setup, we hav
 
 Eve’s loss function is the absolute difference between the message vector **P** and her attempt at decrypting it, called **PEve**. The loss then backpropagated through the weights in the Eve network to update her weights. The loss function can be written down like this:
 
+$$
 \begin{align}
 LEve = abs(P - PEve)
 \end{align}
+$$
 
 Pretty simple, right?
 
 As for Bob + Alice's loss function, we will also compute a similar thing: the absolute decryption error. But with an additional term that signifies how well Eve is currently decrypting the message, so we have:
 
+$$
 \begin{align}
 \frac{(N/2 - LEve)^2}{(N/2)^2}
 \end{align}
+$$
 
 Putting these all together, we have:
 
+$$
 \begin{align}
 LossBob = LossBob + \frac{(N/2 - LEve)^2}{(N/2)^2}
 \end{align}
+$$
 
 ### Training Process
 

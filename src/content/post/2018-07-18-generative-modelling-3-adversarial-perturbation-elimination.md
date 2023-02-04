@@ -5,7 +5,7 @@ publishDate: "21 April 2018"
 tags: ["machine-learning", "generative-modelling"]
 ---
 
-![Generative Modelling 3 Cover, DNN vs Perturbation. Who would win?. Source: https://www.reddit.com/r/ProgrammerHumor/comments/79g0m6/one_pixel_attack_for_fooling_deep_neural_networks/](assets/2018/july/generative-modelling-3-cover.jpeg "Generative Modelling 3 Cover, DNN vs Perturbation. Who would win?. Source: https://www.reddit.com/r/ProgrammerHumor/comments/79g0m6/one_pixel_attack_for_fooling_deep_neural_networks/")
+![Generative Modelling 3 Cover, DNN vs Perturbation. Who would win?. Source: https://www.reddit.com/r/ProgrammerHumor/comments/79g0m6/one_pixel_attack_for_fooling_deep_neural_networks/](/assets/2018/july/generative-modelling-3-cover.jpeg "Generative Modelling 3 Cover, DNN vs Perturbation. Who would win?. Source: https://www.reddit.com/r/ProgrammerHumor/comments/79g0m6/one_pixel_attack_for_fooling_deep_neural_networks/")
 
 **Disclaimer:** This article was originally published on my LinkedIn ([click here](https://www.linkedin.com/pulse/generative-modelling-part-3-adversarial-perturbation-ifdillah/)) on April 21, 2018.
 
@@ -15,7 +15,7 @@ This is the 3rd instalment of 'On Generative Modelling' series. If you haven't r
 
 In this article, we will continue our discussion about generative modelling. However, in contrast to the previous articles, we are going to be dissecting multiple papers at once. So it is going to be a long post. But all rooted in one topic.. perturbation.
 
-![Aw, man... Source: http://media.makeameme.org/created/Everyones-out-at.jpg](assets/2018/july/generative-modelling-3-1.jpeg "Aw, man... Source: http://media.makeameme.org/created/Everyones-out-at.jpg")
+![Aw, man... Source: http://media.makeameme.org/created/Everyones-out-at.jpg](/assets/2018/july/generative-modelling-3-1.jpeg "Aw, man... Source: http://media.makeameme.org/created/Everyones-out-at.jpg")
 
 ## Perturbation? As in Perturbation Theory? What is this, Quantum Mechanics?
 
@@ -39,7 +39,7 @@ As we all know, neural networks have been producing some incredible results - in
 
 This means it is possible to take any input, let's say an image, and find a **small modification** to its pixel values that caused the network to produce wrong output (misclassify the image). The cover image of this post above depicts this phenomenon perfectly, it's a 'battle' between machine learning models vs small perturbation and believe me it is an important topic.
 
-![Adversarial attack on a picture of a panda. Source: http://arxiv.org/pdf/1412.6572.pdf](assets/2018/july/generative-modelling-3-2.png "Adversarial attack on a picture of a panda. Source: http://arxiv.org/pdf/1412.6572.pdf")
+![Adversarial attack on a picture of a panda. Source: http://arxiv.org/pdf/1412.6572.pdf](/assets/2018/july/generative-modelling-3-2.png "Adversarial attack on a picture of a panda. Source: http://arxiv.org/pdf/1412.6572.pdf")
 
 In the picture above, we are faced with two seemingly 'identical' photos of a panda, one classified correctly and the other incorrectly in a ridiculous way (with HIGH confidence, 99.3%-high confidence!). I mean, look at the modification. It was very small. So small that we human barely even notice it. Yet it affects our models dearly.
 
@@ -47,7 +47,7 @@ Then, another result discovered by researchers from École Polytechnique Fédér
 
 What do these perturbations look like:
 
-![Take a look a these perturbations. Source: http://openaccess.thecvf.com/content_cvpr_2017/papers/Moosavi-Dezfooli_Universal_Adversarial_Perturbations_CVPR_2017_paper.pdf](assets/2018/july/generative-modelling-3-3.png "Take a look a these perturbations. Source: http://openaccess.thecvf.com/content_cvpr_2017/papers/Moosavi-Dezfooli_Universal_Adversarial_Perturbations_CVPR_2017_paper.pdf")
+![Take a look a these perturbations. Source: http://openaccess.thecvf.com/content_cvpr_2017/papers/Moosavi-Dezfooli_Universal_Adversarial_Perturbations_CVPR_2017_paper.pdf](/assets/2018/july/generative-modelling-3-3.png "Take a look a these perturbations. Source: http://openaccess.thecvf.com/content_cvpr_2017/papers/Moosavi-Dezfooli_Universal_Adversarial_Perturbations_CVPR_2017_paper.pdf")
 
 An extreme case for the adversarial attack is when **only one pixel** in the image is changed to fool the classifier. Su et al. [5] claimed successful fooling of three different network models on 70.97% of the tested images by changing just **one pixel** per image. They also reported that the average confidence of the networks on the wrong labels was found to be 97.47%.
 
@@ -99,7 +99,7 @@ Man, I've been saying 'interesting' for like a hundred times. But it actually is
 
 The image below summarizes their work:
 
-![Summary of Shen et al (2017). Source: http://arxiv.org/pdf/1707.05474.pdf](assets/2018/july/generative-modelling-3-4.png "Summary of Shen et al (2017). Source: http://arxiv.org/pdf/1707.05474.pdf")
+![Summary of Shen et al (2017). Source: http://arxiv.org/pdf/1707.05474.pdf](/assets/2018/july/generative-modelling-3-4.png "Summary of Shen et al (2017). Source: http://arxiv.org/pdf/1707.05474.pdf")
 
 So basically, with this figure, Shen et al (2017) wanted us to know that[1]:
 
@@ -117,9 +117,11 @@ Second, we need to define the difference of adversarial image (AI) and clean ima
 
 **Fun fact**; As we all know, we considered GANs 'optimal' IF the generative distribution of G and the data generating distribution of D is consistent:
 
+$$
 \begin{align}
 Pg = Pdata
 \end{align}
+$$
 
 And you know what? The procedure of converging to a good estimator Pdata **COINCIDES** with the demand of the elimination of adversarial perturbations N. **Boom**.
 

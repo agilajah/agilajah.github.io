@@ -5,7 +5,7 @@ publishDate: "6 May 2018"
 tags: ["machine-learning", "random-ml"]
 ---
 
-![Random ML 2 Cover, Learning to learn. Source: https://memegenerator.net.]({{site.url}}/images/2018/july/random-ml-2-cover.jpeg "Random ML 2 Cover, Learning to learn. Source: https://memegenerator.net")
+![Random ML 2 Cover, Learning to learn. Source: https://memegenerator.net.](/assets/2018/july/random-ml-2-cover.jpeg "Random ML 2 Cover, Learning to learn. Source: https://memegenerator.net")
 
 **Disclaimer:** This article was originally published on my LinkedIn ([click here](https://www.linkedin.com/pulse/mlrand-2-learning-learn-febi-agil-ifdillah/)) on May 6, 2018.
 
@@ -91,15 +91,19 @@ It sounds 'easy' in some sense, but also comes with a challenge: the RNN has a l
 
 Each cell in the LSTM has four components: the cell weights, the input gate, the forget gate, and the output gate. Each component has weights associated with all of its input from the previous layer, plus input from the previous time step. The number of LSTM parameters, taking input vectors of size m and giving output vectors of size _n_ is:
 
+$$
 \begin{align}
 4(nm + n^2)
 \end{align}
+$$
 
 But if our LSTM model has bias(es), it would be:
 
+$$
 \begin{align}
 4(nm + n^2 + n)
 \end{align}
+$$
 
 So, we're talking about tens of thousand parameters here. this is a problem in and of itself.
 

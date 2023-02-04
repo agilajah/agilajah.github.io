@@ -1,7 +1,7 @@
 ---
 title: "Software is Feeding the World"
 publishDate: "21 October 2021"
-description: "Have you heard the phrase 'Software is eating the world'? it was coined by Marc Andreseen and refers to his prediction that software would disrupt traditional business. here, I'll paint a picture on how we, at Neurafarm, is using software to feed the world."
+description: "Have you heard the phrase 'Software is eating the world'? it was coined by Marc Andreseen and refers to his prediction that software would disrupt traditional business. Here, I'll paint a picture on how we, at Neurafarm, is using software to 'feed' the world."
 tags: ["startup", "agritech", "sustainability"]
 ---
 
