@@ -57,6 +57,13 @@ declare module 'astro:content' {
   collection: "book",
   data: InferEntrySchema<"book">
 },
+"the-future-of-humanity-michio-kaku.md": {
+  id: "the-future-of-humanity-michio-kaku.md",
+  slug: "the-future-of-humanity-michio-kaku",
+  body: string,
+  collection: "book",
+  data: InferEntrySchema<"book">
+},
 },
 "post": {
 "2018-07-18-generative-modelling-1-driving-simulator.md": {
