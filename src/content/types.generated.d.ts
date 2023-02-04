@@ -92,6 +92,27 @@ declare module 'astro:content' {
   collection: "post",
   data: InferEntrySchema<"post">
 },
+"2018-11-09-moments-the-series-chapter-zero.md": {
+  id: "2018-11-09-moments-the-series-chapter-zero.md",
+  slug: "2018-11-09-moments-the-series-chapter-zero",
+  body: string,
+  collection: "post",
+  data: InferEntrySchema<"post">
+},
+"2018-11-14-moments-the-series-chapter-one.md": {
+  id: "2018-11-14-moments-the-series-chapter-one.md",
+  slug: "2018-11-14-moments-the-series-chapter-one",
+  body: string,
+  collection: "post",
+  data: InferEntrySchema<"post">
+},
+"2018-11-18-moments-the-series-chapter-two.md": {
+  id: "2018-11-18-moments-the-series-chapter-two.md",
+  slug: "2018-11-18-moments-the-series-chapter-two",
+  body: string,
+  collection: "post",
+  data: InferEntrySchema<"post">
+},
 "2019-12-31-year-in-review-2019.md": {
   id: "2019-12-31-year-in-review-2019.md",
   slug: "2019-12-31-year-in-review-2019",
