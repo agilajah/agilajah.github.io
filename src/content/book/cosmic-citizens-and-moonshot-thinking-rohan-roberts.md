@@ -4,7 +4,7 @@ author: "Rohan Roberts"
 description: "Cosmic Citizens and Moonshot Thinking: Education in an Age of Exponential Technologies takes a fresh approach to what we need to do differently to prepare our children for a world of exponential technologies, disruptive innovations, and ubiquitous A.I. "
 tags: ["education"]
 status: "Currently Reading"
-publishDate: "04 February 2023"
+publishDate: "08 July 2020"
 ---
 
 # Thoughts & Notes
