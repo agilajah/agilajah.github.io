@@ -57,6 +57,13 @@ declare module 'astro:content' {
   collection: "book",
   data: InferEntrySchema<"book">
 },
+"educated-memoir-tara-westover.md": {
+  id: "educated-memoir-tara-westover.md",
+  slug: "educated-memoir-tara-westover",
+  body: string,
+  collection: "book",
+  data: InferEntrySchema<"book">
+},
 "the-future-of-humanity-michio-kaku.md": {
   id: "the-future-of-humanity-michio-kaku.md",
   slug: "the-future-of-humanity-michio-kaku",

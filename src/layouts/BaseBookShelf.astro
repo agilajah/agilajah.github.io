@@ -1,0 +1,56 @@
+---
+import type { SiteMeta } from "@/data/siteMeta";
+import BaseHead from "@/components/BaseHead";
+import Header from "@/components/layout/Header";
+import Footer from "@/components/layout/Footer";
+import SkipLink from "@/components/SkipLink";
+import siteConfig from "@/site-config";
+
+interface Props {
+	meta: SiteMeta;
+}
+
+const {
+	meta: { title, description = siteConfig.description, image = "/social-card.png" },
+} = Astro.props;
+---
+
+<html lang={siteConfig.lang}>
+	<head>
+		<BaseHead title={title} description={description} image={image} />
+		<script define:vars={{ siteConfig }}>
+			const root = document.documentElement;
+			const colorThemeMetaTag = document.querySelector("meta[name='theme-color']");
+			const theme = typeof localStorage !== "undefined" ? localStorage.getItem("theme") : null;
+			if (
+				theme === "dark" ||
+				(!theme && window.matchMedia("(prefers-color-scheme: dark)").matches)
+			) {
+				root.classList.add("dark");
+				colorThemeMetaTag.setAttribute("content", siteConfig.themeColorDark);
+			} else {
+				root.classList.remove("dark");
+				colorThemeMetaTag.setAttribute("content", siteConfig.themeColorLight);
+			}
+		</script>
+		<script defer data-domain="febiagil.me" src="https://plausible.io/js/script.js"></script>
+		<!-- Google tag (gtag.js) -->
+		<script async src="https://www.googletagmanager.com/gtag/js?id=G-B6G81G81F8"></script>
+		<script>
+			window.dataLayer = window.dataLayer || [];
+			function gtag(){dataLayer.push(arguments);}
+			gtag('js', new Date());
+
+			gtag('config', 'G-B6G81G81F8');
+		</script>
+
+	</head>
+	<body>
+		<SkipLink />
+		<Header />
+		<main id="main" class="">
+			<slot />
+		</main>
+		<Footer />
+	</body>
+</html>

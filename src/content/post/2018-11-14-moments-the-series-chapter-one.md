@@ -2,7 +2,7 @@
 title: "Moments - One"
 publishDate: "14 November 2018"
 description: "What if you could relive your life over and over again?"
-tags: ["moments-series", story"]
+tags: ["moments-series", "story"]
 ---
 
 ![Essential Silence. Image Source: Hybridpedagogy.org](/assets/2018/november/moment_one.png)

@@ -2,7 +2,7 @@
 title: "Moments - Two"
 publishDate: "18 November 2018"
 description: "What if you could relive your life over and over again?"
-tags: ["moments-series", story"]
+tags: ["moments-series", "story"]
 ---
 
 ### Moments the Series

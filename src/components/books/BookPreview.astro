@@ -14,6 +14,7 @@ const datetime = date.toISOString();
 const bookDate = getFormattedDate(date, { month: "short" });
 ---
 
+
 <time datetime={datetime} class="min-w-[120px] text-gray-500">{bookDate}</time>
 <Element>
 	<a href={`/books/${book.slug}`} class="cactus-link inline-block line-clamp-2" rel="prefetch">
