@@ -17,6 +17,7 @@ const book = defineCollection({
 		tags: z.array(z.string()).default([]),
 		status: z.string().max(40),
 		publishDate: z.string().transform((str) => new Date(str)),
+		cover: z.string()
 	}
 });
 

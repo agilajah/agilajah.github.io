@@ -5,6 +5,7 @@ description: "Cosmic Citizens and Moonshot Thinking: Education in an Age of Expo
 tags: ["education"]
 status: "Currently Reading"
 publishDate: "08 July 2020"
+cover: "cosmic-citizens-and-moonshot-thinking-rohan-roberts.jpeg"
 ---
 
 # Thoughts & Notes

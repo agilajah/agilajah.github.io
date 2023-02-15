@@ -5,6 +5,7 @@ description: "The foremost authority on innovation and growth presents a path-br
 tags: ["business", "nonfiction", "management", "leadership", "entrepreneurship"]
 status: "Read"
 publishDate: "10 August 2018"
+cover: "competing-against-luck-claython-christensen.jpeg"
 ---
 
 # Thoughts & Notes

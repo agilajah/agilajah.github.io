@@ -13,22 +13,16 @@ const date = new Date(book.data.publishDate);
 const datetime = date.toISOString();
 const bookDate = getFormattedDate(date, { month: "short" });
 ---
-
-<!-- 
-	<div class="max-w-sm overflow-hidden rounded-xl bg-white shadow-md duration-200 hover:scale-105 hover:shadow-xl">
-	  <img src="https://i.imgur.com/5dmBrx6.jpg" alt="plant" class="h-auto w-full" />
-	  <div class="p-5">
-		<p class="text-medium mb-5 text-gray-700">Well, aren't you going up to the lake tonight, you've been planning it for two weeks.</p>
-		<button class="w-full rounded-md bg-indigo-600  py-2 text-indigo-100 hover:bg-indigo-500 hover:shadow-md duration-75">See More</button>
-	  </div>
-	  </div> -->
-
-
-
-<time datetime={datetime} class="min-w-[120px] text-gray-500">{bookDate}</time>
-<Element>
-	<a href={`/books/${book.slug}`} class="cactus-link inline-block line-clamp-2" rel="prefetch">
-		{book.data.title}
-	</a>
+<!-- <time datetime={datetime} class="min-w-[120px] text-gray-500">{bookDate}</time> -->
+<Element class="relative overflow-hidden rounded-xl group w-64 h-64 bg-gray-100">
+		<div class="flex justify-center mx-auto">
+			<img class="absolute rounded-md w-7/12 h-7/12 drop-shadow-md transform duration-300 inset-y-1 group-hover:-inset-y-full mt-8" alt={book.data.title} src={`/assets/books/${book.data.cover}`}>
+		</div>
+		<div class="absolute w-full h-full shadow-2xl opacity-20 transform duration-300 inset-y-full group-hover:-inset-y-0 mt-10"></div>
+		
+		<div class="absolute w-full h-full transform duration-300 inset-y-full group-hover:-inset-y-0 ml-3 mr-3">
+			<a href={`/books/${book.slug}`} class="capitalize font-serif font-bold text-lg mt-5 text-gray-500">{book.data.title}</a>
+			{withDesc && <q class="mt-2 block italic line-clamp-3">{book.data.description}</q>}
+		</div>
 </Element>
-{withDesc && <q class="mt-2 block italic line-clamp-3">{book.data.description}</q>}
+

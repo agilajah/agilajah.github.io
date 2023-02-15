@@ -5,6 +5,7 @@ description: "Human civilization is on the verge of spreading beyond Earth. More
 tags: ["science", "nonficition", "physics", "space", "technology", "futurism"]
 status: "Read"
 publishDate: "30 June 2018"
+cover: "the-future-of-humanity-michio-kaku.jpeg"
 ---
 
 # Thoughts & Notes
