@@ -12,7 +12,7 @@ const post = defineCollection({
 const book = defineCollection({
 	schema: {
 		title: z.string().max(150),
-		description: z.string().min(40).max(300),
+		description: z.string().min(2).max(500),
 		author: z.string().min(2).max(300),
 		tags: z.array(z.string()).default([]),
 		status: z.string().max(40),

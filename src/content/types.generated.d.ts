@@ -57,6 +57,13 @@ declare module 'astro:content' {
   collection: "book",
   data: InferEntrySchema<"book">
 },
+"crossing-the-chasm-geoffrey-moore.md": {
+  id: "crossing-the-chasm-geoffrey-moore.md",
+  slug: "crossing-the-chasm-geoffrey-moore",
+  body: string,
+  collection: "book",
+  data: InferEntrySchema<"book">
+},
 "educated-memoir-tara-westover.md": {
   id: "educated-memoir-tara-westover.md",
   slug: "educated-memoir-tara-westover",
@@ -64,9 +71,44 @@ declare module 'astro:content' {
   collection: "book",
   data: InferEntrySchema<"book">
 },
+"hit-refresh-satya-nadella.md": {
+  id: "hit-refresh-satya-nadella.md",
+  slug: "hit-refresh-satya-nadella",
+  body: string,
+  collection: "book",
+  data: InferEntrySchema<"book">
+},
+"innovation-capital-jeff-dyer.md": {
+  id: "innovation-capital-jeff-dyer.md",
+  slug: "innovation-capital-jeff-dyer",
+  body: string,
+  collection: "book",
+  data: InferEntrySchema<"book">
+},
+"the-daily-stoic-ryan-holiday.md": {
+  id: "the-daily-stoic-ryan-holiday.md",
+  slug: "the-daily-stoic-ryan-holiday",
+  body: string,
+  collection: "book",
+  data: InferEntrySchema<"book">
+},
 "the-future-of-humanity-michio-kaku.md": {
   id: "the-future-of-humanity-michio-kaku.md",
   slug: "the-future-of-humanity-michio-kaku",
+  body: string,
+  collection: "book",
+  data: InferEntrySchema<"book">
+},
+"the-gene-siddhartha-mukherjee.md": {
+  id: "the-gene-siddhartha-mukherjee.md",
+  slug: "the-gene-siddhartha-mukherjee",
+  body: string,
+  collection: "book",
+  data: InferEntrySchema<"book">
+},
+"the-prosperity-paradox-clayton-christensen.md": {
+  id: "the-prosperity-paradox-clayton-christensen.md",
+  slug: "the-prosperity-paradox-clayton-christensen",
   body: string,
   collection: "book",
   data: InferEntrySchema<"book">
