@@ -43,6 +43,13 @@ declare module 'astro:content' {
 
 	const entryMap: {
 		"book": {
+"barking-up-the-wrong-tree-eric-barker.md": {
+  id: "barking-up-the-wrong-tree-eric-barker.md",
+  slug: "barking-up-the-wrong-tree-eric-barker",
+  body: string,
+  collection: "book",
+  data: InferEntrySchema<"book">
+},
 "competing-against-luck-claython-christensen.md": {
   id: "competing-against-luck-claython-christensen.md",
   slug: "competing-against-luck-claython-christensen",
@@ -85,9 +92,23 @@ declare module 'astro:content' {
   collection: "book",
   data: InferEntrySchema<"book">
 },
+"the-culture-code-daniel-coyle.md": {
+  id: "the-culture-code-daniel-coyle.md",
+  slug: "the-culture-code-daniel-coyle",
+  body: string,
+  collection: "book",
+  data: InferEntrySchema<"book">
+},
 "the-daily-stoic-ryan-holiday.md": {
   id: "the-daily-stoic-ryan-holiday.md",
   slug: "the-daily-stoic-ryan-holiday",
+  body: string,
+  collection: "book",
+  data: InferEntrySchema<"book">
+},
+"the-dip-seth-godin.md": {
+  id: "the-dip-seth-godin.md",
+  slug: "the-dip-seth-godin",
   body: string,
   collection: "book",
   data: InferEntrySchema<"book">
@@ -106,9 +127,23 @@ declare module 'astro:content' {
   collection: "book",
   data: InferEntrySchema<"book">
 },
+"the-hard-thing-about-hard-things-ben-horowitz.md": {
+  id: "the-hard-thing-about-hard-things-ben-horowitz.md",
+  slug: "the-hard-thing-about-hard-things-ben-horowitz",
+  body: string,
+  collection: "book",
+  data: InferEntrySchema<"book">
+},
 "the-prosperity-paradox-clayton-christensen.md": {
   id: "the-prosperity-paradox-clayton-christensen.md",
   slug: "the-prosperity-paradox-clayton-christensen",
+  body: string,
+  collection: "book",
+  data: InferEntrySchema<"book">
+},
+"to-pixar-and-beyond-lawrence-levy.md": {
+  id: "to-pixar-and-beyond-lawrence-levy.md",
+  slug: "to-pixar-and-beyond-lawrence-levy",
   body: string,
   collection: "book",
   data: InferEntrySchema<"book">

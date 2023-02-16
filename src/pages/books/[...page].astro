@@ -11,7 +11,7 @@ export async function getStaticPaths({ paginate }: GetStaticPathsOptions) {
 	const allBooks = await getCollection("book");
 	const allBookssByDate = sortMDByDate(allBooks);
 	const uniqueTags = getUniqueTags(allBooks);
-	return paginate(allBookssByDate, { props: { uniqueTags }, pageSize: 10 });
+	return paginate(allBookssByDate, { props: { uniqueTags }, pageSize: 200 });
 }
 
 interface Props {
@@ -66,11 +66,11 @@ const paginationProps = {
 					</svg>
 					Categories
 				</h2>
-				<ul class="flex flex-wrap gap-2 text-bgColor">
+				<ul class="text-bgColor flex flex-wrap gap-2">
 					{uniqueTags.map((tag) => (
 						<li>
 							<a
-								class="flex items-center justify-center rounded-lg bg-accent p-1"
+								class="bg-accent flex items-center justify-center rounded-lg p-1"
 								href={`/book-tags/${tag}`}
 								aria-label={`View all books with the tag: ${tag}`}
 							>
@@ -89,7 +89,7 @@ const paginationProps = {
 	}
 	<div class="container mx-auto">
 		<section aria-label="Book post list">
-			<ul class="grid sm:gap-y-8 sm:grid-cols-3 sm:gap-x-8 space-y-8 text-left mt-24">
+			<ul class="mt-24 grid space-y-8 text-left sm:grid-cols-3 sm:gap-y-8 sm:gap-x-8">
 				{
 					page.data.map((p) => (
 						<li class="flex flex-wrap items-center gap-x-2 space-y-2 [&_q]:w-full">
@@ -100,6 +100,5 @@ const paginationProps = {
 			</ul>
 			<Pagination {...paginationProps} />
 		</section>
-		
 	</div>
 </PageLayout>
