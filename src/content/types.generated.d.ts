@@ -92,6 +92,13 @@ declare module 'astro:content' {
   collection: "book",
   data: InferEntrySchema<"book">
 },
+"team-topologies-matthew-skelton.md": {
+  id: "team-topologies-matthew-skelton.md",
+  slug: "team-topologies-matthew-skelton",
+  body: string,
+  collection: "book",
+  data: InferEntrySchema<"book">
+},
 "the-culture-code-daniel-coyle.md": {
   id: "the-culture-code-daniel-coyle.md",
   slug: "the-culture-code-daniel-coyle",
@@ -137,6 +144,13 @@ declare module 'astro:content' {
 "the-prosperity-paradox-clayton-christensen.md": {
   id: "the-prosperity-paradox-clayton-christensen.md",
   slug: "the-prosperity-paradox-clayton-christensen",
+  body: string,
+  collection: "book",
+  data: InferEntrySchema<"book">
+},
+"the-socrates-express-eric-weiner.md": {
+  id: "the-socrates-express-eric-weiner.md",
+  slug: "the-socrates-express-eric-weiner",
   body: string,
   collection: "book",
   data: InferEntrySchema<"book">
@@ -244,6 +258,13 @@ declare module 'astro:content' {
 "2021-10-21-software-is-feeding-the-world.md": {
   id: "2021-10-21-software-is-feeding-the-world.md",
   slug: "2021-10-21-software-is-feeding-the-world",
+  body: string,
+  collection: "post",
+  data: InferEntrySchema<"post">
+},
+"2023-11-19-superficiality-interesting-things-this-week-1.md": {
+  id: "2023-11-19-superficiality-interesting-things-this-week-1.md",
+  slug: "2023-11-19-superficiality-interesting-things-this-week-1",
   body: string,
   collection: "post",
   data: InferEntrySchema<"post">
