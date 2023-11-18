@@ -11,9 +11,9 @@ tags: ["weekly-digest", "AI"]
 
 What a week.
 
-What a day, specifically. Waking up to this news is nothing short of shocking.
+What a day, specifically. Waking up to [this news](https://openai.com/blog/openai-announces-leadership-transition) is nothing short of shocking.
 
-We have been discussing the possibility of AI replacing jobs for a while now. Unfortunately, we might have a concrete evidence already. According to a new working paper by Hui, Reshef, and Zhou, the introduction of ChatGPT led to a decrease in demand for freelancers on an online freelancing platform. Here’s a graph by John Burn-Murdoch:
+We have been discussing the possibility of AI replacing jobs for a while now. Unfortunately, we might have a concrete evidence already. According to [a new working paper](https://papers.ssrn.com/sol3/papers.cfm?abstract_id=4544582) by Hui, Reshef, and Zhou, the introduction of ChatGPT led to a decrease in demand for freelancers on an online freelancing platform. Here’s a graph by John Burn-Murdoch:
 
 ![Source: John Burn-Murdoch](/assets/2023/november/superficiality-1-1.webp)
 
@@ -41,13 +41,13 @@ Traditionally, forecasts have depended on Numerical Weather Prediction (NWP), a 
 
 Deep learning adopts an alternative strategy, leveraging data rather than physical equations to construct a system for weather forecasting. Machine Learning model developed by learning from many years of historical weather records, enabling it to understand the intricate cause-and-effect dynamics that dictate the progression of the Earth's weather patterns from now into the forthcoming days.
 
-A couple months ago, Huawei released Pangu-Weather Forecast Model which demonstrated promising results against ECMWF IFS (a leading global NWP - Numerical Weather Prediction system). As reported here, Machine learning (ML) is rapidly proving its worth in the realm of weather forecasting, demonstrating significant potential to enhance predictive capabilities.
+A couple months ago, Huawei released [Pangu-Weather Forecast Model](https://www.huawei.com/en/news/2023/8/pangu-weather-forcast) which demonstrated promising results against ECMWF IFS (a leading global NWP - Numerical Weather Prediction system). As [reported here](https://www.huawei.com/en/news/2023/8/pangu-weather-forcast), Machine learning (ML) is rapidly proving its worth in the realm of weather forecasting, demonstrating significant potential to enhance predictive capabilities.
 
 In May 2023, the AI-driven Pangu-Weather model successfully forecasted the path of Typhoon Mawar a full five days ahead of its unexpected shift in direction—a remarkable achievement.
 
 Meanwhile, the rivalry in advancing machine learning for weather forecasting between Chinese and American firms has led to a rapid and competitive race, with companies from both nations consistently outpacing each other in developments.
 
-Our state-of-the-art model delivers 10-day weather predictions at unprecedented accuracy in under one minute - Google Deepmind
+> Our state-of-the-art model delivers 10-day weather predictions at unprecedented accuracy in under one minute - Google Deepmind
 
 DeepMind, Google's renowned research arm, has introduced GraphCast, its cutting-edge weather forecasting model, which outshines the previous benchmarks established by the prominent Chinese company, Huawei Technologies. According to the latest test outcomes, GraphCast has outperformed Pangu-Weather, Huawei's model, in the majority of testing environments. However, Pangu-Weather still maintains an edge in certain areas, including time-resolution benchmarks, where it delivers predictions with less time interval between them.
 
