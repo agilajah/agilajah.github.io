@@ -276,6 +276,13 @@ declare module 'astro:content' {
   collection: "post",
   data: InferEntrySchema<"post">
 },
+"2023-12-02-superficiality-interesting-things-this-week-3.md": {
+  id: "2023-12-02-superficiality-interesting-things-this-week-3.md",
+  slug: "2023-12-02-superficiality-interesting-things-this-week-3",
+  body: string,
+  collection: "post",
+  data: InferEntrySchema<"post">
+},
 "eid-and-neurafarm-contribution-pandemic.md": {
   id: "eid-and-neurafarm-contribution-pandemic.md",
   slug: "eid-and-neurafarm-contribution-pandemic",

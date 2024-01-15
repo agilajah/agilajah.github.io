@@ -2,10 +2,12 @@
 title: "Some interesting things to end this week #2"
 publishDate: "25 November 2023"
 description: "The return of Altman, OpenAI Q*, NVIDIA Go Brrrr, Claude 2.1 vs GPT-4 and which one remembers better."
-tags: ["weekly-digest", "AI"]
+tags: ["weekly-digest", "AI", "technology", "machine-learning"]
 ---
 
-### This post is also published on my newsletter, Superficial Intelligence [here](https://open.substack.com/pub/superficiality/p/some-interesting-things-to-end-this?r=7buma&utm_campaign=post&utm_medium=web&showWelcome=true)
+---
+
+**This post is also published on my newsletter, Superficial Intelligence [here](https://open.substack.com/pub/superficiality/p/some-interesting-things-to-end-this?r=7buma&utm_campaign=post&utm_medium=web&showWelcome=true)**
 
 ---
 

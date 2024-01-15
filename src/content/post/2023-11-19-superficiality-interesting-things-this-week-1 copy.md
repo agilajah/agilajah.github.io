@@ -2,10 +2,12 @@
 title: "Some interesting things to end this week #1"
 publishDate: "19 November 2023"
 description: "OpenAI/Sam Altman Coup, AI is taking over the jobs, DeepMind's Graphcast, Microsoft's mega infrastructure."
-tags: ["weekly-digest", "AI"]
+tags: ["weekly-digest", "AI", "technology", "machine-learning"]
 ---
 
-### This post is also published [here](https://open.substack.com/pub/superficiality/p/some-interesting-things-i-learned?r=7buma&utm_campaign=post&utm_medium=web)
+---
+
+**This post is also published [here](https://open.substack.com/pub/superficiality/p/some-interesting-things-i-learned?r=7buma&utm_campaign=post&utm_medium=web)**
 
 ---
 
