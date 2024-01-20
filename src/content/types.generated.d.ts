@@ -141,6 +141,13 @@ declare module 'astro:content' {
   collection: "book",
   data: InferEntrySchema<"book">
 },
+"the-planet-remade-how-geoengineering-could-change-the-world.md": {
+  id: "the-planet-remade-how-geoengineering-could-change-the-world.md",
+  slug: "the-planet-remade-how-geoengineering-could-change-the-world",
+  body: string,
+  collection: "book",
+  data: InferEntrySchema<"book">
+},
 "the-prosperity-paradox-clayton-christensen.md": {
   id: "the-prosperity-paradox-clayton-christensen.md",
   slug: "the-prosperity-paradox-clayton-christensen",
@@ -272,6 +279,13 @@ declare module 'astro:content' {
 "2023-11-25-superficiality-interesting-things-this-week-2.md": {
   id: "2023-11-25-superficiality-interesting-things-this-week-2.md",
   slug: "2023-11-25-superficiality-interesting-things-this-week-2",
+  body: string,
+  collection: "post",
+  data: InferEntrySchema<"post">
+},
+"2023-12-02-superficiality-interesting-things-this-week-3 copy.md": {
+  id: "2023-12-02-superficiality-interesting-things-this-week-3 copy.md",
+  slug: "2023-12-02-superficiality-interesting-things-this-week-3-copy",
   body: string,
   collection: "post",
   data: InferEntrySchema<"post">
