@@ -1,12 +1,36 @@
 import { z, defineCollection } from "astro:content";
 
+function removeDupsAndLowerCase(array: string[]) {
+	if (!array.length) return array;
+	const lowercaseItems = array.map((str) => str.toLowerCase());
+	const distinctItems = new Set(lowercaseItems);
+	return Array.from(distinctItems);
+}
+
 const post = defineCollection({
-	schema: {
-		title: z.string().max(100),
-		description: z.string().min(40).max(300),
-		publishDate: z.string().transform((str) => new Date(str)),
-		tags: z.array(z.string()).default([]),
-	},
+	type: "content",
+	schema: ({ image }) =>
+		z.object({
+			title: z.string().max(150),
+			description: z.string().min(50).max(300),
+			publishDate: z
+				.string()
+				.or(z.date())
+				.transform((val) => new Date(val)),
+			updatedDate: z
+				.string()
+				.optional()
+				.transform((str) => (str ? new Date(str) : undefined)),
+			coverImage: z
+				.object({
+					src: image(),
+					alt: z.string(),
+				})
+				.optional(),
+			draft: z.boolean().default(false),
+			tags: z.array(z.string()).default([]).transform(removeDupsAndLowerCase),
+			ogImage: z.string().optional(),
+		}),
 });
 
 const book = defineCollection({

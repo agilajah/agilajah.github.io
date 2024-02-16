@@ -1,22 +1,29 @@
 {
 	"editor.formatOnSave": true,
+	"editor.defaultFormatter": "esbenp.prettier-vscode",
 	"editor.codeActionsOnSave": {
 		"source.fixAll.eslint": "explicit"
 	},
-	"stylelint.validate": ["css", "less", "postcss", "astro"],
-	"stylelint.snippet": ["css", "less", "postcss", "astro"],
 	"[markdown]": {
+<<<<<<< HEAD
 		"editor.wordWrap": "on",
 		"editor.codeActionsOnSave": {
 			"source.fixAll.markdownlint": "explicit"
 		}
+=======
+		"editor.wordWrap": "on"
+>>>>>>> 344315380673fcedebb913a94d5ab8280a5a6b6d
 	},
 	"prettier.documentSelectors": ["**/*.astro"],
-	"eslint.validate": [
+	"eslint.probe": [
+		"astro",
 		"javascript",
 		"javascriptreact",
-		"astro", // Enable .astro
-		"typescript", // Enable .ts
+		"markdown",
+		"typescript",
 		"typescriptreact"
-	]
+	],
+	"[astro]": {
+		"editor.defaultFormatter": "astro-build.astro-vscode"
+	}
 }

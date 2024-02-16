@@ -1,18 +1,18 @@
 ---
-import type { Page, GetStaticPathsOptions } from "astro";
+import type { GetStaticPaths, Page } from "astro";
 import type { CollectionEntry } from "astro:content";
-import { getCollection } from "astro:content";
-import PageLayout from "@/layouts/BaseBookShelf";
-import BookPreview from "@/components/books/BookPreview";
-import Pagination from "@/components/Paginator";
-import { getUniqueTags, sortMDByDate } from "@/utils";
 
-export async function getStaticPaths({ paginate }: GetStaticPathsOptions) {
-	const allBooks = await getCollection("book");
-	const allBookssByDate = sortMDByDate(allBooks);
-	const uniqueTags = getUniqueTags(allBooks);
-	return paginate(allBookssByDate, { props: { uniqueTags }, pageSize: 200 });
-}
+import PageLayout from "@/layouts/BaseBookShelf.astro";
+import BookPreview from "@/components/books/BookPreview.astro";
+import Pagination from "@/components/Paginator.astro";
+import { getAllBooks, getUniqueTags, sortMDByDate } from "@/utils";
+
+export const getStaticPaths = (async ({ paginate }) => {
+	const allPosts = await getAllBooks();
+	const allPostsByDate = sortMDByDate(allPosts);
+	const uniqueTags = getUniqueTags(allPosts);
+	return paginate(allPostsByDate, { pageSize: 10, props: { uniqueTags } });
+}) satisfies GetStaticPaths;
 
 interface Props {
 	page: Page<CollectionEntry<"book">>;
@@ -66,11 +66,11 @@ const paginationProps = {
 					</svg>
 					Categories
 				</h2>
-				<ul class="text-bgColor flex flex-wrap gap-2">
+				<ul class="flex flex-wrap gap-2 text-bgColor">
 					{uniqueTags.map((tag) => (
 						<li>
 							<a
-								class="bg-accent flex items-center justify-center rounded-lg p-1"
+								class="flex items-center justify-center rounded-lg bg-accent p-1"
 								href={`/book-tags/${tag}`}
 								aria-label={`View all books with the tag: ${tag}`}
 							>
@@ -89,7 +89,7 @@ const paginationProps = {
 	}
 	<div class="container mx-auto">
 		<section aria-label="Book post list">
-			<ul class="mt-24 grid space-y-8 text-left sm:grid-cols-3 sm:gap-y-8 sm:gap-x-8">
+			<ul class="mt-24 grid space-y-8 text-left sm:grid-cols-3 sm:gap-x-8 sm:gap-y-8">
 				{
 					page.data.map((p) => (
 						<li class="flex flex-wrap items-center gap-x-2 space-y-2 [&_q]:w-full">
