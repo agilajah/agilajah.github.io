@@ -1,21 +1,19 @@
 ---
 import type { CollectionEntry } from "astro:content";
-import type { IElement } from "@/data/shared";
-import { getFormattedDate } from "@/utils";
+import type { HTMLTag, Polymorphic } from "astro/types";
+import FormattedDate from "../FormattedDate.astro";
 
-interface Props extends IElement {
-	book: CollectionEntry<"book">;
+type Props<Tag extends HTMLTag> = Polymorphic<{ as: Tag }> & {
+	post: CollectionEntry<"book">;
 	withDesc?: boolean;
-}
+};
 
-const { book, as: Element = "div", withDesc = false } = Astro.props;
-const date = new Date(book.data.publishDate);
-const datetime = date.toISOString();
-const bookDate = getFormattedDate(date, { month: "short" });
+const { as: Tag = "div", post, withDesc = false } = Astro.props;
+const postDate = post.data.updatedDate ?? post.data.publishDate;
 ---
 
 <!-- <time datetime={datetime} class="min-w-[120px] text-gray-500">{bookDate}</time> -->
-<Element class="relative overflow-hidden rounded-xl group w-64 h-64 bg-gray-100">
+<Element class="group relative h-64 w-64 overflow-hidden rounded-xl bg-gray-100">
 	<div class="mx-auto flex justify-center">
 		<img
 			class="h-7/12 absolute inset-y-1 mt-8 w-7/12 transform rounded-md drop-shadow-md duration-300 group-hover:-inset-y-full"
@@ -34,6 +32,6 @@ const bookDate = getFormattedDate(date, { month: "short" });
 		<a href={`/books/${book.slug}`} class="mt-5 font-serif text-lg font-bold text-gray-500"
 			>{book.data.title}</a
 		>
-		{withDesc && <q class="line-clamp-3 mt-2 block italic">{book.data.description}</q>}
+		{withDesc && <q class="mt-2 line-clamp-3 block italic">{book.data.description}</q>}
 	</div>
 </Element>

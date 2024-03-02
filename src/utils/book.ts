@@ -1,7 +1,7 @@
 import type { CollectionEntry } from "astro:content";
 import { getCollection } from "astro:content";
 
-/** Note: this function filters out draft posts based on the environment */
+/** Note: this function filters out draft books based on the environment */
 export async function getAllBooks() {
 	return await getCollection("book", ({ data }) => {
 		return import.meta.env.PROD ? data.draft !== true : true;
@@ -16,17 +16,17 @@ export function sortMDByDateBooks(books: Array<CollectionEntry<"book">>) {
 	});
 }
 
-/** Note: This function doesn't filter draft posts, pass it the result of getAllPosts above to do so. */
-export function getAllTagsBooks(posts: Array<CollectionEntry<"book">>) {
-	return books.flatMap((post) => [...book.data.tags]);
+/** Note: This function doesn't filter draft books, pass it the result of getAllbooks above to do so. */
+export function getAllTagsBooks(books: Array<CollectionEntry<"book">>) {
+	return books.flatMap((book) => [...book.data.tags]);
 }
 
-/** Note: This function doesn't filter draft posts, pass it the result of getAllPosts above to do so. */
+/** Note: This function doesn't filter draft books, pass it the result of getAllbooks above to do so. */
 export function getUniqueTagsBooks(books: Array<CollectionEntry<"book">>) {
 	return [...new Set(getAllTags(books))];
 }
 
-/** Note: This function doesn't filter draft posts, pass it the result of getAllPosts above to do so. */
+/** Note: This function doesn't filter draft books, pass it the result of getAllbooks above to do so. */
 export function getUniqueTagsWithCountBooks(
 	books: Array<CollectionEntry<"book">>,
 ): Array<[string, number]> {

@@ -2,7 +2,7 @@
 import type { GetStaticPathsResult } from "astro";
 import type { CollectionEntry } from "astro:content";
 import { getCollection } from "astro:content";
-import BookLayout from "@/layouts/BookLayout";
+import BookLayout from "@/layouts/BookLayout.astro";
 
 export async function getStaticPaths(): Promise<GetStaticPathsResult> {
 	const books: CollectionEntry<"book">[] = await getCollection("book");

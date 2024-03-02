@@ -34,15 +34,27 @@ const post = defineCollection({
 });
 
 const book = defineCollection({
-	schema: {
+	type: "content",
+	schema: ({ image }) =>
+	z.object({
 		title: z.string().max(150),
-		description: z.string().min(2).max(500),
+		description: z.string().min(50).max(300),
 		author: z.string().min(2).max(300),
-		tags: z.array(z.string()).default([]),
+		publishDate: z
+			.string()
+			.or(z.date())
+			.transform((val) => new Date(val)),
+		cover: z
+			.object({
+				src: image(),
+				alt: z.string(),
+			})
+			.optional(),
+		draft: z.boolean().default(false),
 		status: z.string().max(40),
-		publishDate: z.string().transform((str) => new Date(str)),
-		cover: z.string()
-	}
+		tags: z.array(z.string()).default([]).transform(removeDupsAndLowerCase),
+	}),
+
 });
 
 

@@ -5,13 +5,13 @@ import type { CollectionEntry } from "astro:content";
 import PageLayout from "@/layouts/BaseBookShelf.astro";
 import BookPreview from "@/components/books/BookPreview.astro";
 import Pagination from "@/components/Paginator.astro";
-import { getAllBooks, getUniqueTags, sortMDByDate } from "@/utils";
+import { getAllBooks, getUniqueTagsBooks, sortMDByDateBooks } from "@/utils";
 
 export const getStaticPaths = (async ({ paginate }) => {
-	const allPosts = await getAllBooks();
-	const allPostsByDate = sortMDByDate(allPosts);
-	const uniqueTags = getUniqueTags(allPosts);
-	return paginate(allPostsByDate, { pageSize: 10, props: { uniqueTags } });
+	const allBooks = await getAllBooks();
+	const allBooksByDate = sortMDByDateBooks(allBooks);
+	const uniqueTags = getUniqueTagsBooks(allBooks);
+	return paginate(allBooksByDate, { pageSize: 10, props: { uniqueTags } });
 }) satisfies GetStaticPaths;
 
 interface Props {
