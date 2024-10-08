@@ -25,4 +25,9 @@
 		--theme-accent-2: 0deg 0% 93%;
 		--theme-quote: 102deg 100% 86%;
 	}
+
+	.logo-large {
+		width: 8rem;
+		height: 14rem;
+	}
 }

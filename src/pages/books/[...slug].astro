@@ -1,0 +1,22 @@
+---
+import { getAllBooks } from "@/data/book";
+import BookLayout from "@/layouts/BookLayout.astro";
+import type { GetStaticPaths, InferGetStaticPropsType } from "astro";
+
+export const getStaticPaths = (async () => {
+	const bookEntries = await getAllBooks();
+	return bookEntries.map((entry) => ({
+		params: { slug: entry.slug },
+		props: { entry },
+	}));
+}) satisfies GetStaticPaths;
+
+type Props = InferGetStaticPropsType<typeof getStaticPaths>;
+
+const { entry } = Astro.props;
+const { Content } = await entry.render();
+---
+
+<BookLayout book={entry}>
+	<Content />
+</BookLayout>
