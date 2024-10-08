@@ -5,10 +5,9 @@ description: "Small Language Models, Data exhaustion, Prompt engineering, LLMs h
 tags: ["weekly-digest", "AI", "technology", "machine-learning"]
 ---
 
----
-
-#### This post is also published on my newsletter, Superficial Intelligence [here](https://open.substack.com/pub/superficiality/p/some-interesting-things-to-read-in?r=7buma&utm_campaign=post&utm_medium=web)
-
+:::note
+**This post is also published on my newsletter, Superficial Intelligence [here](https://open.substack.com/pub/superficiality/p/some-interesting-things-to-read-in?r=7buma&utm_campaign=post&utm_medium=web)**
+:::
 ---
 
 I thought December was going to be a slow down month for everybody, but boy.. this post is gonna be so packed. People in the space just can’t take it slow.
@@ -23,7 +22,7 @@ In today’s edition:
 
 ---
 
-# Let’s start small, and why is it the next big thing instead
+## 1. Let’s start small, and why is it the next big thing instead
 
 Compact, yet powerful models are always welcome. In fact, very much needed. The ability to train compact models with cutting-edge capabilities would democratize advanced AI, enabling a broader range of individuals and organizations to study and deploy them, instead of being an exclusive domain of a few with vast computational resources — overall better for the pocket and environment alike.
 
@@ -119,7 +118,7 @@ Going back to Mistral. Like Google’s Gemini family, Mistral provides three end
 
 I don’t think it’s an exaggeration to say that Mistral has rapidly became the new darling in the OpenLM community…
 
-# 2. Mixtrals of Experts and Mamba’s State-Space Models
+## 2. Mixtrals of Experts and Mamba’s State-Space Models
 
 ![](/assets/2023/december/superficiality-4-8.webp)
 

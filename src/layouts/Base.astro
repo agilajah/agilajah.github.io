@@ -18,7 +18,7 @@ const {
 
 <html class="scroll-smooth" lang={siteConfig.lang}>
 	<head>
-		<BaseHead title={title} description={description} image={image} />
+		<BaseHead title={title} description={description} />
 		<script define:vars={{ siteConfig }}>
 			const root = document.documentElement;
 			const colorThemeMetaTag = document.querySelector("meta[name='theme-color']");
@@ -39,10 +39,12 @@ const {
 		<script async src="https://www.googletagmanager.com/gtag/js?id=G-B6G81G81F8"></script>
 		<script>
 			window.dataLayer = window.dataLayer || [];
-			function gtag(){dataLayer.push(arguments);}
-			gtag('js', new Date());
+			function gtag() {
+				dataLayer.push(arguments);
+			}
+			gtag("js", new Date());
 
-			gtag('config', 'G-B6G81G81F8');
+			gtag("config", "G-B6G81G81F8");
 		</script>
 
 		<BaseHead articleDate={articleDate} description={description} ogImage={ogImage} title={title} />

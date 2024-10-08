@@ -5,12 +5,11 @@ description: "OpenAI/Sam Altman Coup, AI is taking over the jobs, DeepMind's Gra
 tags: ["weekly-digest", "AI", "technology", "machine-learning"]
 ---
 
----
-
+:::note
 **This post is also published [here](https://open.substack.com/pub/superficiality/p/some-interesting-things-i-learned?r=7buma&utm_campaign=post&utm_medium=web)**
+:::
 
 ---
-
 What a week.
 
 What a day, specifically. Waking up to [this news](https://openai.com/blog/openai-announces-leadership-transition) is nothing short of shocking.
@@ -23,7 +22,7 @@ In light of sudden departure of Sam Altman, people on twitter (X) jokingly dubbe
 
 ![Source: Twitter](/assets/2023/november/superficiality-1-2.webp)
 
-# 1. OpenAI/Sam Altman Coup
+## 1. OpenAI/Sam Altman Coup
 
 Joking aside, Sam Altman’s ousting from the company sent shockwaves through the tech community, instantly becoming a trending topic on social media and tech news outlets. The unexpected departure of Greg Brockman (Co-founder), following closely on Altman’s heels, only added fuel to the fire of speculation and rumor.
 
@@ -33,7 +32,7 @@ Considering the whirlwind of information that's out there, it's pretty tough to 
 
 But one thing for sure, this internal tug-of-war is creating a lot of buzz and speculation. It's not just a simple leadership change; it's a fundamental clash of visions that could define the company's trajectory and the industry for years to come.
 
-# 2. DeepMind’s GraphCast
+## 2. DeepMind’s GraphCast
 
 ![Source: Google DeepMind](/assets/2023/november/superficiality-1-3.webp)
 
@@ -59,7 +58,7 @@ Although the training phase for GraphCast required significant computational res
 
 I think what’s even more interesting from this development is that the code is [open-sourced](https://github.com/google-deepmind/graphcast)
 
-# 3. Microsoft Mega Infrastructure
+## 3. Microsoft Mega Infrastructure
 
 Microsoft is undertaking an unprecedented infrastructure expansion that, despite sounding like an exaggeration, dwarfs the spending on historical mega projects. When you compare it to the investment in national railway systems, massive dams, or even the Apollo moon missions, the projected annual expenditure of over $50 billion on data centers from 2024 onward makes these projects look modest. This ambitious expansion is designed to fast-track the journey toward AGI (Artificial General Intelligence) and integrate the capabilities of generative AI into every aspect of our lives, from work productivity tools to entertainment.
 

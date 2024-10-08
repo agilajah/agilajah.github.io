@@ -8,83 +8,74 @@ import { defineConfig } from "astro/config";
 import { expressiveCodeOptions } from "./src/site.config";
 
 // Remark plugins
-import remarkDirective from "remark-directive"; /* Handle ::: directives as nodes */
+import remarkDirective from "remark-directive";
 import remarkUnwrapImages from "remark-unwrap-images";
-import { remarkAdmonitions } from "./src/plugins/remark-admonitions"; /* Add admonitions */
+import { remarkAdmonitions } from "./src/plugins/remark-admonitions";
 import { remarkReadingTime } from "./src/plugins/remark-reading-time";
 
 // Rehype plugins
 import rehypeExternalLinks from "rehype-external-links";
-import remarkMath from "remark-math";
-import rehypeKatex from "rehype-katex";
-import rehypeMathJax from "rehype-mathjax";
 
-
-// https://astro.build/config
 export default defineConfig({
-	site: "https://agilajah.github.io",
-	experimental: {
-		contentCollections: true,
-	},
-	markdown: {
-		shikiConfig: {
-			theme: "dracula",
-			wrap: true,
-		},
-		remarkPlugins: [remarkMath],
-		rehypePlugins: [rehypeMathJax]
-	},
-	integrations: [
-		expressiveCode(expressiveCodeOptions),
-		icon(),
-		tailwind({
-			applyBaseStyles: false,
-			nesting: true,
-		}),
-		sitemap(),
-		mdx(),
-	],
-	markdown: {
-		rehypePlugins: [
-			[
-				rehypeExternalLinks,
-				{
-					rel: ["nofollow, noreferrer"],
-					target: "_blank",
-				},
-			],
-		],
-		remarkPlugins: [remarkUnwrapImages, remarkReadingTime, remarkDirective, remarkAdmonitions],
-		remarkRehype: {
-			footnoteLabelProperties: {
-				className: [""],
-			},
-		},
-	},
-	// https://docs.astro.build/en/guides/prefetch/
-	prefetch: true,
-	// ! Please remember to replace the following site property with your own domain
-	site: "https://astro-cactus.chriswilliams.dev/",
-	vite: {
-		optimizeDeps: {
-			exclude: ["@resvg/resvg-js"],
-		},
-		plugins: [rawFonts([".ttf", ".woff"])],
-	},
+  site: "https://agilajah.github.io",
+  // Remove the experimental section
+  integrations: [
+    expressiveCode(expressiveCodeOptions),
+    icon(),
+    tailwind({
+      applyBaseStyles: false,
+      nesting: true,
+    }),
+    sitemap(),
+    mdx(),
+  ],
+  markdown: {
+    shikiConfig: {
+      theme: "dracula",
+      wrap: true,
+    },
+    rehypePlugins: [
+      [
+        rehypeExternalLinks,
+        {
+          rel: ["nofollow, noreferrer"],
+          target: "_blank",
+        },
+      ],
+    ],
+    remarkPlugins: [
+      remarkUnwrapImages,
+      remarkReadingTime,
+      remarkDirective,
+      remarkAdmonitions,
+    ],
+    remarkRehype: {
+      footnoteLabelProperties: {
+        className: [""],
+      },
+    },
+  },
+  prefetch: true,
+  vite: {
+    optimizeDeps: {
+      exclude: ["@resvg/resvg-js"],
+    },
+    plugins: [rawFonts([".ttf", ".woff"])],
+  },
 });
 
 function rawFonts(ext: string[]) {
-	return {
-		name: "vite-plugin-raw-fonts",
-		// @ts-expect-error:next-line
-		transform(_, id) {
-			if (ext.some((e) => id.endsWith(e))) {
-				const buffer = fs.readFileSync(id);
-				return {
-					code: `export default ${JSON.stringify(buffer)}`,
-					map: null,
-				};
-			}
-		},
-	};
+  return {
+    name: "vite-plugin-raw-fonts",
+    // @ts-expect-error:next-line
+    transform(_, id) {
+      if (ext.some((e) => id.endsWith(e))) {
+        const buffer = fs.readFileSync(id);
+        return {
+          code: `export default ${JSON.stringify(buffer)}`,
+          map: null,
+        };
+      }
+    },
+  };
 }

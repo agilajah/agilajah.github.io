@@ -5,10 +5,9 @@ description: "Gemini launch, TPUv5 - AI Hypercomputer, Mistral dropped bombs, Mi
 tags: ["weekly-digest", "AI", "technology", "machine-learning"]
 ---
 
----
-
-#### This post is also published on my newsletter, Superficial Intelligence [here](https://open.substack.com/pub/superficiality/p/some-interesting-things-to-read-in?r=7buma&utm_campaign=post&utm_medium=web)
-
+:::note
+**This post is also published on my newsletter, Superficial Intelligence [here](https://open.substack.com/pub/superficiality/p/some-interesting-things-to-read-in?r=7buma&utm_campaign=post&utm_medium=web))**
+:::
 ---
 
 Hi, it’s here with our somewhat regular weekly roundup. Which was overdue by 5 days.
@@ -21,7 +20,7 @@ In today’s edition:
 
 ---
 
-# 1. A Tale of Two Launch: Gemini and Mistral
+## 1. A Tale of Two Launch: Gemini and Mistral
 
 ![](/assets/2023/december/superficiality-4-1.webp)
 _Image Source: DALL-E_
@@ -111,7 +110,7 @@ Going back to Mistral. Like Google’s Gemini family, Mistral provides three end
 
 I don’t think it’s an exaggeration to say that Mistral has rapidly became the new darling in the OpenLM community…
 
-# 2. Mixtrals of Experts and Mamba’s State-Space Models
+## 2. Mixtrals of Experts and Mamba’s State-Space Models
 
 ![](/assets/2023/december/superficiality-4-8.webp)
 
