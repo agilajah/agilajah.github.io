@@ -1,6 +1,6 @@
 ---
 import SocialList from "@/components/SocialList.astro";
-import PostPreviewNoDesc from "@/components/blog/PostPreviewNoDesc.astro";
+import PostPreview from "@/components/blog/PostPreview.astro";
 import { getAllPosts, sortMDByDate } from "@/data/post";
 import PageLayout from "@/layouts/Base.astro";
 
@@ -20,17 +20,19 @@ const allPostsByDate = sortMDByDate(allPosts).slice(0, MAX_POSTS);
 		</p>
 		<SocialList />
 	</section>
-	<section aria-label="Blog post list" class="mt-16">
-		<h2 class="title mb-4 text-xl">Posts</h2>
-		<h3 class="subtitle text-m mb-3">Things I wrote recently...</h3>
-		<ul class="space-y-4 sm:space-y-2">
-			{
-				allPostsByDate.map((p) => (
-					<li class="flex flex-wrap items-center gap-x-2 [&_q]:w-full">
-						<PostPreviewNoDesc post={p} as="h2" />
-					</li>
-				))
-			}
-		</ul>
-	</section>
+	<div class="grid gap-y-16 sm:grid-cols-[6fr_minmax(0,auto)] sm:gap-x-6">
+		<section aria-label="Blog post list" class="mt-16">
+			<h2 class="title mb-4 text-xl">Posts</h2>
+			<h3 class="subtitle text-m mb-3">Things I wrote recently...</h3>
+			<ul class="space-y-4 pr-0 sm:space-y-2">
+				{
+					allPostsByDate.map((p) => (
+						<li class="grid gap-2 sm:grid-cols-[minmax(0,auto)_1fr] sm:[&_q]:col-start-2">
+							<PostPreview post={p} as="h2" withDesc={false} />
+						</li>
+					))
+				}
+			</ul>
+		</section>
+	</div>
 </PageLayout>
