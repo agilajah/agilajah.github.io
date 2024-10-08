@@ -1,6 +1,6 @@
 ---
 import SocialList from "@/components/SocialList.astro";
-import PostPreview from "@/components/blog/PostPreview.astro";
+import PostPreviewNoDesc from "@/components/blog/PostPreviewNoDesc.astro";
 import { getAllPosts, sortMDByDate } from "@/data/post";
 import PageLayout from "@/layouts/Base.astro";
 
@@ -27,7 +27,7 @@ const allPostsByDate = sortMDByDate(allPosts).slice(0, MAX_POSTS);
 			{
 				allPostsByDate.map((p) => (
 					<li class="flex flex-wrap items-center gap-x-2 [&_q]:w-full">
-						<PostPreview post={p} as="h2" />
+						<PostPreviewNoDesc post={p} as="h2" />
 					</li>
 				))
 			}
