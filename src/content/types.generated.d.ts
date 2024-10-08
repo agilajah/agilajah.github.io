@@ -283,16 +283,23 @@ declare module 'astro:content' {
   collection: "post",
   data: InferEntrySchema<"post">
 },
-"2023-12-02-superficiality-interesting-things-this-week-3 copy.md": {
-  id: "2023-12-02-superficiality-interesting-things-this-week-3 copy.md",
-  slug: "2023-12-02-superficiality-interesting-things-this-week-3-copy",
+"2023-12-02-superficiality-interesting-things-this-week-3.md": {
+  id: "2023-12-02-superficiality-interesting-things-this-week-3.md",
+  slug: "2023-12-02-superficiality-interesting-things-this-week-3",
   body: string,
   collection: "post",
   data: InferEntrySchema<"post">
 },
-"2023-12-02-superficiality-interesting-things-this-week-3.md": {
-  id: "2023-12-02-superficiality-interesting-things-this-week-3.md",
-  slug: "2023-12-02-superficiality-interesting-things-this-week-3",
+"2023-12-02-superficiality-interesting-things-this-week-4 copy.md": {
+  id: "2023-12-02-superficiality-interesting-things-this-week-4 copy.md",
+  slug: "2023-12-02-superficiality-interesting-things-this-week-4-copy",
+  body: string,
+  collection: "post",
+  data: InferEntrySchema<"post">
+},
+"2023-12-02-superficiality-interesting-things-this-week-5.md": {
+  id: "2023-12-02-superficiality-interesting-things-this-week-5.md",
+  slug: "2023-12-02-superficiality-interesting-things-this-week-5",
   body: string,
   collection: "post",
   data: InferEntrySchema<"post">

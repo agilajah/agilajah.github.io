@@ -1,28 +1,37 @@
-import { z, defineCollection } from "astro:content";
+import { defineCollection, z } from "astro:content";
+
+function removeDupsAndLowerCase(array: string[]) {
+	if (!array.length) return array;
+	const lowercaseItems = array.map((str) => str.toLowerCase());
+	const distinctItems = new Set(lowercaseItems);
+	return Array.from(distinctItems);
+}
 
 const post = defineCollection({
-	schema: {
-		title: z.string().max(100),
-		description: z.string().min(40).max(300),
-		publishDate: z.string().transform((str) => new Date(str)),
-		tags: z.array(z.string()).default([]),
-	},
+	schema: ({ image }) =>
+		z.object({
+			coverImage: z
+				.object({
+					alt: z.string(),
+					src: image(),
+				})
+				.optional(),
+			description: z.string().min(50).max(400),
+			draft: z.boolean().default(false),
+			ogImage: z.string().optional(),
+			publishDate: z
+				.string()
+				.or(z.date())
+				.transform((val) => new Date(val)),
+			tags: z.array(z.string()).default([]).transform(removeDupsAndLowerCase),
+			title: z.string().max(300),
+			updatedDate: z
+				.string()
+				.optional()
+				.transform((str) => (str ? new Date(str) : undefined)),
+		}),
+	type: "content",
 });
 
-const book = defineCollection({
-	schema: {
-		title: z.string().max(150),
-		description: z.string().min(2).max(500),
-		author: z.string().min(2).max(300),
-		tags: z.array(z.string()).default([]),
-		status: z.string().max(40),
-		publishDate: z.string().transform((str) => new Date(str)),
-		cover: z.string()
-	}
-});
 
-
-export const collections = { 
-	'post': post,
-	'book':  book
-};
+export const collections = { post };

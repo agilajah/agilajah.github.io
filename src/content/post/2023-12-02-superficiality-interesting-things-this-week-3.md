@@ -5,11 +5,12 @@ description: "Delving deep into LLMs reasoning ability and DeepMind breakthrough
 tags: ["weekly-digest", "AI", "technology", "machine-learning"]
 ---
 
+
+:::note
+**This post is also published on my newsletter, Superficial Intelligence [here](https://open.substack.com/pub/superficiality/p/some-interesting-things-to-end-this-126?r=7buma&utm_campaign=post&utm_medium=web&showWelcome=true)**
+:::
 ---
 
-#### This post is also published on my newsletter, Superficial Intelligence [here](https://open.substack.com/pub/superficiality/p/some-interesting-things-to-end-this-126?r=7buma&utm_campaign=post&utm_medium=web&showWelcome=true)
-
----
 
 Throughout history, humanity has witnessed several inflection points that have dramatically advanced our civilization. We tamed fire, not just for s'mores, but to forge civilizations. We crafted languages, because grunts and gestures only get you so far - now we are able to communicate in all complexities, in many forms. Written words came next, allowing for the preservation and dissemination of knowledge. Then the printing press arrived – talk about going viral pre-internet! Then the development of self-propelled vehicles, transforming mobility, including cars turned our world from a walkathon to a road trip. All the way to the moon landing, and recently, isn't chatting with Emojis with someone across the globe in real-time just sci-fi turned reality?
 
@@ -27,7 +28,7 @@ Anyway, the potential to replicate or even enhance aspects of human cognition an
 
 However, the current AI systems have some limitations. One significant constraint is their autoregressive nature, where outputs are sequentially generated based on previous outputs. This limitation can impact the efficiency and accuracy of AI systems, especially in complex tasks that require an understanding of broader contexts or the integration of diverse data types, which led us the the first topic…
 
-# 1. Can LLMs reason and plan?
+## 1. Can LLMs reason and plan?
 
 ![](/assets/2023/december/superficiality-3-1.webp)
 _Image Source: DALL-E_
@@ -69,7 +70,7 @@ It’s not a surprise that OpenAI might have thought of the same thing. Hence le
 
 This is a super interesting topic, but I’ll have to stop here for now.
 
-# 2. AI Unlocks the Door to New Material Discoveries: A DeepMind Breakthrough
+## 2. AI Unlocks the Door to New Material Discoveries: A DeepMind Breakthrough
 
 ![](/assets/2023/december/superficiality-3-6.webp)
 _Image Source: DALL-E_
