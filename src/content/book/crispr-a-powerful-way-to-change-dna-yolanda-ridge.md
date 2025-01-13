@@ -1,11 +1,11 @@
 ---
-title: "Fooled by Randomness: The Hidden Role of Chance in Life and in the Markets"
-author: "Nassim Nicholas Taleb"
-description: "This book is a foundational text in understanding how we often misinterpret random events as meaningful patterns, particularly in contexts like finance and life in general."
-tags: ["business", "nonfiction", "finance"]
+title: "CRISPR: A Powerful Way to Change DNA"
+author: "Yolanda Ridge"
+description: "We can change the world with gene editing—but should we?"
+tags: ["science", "nonfiction", "biology", "genetics", "medical"]
 status: "On Going"
-publishDate: "13 January 2025"
-cover: "fooled-by-randomness-nassim-nicholas-taleb.jpg"
+publishDate: "20 October 2024"
+cover: "crispr-a-powerful-way-to-change-dna-yolanda-ridge.jpg"
 ---
 
 # Thoughts & Notes
