@@ -1,11 +1,11 @@
 ---
-title: "The Loom of Time: Between Empire and Anarchy, from the Mediterranean to China"
-author: "Robert D. Kaplan"
-description: "A stunning exploration of the Greater Middle East, where lasting stability has often seemed just out of reach but may hold the key to the shifting world order of the twenty-first century"
-tags: ["history", "politics", "nonfiction"]
+title: "Power Systems: Conversations on Global Democratic Uprisings and the New Challenges to U.S. Empire"
+author: "Noam Chomsky"
+description: "Noam Chomsky explores the most immediate and urgent the future of democracy in the Arab world, the implications of the Fukushima nuclear disaster, the European financial crisis, the breakdown of American mainstream political institutions, and the rise of the Occupy movement."
+tags: ["history", "politics", "nonfiction", "sociology", "economics"]
 status: "On Going"
-publishDate: "29 September 2024"
-cover: "the-loom-of-time-robert-d-kaplan.jpg"
+publishDate: "3 November 2024"
+cover: "power-systems-noam-chomsky.jpg"
 ---
 
 # Thoughts & Notes
