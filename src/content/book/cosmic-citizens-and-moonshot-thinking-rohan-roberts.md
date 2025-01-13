@@ -1,5 +1,5 @@
 ---
-title: "Cosmic Citizens and Moonshot 
+title: "Cosmic Citizens and Moonshot"
 Thinking: Education in an Age of Exponential Technologies"
 publishDate: "08 July 2020"
 author: "Rohan Roberts"
