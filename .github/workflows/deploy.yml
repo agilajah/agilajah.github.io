@@ -15,22 +15,42 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout your repository using git
-        uses: actions/checkout@v3  # Updated to v3 for efficiency
+        uses: actions/checkout@v3
+
+      - name: Setup pnpm
+        uses: pnpm/action-setup@v2
+        with:
+          version: latest
+
+      - name: Setup Node
+        uses: actions/setup-node@v3
+        with:
+          node-version: 20
+          cache: 'pnpm'
 
       - name: Cache pnpm modules
         uses: actions/cache@v3
         with:
-          path: ~/.pnpm-store
-          key: ${{ runner.os }}-pnpm-store-${{ hashFiles('**/pnpm-lock.yaml') }}
+          path: |
+            ~/.pnpm-store
+            node_modules
+            .astro
+          key: ${{ runner.os }}-pnpm-${{ hashFiles('**/pnpm-lock.yaml') }}
           restore-keys: |
-            ${{ runner.os }}-pnpm-store-
+            ${{ runner.os }}-pnpm-
 
-      - name: Install, build, and upload your site
-        uses: withastro/action@v1
-        with:
-          path: .
-          node-version: 20
-          package-manager: pnpm@latest
+      - name: Install dependencies
+        run: pnpm install --no-frozen-lockfile
+        continue-on-error: true
+        
+      - name: Retry failed installation
+        if: failure()
+        run: |
+          sleep 60
+          pnpm install --no-frozen-lockfile
+
+      - name: Build site
+        run: pnpm build
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
@@ -46,4 +66,4 @@ jobs:
     steps:
       - name: Deploy to GitHub Pages
         id: deployment
-        uses: actions/deploy-pages@v4 # Removed extra "name:"
+        uses: actions/deploy-pages@v4
