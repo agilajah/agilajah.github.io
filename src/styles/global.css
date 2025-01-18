@@ -33,16 +33,15 @@
 
 @layer components {
 	.toc-link {
-		@apply relative py-1 transition-colors duration-200;
+		@apply relative py-1 pl-4 transition-colors duration-200 hover:text-accent;
 	}
 
 	.toc-link.active {
 		@apply text-accent;
 	}
 
-	/* Optional: add a marker to show which section is active */
 	.toc-link.active::before {
 		content: "";
-		@apply absolute -left-[calc(0.25rem+1px)] top-0 h-full w-[2px] bg-accent;
+		@apply absolute left-0 top-0 h-full w-0.5 bg-accent;
 	}
 }
