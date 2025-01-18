@@ -32,7 +32,7 @@ This toddler taking its first wobbly steps toward reshaping our reality. The ado
 ![](/assets/2024/january/superficiality-7-2.webp)
 _Source: [Coatue](https://www.coatue.com/blog/perspective/ai-the-coming-revolution-2023)_
 
-Most likely the trend will continue, pushing the growth beyond its current [additional $2.4 trillion](https://www.accel.com/euroscape) in terms of equities of big companies like Microsoft, Alphabet, Apple, Tesla, Amazon, Meta, and of the biggest gainer, NVIDIA, which have added more than $1 trillion in value alone.
+Most likely the trend will continue, pushing the growth beyond its current [additional USD 2.4 Trillion](https://www.accel.com/euroscape) in terms of equities of big companies like Microsoft, Alphabet, Apple, Tesla, Amazon, Meta, and of the biggest gainer, NVIDIA, which have added more than $1 trillion in value alone.
 
 While the impact of the technology continues to deeply woven into our everyday lives, this doesn’t mean the deflation won’t happen. With a whopping [25% of US venture funding pouring into AI startups](https://news.crunchbase.com/ai-robotics/us-startup-funding-doubled-openai-anthropic-2023/), and [4 in 5 American unicorns are now AI-related](https://www.cnbc.com/2023/10/17/amid-ai-buzz-big-us-tech-giants-add-2point5-trillion-in-market-cap.html#:~:text=The%20number%20of%20unicorn%20companies,States%2C%20it%20was%2080%25), concerns of overvaluation linger. Take a look at OpenAI’s and Anthropic’s valuation: 180x and 200x sales, respectively. Which stand in stark contrast to more established players like Uber (3x).
 

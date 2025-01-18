@@ -3,7 +3,6 @@
 @tailwind utilities;
 
 @layer base {
-
 	:root,
 	:root[data-theme="light"] {
 		color-scheme: light;
@@ -29,5 +28,21 @@
 	.logo-large {
 		width: 8rem;
 		height: 14rem;
+	}
+}
+
+@layer components {
+	.toc-link {
+		@apply relative py-1 transition-colors duration-200;
+	}
+
+	.toc-link.active {
+		@apply text-accent;
+	}
+
+	/* Optional: add a marker to show which section is active */
+	.toc-link.active::before {
+		content: "";
+		@apply absolute -left-[calc(0.25rem+1px)] top-0 h-full w-[2px] bg-accent;
 	}
 }
