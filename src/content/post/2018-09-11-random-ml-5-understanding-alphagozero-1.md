@@ -88,7 +88,13 @@ Note that we can't do both exploration and exploitation at the same time. For a 
 
 Recall that the true value of an action is the mean reward when that action is selected. One way to estimate this is by averaging the rewards actually received [1]:
 
-![Equation of averaging rewards actually received. Source: [1]](/assets/2018/september/random-ml-5-4.png "Equation of averaging rewards actually received. Source: [1]")
+$$
+\begin{align}
+Q_t(a) \doteq \frac{\text{sum of rewards when } a \text{ taken prior to } t}{\text{number of times } a \text{ taken prior to } t} = \frac{\sum_{i=1}^{t-1} R_i \cdot \mathbb{1}_{A_i=a}}{\sum_{i=1}^{t-1} \mathbb{1}_{A_i=a}}
+\end{align}
+$$
+<!--
+![Equation of averaging rewards actually received. Source: [1]](/assets/2018/september/random-ml-5-4.png "Equation of averaging rewards actually received. Source: [1]") -->
 
 A simple bandit algorithm then goes like this [1]:
 

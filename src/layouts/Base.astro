@@ -18,7 +18,7 @@ const {
 
 <html class="scroll-smooth" lang={siteConfig.lang}>
 	<head>
-		<BaseHead title={title} description={description} />
+		<BaseHead articleDate={articleDate} description={description} ogImage={ogImage} title={title} />
 		<script define:vars={{ siteConfig }}>
 			const root = document.documentElement;
 			const colorThemeMetaTag = document.querySelector("meta[name='theme-color']");
@@ -46,8 +46,6 @@ const {
 
 			gtag("config", "G-B6G81G81F8");
 		</script>
-
-		<BaseHead articleDate={articleDate} description={description} ogImage={ogImage} title={title} />
 	</head>
 	<body
 		class="mx-auto flex min-h-screen max-w-3xl flex-col bg-bgColor px-4 pt-16 font-mono text-sm font-normal text-textColor antialiased sm:px-8"
