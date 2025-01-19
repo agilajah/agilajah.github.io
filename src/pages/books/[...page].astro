@@ -5,7 +5,7 @@ import { getCollection } from "astro:content";
 import PageLayout from "@/layouts/BaseBookShelf.astro";
 import BookPreview from "@/components/books/BookPreview.astro";
 import Pagination from "@/components/Paginator.astro";
-import { getUniqueTags, sortMDByDate } from "@/data/post";
+import { getUniqueTags, sortMDByDate } from "@/data/book";
 
 export async function getStaticPaths({ paginate }: GetStaticPathsOptions) {
 	const allBooks = await getCollection("book");
@@ -88,7 +88,7 @@ const paginationProps = {
 		)
 	}
 	<div class="container mx-auto">
-		<section aria-label="Book post list">
+		<section aria-label="Books list">
 			<ul class="mt-24 grid space-y-8 text-left sm:grid-cols-3 sm:gap-x-8 sm:gap-y-8">
 				{
 					page.data.map((p) => (

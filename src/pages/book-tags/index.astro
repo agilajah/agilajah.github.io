@@ -1,0 +1,35 @@
+---
+import { getAllBooks, getUniqueTagsWithCount } from "@/data/book";
+import PageLayout from "@/layouts/Base.astro";
+
+const allBooks = await getAllBooks();
+const allTags = getUniqueTagsWithCount(allBooks);
+
+const meta = {
+	description: "A list of all the books I've read or own in my bookshelf",
+	title: "All Books Categories",
+};
+---
+
+<PageLayout meta={meta}>
+	<h1 class="title mb-6">Book Categories</h1>
+	<ul class="space-y-4">
+		{
+			allTags.map(([tag, val]) => (
+				<li class="flex items-center gap-x-2">
+					<a
+						class="cactus-link inline-block"
+						data-astro-prefetch
+						href={`/book-tags/${tag}/`}
+						title={`View books with the tag: ${tag}`}
+					>
+						&#35;{tag}
+					</a>
+					<span class="inline-block">
+						- {val} Book{val > 1 && "s"}
+					</span>
+				</li>
+			))
+		}
+	</ul>
+</PageLayout>
