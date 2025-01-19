@@ -1,11 +1,11 @@
 ---
-title: "Plagues upon the Earth: Disease and the Course of Human History"
-author: "Kyle Harper"
-description: "How pathogenic microbes have been an intimate part of human history from the beginning--and how our deadliest germs and biggest pandemics are the product of our success as a species"
-tags: ["nonfiction","science", "history", "medicine", "health", "biology"]
+title: "The Richest Man in Babylon"
+author: "George S. Clason"
+description: "The Richest Man in Babylon is an early twentieth century classic about financial investment and monetary success. Through a series of enlightening parables set in the heart of ancient Babylon, Clason provided his readers with economic tips and tools for financial success."
+tags: ["nonfiction","finance", "business", "personal-finance", "money"]
 status: "On Going"
-publishDate: "23 September 2024"
-cover: "plagues-upon-the-earth-kyle-harper.jpg"
+publishDate: "21 September 2024"
+cover: "the-richest-man-in-babylon-george-clason.jpg"
 ---
 
 # Thoughts & Notes
