@@ -182,7 +182,12 @@ We need an upper confidence bound to describe the largest plausible mean of each
 
 With the help of [Hoeffding inequality](https://en.wikipedia.org/wiki/Hoeffding%27s_inequality) we can estimate the upper confidence bound. Suppose X1, X2, .... Xt be i.i.d (independent and identically distributed) random variables and they are all bounded by the interval [0, 1]. After doing some magic, we obtained **Ut(a)** and we have:
 
-![How to choose action with upper confidence bound. Source: Sutton & Barto](/assets/2018/september/random-ml-5-9.png "How to choose action with upper confidence bound. Source: Sutton & Barto")
+$$
+\begin{align}
+A_t \doteq \underset{a}{\operatorname{argmax}} \left[ Q_t(a) + c \sqrt{\frac{\ln t}{N_t(a)}} \right],
+\end{align}
+$$
+<!-- ![How to choose action with upper confidence bound. Source: Sutton & Barto](/assets/2018/september/random-ml-5-9.png "How to choose action with upper confidence bound. Source: Sutton & Barto") -->
 
 Kidding. Alright, let's start over, if you insisted.
 
