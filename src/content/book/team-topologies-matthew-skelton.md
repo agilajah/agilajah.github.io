@@ -4,7 +4,7 @@ author: "Matthew Skelton"
 description: "Effective software teams are essential for any organization to deliver value continuously and sustainably. But how do you build the best team organization for your specific goals, culture, and needs?"
 tags: ["management", "leadership", "engineering"]
 status: "Currently Reading"
-publishDate: "23 July 2023"
+publishDate: "20 June 2023"
 cover: "team-topologies-matthew-skelton.jpeg"
 ---
 
