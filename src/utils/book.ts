@@ -23,7 +23,7 @@ export function getAllTagsBooks(books: Array<CollectionEntry<"book">>) {
 
 /** Note: This function doesn't filter draft books, pass it the result of getAllbooks above to do so. */
 export function getUniqueTagsBooks(books: Array<CollectionEntry<"book">>) {
-	return [...new Set(getAllTags(books))];
+	return [...new Set(getAllTagsBooks(books))];
 }
 
 /** Note: This function doesn't filter draft books, pass it the result of getAllbooks above to do so. */
@@ -31,7 +31,7 @@ export function getUniqueTagsWithCountBooks(
 	books: Array<CollectionEntry<"book">>,
 ): Array<[string, number]> {
 	return [
-		...getAllTags(books).reduce(
+		...getAllTagsBooks(books).reduce(
 			(acc, t) => acc.set(t, (acc.get(t) || 0) + 1),
 			new Map<string, number>(),
 		),

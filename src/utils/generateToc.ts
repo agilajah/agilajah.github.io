@@ -21,17 +21,15 @@ export function generateToc(headings: ReadonlyArray<MarkdownHeading>) {
 	bodyHeadings.forEach((h) => {
 		const heading: TocItem = { ...h, subheadings: [] };
 
-		// add h2 elements into the top level
-		if (heading.depth === 2) {
+		const lastItemInToc = toc[toc.length - 1];
+		// Promote to the top level when it's an h2, when there's no parent yet,
+		// or when it would otherwise be an orphan (same/shallower depth than the
+		// last top-level item). This keeps loosely-structured posts — e.g. an h4
+		// intro before any h2, or h1-per-section layouts — from crashing the TOC.
+		if (heading.depth === 2 || !lastItemInToc || heading.depth <= lastItemInToc.depth) {
 			toc.push(heading);
 		} else {
-			const lastItemInToc = toc[toc.length - 1]!;
-			if (heading.depth < lastItemInToc.depth) {
-				throw new Error(`Orphan heading found: ${heading.text}.`);
-			}
-
-			// higher depth
-			// push into children, or children's children
+			// deeper than the last top-level item: nest into its descendants
 			const gap = heading.depth - lastItemInToc.depth;
 			const target = diveChildren(lastItemInToc, gap);
 			target.push(heading);

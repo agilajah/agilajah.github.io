@@ -4,7 +4,7 @@ author: "Jeff Dyer"
 description: "We've all seen leaders who excel at winning resources and support for their ideas. It turns out that this quality is so valuable, and measurably more important for innovation than just being creative, that it has a name: 'innovation capital.'"
 tags: ["business", "leadership"]
 status: "Read"
-publishDate: "1 January 2020"
+publishDate: "25 January 2020"
 cover: "innovation-capital-jeff-dyer.jpeg"
 ---
 

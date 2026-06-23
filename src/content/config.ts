@@ -35,21 +35,22 @@ const post = defineCollection({
 
 const book = defineCollection({
 	type: "content",
-	schema: ({ image }) =>
-	z.object({
-		title: z.string().max(150),
-		description: z.string().min(50).max(300),
+	schema: () =>
+		z.object({
+		// Full titles include subtitles ("Main: The Long Subtitle ..."), which
+		// routinely run past 150 chars, so allow generous room.
+		title: z.string().max(300),
+		// Book blurbs are publisher copy and vary a lot: some run ~475 chars,
+		// others are still "TBD" placeholders — so don't enforce a min length.
+		description: z.string().max(1000),
 		author: z.string().min(2).max(300),
 		publishDate: z
 			.string()
 			.or(z.date())
 			.transform((val) => new Date(val)),
-		cover: z
-			.object({
-				src: image(),
-				alt: z.string(),
-			})
-			.optional(),
+		// Filename under /public/assets/books/. Nullish: one entry has an
+		// empty `cover:` (YAML null) and others may omit it entirely.
+		cover: z.string().nullish(),
 		draft: z.boolean().default(false),
 		status: z.string().max(40),
 		tags: z.array(z.string()).default([]).transform(removeDupsAndLowerCase),

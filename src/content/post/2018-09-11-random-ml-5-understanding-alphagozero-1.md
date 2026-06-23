@@ -88,7 +88,13 @@ Note that we can't do both exploration and exploitation at the same time. For a 
 
 Recall that the true value of an action is the mean reward when that action is selected. One way to estimate this is by averaging the rewards actually received [1]:
 
-![Equation of averaging rewards actually received. Source: [1]](/assets/2018/september/random-ml-5-4.png "Equation of averaging rewards actually received. Source: [1]")
+$$
+\begin{align}
+Q_t(a) \doteq \frac{\text{sum of rewards when } a \text{ taken prior to } t}{\text{number of times } a \text{ taken prior to } t} = \frac{\sum_{i=1}^{t-1} R_i \cdot \mathbb{1}_{A_i=a}}{\sum_{i=1}^{t-1} \mathbb{1}_{A_i=a}}
+\end{align}
+$$
+<!--
+![Equation of averaging rewards actually received. Source: [1]](/assets/2018/september/random-ml-5-4.png "Equation of averaging rewards actually received. Source: [1]") -->
 
 A simple bandit algorithm then goes like this [1]:
 
@@ -176,7 +182,12 @@ We need an upper confidence bound to describe the largest plausible mean of each
 
 With the help of [Hoeffding inequality](https://en.wikipedia.org/wiki/Hoeffding%27s_inequality) we can estimate the upper confidence bound. Suppose X1, X2, .... Xt be i.i.d (independent and identically distributed) random variables and they are all bounded by the interval [0, 1]. After doing some magic, we obtained **Ut(a)** and we have:
 
-![How to choose action with upper confidence bound. Source: Sutton & Barto](/assets/2018/september/random-ml-5-9.png "How to choose action with upper confidence bound. Source: Sutton & Barto")
+$$
+\begin{align}
+A_t \doteq \underset{a}{\operatorname{argmax}} \left[ Q_t(a) + c \sqrt{\frac{\ln t}{N_t(a)}} \right],
+\end{align}
+$$
+<!-- ![How to choose action with upper confidence bound. Source: Sutton & Barto](/assets/2018/september/random-ml-5-9.png "How to choose action with upper confidence bound. Source: Sutton & Barto") -->
 
 Kidding. Alright, let's start over, if you insisted.
 
