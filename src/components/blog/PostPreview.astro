@@ -6,18 +6,28 @@ import FormattedDate from "../FormattedDate.astro";
 
 type Props<Tag extends HTMLTag> = Polymorphic<{ as: Tag }> & {
 	post: CollectionEntry<"post">;
+	index?: number;
 	withDesc?: boolean;
 };
 
-const { as: Tag = "div", post, withDesc = false } = Astro.props;
+const { as: Tag = "div", post } = Astro.props;
 const postDate = post.data.updatedDate ?? post.data.publishDate;
 ---
 
-<FormattedDate class="min-w-[120px] text-gray-600 dark:text-gray-400" date={postDate} />
-<Tag>
-	{post.data.draft && <span class="text-red-500">(Draft) </span>}
-	<a class="cactus-link" data-astro-prefetch href={`/posts/${post.slug}/`}>
-		{post.data.title}
-	</a>
-</Tag>
-{withDesc && <q class="line-clamp-3 block italic">{post.data.description}</q>}
+<div class="group flex flex-wrap items-baseline gap-x-3">
+	<Tag class="m-0 text-base font-medium leading-relaxed">
+		{post.data.draft && <span class="text-red-500">(Draft) </span>}
+		<a
+			class="link-underline text-accent-2 transition-colors group-hover:text-accent"
+			data-astro-prefetch
+			href={`/posts/${post.slug}/`}
+		>
+			{post.data.title}
+		</a>
+	</Tag>
+	<FormattedDate
+		class="text-xs text-textColor/35"
+		date={postDate}
+		dateTimeOptions={{ month: "short", year: "numeric" }}
+	/>
+</div>

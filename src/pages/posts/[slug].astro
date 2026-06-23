@@ -2,22 +2,27 @@
 import type { GetStaticPaths, InferGetStaticPropsType } from "astro";
 
 import PostLayout from "@/layouts/BlogPost.astro";
-import { getAllPosts } from "@/utils";
+import { getAllPosts, sortMDByDate } from "@/utils";
 
 export const getStaticPaths = (async () => {
-	const blogEntries = await getAllPosts();
-	return blogEntries.map((entry) => ({
+	const blogEntries = sortMDByDate(await getAllPosts()); // newest → oldest
+	return blogEntries.map((entry, i) => ({
 		params: { slug: entry.slug },
-		props: { entry },
+		props: {
+			entry,
+			// "newer" is the previous item in the newest-first list; "older" the next.
+			newer: blogEntries[i - 1] ?? null,
+			older: blogEntries[i + 1] ?? null,
+		},
 	}));
 }) satisfies GetStaticPaths;
 
 type Props = InferGetStaticPropsType<typeof getStaticPaths>;
 
-const { entry } = Astro.props;
+const { entry, newer, older } = Astro.props;
 const { Content } = await entry.render();
 ---
 
-<PostLayout post={entry}>
+<PostLayout post={entry} newer={newer} older={older}>
 	<Content />
 </PostLayout>

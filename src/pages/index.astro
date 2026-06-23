@@ -1,6 +1,6 @@
 ---
 import SocialList from "@/components/SocialList.astro";
-import PostPreview from "@/components/blog/PostPreview.astro";
+import PostArchive from "@/components/blog/PostArchive.astro";
 import PageLayout from "@/layouts/Base.astro";
 import { getAllPosts, sortMDByDate } from "@/utils";
 
@@ -23,16 +23,6 @@ const allPostsByDate = sortMDByDate(allPosts).slice(0, MAX_POSTS);
 	<section aria-label="Blog post list" class="mt-16">
 		<h2 class="title mb-4 text-xl">Posts</h2>
 		<h3 class="subtitle text-m mb-3">Things I wrote recently...</h3>
-		<ul class="space-y-4 sm:space-y-2">
-			<ul class="space-y-4">
-				{
-					allPostsByDate.map((p) => (
-						<li class="flex flex-col gap-x-2 sm:flex-row">
-							<PostPreview post={p} />
-						</li>
-					))
-				}
-			</ul>
-		</ul>
+		<PostArchive posts={allPostsByDate} />
 	</section>
 </PageLayout>
