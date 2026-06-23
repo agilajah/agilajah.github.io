@@ -2,103 +2,270 @@
 import type { GetStaticPaths, Page } from "astro";
 import type { CollectionEntry } from "astro:content";
 
-import PageLayout from "@/layouts/BaseBookShelf.astro";
-import BookPreview from "@/components/books/BookPreview.astro";
-import Pagination from "@/components/Paginator.astro";
-import { getAllBooks, getUniqueTagsBooks, sortMDByDateBooks } from "@/utils";
+import PageLayout from "@/layouts/Base.astro";
+import BookCard from "@/components/books/BookCard.astro";
+import CategoryList from "@/components/CategoryList.astro";
+import {
+	getAllBooks,
+	getUniqueTagsBooks,
+	getUniqueTagsWithCountBooks,
+	sortMDByDateBooks,
+} from "@/utils";
 
 export const getStaticPaths = (async ({ paginate }) => {
 	const allBooks = await getAllBooks();
 	const allBooksByDate = sortMDByDateBooks(allBooks);
-	const uniqueTags = getUniqueTagsBooks(allBooks);
-	return paginate(allBooksByDate, { pageSize: 10, props: { uniqueTags } });
+	const uniqueTags = getUniqueTagsBooks(allBooks).sort((a, b) => a.localeCompare(b));
+	const tagsWithCount = getUniqueTagsWithCountBooks(allBooks).sort((a, b) => b[1] - a[1]);
+	// Status counts for the dashboard. Order: Read, Currently Reading, On Going, then any others.
+	const order = ["Read", "Currently Reading", "On Going"];
+	const counts = new Map<string, number>();
+	for (const b of allBooks) counts.set(b.data.status, (counts.get(b.data.status) || 0) + 1);
+	const statusStats = [...counts.entries()].sort(
+		(a, b) => (order.indexOf(a[0]) + 1 || 99) - (order.indexOf(b[0]) + 1 || 99),
+	);
+	return paginate(allBooksByDate, {
+		pageSize: 1000,
+		props: { uniqueTags, statusStats, tagsWithCount, tagCount: uniqueTags.length },
+	});
 }) satisfies GetStaticPaths;
 
 interface Props {
 	page: Page<CollectionEntry<"book">>;
 	uniqueTags: string[];
+	statusStats: Array<[string, number]>;
+	tagsWithCount: Array<[string, number]>;
+	tagCount: number;
 }
 
-const { page, uniqueTags } = Astro.props;
+const { page, uniqueTags, statusStats, tagsWithCount, tagCount } = Astro.props;
+const total = page.data.length;
+const topTags = tagsWithCount.slice(0, 30);
 
 const meta = {
-	title: "Bookshelf",
-	description: "A collection of books that I own and read",
+	title: "Library",
+	description: `A personal library of ${total} books — what I've read, am reading, and own.`,
 };
 
-const paginationProps = {
-	...(page.url.prev && {
-		prevUrl: {
-			url: page.url.prev,
-			text: `← Previous Shelf`,
-		},
-	}),
-	...(page.url.next && {
-		nextUrl: {
-			url: page.url.next,
-			text: `Next Shelf →`,
-		},
-	}),
-};
+const controlClass =
+	"border border-textColor/20 bg-transparent px-3 py-2 text-sm text-textColor focus:border-accent focus:outline-none";
+const statCell =
+	"lib-stat flex min-w-[5rem] flex-1 flex-col items-start bg-bgColor px-3 py-2.5 text-left transition-colors hover:text-accent";
 ---
 
 <PageLayout meta={meta}>
-	<h1 class="title mb-6">Books ({page.data.length})</h1>
-	{
-		uniqueTags.length && (
-			<aside>
-				<h2 class="mb-4 flex items-center text-lg font-semibold">
-					<svg
-						aria-hidden="true"
-						xmlns="http://www.w3.org/2000/svg"
-						class="h-6 w-6"
-						viewBox="0 0 24 24"
-						stroke-width="1.5"
-						stroke="currentColor"
-						fill="none"
-						stroke-linecap="round"
-						stroke-linejoin="round"
-					>
-						<path stroke="none" d="M0 0h24v24H0z" fill="none" />
-						<path d="M7.859 6h-2.834a2.025 2.025 0 0 0 -2.025 2.025v2.834c0 .537 .213 1.052 .593 1.432l6.116 6.116a2.025 2.025 0 0 0 2.864 0l2.834 -2.834a2.025 2.025 0 0 0 0 -2.864l-6.117 -6.116a2.025 2.025 0 0 0 -1.431 -.593z" />
-						<path d="M17.573 18.407l2.834 -2.834a2.025 2.025 0 0 0 0 -2.864l-7.117 -7.116" />
-						<path d="M6 9h-.01" />
-					</svg>
-					Categories
-				</h2>
-				<ul class="flex flex-wrap gap-2 text-bgColor">
-					{uniqueTags.map((tag) => (
-						<li>
-							<a
-								class="flex items-center justify-center rounded-lg bg-accent p-1"
-								href={`/book-tags/${tag}`}
-								aria-label={`View all books with the tag: ${tag}`}
-							>
-								{tag}
-							</a>
-						</li>
-					))}
-				</ul>
-				<span class="mt-4 block sm:text-right">
-					<a class="sm:hover:text-accent" href="/book-tags" aria-label="View all book categories">
-						View all →
-					</a>
-				</span>
-			</aside>
-		)
-	}
-	<div class="container mx-auto">
-		<section aria-label="Book post list">
-			<ul class="mt-24 grid space-y-8 text-left sm:grid-cols-3 sm:gap-x-8 sm:gap-y-8">
+	<section>
+		<h1 class="title mb-2 flex items-baseline gap-3">
+			Library
+			<span class="text-base font-normal text-textColor/50">{total}</span>
+		</h1>
+		<p class="mb-8 text-textColor/70">What I've read, am reading, and own — all opinions my own.</p>
+
+		{/* ===== Control panel ===== */}
+		<div class="mb-8 border border-textColor/15">
+			{/* stats — status cells are clickable filters */}
+			<div class="flex flex-wrap gap-px border-b border-textColor/15 bg-textColor/15">
+				<button class={statCell} data-status="all" type="button">
+					<span class="text-lg font-bold tabular-nums leading-none">{total}</span>
+					<span class="lib-stat-label mt-1 text-[10px] font-medium uppercase tracking-widest text-textColor/50">
+						Total
+					</span>
+				</button>
 				{
-					page.data.map((p) => (
-						<li class="flex flex-wrap items-center gap-x-2 space-y-2 [&_q]:w-full">
-							<BookPreview book={p} as="h2" withDesc />
-						</li>
+					statusStats.map(([status, count]) => (
+						<button class={statCell} data-status={status} type="button">
+							<span class="text-lg font-bold tabular-nums leading-none">{count}</span>
+							<span class="lib-stat-label mt-1 text-[10px] font-medium uppercase tracking-widest text-textColor/50">
+								{status}
+							</span>
+						</button>
 					))
 				}
-			</ul>
-			<Pagination {...paginationProps} />
-		</section>
-	</div>
+				<a
+					class="flex min-w-[5rem] flex-1 flex-col items-start bg-bgColor px-3 py-2.5 transition-colors hover:text-accent"
+					href="/book-tags/"
+				>
+					<span class="text-lg font-bold tabular-nums leading-none">{tagCount}</span>
+					<span class="mt-1 text-[10px] font-medium uppercase tracking-widest text-textColor/50">
+						Tags
+					</span>
+				</a>
+			</div>
+
+			{/* controls */}
+			<div class="flex flex-wrap items-center gap-3 p-3">
+				<input
+					autocomplete="off"
+					class:list={[controlClass, "min-w-0 flex-1 sm:min-w-[12rem]"]}
+					id="lib-search"
+					placeholder="Search title or author…"
+					type="search"
+				/>
+				<select aria-label="Filter by category" class={controlClass} id="lib-category">
+					<option value="all">All categories</option>
+					{uniqueTags.map((t) => <option value={t}>{t}</option>)}
+				</select>
+				<select aria-label="Sort books" class={controlClass} id="lib-sort">
+					<option value="recent">Newest first</option>
+					<option value="oldest">Oldest first</option>
+					<option value="title">Title A–Z</option>
+					<option value="author">Author A–Z</option>
+				</select>
+				<div class="flex border border-textColor/20" role="group" aria-label="View">
+					<button
+						aria-label="Grid view"
+						class="lib-view px-2.5 py-2 text-textColor/70 transition-colors hover:text-accent"
+						data-view="grid"
+						type="button"
+					>
+						<svg aria-hidden="true" class="h-4 w-4" fill="currentColor" viewBox="0 0 16 16">
+							<rect x="0" y="0" width="7" height="7"></rect>
+							<rect x="9" y="0" width="7" height="7"></rect>
+							<rect x="0" y="9" width="7" height="7"></rect>
+							<rect x="9" y="9" width="7" height="7"></rect>
+						</svg>
+					</button>
+					<button
+						aria-label="List view"
+						class="lib-view px-2.5 py-2 text-textColor/70 transition-colors hover:text-accent"
+						data-view="list"
+						type="button"
+					>
+						<svg aria-hidden="true" class="h-4 w-4" fill="currentColor" viewBox="0 0 16 16">
+							<rect x="0" y="1" width="16" height="2"></rect>
+							<rect x="0" y="7" width="16" height="2"></rect>
+							<rect x="0" y="13" width="16" height="2"></rect>
+						</svg>
+					</button>
+				</div>
+			</div>
+		</div>
+
+		<div class="grid gap-y-10 sm:grid-cols-[1fr_15rem] sm:gap-x-8">
+			<div class="min-w-0">
+				<p class="mb-6 text-xs uppercase tracking-wider text-textColor/45">
+					<span id="lib-count">{total}</span> of {total} books
+				</p>
+
+				<p class="hidden py-16 text-center text-textColor/50" id="lib-empty">
+					No books match your filters.
+				</p>
+
+				<ul
+					class="grid grid-cols-[repeat(auto-fill,minmax(6rem,1fr))] gap-x-4 gap-y-7"
+					id="lib-grid"
+					role="list"
+				>
+					{page.data.map((book) => <BookCard book={book} />)}
+				</ul>
+			</div>
+
+			{/* Tag summary: right column on desktop, below on mobile (matches the blog) */}
+			<aside>
+				<CategoryList
+					items={topTags}
+					listId="lib-tagcloud"
+					title="Top Categories"
+					viewAllHref="/book-tags"
+				/>
+			</aside>
+		</div>
+	</section>
 </PageLayout>
+
+<script>
+	function initLibrary() {
+		const grid = document.getElementById("lib-grid");
+		if (!grid) return; // not the library page
+
+		const search = document.getElementById("lib-search") as HTMLInputElement;
+		const categoryEl = document.getElementById("lib-category") as HTMLSelectElement;
+		const sortEl = document.getElementById("lib-sort") as HTMLSelectElement;
+		const countEl = document.getElementById("lib-count");
+		const emptyEl = document.getElementById("lib-empty");
+		const items = Array.from(grid.querySelectorAll<HTMLElement>(".lib-item"));
+		const tagButtons = Array.from(document.querySelectorAll<HTMLElement>(".lib-tag"));
+		const statButtons = Array.from(
+			document.querySelectorAll<HTMLElement>(".lib-stat[data-status]"),
+		);
+		const viewButtons = Array.from(document.querySelectorAll<HTMLElement>(".lib-view"));
+
+		let status = "all";
+
+		function sortKey(el: HTMLElement, mode: string) {
+			if (mode === "title") return el.dataset.title || "";
+			if (mode === "author") return el.dataset.author || "";
+			return Number(el.dataset.date || 0); // recent / oldest
+		}
+
+		function apply() {
+			const q = search.value.trim().toLowerCase();
+			const cat = categoryEl.value;
+			const mode = sortEl.value;
+
+			const sorted = items.slice().sort((a, b) => {
+				const ka = sortKey(a, mode);
+				const kb = sortKey(b, mode);
+				if (mode === "title" || mode === "author") return String(ka).localeCompare(String(kb));
+				const diff = Number(ka) - Number(kb);
+				return mode === "oldest" ? diff : -diff;
+			});
+
+			let visible = 0;
+			for (const el of sorted) {
+				grid.appendChild(el);
+				const matchQ =
+					!q || (el.dataset.title || "").includes(q) || (el.dataset.author || "").includes(q);
+				const matchS = status === "all" || el.dataset.status === status;
+				const matchC = cat === "all" || (el.dataset.tags || "").split(" ").includes(cat);
+				const show = matchQ && matchS && matchC;
+				el.style.display = show ? "" : "none";
+				if (show) visible++;
+			}
+
+			if (countEl) countEl.textContent = String(visible);
+			if (emptyEl) emptyEl.classList.toggle("hidden", visible > 0);
+			tagButtons.forEach((b) => b.classList.toggle("is-active", b.dataset.tag === cat));
+			statButtons.forEach((b) => b.classList.toggle("is-active", b.dataset.status === status));
+		}
+
+		function setView(view: string) {
+			grid.classList.toggle("is-list", view === "list");
+			viewButtons.forEach((b) => b.classList.toggle("is-active", b.dataset.view === view));
+			try {
+				localStorage.setItem("lib-view", view);
+			} catch {}
+		}
+
+		statButtons.forEach((btn) => {
+			btn.addEventListener("click", () => {
+				const s = btn.dataset.status || "all";
+				status = status === s ? "all" : s;
+				apply();
+			});
+		});
+		tagButtons.forEach((btn) => {
+			btn.addEventListener("click", () => {
+				const tag = btn.dataset.tag || "";
+				categoryEl.value = categoryEl.value === tag ? "all" : tag;
+				apply();
+			});
+		});
+		viewButtons.forEach((btn) => {
+			btn.addEventListener("click", () => setView(btn.dataset.view || "grid"));
+		});
+
+		search.addEventListener("input", apply);
+		categoryEl.addEventListener("change", apply);
+		sortEl.addEventListener("change", apply);
+
+		let savedView = "grid";
+		try {
+			savedView = localStorage.getItem("lib-view") || "grid";
+		} catch {}
+		setView(savedView);
+		apply();
+	}
+
+	document.addEventListener("astro:page-load", initLibrary);
+</script>

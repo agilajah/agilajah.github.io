@@ -1,0 +1,18 @@
+---
+import CategoryList from "@/components/CategoryList.astro";
+import PageLayout from "@/layouts/Base.astro";
+import { getAllBooks, getUniqueTagsWithCountBooks } from "@/utils";
+
+const allBooks = await getAllBooks();
+const allTags = getUniqueTagsWithCountBooks(allBooks).sort((a, b) => b[1] - a[1]);
+
+const meta = {
+	description: "Every category in my library",
+	title: "Book Categories",
+};
+---
+
+<PageLayout meta={meta}>
+	<h1 class="title mb-6">Book Categories <span class="text-base font-normal text-textColor/50">{allTags.length}</span></h1>
+	<CategoryList hrefBase="/book-tags/" items={allTags} title="" />
+</PageLayout>

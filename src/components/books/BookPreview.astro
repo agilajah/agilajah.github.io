@@ -1,26 +1,27 @@
 ---
 import type { CollectionEntry } from "astro:content";
 import type { HTMLTag, Polymorphic } from "astro/types";
-import FormattedDate from "../FormattedDate.astro";
 
 type Props<Tag extends HTMLTag> = Polymorphic<{ as: Tag }> & {
-	post: CollectionEntry<"book">;
+	book: CollectionEntry<"book">;
 	withDesc?: boolean;
 };
 
-const { as: Tag = "div", post, withDesc = false } = Astro.props;
-const postDate = post.data.updatedDate ?? post.data.publishDate;
+const { as: Tag = "div", book, withDesc = false } = Astro.props;
 ---
 
-<!-- <time datetime={datetime} class="min-w-[120px] text-gray-500">{bookDate}</time> -->
-<Element class="group relative h-64 w-64 overflow-hidden rounded-xl bg-gray-100">
-	<div class="mx-auto flex justify-center">
-		<img
-			class="h-7/12 absolute inset-y-1 mt-8 w-7/12 transform rounded-md drop-shadow-md duration-300 group-hover:-inset-y-full"
-			alt={book.data.title}
-			src={`/assets/books/${book.data.cover}`}
-		/>
-	</div>
+<Tag class="group relative h-64 w-64 overflow-hidden rounded-xl bg-gray-100">
+	{
+		book.data.cover && (
+			<div class="mx-auto flex justify-center">
+				<img
+					class="h-7/12 absolute inset-y-1 mt-8 w-7/12 transform rounded-md drop-shadow-md duration-300 group-hover:-inset-y-full"
+					alt={book.data.title}
+					src={`/assets/books/${book.data.cover}`}
+				/>
+			</div>
+		)
+	}
 	<div
 		class="absolute inset-y-full mt-10 h-full w-full transform opacity-20 shadow-2xl duration-300 group-hover:-inset-y-0"
 	>
@@ -34,4 +35,4 @@ const postDate = post.data.updatedDate ?? post.data.publishDate;
 		>
 		{withDesc && <q class="mt-2 line-clamp-3 block italic">{book.data.description}</q>}
 	</div>
-</Element>
+</Tag>
