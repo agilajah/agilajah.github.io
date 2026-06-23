@@ -4,8 +4,12 @@ import mdx from "@astrojs/mdx";
 import tailwind from "@astrojs/tailwind";
 import sitemap from "@astrojs/sitemap";
 import remarkUnwrapImages from "remark-unwrap-images";
+import remarkDirective from "remark-directive";
+import remarkMath from "remark-math";
 import rehypeExternalLinks from "rehype-external-links";
+import rehypeKatex from "rehype-katex";
 import { remarkReadingTime } from "./src/utils/remark-reading-time";
+import { remarkAdmonitions } from "./src/plugins/remark-admonitions";
 import icon from "astro-icon";
 import expressiveCode from "astro-expressive-code";
 import { expressiveCodeOptions } from "./src/site.config";
@@ -15,8 +19,16 @@ export default defineConfig({
 	// ! Please remember to replace the following site property with your own domain
 	site: "https://febiagil.me/",
 	markdown: {
-		remarkPlugins: [remarkUnwrapImages, remarkReadingTime],
+		// remarkDirective must run before remarkAdmonitions (which consumes `:::` directives).
+		remarkPlugins: [
+			remarkUnwrapImages,
+			remarkReadingTime,
+			remarkDirective,
+			remarkAdmonitions,
+			remarkMath,
+		],
 		rehypePlugins: [
+			rehypeKatex,
 			[
 				rehypeExternalLinks,
 				{
