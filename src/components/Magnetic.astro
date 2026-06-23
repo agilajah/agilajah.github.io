@@ -1,0 +1,37 @@
+---
+// Magnetic hover: elements tagged [data-magnetic] drift toward the pointer
+// and spring back on leave (the spring easing is in global.css). Skipped on
+// touch devices and when the visitor prefers reduced motion. Re-binds on each
+// Astro view-transition navigation; an element-level flag prevents double-bind.
+---
+
+<script>
+	function initMagnetic() {
+		const reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+		const noHover = window.matchMedia("(hover: none)").matches; // touch / no pointer
+		if (reduce || noHover) return;
+
+		const STRENGTH = 0.35; // fraction of the cursor offset the element follows
+
+		document.querySelectorAll<HTMLElement>("[data-magnetic]").forEach((el) => {
+			if (el.dataset.magneticBound) return;
+			el.dataset.magneticBound = "1";
+
+			el.addEventListener("pointermove", (e) => {
+				const r = el.getBoundingClientRect();
+				const dx = e.clientX - (r.left + r.width / 2);
+				const dy = e.clientY - (r.top + r.height / 2);
+				// Follow quickly while tracking; the CSS spring takes over on leave.
+				el.style.transition = "transform 60ms linear";
+				el.style.transform = `translate(${dx * STRENGTH}px, ${dy * STRENGTH}px)`;
+			});
+
+			el.addEventListener("pointerleave", () => {
+				el.style.transition = "";
+				el.style.transform = "";
+			});
+		});
+	}
+
+	document.addEventListener("astro:page-load", initMagnetic);
+</script>

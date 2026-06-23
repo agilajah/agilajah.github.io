@@ -41,7 +41,7 @@ _Source: [Accel](https://www.accel.com/euroscape)_
 
 Speaking of surging, every peak has its valley. Let’s talk about how we rise, and the potential fall of human civilization.
 
-### 2. The humans progress: a story of how we rise and collectively decline
+## 2. The humans progress: a story of how we rise and collectively decline
 
 What sparked the Industrial Revolution? apparently, it wasn’t just machines and factories.
 

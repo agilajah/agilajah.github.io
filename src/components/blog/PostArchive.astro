@@ -1,0 +1,58 @@
+---
+import type { CollectionEntry } from "astro:content";
+
+import FormattedDate from "../FormattedDate.astro";
+
+interface Props {
+	posts: Array<CollectionEntry<"post">>;
+	withDesc?: boolean;
+}
+
+const { posts, withDesc = false } = Astro.props;
+
+// Group by year, preserving the incoming (date-sorted, newest-first) order.
+const groups: Array<[number, Array<CollectionEntry<"post">>]> = [];
+for (const post of posts) {
+	const date = post.data.updatedDate ?? post.data.publishDate;
+	const year = date.getFullYear();
+	const last = groups[groups.length - 1];
+	if (last && last[0] === year) last[1].push(post);
+	else groups.push([year, [post]]);
+}
+---
+
+<div class="space-y-8" data-stagger>
+	{
+		groups.map(([year, items]) => (
+			<div class="grid grid-cols-[2.5rem_1fr] gap-x-5 sm:grid-cols-[4rem_1fr] sm:gap-x-8">
+				<h2 class="pt-0.5 text-sm font-semibold tabular-nums text-textColor/40">{year}</h2>
+				<ul class:list={[withDesc ? "space-y-5" : "space-y-2.5"]}>
+					{items.map((post) => (
+						<li class="group">
+							<div class="flex flex-wrap items-baseline gap-x-3">
+								{post.data.draft && <span class="text-red-500">(Draft)</span>}
+								<a
+									class="link-underline font-medium text-accent-2 transition-colors group-hover:text-accent"
+									data-astro-prefetch
+									href={`/posts/${post.slug}/`}
+								>
+									{post.data.title}
+								</a>
+								<FormattedDate
+									class="text-xs text-textColor/35"
+									date={post.data.updatedDate ?? post.data.publishDate}
+									dateTimeOptions={{ month: "short", day: "numeric" }}
+								/>
+							</div>
+							{withDesc && post.data.description && (
+								<p class="mt-1 line-clamp-2 text-sm italic text-textColor/55">
+									{post.data.description}
+								</p>
+							)}
+						</li>
+					))}
+				</ul>
+			</div>
+		))
+	}
+</div>

@@ -1,11 +1,12 @@
 ---
+import type { SiteMeta } from "@/types";
+
 import BaseHead from "@/components/BaseHead.astro";
 import SkipLink from "@/components/SkipLink.astro";
 import ThemeProvider from "@/components/ThemeProvider.astro";
 import Footer from "@/components/layout/Footer.astro";
 import Header from "@/components/layout/Header.astro";
 import { siteConfig } from "@/site-config";
-import type { SiteMeta } from "@/types";
 
 interface Props {
 	meta: SiteMeta;
@@ -16,28 +17,12 @@ const {
 } = Astro.props;
 ---
 
-<html class="scroll-smooth" lang={siteConfig.lang}>
+<html lang={siteConfig.lang}>
 	<head>
-		<BaseHead title={title} description={description} />
-		<script define:vars={{ siteConfig }}>
-			const root = document.documentElement;
-			const colorThemeMetaTag = document.querySelector("meta[name='theme-color']");
-			const theme = typeof localStorage !== "undefined" ? localStorage.getItem("theme") : null;
-			if (
-				theme === "dark" ||
-				(!theme && window.matchMedia("(prefers-color-scheme: dark)").matches)
-			) {
-				root.classList.add("dark");
-				colorThemeMetaTag.setAttribute("content", siteConfig.themeColorDark);
-			} else {
-				root.classList.remove("dark");
-				colorThemeMetaTag.setAttribute("content", siteConfig.themeColorLight);
-			}
-		</script>
-		<script defer data-domain="febiagil.me" src="https://plausible.io/js/script.js"></script>
-		<!-- Google tag (gtag.js) -->
-		<script async src="https://www.googletagmanager.com/gtag/js?id=G-B6G81G81F8"></script>
-		<script>
+		<BaseHead articleDate={articleDate} description={description} ogImage={ogImage} title={title} />
+		<script defer data-domain="febiagil.me" src="https://plausible.io/js/script.js"></script><script
+			async
+			src="https://www.googletagmanager.com/gtag/js?id=G-B6G81G81F8"></script><script>
 			window.dataLayer = window.dataLayer || [];
 			function gtag() {
 				dataLayer.push(arguments);
@@ -45,17 +30,15 @@ const {
 			gtag("js", new Date());
 
 			gtag("config", "G-B6G81G81F8");
-		</script>
-
-		<BaseHead articleDate={articleDate} description={description} ogImage={ogImage} title={title} />
-	</head>
-	<body
-		class="mx-auto flex min-h-screen max-w-3xl flex-col bg-bgColor px-4 pt-16 font-mono text-sm font-normal text-textColor antialiased sm:px-8"
+		</script></head
 	>
+
+	<!-- Google tag (gtag.js) -->
+	<body>
 		<ThemeProvider />
 		<SkipLink />
 		<Header />
-		<main id="main" class="gap-4">
+		<main id="main">
 			<slot />
 		</main>
 		<Footer />

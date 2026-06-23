@@ -1,0 +1,42 @@
+---
+// A collapsible year on the timeline rail (envelope style). Summary shows the
+// year marker + event count + chevron; events live in the <slot> and are
+// revealed on expand. Keeps the long Highlights list compact by default.
+interface Props {
+	year: string | number;
+	count: number;
+	open?: boolean;
+	first?: boolean;
+}
+
+const { year, count, open = false, first = false } = Astro.props;
+---
+
+<details class:list={["timeline-year group/yr", !first && "mt-8"]} data-reveal open={open}>
+	<summary
+		class="relative mb-4 flex cursor-pointer select-none items-center gap-3 transition-colors hover:text-accent"
+	>
+		<span
+			class="absolute start-[-2rem] top-1 h-3.5 w-3.5 -translate-x-1/2 rotate-45 bg-accent ring-4 ring-bgColor shadow-[0_0_12px_2px_hsl(var(--theme-accent)/0.55)]"
+		></span>
+		<h2 class="text-2xl font-bold uppercase tracking-tight text-accent-2">{year}</h2>
+		<span class="text-xs font-medium uppercase tracking-wider text-textColor/40">
+			{count} {count === 1 ? "entry" : "entries"}
+		</span>
+		<svg
+			aria-hidden="true"
+			class="year-chevron ms-auto h-4 w-4 text-textColor/40 transition-transform duration-300"
+			fill="none"
+			stroke="currentColor"
+			stroke-linecap="round"
+			stroke-linejoin="round"
+			stroke-width="2"
+			viewBox="0 0 24 24"
+		>
+			<path d="M9 6l6 6-6 6"></path>
+		</svg>
+	</summary>
+	<div class="pb-2">
+		<slot />
+	</div>
+</details>

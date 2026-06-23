@@ -1,0 +1,82 @@
+---
+// Progress bar, TOC scrollspy, click-to-copy headings, and figure captions.
+// All scoped to the article and re-initialised on each view-transition load.
+// Styling lives in src/styles/global.css (#reading-progress, .toc a.active,
+// .img-caption).
+---
+
+<div id="reading-progress" aria-hidden="true"></div>
+
+<script>
+	function initReading() {
+		const article = document.querySelector<HTMLElement>("article[data-pagefind-body]");
+		if (!article) return; // not a post page
+		const bar = document.getElementById("reading-progress");
+
+		// Map heading id -> its TOC anchors (desktop + mobile both carry .toc).
+		const tocLinks = new Map<string, HTMLAnchorElement[]>();
+		document.querySelectorAll<HTMLAnchorElement>('.toc a[href^="#"]').forEach((a) => {
+			const id = decodeURIComponent((a.getAttribute("href") || "").slice(1));
+			if (!id) return;
+			if (!tocLinks.has(id)) tocLinks.set(id, []);
+			tocLinks.get(id)!.push(a);
+		});
+		const headings = Array.from(
+			article.querySelectorAll<HTMLElement>("h2[id], h3[id], h4[id]"),
+		);
+
+		// Click a heading to copy its deep link.
+		headings.forEach((h) => {
+			h.style.cursor = "pointer";
+			h.title = "Copy link to this section";
+			h.addEventListener("click", () => {
+				history.replaceState(null, "", "#" + h.id);
+				navigator.clipboard?.writeText(location.href.split("#")[0] + "#" + h.id).catch(() => {});
+			});
+		});
+
+		// Style "_Image Source: …_" lines (a paragraph that is only an <em>) as captions.
+		article.querySelectorAll("img").forEach((img) => {
+			const next = img.nextElementSibling;
+			if (
+				next &&
+				next.tagName === "P" &&
+				next.children.length === 1 &&
+				next.firstElementChild?.tagName === "EM"
+			) {
+				next.classList.add("img-caption");
+			}
+		});
+
+		let ticking = false;
+		function update() {
+			ticking = false;
+			if (bar) {
+				const total = article.offsetHeight - window.innerHeight;
+				const scrolled = Math.min(Math.max(-article.getBoundingClientRect().top, 0), total);
+				bar.style.transform = `scaleX(${total > 0 ? scrolled / total : 0})`;
+			}
+			if (headings.length) {
+				let current = headings[0].id;
+				for (const h of headings) {
+					if (h.getBoundingClientRect().top <= 120) current = h.id;
+					else break;
+				}
+				tocLinks.forEach((arr, id) =>
+					arr.forEach((a) => a.classList.toggle("active", id === current)),
+				);
+			}
+		}
+		function onScroll() {
+			if (!ticking) {
+				ticking = true;
+				requestAnimationFrame(update);
+			}
+		}
+		window.addEventListener("scroll", onScroll, { passive: true });
+		window.addEventListener("resize", onScroll);
+		update();
+	}
+
+	document.addEventListener("astro:page-load", initReading);
+</script>

@@ -1,22 +1,20 @@
 ---
-import type { CollectionEntry } from "astro:content";
-import Pagination from "@/components/Paginator.astro";
-import BookPreview from "@/components/books/BookPreview.astro";
-import { getAllBooks, getUniqueTags, sortMDByDate } from "@/data/book";
-import PageLayout from "@/layouts/BaseBookShelf.astro";
 import type { GetStaticPaths, Page } from "astro";
+import type { CollectionEntry } from "astro:content";
+
+import BookCard from "@/components/books/BookCard.astro";
+import Pagination from "@/components/Paginator.astro";
+import PageLayout from "@/layouts/Base.astro";
+import { getAllBooks, getUniqueTagsBooks, sortMDByDateBooks } from "@/utils";
 
 export const getStaticPaths: GetStaticPaths = async ({ paginate }) => {
 	const allBooks = await getAllBooks();
-	const allBooksByDate = sortMDByDate(allBooks);
-	const uniqueTags = getUniqueTags(allBooksByDate);
+	const allBooksByDate = sortMDByDateBooks(allBooks);
+	const uniqueTags = getUniqueTagsBooks(allBooksByDate);
 
 	return uniqueTags.flatMap((tag) => {
-		const filterBooks = allBooksByDate.filter((book) => book.data.tags.includes(tag));
-		return paginate(filterBooks, {
-			pageSize: 10,
-			params: { tag },
-		});
+		const filtered = allBooksByDate.filter((book) => book.data.tags.includes(tag));
+		return paginate(filtered, { pageSize: 60, params: { tag } });
 	});
 };
 
@@ -28,20 +26,20 @@ const { page } = Astro.props;
 const { tag } = Astro.params;
 
 const meta = {
-	description: `View all books with the book tag - ${tag}`,
-	title: `Tag: ${tag}`,
+	description: `Books in my library tagged ${tag}`,
+	title: `Category: ${tag}`,
 };
 
 const paginationProps = {
 	...(page.url.prev && {
 		prevUrl: {
-			text: "← Previous Tags",
+			text: `← Previous`,
 			url: page.url.prev,
 		},
 	}),
 	...(page.url.next && {
 		nextUrl: {
-			text: "Next Tags →",
+			text: `Next →`,
 			url: page.url.next,
 		},
 	}),
@@ -49,21 +47,14 @@ const paginationProps = {
 ---
 
 <PageLayout meta={meta}>
-	<h1 class="title mb-6 flex items-center">
+	<h1 class="title mb-6 flex flex-wrap items-center gap-x-2">
 		<a class="text-accent sm:hover:underline" href="/book-tags/">Categories</a>
-		<span class="me-3 ms-2">→</span>
+		<span>→</span>
 		<span class="text-xl">#{tag}</span>
+		<span class="text-base font-normal text-textColor/50">{page.total}</span>
 	</h1>
-	<section aria-label="Books list">
-		<ul class="space-y-8">
-			{
-				page.data.map((p) => (
-					<li class="flex flex-col flex-wrap gap-2 sm:flex-row [&_q]:basis-full">
-						<BookPreview as="h2" book={p} withDesc />
-					</li>
-				))
-			}
-		</ul>
-		<Pagination {...paginationProps} />
-	</section>
+	<ul class="grid grid-cols-2 gap-x-5 gap-y-8 sm:grid-cols-3" role="list">
+		{page.data.map((book) => <BookCard book={book} />)}
+	</ul>
+	<Pagination {...paginationProps} />
 </PageLayout>

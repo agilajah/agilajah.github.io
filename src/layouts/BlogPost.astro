@@ -1,7 +1,10 @@
 ---
 import type { CollectionEntry } from "astro:content";
 
-import Masthead from "@/components/blog/Masthead.astro";
+import "katex/dist/katex.min.css";
+
+import BlogHero from "@/components/blog/Hero.astro";
+import ReadingEnhancements from "@/components/blog/ReadingEnhancements.astro";
 import TOC from "@/components/blog/TOC.astro";
 import WebMentions from "@/components/blog/webmentions/index.astro";
 
@@ -9,44 +12,66 @@ import BaseLayout from "./Base.astro";
 
 interface Props {
 	post: CollectionEntry<"post">;
+	newer?: CollectionEntry<"post"> | null;
+	older?: CollectionEntry<"post"> | null;
 }
 
-const { post } = Astro.props;
+const { post, newer = null, older = null } = Astro.props;
 const {
 	data: { description, ogImage, publishDate, title, updatedDate },
 	slug,
 } = post;
 const socialImage = ogImage ?? `/og-image/${slug}.png`;
-
-function formatDate(date: unknown): string {
-	if (!date) return "";
-	if (typeof date === "string") {
-		const d = new Date(date);
-		return isNaN(d.getTime()) ? date : d.toISOString();
-	}
-	if (date instanceof Date) {
-		return date.toISOString();
-	}
-	return String(date);
-}
-
-const articleDate = formatDate(updatedDate) || formatDate(publishDate);
-
+const articleDate = updatedDate?.toISOString() ?? publishDate.toISOString();
 const { headings } = await post.render();
 ---
 
 <BaseLayout meta={{ articleDate, description, ogImage: socialImage, title }}>
-	<div class="gap-x-10 lg:flex lg:items-start">
-		{!!headings.length && <TOC headings={headings} />}
-		<article class="flex-grow break-words" data-pagefind-body>
-			<div id="blog-hero"><Masthead content={post} /></div>
+	<ReadingEnhancements />
+	<div class="lg:flex lg:items-start lg:justify-center lg:gap-x-8">
+		<article class="w-full min-w-0 break-words lg:max-w-prose" data-pagefind-body>
+			{!!headings.length && <TOC headings={headings} variant="float" />}
+			<div id="blog-hero"><BlogHero content={post} /></div>
 			<div
-				class="prose prose-sm prose-cactus mt-12 prose-headings:font-semibold prose-headings:text-accent-2 prose-headings:before:absolute prose-headings:before:-ms-4 prose-headings:before:text-accent sm:prose-headings:before:content-['#'] sm:prose-th:before:content-none"
+				class="prose prose-sm prose-cactus mt-12 prose-headings:font-semibold prose-headings:text-accent-2 prose-headings:before:absolute prose-headings:before:-ms-4 prose-headings:before:text-accent prose-headings:before:content-['#'] prose-th:before:content-none"
 			>
 				<slot />
 				<WebMentions />
 			</div>
+			{
+				(newer || older) && (
+					<nav class="mt-16 flex flex-col gap-5 border-t border-textColor/10 pt-6 text-sm sm:flex-row sm:items-start sm:justify-between sm:gap-8">
+						{older ? (
+							<a
+								class="group min-w-0 border-s-2 border-textColor/15 ps-3 transition-colors hover:border-accent sm:max-w-[47%] sm:border-s-0 sm:ps-0"
+								href={`/posts/${older.slug}/`}
+							>
+								<div class="text-xs uppercase tracking-widest text-textColor/40">← Older</div>
+								<div class="mt-1.5 line-clamp-2 text-textColor/70 transition-colors group-hover:text-accent">
+									{older.data.title}
+								</div>
+							</a>
+						) : (
+							<span class="hidden sm:block" />
+						)}
+						{newer ? (
+							<a
+								class="group min-w-0 border-e-2 border-textColor/15 pe-3 text-end transition-colors hover:border-accent sm:max-w-[47%] sm:border-e-0 sm:pe-0"
+								href={`/posts/${newer.slug}/`}
+							>
+								<div class="text-xs uppercase tracking-widest text-textColor/40">Newer →</div>
+								<div class="mt-1.5 line-clamp-2 text-textColor/70 transition-colors group-hover:text-accent">
+									{newer.data.title}
+								</div>
+							</a>
+						) : (
+							<span class="hidden sm:block" />
+						)}
+					</nav>
+				)
+			}
 		</article>
+		{!!headings.length && <TOC headings={headings} />}
 	</div>
 	<button
 		aria-label="Back to Top"
@@ -69,36 +94,31 @@ const { headings } = await post.render();
 </BaseLayout>
 
 <script>
-	// Get all headings in the content
-	const contentHeadings = document.querySelectorAll(
-		"article h1, article h2, article h3, article h4"
-	);
-	// Get all links in the TOC
-	const tocLinks = document.querySelectorAll(".toc-link");
+	let observer: IntersectionObserver | undefined;
 
-	// Create an intersection observer
-	const observerOptions = {
-		root: null,
-		rootMargin: "0px 0px -40% 0px",
-		threshold: 1.0,
-	};
+	function initToTop() {
+		const scrollBtn = document.getElementById("to-top-btn") as HTMLButtonElement | null;
+		const targetHeader = document.getElementById("blog-hero") as HTMLDivElement | null;
+		// Not a post page (elements get swapped out by view transitions) — clean up.
+		if (!scrollBtn || !targetHeader) {
+			observer?.disconnect();
+			return;
+		}
 
-	const observer = new IntersectionObserver((entries) => {
-		entries.forEach((entry) => {
-			const id = entry.target.getAttribute("id");
-			const tocLink = document.querySelector(`.toc-link[href="#${id}"]`);
-
-			if (entry.isIntersecting) {
-				// Remove active class from all links
-				tocLinks.forEach((link) => link.classList.remove("active"));
-				// Add active class to current link
-				if (tocLink) tocLink.classList.add("active");
-			}
+		scrollBtn.addEventListener("click", () => {
+			document.documentElement.scrollTo({ behavior: "smooth", top: 0 });
 		});
-	}, observerOptions);
 
-	// Observe all headings
-	contentHeadings.forEach((heading) => {
-		observer.observe(heading);
-	});
+		observer?.disconnect();
+		observer = new IntersectionObserver((entries) => {
+			entries.forEach((entry) => {
+				// only show the scroll to top button when the heading is out of view
+				scrollBtn.dataset.show = (!entry.isIntersecting).toString();
+			});
+		});
+		observer.observe(targetHeader);
+	}
+
+	// Re-run after each view-transition navigation (also fires on first load).
+	document.addEventListener("astro:page-load", initToTop);
 </script>

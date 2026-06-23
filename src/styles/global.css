@@ -25,23 +25,375 @@
 		--theme-quote: 102deg 100% 86%;
 	}
 
-	.logo-large {
-		width: 8rem;
-		height: 14rem;
+	html {
+		@apply scroll-smooth;
+	}
+
+	body {
+		@apply mx-auto flex min-h-screen max-w-4xl flex-col bg-bgColor px-8 pt-16 font-mono text-sm font-normal text-textColor antialiased;
+		text-wrap: pretty;
+	}
+
+	/* Balance headings so the last line doesn't leave a lonely orphan word. */
+	h1,
+	h2,
+	h3,
+	h4 {
+		text-wrap: balance;
 	}
 }
 
-@layer components {
-	.toc-link {
-		@apply relative py-1 pl-4 transition-colors duration-200 hover:text-accent;
-	}
+/* ============================================================
+   Experience / micro-interactions
+   Ported in spirit from muhraufan.com — the feel, not the look.
+   ============================================================ */
 
-	.toc-link.active {
-		@apply text-accent;
-	}
+:root {
+	/* Stronger easing curves — the built-in CSS easings lack punch. */
+	--ease-out: cubic-bezier(0.23, 1, 0.32, 1);
+	--ease-in-out: cubic-bezier(0.77, 0, 0.175, 1);
+}
 
-	.toc-link.active::before {
-		content: "";
-		@apply absolute left-0 top-0 h-full w-0.5 bg-accent;
+/* Keyboard-only focus ring — mouse/touch users don't see rings on click. */
+:focus-visible {
+	outline: 2px solid hsl(var(--theme-link));
+	outline-offset: 3px;
+	border-radius: 2px;
+}
+
+/* ---- Staggered list entrance ----
+   Add `data-stagger` to a list; its direct children cascade in on load.
+   60ms between items reads as a subtle wave without feeling slow. */
+[data-stagger] > * {
+	opacity: 0;
+	transform: translateY(6px);
+	animation: list-enter 450ms var(--ease-out) forwards;
+}
+[data-stagger] > *:nth-child(1) {
+	animation-delay: 40ms;
+}
+[data-stagger] > *:nth-child(2) {
+	animation-delay: 100ms;
+}
+[data-stagger] > *:nth-child(3) {
+	animation-delay: 160ms;
+}
+[data-stagger] > *:nth-child(4) {
+	animation-delay: 220ms;
+}
+[data-stagger] > *:nth-child(5) {
+	animation-delay: 280ms;
+}
+[data-stagger] > *:nth-child(6) {
+	animation-delay: 340ms;
+}
+[data-stagger] > *:nth-child(7) {
+	animation-delay: 400ms;
+}
+[data-stagger] > *:nth-child(8) {
+	animation-delay: 460ms;
+}
+[data-stagger] > *:nth-child(n + 9) {
+	animation-delay: 520ms;
+}
+
+@keyframes list-enter {
+	to {
+		opacity: 1;
+		transform: translateY(0);
 	}
+}
+
+/* ---- Marker text selection ("Stabilo") ----
+   The SVG overlay is drawn by MarkerSelection.astro. Native selection is
+   hidden only once the JS boots (body.stabilo-ready) so no-JS / touch
+   visitors still get a real flat-yellow selection instead of an invisible
+   one that breaks the copy affordance. */
+#marker-overlay {
+	position: fixed;
+	inset: 0;
+	width: 100vw;
+	height: 100vh;
+	pointer-events: none;
+	z-index: 9998;
+	mix-blend-mode: multiply;
+	overflow: visible;
+}
+body.stabilo-ready ::selection {
+	background: transparent;
+}
+body.stabilo-ready ::-moz-selection {
+	background: transparent;
+}
+body:not(.stabilo-ready) ::selection {
+	background: rgba(255, 249, 93, 0.55);
+}
+/* In dark mode `multiply` makes the highlight vanish; switch to a plain
+   normal blend with a soft mint so the band stays visible without
+   bleaching the text. CSS wins over the rect's presentation attributes. */
+:root[data-theme="dark"] #marker-overlay {
+	mix-blend-mode: normal;
+}
+:root[data-theme="dark"] #marker-overlay rect {
+	fill: #6fbfa0;
+	opacity: 0.32;
+}
+
+/* ============================================================
+   Theme-toggle wavefront
+   The dark/light swap is wrapped in document.startViewTransition
+   (ThemeProvider.astro), which snapshots the old + new page. Here the
+   NEW snapshot is clipped to a radial mask that expands from the toggle
+   button — that growing transparent→opaque edge IS the wavefront.
+   Scoped under html.theme-vt so ordinary navigation is never affected.
+   --vt-x / --vt-y / --vt-r are set per-click in JS.
+   ============================================================ */
+@property --vt-mask-r {
+	syntax: "<length>";
+	inherits: true;
+	initial-value: 0px;
+}
+
+@supports (view-transition-name: none) {
+	html.theme-vt::view-transition-old(root),
+	html.theme-vt::view-transition-new(root) {
+		animation: none;
+		mix-blend-mode: normal;
+	}
+	html.theme-vt::view-transition-old(root) {
+		z-index: 1;
+	}
+	html.theme-vt::view-transition-new(root) {
+		z-index: 2;
+		animation: theme-wavefront 700ms cubic-bezier(0.22, 0.61, 0.36, 1) both;
+		-webkit-mask-image: radial-gradient(
+			circle var(--vt-mask-r, 0px) at var(--vt-x, 100%) var(--vt-y, 0%),
+			#000 calc(100% - 60px),
+			transparent 100%
+		);
+		mask-image: radial-gradient(
+			circle var(--vt-mask-r, 0px) at var(--vt-x, 100%) var(--vt-y, 0%),
+			#000 calc(100% - 60px),
+			transparent 100%
+		);
+	}
+	@keyframes theme-wavefront {
+		from {
+			--vt-mask-r: 0px;
+		}
+		to {
+			--vt-mask-r: var(--vt-r, 150vmax);
+		}
+	}
+}
+
+/* ---- Reduced motion ----
+   Kill keyframe animations and the wavefront, but leave short transitions
+   (color, opacity, press-scale) alone — zero motion is worse than a 140ms
+   press cue for comprehension. Users asked for reduced motion, not none. */
+@media (prefers-reduced-motion: reduce) {
+	[data-stagger] > * {
+		opacity: 1;
+		transform: none;
+		animation: none;
+	}
+	html.theme-vt::view-transition-new(root),
+	html.theme-vt::view-transition-old(root) {
+		animation: none !important;
+		mask-image: none !important;
+		-webkit-mask-image: none !important;
+	}
+	html.reveal-ready [data-reveal] {
+		opacity: 1 !important;
+		transform: none !important;
+		transition: none !important;
+	}
+	[data-magnetic] {
+		transform: none !important;
+	}
+}
+
+/* ---- Animated link underline ----
+   A line that wipes in from the left on hover/focus, instead of the instant
+   default. Used for nav links; prose links keep their .cactus-link style.
+   currentColor so it inherits the link colour in either theme. */
+.link-underline {
+	position: relative;
+}
+.link-underline::after {
+	content: "";
+	position: absolute;
+	inset-inline-start: 0;
+	bottom: -2px;
+	width: 100%;
+	height: 1.5px;
+	background: currentColor;
+	transform: scaleX(0);
+	transform-origin: left;
+	transition: transform 280ms var(--ease-out);
+}
+.link-underline:hover::after,
+.link-underline:focus-visible::after,
+.link-underline[aria-current="page"]::after {
+	transform: scaleX(1);
+}
+
+/* ---- Scroll reveal ----
+   Elements tagged [data-reveal] fade + rise in when scrolled into view.
+   Gated behind html.reveal-ready (added by ScrollReveal.astro) so that
+   no-JS visitors get the fully-visible content with zero hidden elements. */
+html.reveal-ready [data-reveal] {
+	opacity: 0;
+	transform: translateY(10px);
+	transition:
+		opacity 600ms var(--ease-out),
+		transform 600ms var(--ease-out);
+}
+html.reveal-ready [data-reveal].is-visible {
+	opacity: 1;
+	transform: none;
+}
+
+/* ---- Magnetic hover ----
+   The pull itself is applied as an inline transform by Magnetic.astro;
+   this just defines the spring-back easing when the pointer leaves. */
+[data-magnetic] {
+	transition: transform 350ms var(--ease-out);
+	will-change: transform;
+}
+
+/* ---- Wide body (opt-in via Base.astro `wide`) ----
+   Higher specificity than the base `body` @apply, so it widens the column
+   for sidebar layouts like the Library. */
+body.wide-layout {
+	max-width: 72rem;
+}
+
+/* ---- Library category chips (active state) ----
+   Base chips are solid accent (CategoryList); the active filter inverts to an
+   outlined look so the selected category reads clearly. */
+.lib-tag.is-active {
+	background: transparent;
+	box-shadow: inset 0 0 0 1px hsl(var(--theme-accent));
+	color: hsl(var(--theme-accent));
+}
+.lib-tag.is-active span {
+	color: hsl(var(--theme-accent) / 0.6);
+}
+
+/* ---- Library control-panel: stat cells (active status) ---- */
+.lib-stat.is-active {
+	background: hsl(var(--theme-accent));
+	color: hsl(var(--theme-bg));
+}
+.lib-stat.is-active .lib-stat-label {
+	color: hsl(var(--theme-bg) / 0.7);
+}
+
+/* ---- Collapsible timeline years (Highlights) ---- */
+.timeline-year > summary {
+	list-style: none;
+}
+.timeline-year > summary::-webkit-details-marker {
+	display: none;
+}
+.timeline-year[open] > summary .year-chevron {
+	transform: rotate(90deg);
+}
+
+/* ---- Reading experience (blog posts) ---- */
+/* Top scroll-progress bar (width driven by ReadingEnhancements.astro). */
+#reading-progress {
+	position: fixed;
+	inset: 0 0 auto 0;
+	height: 2px;
+	transform: scaleX(0);
+	transform-origin: left;
+	background: hsl(var(--theme-accent));
+	z-index: 9999;
+	transition: transform 80ms linear;
+}
+/* TOC links carry a transparent left bar so the active one can light up
+   without shifting the text. Active section (scrollspy) gets an accent bar. */
+.toc a {
+	border-inline-start: 2px solid transparent;
+	padding-inline-start: 0.6rem;
+	transition:
+		color 0.2s,
+		border-color 0.2s;
+}
+.toc a.active {
+	color: hsl(var(--theme-accent));
+	border-inline-start-color: hsl(var(--theme-accent));
+}
+/* "_Image Source: …_" lines styled as captions under images. */
+.img-caption {
+	margin-top: 0.5rem;
+	text-align: center;
+	font-size: 0.75rem;
+	color: hsl(var(--theme-text) / 0.5);
+}
+
+/* view toggle (grid / list) active button */
+.lib-view.is-active {
+	background: hsl(var(--theme-accent));
+	color: hsl(var(--theme-bg));
+}
+
+/* When active (accent fill), don't let the hover:text-accent utility repaint
+   the content accent-on-accent (which made it disappear). Keep it readable. */
+.lib-stat.is-active:hover,
+.lib-view.is-active:hover {
+	color: hsl(var(--theme-bg));
+}
+
+/* ---- Library list/index view ----
+   Toggled by adding .is-list to #lib-grid. Covers hide, each row becomes a
+   compact numbered line (number · title · author · status). The CSS counter
+   skips display:none rows, so numbering always reflects the filtered set. */
+#lib-grid.is-list {
+	display: block;
+	counter-reset: book;
+}
+#lib-grid.is-list .lib-item {
+	counter-increment: book;
+}
+#lib-grid.is-list .book-cover {
+	display: none;
+}
+#lib-grid.is-list .book-meta {
+	display: contents;
+}
+#lib-grid.is-list .lib-card-link {
+	display: grid;
+	grid-template-columns: 2.25rem 1fr auto auto;
+	align-items: baseline;
+	gap: 0.5rem 1rem;
+	border-top: 1px solid hsl(var(--theme-text) / 0.1);
+	padding: 0.55rem 0;
+}
+#lib-grid.is-list .lib-item:last-child .lib-card-link {
+	border-bottom: 1px solid hsl(var(--theme-text) / 0.1);
+}
+#lib-grid.is-list .lib-card-link::before {
+	content: counter(book, decimal-leading-zero);
+	font-variant-numeric: tabular-nums;
+	font-size: 0.75rem;
+	color: hsl(var(--theme-text) / 0.3);
+}
+#lib-grid.is-list .book-title {
+	margin: 0;
+	font-size: 0.875rem;
+	line-clamp: 1;
+	-webkit-line-clamp: 1;
+}
+#lib-grid.is-list .book-author {
+	margin: 0;
+	text-align: end;
+}
+#lib-grid.is-list .lib-card-link:hover .book-title {
+	color: hsl(var(--theme-accent));
+}
+#lib-grid.is-list .book-status {
+	display: inline;
 }

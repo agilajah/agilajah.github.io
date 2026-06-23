@@ -1,10 +1,11 @@
 ---
 import TimelineItem from "@/components/TimelineItem.astro";
+import TimelineYearGroup from "@/components/TimelineYearGroup.astro";
 import PageLayout from "@/layouts/Base.astro";
 
 const meta = {
 	title: "About",
-	description: "A brief story of everything",
+	description: "About Febi Agil — engineer, product builder, and co-founder & CTO of Elevarm.",
 };
 ---
 
@@ -23,19 +24,19 @@ const meta = {
 		<p>
 			I aspire to become an entrepreneur and make a positive impact with something I help create. In
 			high school, I ran a clothing 'business' with my friends, and in college, started my 'career'
-			as a freelance programmer providing solutions for universities, telco companies, oil & gas
-			companies, and SMEs. Basically, writing code for most of my life.
+			as a freelancer programmer providing solutions for a university, telco company, oil & gas
+			company, and SMEs. Basically writing code for most of my life.
 		</p>
 		<p>
 			I am very competitive - that's why I joined many hackathons and competitions: gratefully won
-			some, and lost more than I can count--such valuable learning experiences. All in all, I
-			learned many things along the way and met amazing people.
+			some, and lost more than I can count--such valuable learnings. All in all, I learned many
+			things along the way and met amazing people.
 		</p>
 		<h1 class="title">What do I do?</h1>
 		<p>I am a product builder at heart.</p>
 		<p>
 			Be it building solutions from well-defined problem statements the likes of in competitions,
-			hackathons, and projects, all the way to discovering problems and crafting solutions from the
+			hackathons, and projects all the way to discovering problems and crafting solutions from the
 			ground up with lots of uncertainty in startup settings.
 		</p>
 
@@ -58,17 +59,17 @@ const meta = {
 			</p>
 		</blockquote>
 		<p>
-			My passion for building tech products and aspiration to create long-lasting, impactful
-			businesses led me to build a startup called Neurafarm in my final year of college. I helped
-			build a small team and the product from scratch as CTO, and later on focused on strategy,
-			business, innovation, and making sure the company was well-funded, as part of my role as the
-			CEO until 2022.
+			My passion for building tech products, and aspiration to create long-lasting, impactful
+			businesses have led me to build a startup called Neurafarm in my final year in college. I
+			helped build a small team and the product from scratch as CTO, and later on focused on
+			strategy, business, innovation, and making sure the company is well-funded, as part of my role
+			as the CEO until 2022.
 		</p>
 		<p>
 			My time there was amazing and full of challenges: deploying human-centric digital solutions to
 			tens of thousands of smallholder farmers, and building an AI & data-enabled ecosystem to
-			improve overall farmers' productivity, while marshaling many stakeholders to support our
-			mission. We managed to get support (and get funded) from the Indonesian Ministry of Research,
+			improve overall farmers' productivity, while marching many stakeholders to support our
+			mission. We've manage to get support (and get funded) from Indonesia Ministry of Research,
 			Singapore International Foundation, Global Green Growth Institute, Cisco, and many others. In
 			2020, Neurafarm was featured in Temasek Review 2020.
 		</p>
@@ -81,7 +82,7 @@ const meta = {
 		<p>
 			I really enjoy working on complex strategic problems involving software engineering, design,
 			and machine learning, especially in high-impact and multidimensional fields like agriculture
-			and healthcare and energy.
+			and healthcare.
 		</p>
 
 		<p>I love to talk to people about product, technology, and how we can create social impacts.</p>
@@ -95,297 +96,227 @@ const meta = {
 			To reach me, write to febiagil AT gmail.com. You can write to me in English or Bahasa
 			Indonesia (preferred, if you know the language).
 		</p>
-
+		<!-- <div class="flex justify-center">
+			<Image
+				src={aboutImg}
+				alt="A cartoon cactus looking at the 'Astro.build' logo"
+				loading="eager"
+			/>
+		</div> -->
 		<h1 class="title">Highlights</h1>
 		<p>Here is a glimpse of my journey so far:</p>
 
-		<div
-			class="mb-4 rounded-lg border border-gray-100 bg-gray-50 p-5 dark:border-gray-700 dark:bg-gray-800"
-		>
-			<time class="text-xl font-semibold text-gray-900 dark:text-white">2022</time>
-			<ol class="relative mt-4 border-l border-gray-200 dark:border-gray-700">
-				<TimelineItem
+		<div class="relative ms-1 mt-8 border-s-2 border-textColor/25 ps-8">
+			<TimelineYearGroup year="2022" count={1} first open>
+<TimelineItem
 					eventDate="22 February 2022"
 					title="Co-Founded Elevarm and became its CTO"
-					as="li"
 					withDesc
 					linkSource="https://elevarm.com/"
 				/>
-			</ol>
-		</div>
-
-		<div
-			class="mb-4 rounded-lg border border-gray-100 bg-gray-50 p-5 dark:border-gray-700 dark:bg-gray-800"
-		>
-			<time class="text-xl font-semibold text-gray-900 dark:text-white">2021</time>
-			<ol class="relative mt-4 border-l border-gray-200 dark:border-gray-700">
-				<TimelineItem
+			</TimelineYearGroup>
+			<TimelineYearGroup year="2021" count={1}>
+<TimelineItem
 					eventDate="15 July 2021"
 					title="Neurafarm is featured in Temasek Review 2021"
-					as="li"
 					withDesc
 					linkSource="https://tr21.temasekreview.com.sg/"
 				/>
-			</ol>
-		</div>
-
-		<div
-			class="mb-4 rounded-lg border border-gray-100 bg-gray-50 p-5 dark:border-gray-700 dark:bg-gray-800"
-		>
-			<time class="text-xl font-semibold text-gray-900 dark:text-white">2020</time>
-			<ol class="relative mt-4 border-l border-gray-200 dark:border-gray-700">
-				<TimelineItem
+			</TimelineYearGroup>
+			<TimelineYearGroup year="2020" count={6}>
+<TimelineItem
 					eventDate="11 March 2020"
-					title="Neurafarm is selected as Top 50 in Cisco Global Problem Solver Challenge 2020"
-					as="li"
+					title="Neurafarm is selected as Top 50 at Cisco Global Problem Solver Challenge 2020."
 				/>
 				<TimelineItem
 					eventDate="20 February 2020"
-					title="Selected for the YSE (Young Social Entrepreneurs) 2020 Workshop in Singapore, an event held by Singapore International Foundation"
-					as="li"
+					title="Selected for the YSE (Young Social Entrepreneurs) 2020 Workshop in Singapore. An event held by Singapore International Foundation."
 				/>
 				<TimelineItem
 					eventDate="19 February 2020"
-					title="Neurafarm is selected as Top 10 (out of 5200) in Thought For Food Challenge 2019/2020"
-					as="li"
+					title="Neurafarm is selected as Top 10 (out of 5200) in Thought For Food Challenge 2019/2020."
 				/>
 				<TimelineItem
 					eventDate="17 January 2020"
-					title="Neurafarm joins TINC Program Batch 4 and will be accelerated under Telkomsel Innovation Center"
-					as="li"
+					title="Neurafarm joins TINC Program Batch 4 and will be accelerated under Telkomsel Innovation Center."
 				/>
 				<TimelineItem
 					eventDate="15 January 2020"
-					title="Neurafarm becomes Finalist of ASEAN Rice Bowl Startup Awards in Kuala Lumpur, Malaysia"
-					as="li"
+					title="Neurafarm became Finalist of ASEAN Rice Bowl Startup Awards in Kuala Lumpur, Malaysia."
 				/>
 				<TimelineItem
 					eventDate="13 January 2020"
-					title="Neurafarm is selected as Elite 150 Team for the 10th Lee Kuan Yew Global Business Plan Competition"
-					as="li"
+					title="Neurafarm is selected as Elite 150 Team for the 10th Lee Kuan Yew Global Business Plan Competition."
 				/>
-			</ol>
-		</div>
-
-		<div
-			class="mb-4 rounded-lg border border-gray-100 bg-gray-50 p-5 dark:border-gray-700 dark:bg-gray-800"
-		>
-			<time class="text-xl font-semibold text-gray-900 dark:text-white">2019</time>
-			<ol class="relative mt-4 border-l border-gray-200 dark:border-gray-700">
-				<TimelineItem
+			</TimelineYearGroup>
+			<TimelineYearGroup year="2019" count={12}>
+<TimelineItem
 					eventDate="24 December 2019"
-					title="Spoke/facilitated at CodeNomad by Code For Asia Society Ltd in Bali"
-					as="li"
+					title="To speak/facilitate at CodeNomad by Code For Asia Society Ltd in Bali."
 				/>
 				<TimelineItem
 					eventDate="14 December 2019"
-					title="Spoke at BukaMeetup x NeurIPS 'Democratizing State-of-the-Art AI' at East CC Auditorium, Bandung Institute of Technology"
-					as="li"
+					title="To speak at BukaMeetup x NeurIPS 'Democratizing State-of-the-Art AI' at East CC Auditorium, Bandung Institute of Technology"
 				/>
 				<TimelineItem
 					eventDate="7 December 2019"
 					title="Neurafarm became Top 25 of the Nextdev 2019"
-					as="li"
 				/>
 				<TimelineItem
 					eventDate="16 October 2019"
 					title="Neurafarm wins 3rd Place in Create@ Alibaba Cloud Startup Contest 2019"
-					as="li"
 					withDesc
 					linkSource=""
 				/>
 				<TimelineItem
 					eventDate="16 October 2019"
-					title="Neurafarm is awarded as the Best AgTech/FoodTech Company in Indonesia by ASEAN Ricebowl Startup Awards"
-					as="li"
+					title="Neurafarm is awarded as the Best AgTech/FoodTech Company in Indonesia by ASEAN Ricebowl Startup Awards."
 					withDesc
 					linkSource=""
 				/>
 				<TimelineItem
 					eventDate="16 October 2019"
-					title="Neurafarm graduates from Plug and Play Accelerator Batch 5 Indonesia"
-					as="li"
+					title="Neurafarm is graduated from Plug and Play Accelerator Batch 5 Indonesia."
 					withDesc
 					linkSource=""
 				/>
 				<TimelineItem
 					eventDate="9 May 2019"
-					title="Neurafarm is selected for The Nextdev 2019 and wins Golden Ticket for The Nexdev Summit 2019"
-					as="li"
+					title="Neurafarm is selected for The Nextdev 2019 and wins Golden Ticket for The Nexdev Summit 2019."
 				/>
 				<TimelineItem
 					eventDate="4 April 2019"
-					title="Neuratraffic is shortlisted for Bandung Datathon 2019, an event organized by Bandung City Government in collaboration with the City of Melbourne, Bloomberg Philanthropies Initiative for Global Road Safety (BIGRS), School of Business and Management ITB, The Greater Hub, and Go-Jek"
-					as="li"
+					title="Neuratraffic is shortlisted for Bandung Datathon 2019, an event organized by Bandung City Government in collaboration with the City of Melbourne, Bloomberg Philantrophies Initiative for Global Road Safety (BIGRS), School of Business and Management ITB, The Greater Hub, and Go-Jek."
 				/>
 				<TimelineItem
 					eventDate="28 Mar 2019"
-					title="Selected for the ChangemakerXchange in China on May 24th-28th 2019. ChangemakerXchange is a global collaboration platform for young social innovators to connect and develop cross-border collaborations, co-created by Ashoka and Robert Bosch Stiftung"
-					as="li"
+					title="Got selected for the ChangemakerXchange in China on May 24th-28th 2019. ChangemakerXchange is a global collaboration platform for young social innovators to connect and develop cross-border collaborations, co-created by Ashoka and Robert Bosch Stiftung."
 				/>
 				<TimelineItem
 					eventDate="20 Feb 2019"
-					title="Neurafarm selected as Top 10 Indonesia in ALIPAY-NUS Enterprise Social Innovation Challenge"
-					as="li"
+					title="Neurafarm got selected as Top 10 Indonesia in ALIPAY-NUS Enterprise Social Innovation Challenge."
 				/>
 				<TimelineItem
 					eventDate="1 Feb 2019"
-					title="Represented Neurafarm in Global Social Venture Challenge - Regional Round in Bangkok, Thailand (21-23 February 2019). Update: Placed in Top 11"
-					as="li"
+					title="Will represent Neurafarm in Global Social Venture Challenge - Regional Round in Bangkok, Thailand (21-23 February 2019). **Update: ** Came out as Top 11"
 				/>
 				<TimelineItem
 					eventDate="10 Jan 2019"
-					title="Appointed as the new Chief Executive Officer of Neurafarm. The previous CEO will serve in COO role"
-					as="li"
+					title="Appointed as the new Chief Executive Officer of Neurafarm. The previous CEO will serve in COO role."
 				/>
-			</ol>
-		</div>
-
-		<div
-			class="mb-4 rounded-lg border border-gray-100 bg-gray-50 p-5 dark:border-gray-700 dark:bg-gray-800"
-		>
-			<time class="text-xl font-semibold text-gray-900 dark:text-white">2018</time>
-			<ol class="relative mt-4 border-l border-gray-200 dark:border-gray-700">
-				<TimelineItem
+			</TimelineYearGroup>
+			<TimelineYearGroup year="2018" count={16}>
+<TimelineItem
 					eventDate="2 October 2018"
-					title="Neurafarm wins 2nd place in Startup Istanbul 2018 Competition"
-					as="li"
+					title="Neurafarm wins 2nd place in Startup Istanbul 2018 Competition."
 					withDesc
 					linkSource=""
 				/>
 				<TimelineItem
 					eventDate="27 September 2018"
-					title="Represented Neurafarm in the Swiss Innovation Challenge 2018 in Basel, Switzerland"
-					as="li"
+					title="Will represent Neurafarm in the Swiss Innvoation Challenge 2018 in Basel, Switzerland."
 					withDesc
 					linkSource=""
 				/>
 				<TimelineItem
 					eventDate="19 September 2018"
-					title="Neurafarm joins NVIDIA Inception Program"
-					as="li"
+					title="Neurafarm joins NVIDIA Inception Program."
 				/>
 				<TimelineItem
 					eventDate="8 September 2018"
-					title="Neurafarm selected as one of the top 100 startups among 93,200 startup applications from 140 countries for Startup Istanbul 2018 Challenge on 19-22 October, in Istanbul"
-					as="li"
+					title="Neurafarm got selected as one of the top 100 startups among 93.200 startup applications from 140 countries all over the world for Startup Istanbul 2018 Challenge to be on 19-22 October, in the center of the world, Istanbul."
 				/>
 				<TimelineItem
 					eventDate="28 August 2018"
-					title="Selected as top 15 participants of The Falling Walls Lab Jakarta, an event hosted by the German Academic Exchange Service (DAAD) in cooperation with the Faculty of Administrative Science Universitas Indonesia and supported by EURAXESS, the Federal Foreign Office of Germany and the Falling Walls Foundation. (Presented Dr. Tania at Universitas Indonesia on 13th September)"
-					as="li"
+					title="Got selected as top 15 participants of The Falling Walls Lab Jakarta, an event hosted by the German Academic Exchange Service (DAAD) in cooperation with the Faculty of Administrative Science Universitas Indonesia and is supported by EURAXESS, the Federal Foreign Office of Germany and the Falling Walls Foundation. (Will be presenting Dr. Tania at Universitas Indonesia on 13th September."
 				/>
 				<TimelineItem
-					eventDate="9 August 2018"
-					title="Neurafarm wins Swiss Innovation Challenge Asia-Indonesia 2018. An innovation competition held by University of Applied Sciences and Arts Northwestern Switzerland in collaboration with School of Business and Management, Bandung Institute of Technology (ITB)"
-					as="li"
+					eventDate="9 August 2019"
+					title="Neurafarm wins Swiss Innovation Challenge Asia-Indonesia 2018. An innovation competition held by University of Applied Sciences and Arts Northwestern Switzerland in collaboration with School of Business and Management, Bandung Institute of Technology (ITB)."
 				/>
 				<TimelineItem
 					eventDate="6 August 2018"
-					title="Received Ganesha Karya Award. An award presented by Bandung Institute of Technology (ITB) to recognize achievement and excellence in innovation"
-					as="li"
+					title="Received Ganesha Karya Award. It is an award presented by Bandung Institute of Technology (ITB) to recognize achievement and excellence in innovation."
 				/>
 				<TimelineItem
 					eventDate="31 July 2018"
-					title="Canceled Summer Internship at Microsoft Indonesia"
-					as="li"
+					title="Canceled my Summer Internship at Microsoft Indonesia."
 				/>
 				<TimelineItem
 					eventDate="7 May 2018"
-					title="Invited to Asia MSP Summit in Taipei, Taiwan (June). Thank you, Microsoft!"
-					as="li"
+					title="Got invited to Asia MSP Summit in Taipei, Taiwan (June). Thank you, Microsoft!"
 				/>
 				<TimelineItem
 					eventDate="2 May 2018"
-					title="Selected as a Software Engineer Intern at Microsoft Indonesia"
-					as="li"
+					title="Got selected as a Software Engineer Intern at Microsoft Indonesia."
 				/>
 				<TimelineItem
 					eventDate="16 March 2018"
-					title="Taleus proceeded to Microsoft Imagine Cup 2018 Asia-Pacific Finals after receiving a wild card"
-					as="li"
+					title="Taleus proceeded to Microsoft Imagine Cup 2018 Asia-Pacific Finals after got a wild card."
 					withDesc
 					linkSource=""
 				/>
 				<TimelineItem
 					eventDate="13 March 2018"
-					title="Neurafarm's product - Dr. Tania received the Gold Prize in World Invention and Technology Expo (WINTEX) 2018 at Bandung Institute of Technology"
-					as="li"
+					title="Neurafarm's product - Dr. Tania received the Gold Prize in World Invention and Technology Expo (WINTEX) 2018 in Bandung Insitute of Technology."
 					withDesc
 					linkSource=""
 				/>
 				<TimelineItem
 					eventDate="2 March 2018"
-					title="Taleus chosen as finalist of Microsoft Imagine Cup 2018 Indonesia"
-					as="li"
+					title="Taleus was chosen as the finalist of Microsoft Imagine Cup 2018 Indonesia"
 					withDesc
 					linkSource=""
 				/>
 				<TimelineItem
 					eventDate="20 February 2018"
-					title="Taleus selected as semi-finalist of Microsoft Imagine Cup 2018 Indonesia"
-					as="li"
+					title="Taleus was selected as the semi-finalist of Microsoft Imagine Cup 2018 Indonesia."
 					withDesc
 					linkSource=""
 				/>
 				<TimelineItem
 					eventDate="17 February 2018"
-					title="Neurafarm awarded 3rd Place in Business Plan Competition at the 7th University of Indonesia Studentpreneurs"
-					as="li"
+					title="Neurafarm got awarded as the 3rd Winner of Business Plan Competition in the 7th University of Indonesia Studentpreneurs."
 				/>
 				<TimelineItem
 					eventDate="5 February 2018"
-					title="Accepted as Part-Time (Machine Learning) Engineer at Prosa.ai"
-					as="li"
+					title="Accepted as Part Time (Machine Learning) Engineer at Prosa.ai."
 				/>
-			</ol>
-		</div>
-
-		<div
-			class="mb-4 rounded-lg border border-gray-100 bg-gray-50 p-5 dark:border-gray-700 dark:bg-gray-800"
-		>
-			<time class="text-xl font-semibold text-gray-900 dark:text-white">2017</time>
-			<ol class="relative mt-4 border-l border-gray-200 dark:border-gray-700">
-				<TimelineItem
+			</TimelineYearGroup>
+			<TimelineYearGroup year="2017" count={7}>
+<TimelineItem
 					eventDate="23 November 2017"
-					title="Awarded 2nd Place in Indonesia Developer Summit Hackathon"
-					as="li"
+					title="Awarded as the 2nd Winner in Indonesia Developer Summit Hackathon."
 				/>
 				<TimelineItem
 					eventDate="19 November 2017"
-					title="Awarded Best Student (Team) in Facebook Developer Circle: Bandung Hackathon"
-					as="li"
+					title="Awarded as the Best Student (Team) in Facebook Developer Circle: Bandung Hackathon."
 				/>
 				<TimelineItem
 					eventDate="4 November 2017"
-					title="Awarded 1st Place in Data Mining Competition at Gemastik 2017, held by Indonesia Ministry of Research, Technology, and Higher Education"
-					as="li"
+					title="Awarded as the 1st Winner of Data Mining Competition in Gemastik 2017. Held by Indonesia Ministry of Research, Technology, and Higher Education."
 					withDesc
 					linkSource=""
 				/>
 				<TimelineItem
 					eventDate="13 August 2017"
-					title="Co-founded Neurafarm and became its Chief Technology Officer"
-					as="li"
+					title="Co-founded Neurafarm and became its Chief Technology Officer."
 				/>
 				<TimelineItem
 					eventDate="16 May 2017"
-					title="Accepted as Software Engineer Intern at Kata.ai"
-					as="li"
+					title="Accepted as Software Engineer Intern at Kata.ai."
 				/>
 				<TimelineItem
 					eventDate="8 March 2017"
-					title="Our LINE Bot, Leptons, chosen as Finalist for LINE Developer Challenge Indonesia 2017"
-					as="li"
+					title="Our LINE Bot, Leptons, chosen as Finalist for Line Developer Challenge Indonesia 2017."
 				/>
 				<TimelineItem
 					eventDate="26 November 2017"
-					title="Bees team wins Kurio x UMN Hackathon 2016 with hoaxbuster project"
-					as="li"
+					title="Bees team wins Kurio x UMN Hackathon 2016 with hoaxbuster project."
 					withDesc
 					linkSource=""
 				/>
-			</ol>
+			</TimelineYearGroup>
 		</div>
 	</div>
 </PageLayout>

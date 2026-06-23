@@ -3,7 +3,15 @@ import type { AstroExpressiveCodeOptions } from "astro-expressive-code";
 
 export const siteConfig: SiteConfig = {
 	// Used as both a meta property (src/components/BaseHead.astro L:31 + L:49) & the generated satori png (src/pages/og-image/[slug].png.ts)
-	author: "Febi Agil Ifdillah",
+	author: "Febi Agil",
+	// Meta property used to construct the meta title property, found in src/components/BaseHead.astro L:11
+	title: "Febi Agil - Hello World!",
+	// Meta property used as the default description meta property
+	description: "Febi's personal blog",
+	// HTML lang property, found in src/layouts/Base.astro L:18
+	lang: "en-GB",
+	// Meta property, found in src/components/BaseHead.astro L:42
+	ogLocale: "en_GB",
 	// Date.prototype.toLocaleDateString() parameters, found in src/utils/date.ts.
 	date: {
 		locale: "en-GB",
@@ -13,56 +21,35 @@ export const siteConfig: SiteConfig = {
 			year: "numeric",
 		},
 	},
-	// Meta property used as the default description meta property
-	description: "TBD",
-	// HTML lang property, found in src/layouts/Base.astro L:18
-	lang: "en-GB",
-	// Meta property, found in src/components/BaseHead.astro L:42
-	ogLocale: "en_GB",
-	// Option to sort posts by updatedDate if set to true (if property exists). Default (false) will sort by publishDate
-	sortPostsByUpdatedDate: false,
-	// Meta property used to construct the meta title property, found in src/components/BaseHead.astro L:11
-	title: "Febi Agil's Blog",
 	webmentions: {
-		// Webmention.io API endpoint. Get your own here: https://webmention.io/, and follow this blog post: https://astro-cactus.chriswilliams.dev/posts/webmentions/
 		link: "https://webmention.io/astro-cactus.chriswilliams.dev/webmention",
 	},
 };
 
 // Used to generate links in both the Header & Footer.
-export const menuLinks: { path: string; title: string }[] = [
+export const menuLinks: Array<{ title: string; path: string }> = [
 	{
-		path: "/",
 		title: "Home",
+		path: "/",
 	},
 	{
-		path: "/readme/",
 		title: "Readme",
+		path: "/readme",
 	},
 	{
-		path: "/posts/",
 		title: "Blog",
+		path: "/posts",
 	},
 	{
-		path: "/books/",
 		title: "Bookshelf",
+		path: "/books",
 	},
 ];
 
 // https://expressive-code.com/reference/configuration/
 export const expressiveCodeOptions: AstroExpressiveCodeOptions = {
-	styleOverrides: {
-		borderRadius: "4px",
-		codeFontFamily:
-			'ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;',
-		codeFontSize: "0.875rem",
-		codeLineHeight: "1.7142857rem",
-		codePaddingInline: "1rem",
-		frames: {
-			frameBoxShadowCssValue: "none",
-		},
-		uiLineHeight: "inherit",
-	},
+	// One dark, one light theme => https://expressive-code.com/guides/themes/#available-themes
+	themes: ["dracula", "github-light"],
 	themeCssSelector(theme, { styleVariants }) {
 		// If one dark and one light theme are available
 		// generate theme CSS selectors compatible with cactus-theme dark mode switch
@@ -74,7 +61,17 @@ export const expressiveCodeOptions: AstroExpressiveCodeOptions = {
 		// return default selector
 		return `[data-theme="${theme.name}"]`;
 	},
-	// One dark, one light theme => https://expressive-code.com/guides/themes/#available-themes
-	themes: ["dracula", "github-light"],
 	useThemedScrollbars: false,
+	styleOverrides: {
+		frames: {
+			frameBoxShadowCssValue: "none",
+		},
+		uiLineHeight: "inherit",
+		codeFontSize: "0.875rem",
+		codeLineHeight: "1.7142857rem",
+		borderRadius: "4px",
+		codePaddingInline: "1rem",
+		codeFontFamily:
+			'ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;',
+	},
 };

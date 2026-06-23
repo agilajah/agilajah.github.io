@@ -38,8 +38,36 @@
 	document.addEventListener("astro:after-swap", () => setTheme(getUserPref()));
 
 	// listen for theme-change custom event, fired in src/components/ThemeToggle.astro
+	// Wrap the swap in document.startViewTransition so the CSS in global.css
+	// (html.theme-vt::view-transition-new) can animate a wavefront that expands
+	// from the toggle button. Falls back to an instant swap when the API or
+	// coords are missing, or when the visitor prefers reduced motion.
+	function runThemeChange(newTheme, coords) {
+		const root = document.documentElement;
+		const reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+		if (!document.startViewTransition || reduce || !coords) {
+			setTheme(newTheme);
+			return;
+		}
+		const { x, y } = coords;
+		// Radius needed to cover the furthest corner from the origin.
+		const r = Math.hypot(Math.max(x, innerWidth - x), Math.max(y, innerHeight - y));
+		root.style.setProperty("--vt-x", `${x}px`);
+		root.style.setProperty("--vt-y", `${y}px`);
+		root.style.setProperty("--vt-r", `${r}px`);
+		// The wavefront is pure decoration — never let it block the actual swap.
+		try {
+			root.classList.add("theme-vt");
+			const transition = document.startViewTransition(() => setTheme(newTheme));
+			transition.finished.finally(() => root.classList.remove("theme-vt"));
+		} catch (err) {
+			root.classList.remove("theme-vt");
+			setTheme(newTheme);
+		}
+	}
+
 	document.addEventListener("theme-change", (e) => {
-		setTheme(e.detail.theme);
+		runThemeChange(e.detail.theme, e.detail.coords);
 	});
 
 	// listen for prefers-color-scheme change.

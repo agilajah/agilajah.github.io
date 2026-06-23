@@ -1,25 +1,18 @@
 ---
-import { getFormattedDate } from "@/utils/date";
 import type { HTMLAttributes } from "astro/types";
 
+import { getFormattedDate } from "@/utils";
+
 type Props = HTMLAttributes<"time"> & {
-	date: Date | string;
+	date: Date;
 	dateTimeOptions?: Intl.DateTimeFormatOptions;
 };
 
 const { date, dateTimeOptions, ...attrs } = Astro.props;
 
-function ensureDate(date: Date | string): Date {
-	if (date instanceof Date) {
-		return date;
-	}
-	const parsedDate = new Date(date);
-	return isNaN(parsedDate.getTime()) ? new Date() : parsedDate;
-}
-
-const dateObject = ensureDate(date);
-const postDate = getFormattedDate(dateObject, dateTimeOptions);
-const isoString = dateObject.toISOString();
+const postDate = getFormattedDate(date, dateTimeOptions);
 ---
 
-<time datetime={isoString} {...attrs}>{postDate}</time>
+<time datetime={date.toISOString()} {...attrs}>
+	{postDate}
+</time>

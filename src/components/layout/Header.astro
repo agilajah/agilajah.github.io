@@ -1,5 +1,6 @@
 ---
 import { menuLinks } from "@/site-config";
+
 import Search from "../Search.astro";
 import ThemeToggle from "../ThemeToggle.astro";
 
@@ -10,25 +11,15 @@ const url = new URL(Astro.request.url);
 	<div class="flex sm:flex-col">
 		<a
 			aria-current={url.pathname === "/" ? "page" : false}
-			class="inline-flex items-center grayscale hover:filter-none sm:relative sm:inline-block"
+			class="group/logo inline-flex items-center sm:relative sm:inline-block"
 			href="/"
 		>
-			<svg
-				aria-hidden="true"
-				class="me-3 h-12 w-8 sm:absolute sm:start-[-5.5rem] sm:me-0 sm:h-20 sm:w-16"
-				fill="none"
-				focusable="false"
-				viewBox="0 0 136 240"
-				xmlns="http://www.w3.org/2000/svg"
+			<span
+				class="me-3 flex h-9 w-9 items-center justify-center rounded-md border-2 border-textColor/40 text-lg font-bold leading-none text-accent-2 transition-colors group-hover/logo:border-accent group-hover/logo:text-accent sm:absolute sm:start-[-4.5rem] sm:me-0 sm:h-12 sm:w-12 sm:text-2xl"
+				data-magnetic
 			>
-				<title>Logo</title>
-				<rect x="30" y="2" width="115" height="172" stroke="#6F6F6F" stroke-width="4"></rect>
-				<path
-					fill-rule="evenodd"
-					clip-rule="evenodd"
-					d="M45 16H163V192H45V16ZM80.7035 53.3546L81.7427 52.4019C82.6649 51.5566 83.8704 51.0877 85.1214 51.0877H134.166C138.621 51.0877 140.852 56.4734 137.702 59.6232L136.749 60.5759C135.811 61.5136 134.54 62.0404 133.214 62.0404H84.0821C79.522 62.0404 77.342 56.4359 80.7035 53.3546ZM73.5514 73.6783V100.851C73.5514 103.612 75.7899 105.851 78.5514 105.851H126.576C127.902 105.851 129.173 105.324 130.111 104.387L132.059 102.438C135.209 99.2884 132.978 93.9027 128.524 93.9027H93.8187C91.0573 93.9027 88.8187 91.6641 88.8187 88.9027V73.6784C88.8187 70.9169 86.5801 68.6783 83.8187 68.6783H78.5514C75.7899 68.6783 73.5514 70.9169 73.5514 73.6783ZM73.5514 118.817V144.56C73.5514 149.015 78.9371 151.246 82.0869 148.096L87.3543 142.829C88.2919 141.891 88.8187 140.619 88.8187 139.293V118.817C88.8187 116.055 86.5801 113.817 83.8187 113.817H78.5514C75.7899 113.817 73.5514 116.055 73.5514 118.817Z"
-					fill="#6F6F6F"></path>
-			</svg>
+				F
+			</span>
 			<span class="text-xl font-bold sm:text-2xl">Febi Agil</span>
 		</a>
 		<nav
@@ -40,7 +31,7 @@ const url = new URL(Astro.request.url);
 				menuLinks.map((link) => (
 					<a
 						aria-current={url.pathname === link.path ? "page" : false}
-						class="px-4 py-4 underline-offset-2 sm:py-0 sm:hover:underline"
+						class="link-underline px-4 py-4 sm:py-0"
 						data-astro-prefetch
 						href={link.path}
 					>
@@ -94,20 +85,28 @@ const url = new URL(Astro.request.url);
 </header>
 
 <script>
-	import { toggleClass } from "@/utils/domElement";
+	// Leaf import (not the @/utils barrel) so this client script doesn't pull
+	// server-only utils + CJS deps into the browser bundle.
+	import { toggleClass } from "../../utils/domElement";
 
 	class MobileNavBtn extends HTMLElement {
-		#menuOpen: boolean = false;
+		private headerEl: HTMLElement;
+		private menuOpen: boolean;
+		private mobileButtonEl: HTMLButtonElement;
 
-		connectedCallback() {
-			const headerEl = document.getElementById("main-header")!;
-			const mobileButtonEl = this.querySelector<HTMLButtonElement>("button");
+		toggleMobileMenu = () => {
+			toggleClass(this.headerEl, "menu-open");
+			this.menuOpen = !this.menuOpen;
+			this.mobileButtonEl.setAttribute("aria-expanded", this.menuOpen.toString());
+		};
 
-			mobileButtonEl?.addEventListener("click", () => {
-				if (headerEl) toggleClass(headerEl, "menu-open");
-				this.#menuOpen = !this.#menuOpen;
-				mobileButtonEl.setAttribute("aria-expanded", this.#menuOpen.toString());
-			});
+		constructor() {
+			super();
+			this.headerEl = document.getElementById("main-header")!;
+			this.mobileButtonEl = this.querySelector("button") as HTMLButtonElement;
+			this.menuOpen = false;
+
+			this.mobileButtonEl.addEventListener("click", this.toggleMobileMenu);
 		}
 	}
 
