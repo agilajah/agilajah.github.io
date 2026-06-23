@@ -1,0 +1,71 @@
+---
+// Stabilo-style highlighter for text selection.
+// Native ::selection only accepts a flat colour, so we hide it (once this
+// script boots) and paint an SVG overlay that tracks the selection rects —
+// mix-blend-mode: multiply makes it read like real marker ink. Styling lives
+// in src/styles/global.css (#marker-overlay + body.stabilo-ready).
+---
+
+<svg id="marker-overlay" aria-hidden="true" focusable="false" transition:persist></svg>
+
+<script is:inline>
+	(function () {
+		// Guard so listeners attach only once even if this inline script is
+		// re-evaluated after an Astro view-transition swap.
+		if (window.__stabiloInit) return;
+		if (!window.getSelection || !document.createElementNS) return;
+
+		// Honour reduced-motion by simply not enabling the fancy overlay — the
+		// no-JS flat-yellow native selection fallback (in CSS) takes over.
+		if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
+		window.__stabiloInit = true;
+
+		const SVGNS = "http://www.w3.org/2000/svg";
+		let frame = 0;
+
+		// Re-query each draw: the overlay uses transition:persist, but body is
+		// swapped on navigation so we never cache a stale node.
+		const getOverlay = () => document.getElementById("marker-overlay");
+		const markReady = () => document.body && document.body.classList.add("stabilo-ready");
+
+		function draw() {
+			frame = 0;
+			const overlay = getOverlay();
+			if (!overlay) return;
+			while (overlay.firstChild) overlay.removeChild(overlay.firstChild);
+
+			const sel = window.getSelection();
+			if (!sel || sel.isCollapsed || sel.rangeCount === 0) return;
+
+			for (let i = 0; i < sel.rangeCount; i++) {
+				const rects = sel.getRangeAt(i).getClientRects();
+				for (let j = 0; j < rects.length; j++) {
+					const r = rects[j];
+					if (r.width < 1 || r.height < 1) continue;
+					// Trim a hair off the top so the ink sits over the text body,
+					// not the line gap above it — closer to a real marker stroke.
+					const pad = Math.min(2, r.height * 0.08);
+					const rect = document.createElementNS(SVGNS, "rect");
+					rect.setAttribute("x", r.left);
+					rect.setAttribute("y", r.top + pad);
+					rect.setAttribute("width", r.width);
+					rect.setAttribute("height", r.height - pad);
+					rect.setAttribute("rx", "2");
+					rect.setAttribute("fill", "#fff95d");
+					rect.setAttribute("opacity", "0.55");
+					overlay.appendChild(rect);
+				}
+			}
+		}
+
+		function schedule() {
+			if (!frame) frame = requestAnimationFrame(draw);
+		}
+
+		document.addEventListener("selectionchange", schedule);
+		window.addEventListener("scroll", schedule, { passive: true });
+		window.addEventListener("resize", schedule);
+		document.addEventListener("astro:page-load", markReady);
+		markReady();
+	})();
+</script>
