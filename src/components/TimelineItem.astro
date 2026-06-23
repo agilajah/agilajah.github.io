@@ -1,7 +1,9 @@
 ---
-import type { IElement } from "@/data/shared";
+import type { HTMLTag } from "astro/types";
 
-interface Props extends IElement {
+interface Props {
+	as?: HTMLTag;
+	desc?: string;
 	eventDate?: any;
 	title?: string;
 	withDesc?: boolean;
