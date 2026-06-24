@@ -88,12 +88,12 @@ const statCell =
 				<button aria-label="Scroll right" class="shelf-arrow" data-dir="1" type="button">&rsaquo;</button>
 			</div>
 		</div>
+		<div class="spine-shelf-wrap" id="spine-shelf-wrap">
 		<div class="spine-shelf" id="spine-shelf">
 			{shelfYears.map(([year, books]) => (
 				<Fragment>
 					<div class="year-divider" id={`shelf-${year}`}>
 						<span class="year-label">{year} <span class="year-count">({books.length})</span></span>
-						<span class="year-arrow" aria-hidden="true">&rarr;</span>
 					</div>
 					{books.map((b) => (
 						<a
@@ -114,6 +114,12 @@ const statCell =
 					))}
 				</Fragment>
 			))}
+		</div>
+			<div class="shelf-fade shelf-fade-left" aria-hidden="true"></div>
+			<div class="shelf-fade shelf-fade-right" aria-hidden="true"></div>
+			<div class="shelf-hint" id="shelf-hint" aria-hidden="true">
+				Scroll<span class="shelf-hint-arrow">&rarr;</span>
+			</div>
 		</div>
 
 		</div>
@@ -387,6 +393,22 @@ const statCell =
 		// ----- Browse shelf: arrows + year jump -----
 		const shelf = document.getElementById("spine-shelf");
 		if (shelf) {
+			// reflect scroll position into edge-fade + hint affordances
+			const wrap = document.getElementById("spine-shelf-wrap");
+			shelf.scrollLeft = 0; // start at the most recent year
+			const updateShelfCue = () => {
+				if (!wrap) return;
+				const max = shelf.scrollWidth - shelf.clientWidth;
+				wrap.classList.toggle("more-left", shelf.scrollLeft > 8);
+				wrap.classList.toggle("more-right", shelf.scrollLeft < max - 8);
+			};
+			shelf.addEventListener("scroll", () => {
+				// retire the hint once the reader has scrolled a meaningful distance
+				if (shelf.scrollLeft > 64) wrap?.classList.add("scrolled");
+				updateShelfCue();
+			}, { passive: true });
+			window.addEventListener("resize", updateShelfCue, { passive: true });
+			updateShelfCue();
 			document.querySelectorAll(".shelf-arrow").forEach((btn) =>
 				btn.addEventListener("click", () => {
 					const dir = Number((btn as HTMLElement).dataset.dir);
