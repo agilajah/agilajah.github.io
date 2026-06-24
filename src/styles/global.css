@@ -446,6 +446,16 @@ body.wide-layout {
 :root[data-theme="light"] .spine {
 	--spine-l: 34%;
 }
+/* on phones the shelf is otherwise very tall — scale spines down ~30% while
+   keeping their relative height/width variation */
+@media (max-width: 640px) {
+	.spine {
+		height: calc(var(--spine-h, 18rem) * 0.7);
+	}
+	.year-label {
+		font-size: 1.2rem;
+	}
+}
 .spine:hover {
 	transform: translateY(-8px);
 	box-shadow:
