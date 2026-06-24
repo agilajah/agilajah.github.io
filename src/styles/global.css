@@ -490,33 +490,9 @@ body.wide-layout {
 	font-variant-numeric: tabular-nums;
 	color: hsl(var(--theme-accent-2));
 }
-/* ---- Horizontal-scroll affordance: edge fades + animated "Scroll →" hint ---- */
+/* ---- Horizontal-scroll affordance: animated "Scroll →" hint ---- */
 .spine-shelf-wrap {
 	position: relative;
-}
-/* gradient fades that bleed the spines off-edge — the classic "more content
-   this way" cue. Shown only when there's actually more to scroll that way. */
-.shelf-fade {
-	position: absolute;
-	top: 0;
-	bottom: 0;
-	width: 3.5rem;
-	pointer-events: none;
-	opacity: 0;
-	transition: opacity 0.25s var(--ease-out);
-	z-index: 2;
-}
-.shelf-fade-left {
-	left: 0;
-	background: linear-gradient(to right, hsl(var(--theme-bg)), hsl(var(--theme-bg) / 0));
-}
-.shelf-fade-right {
-	right: 0;
-	background: linear-gradient(to left, hsl(var(--theme-bg)), hsl(var(--theme-bg) / 0));
-}
-.spine-shelf-wrap.more-left .shelf-fade-left,
-.spine-shelf-wrap.more-right .shelf-fade-right {
-	opacity: 1;
 }
 /* explicit pill that animates a nudging arrow until the reader scrolls */
 .shelf-hint {
