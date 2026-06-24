@@ -5,3 +5,5 @@ export { getAllBooks, sortMDByDateBooks, getUniqueTagsBooks, getUniqueTagsWithCo
 export { generateToc } from "./generateToc";
 export type { TocItem } from "./generateToc";
 export { getWebmentionsForUrl } from "./webmentions";
+export { getSeries, getRelatedPosts } from "./series";
+export type { SeriesInfo } from "./series";

@@ -8,8 +8,10 @@ import remarkDirective from "remark-directive";
 import remarkMath from "remark-math";
 import rehypeExternalLinks from "rehype-external-links";
 import rehypeKatex from "rehype-katex";
+import { rehypeImgAttrs } from "./src/plugins/rehype-img-attrs";
 import { remarkReadingTime } from "./src/utils/remark-reading-time";
 import { remarkAdmonitions } from "./src/plugins/remark-admonitions";
+import { remarkSidenotes } from "./src/plugins/remark-sidenotes";
 import icon from "astro-icon";
 import expressiveCode from "astro-expressive-code";
 import { expressiveCodeOptions } from "./src/site.config";
@@ -25,10 +27,12 @@ export default defineConfig({
 			remarkReadingTime,
 			remarkDirective,
 			remarkAdmonitions,
+			remarkSidenotes,
 			remarkMath,
 		],
 		rehypePlugins: [
 			rehypeKatex,
+			rehypeImgAttrs,
 			[
 				rehypeExternalLinks,
 				{

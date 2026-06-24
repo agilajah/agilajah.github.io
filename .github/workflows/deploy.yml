@@ -49,6 +49,8 @@ jobs:
 
       - name: Build site
         run: pnpm build
+        env:
+          WEBMENTION_API_KEY: ${{ secrets.WEBMENTION_API_KEY }}
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
