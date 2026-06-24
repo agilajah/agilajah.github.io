@@ -16,8 +16,11 @@ const { as: Tag = "div", book, withDesc = false } = Astro.props;
 			<div class="mx-auto flex justify-center">
 				<img
 					class="h-7/12 absolute inset-y-1 mt-8 w-7/12 transform rounded-md drop-shadow-md duration-300 group-hover:-inset-y-full"
-					alt={book.data.title}
+					alt={`${book.data.title} by ${book.data.author}`}
+					height="300"
+					loading="lazy"
 					src={`/assets/books/${book.data.cover}`}
+					width="200"
 				/>
 			</div>
 		)
