@@ -92,7 +92,8 @@ const statCell =
 			{shelfYears.map(([year, books]) => (
 				<Fragment>
 					<div class="year-divider" id={`shelf-${year}`}>
-						<span>{year} <span class="year-count">({books.length})</span></span>
+						<span class="year-label">{year} <span class="year-count">({books.length})</span></span>
+						<span class="year-arrow" aria-hidden="true">&rarr;</span>
 					</div>
 					{books.map((b) => (
 						<a

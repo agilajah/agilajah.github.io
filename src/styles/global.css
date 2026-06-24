@@ -476,14 +476,30 @@ body.wide-layout {
 .year-divider {
 	flex: 0 0 auto;
 	display: flex;
-	align-items: flex-end;
-	padding: 0 0.35rem 0.35rem;
+	flex-direction: column;
+	align-items: center;
+	justify-content: flex-end;
+	gap: 0.5rem;
+	padding: 0 0.4rem 0.4rem;
+}
+.year-label {
 	writing-mode: vertical-rl;
 	transform: rotate(180deg);
 	font-size: 1.5rem;
 	font-weight: 700;
 	font-variant-numeric: tabular-nums;
 	color: hsl(var(--theme-accent-2));
+}
+/* "→" scroll cue under each year marker — nudges right on shelf hover */
+.year-arrow {
+	font-size: 1rem;
+	line-height: 1;
+	color: hsl(var(--theme-text) / 0.4);
+	transition: transform 0.3s var(--ease-out);
+}
+.spine-shelf:hover .year-arrow {
+	transform: translateX(3px);
+	color: hsl(var(--theme-accent));
 }
 .shelf-arrow {
 	display: flex;
