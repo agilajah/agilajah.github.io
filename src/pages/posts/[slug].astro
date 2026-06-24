@@ -2,27 +2,33 @@
 import type { GetStaticPaths, InferGetStaticPropsType } from "astro";
 
 import PostLayout from "@/layouts/BlogPost.astro";
-import { getAllPosts, sortMDByDate } from "@/utils";
+import { getAllPosts, getRelatedPosts, getSeries, sortMDByDate } from "@/utils";
 
 export const getStaticPaths = (async () => {
 	const blogEntries = sortMDByDate(await getAllPosts()); // newest → oldest
-	return blogEntries.map((entry, i) => ({
-		params: { slug: entry.slug },
-		props: {
-			entry,
-			// "newer" is the previous item in the newest-first list; "older" the next.
-			newer: blogEntries[i - 1] ?? null,
-			older: blogEntries[i + 1] ?? null,
-		},
-	}));
+	return blogEntries.map((entry, i) => {
+		const series = getSeries(entry, blogEntries);
+		// Don't repeat same-series posts under "Related" — SeriesNav covers them.
+		const exclude = new Set(series?.parts.map((p) => p.slug) ?? []);
+		return {
+			params: { slug: entry.slug },
+			props: {
+				entry,
+				newer: blogEntries[i - 1] ?? null,
+				older: blogEntries[i + 1] ?? null,
+				series,
+				related: getRelatedPosts(entry, blogEntries, 3, exclude),
+			},
+		};
+	});
 }) satisfies GetStaticPaths;
 
 type Props = InferGetStaticPropsType<typeof getStaticPaths>;
 
-const { entry, newer, older } = Astro.props;
+const { entry, newer, older, series, related } = Astro.props;
 const { Content } = await entry.render();
 ---
 
-<PostLayout post={entry} newer={newer} older={older}>
+<PostLayout post={entry} newer={newer} older={older} series={series} related={related}>
 	<Content />
 </PostLayout>

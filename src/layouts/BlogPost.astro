@@ -3,8 +3,12 @@ import type { CollectionEntry } from "astro:content";
 
 import "katex/dist/katex.min.css";
 
+import type { SeriesInfo } from "@/utils";
+
 import BlogHero from "@/components/blog/Hero.astro";
+import FormattedDate from "@/components/FormattedDate.astro";
 import ReadingEnhancements from "@/components/blog/ReadingEnhancements.astro";
+import SeriesNav from "@/components/blog/SeriesNav.astro";
 import TOC from "@/components/blog/TOC.astro";
 import WebMentions from "@/components/blog/webmentions/index.astro";
 
@@ -14,9 +18,11 @@ interface Props {
 	post: CollectionEntry<"post">;
 	newer?: CollectionEntry<"post"> | null;
 	older?: CollectionEntry<"post"> | null;
+	series?: SeriesInfo | null;
+	related?: Array<CollectionEntry<"post">>;
 }
 
-const { post, newer = null, older = null } = Astro.props;
+const { post, newer = null, older = null, series = null, related = [] } = Astro.props;
 const {
 	data: { description, ogImage, publishDate, title, updatedDate },
 	slug,
@@ -24,7 +30,23 @@ const {
 const socialImage = ogImage ?? `/og-image/${slug}.png`;
 const articleDate = updatedDate?.toISOString() ?? publishDate.toISOString();
 const { headings } = await post.render();
+
+const canonical = new URL(Astro.url.pathname, Astro.site).href;
+const jsonLd = {
+	"@context": "https://schema.org",
+	"@type": "BlogPosting",
+	headline: title,
+	description,
+	datePublished: publishDate.toISOString(),
+	dateModified: (updatedDate ?? publishDate).toISOString(),
+	author: { "@type": "Person", name: "Febi Agil", url: Astro.site?.href },
+	image: new URL(socialImage, Astro.site).href,
+	url: canonical,
+	mainEntityOfPage: canonical,
+};
 ---
+
+<script is:inline type="application/ld+json" set:html={JSON.stringify(jsonLd)} />
 
 <BaseLayout meta={{ articleDate, description, ogImage: socialImage, title }}>
 	<ReadingEnhancements />
@@ -32,12 +54,37 @@ const { headings } = await post.render();
 		<article class="w-full min-w-0 break-words lg:max-w-prose" data-pagefind-body>
 			{!!headings.length && <TOC headings={headings} variant="float" />}
 			<div id="blog-hero"><BlogHero content={post} /></div>
+			{series && <div class="mt-10"><SeriesNav series={series} /></div>}
 			<div
 				class="prose prose-sm prose-cactus mt-12 prose-headings:font-semibold prose-headings:text-accent-2 prose-headings:before:absolute prose-headings:before:-ms-4 prose-headings:before:text-accent prose-headings:before:content-['#'] prose-th:before:content-none"
 			>
 				<slot />
 				<WebMentions />
 			</div>
+			{
+				related.length > 0 && (
+					<section class="mt-16 border-t border-textColor/10 pt-8">
+						<h2 class="text-xs font-bold uppercase tracking-widest text-textColor/50">Related</h2>
+						<ul class="mt-4 space-y-3">
+							{related.map((p) => (
+								<li class="group flex flex-wrap items-baseline gap-x-3">
+									<a
+										class="link-underline font-medium text-accent-2 transition-colors group-hover:text-accent"
+										href={`/posts/${p.slug}/`}
+									>
+										{p.data.title}
+									</a>
+									<FormattedDate
+										class="text-xs text-textColor/35"
+										date={p.data.updatedDate ?? p.data.publishDate}
+										dateTimeOptions={{ month: "short", year: "numeric" }}
+									/>
+								</li>
+							))}
+						</ul>
+					</section>
+				)
+			}
 			{
 				(newer || older) && (
 					<nav class="mt-16 flex flex-col gap-5 border-t border-textColor/10 pt-6 text-sm sm:flex-row sm:items-start sm:justify-between sm:gap-8">

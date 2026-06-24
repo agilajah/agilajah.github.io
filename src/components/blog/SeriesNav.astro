@@ -1,0 +1,52 @@
+---
+import type { SeriesInfo } from "@/utils";
+
+interface Props {
+	series: SeriesInfo;
+}
+
+const { series } = Astro.props;
+---
+
+<details class="series-nav mb-10 border border-textColor/15 bg-textColor/[0.025]">
+	<summary
+		class="flex cursor-pointer select-none items-center gap-2 px-4 py-3 text-xs font-bold uppercase tracking-widest text-textColor/55 transition-colors hover:text-accent"
+	>
+		<svg aria-hidden="true" class="h-4 w-4 shrink-0" fill="none" stroke="currentColor" stroke-width="1.6" viewBox="0 0 24 24">
+			<path d="M12 2 2 7l10 5 10-5-10-5Z" stroke-linejoin="round"></path>
+			<path d="m2 17 10 5 10-5M2 12l10 5 10-5" stroke-linejoin="round"></path>
+		</svg>
+		<span class="min-w-0 truncate">{series.name} · Part {series.index + 1} of {series.total}</span>
+		<svg
+			aria-hidden="true"
+			class="series-chevron ms-auto h-3.5 w-3.5 shrink-0 transition-transform duration-300"
+			fill="none"
+			stroke="currentColor"
+			stroke-linecap="round"
+			stroke-linejoin="round"
+			stroke-width="2"
+			viewBox="0 0 24 24"
+		>
+			<path d="M9 6l6 6-6 6"></path>
+		</svg>
+	</summary>
+	<ol class="space-y-1.5 border-t border-textColor/10 px-4 py-3 text-sm">
+		{
+			series.parts.map((p, i) => (
+				<li class="flex min-w-0 gap-2.5">
+					<span class="shrink-0 tabular-nums text-textColor/40">{String(i + 1).padStart(2, "0")}</span>
+					{p.current ? (
+						<span class="truncate font-semibold text-accent-2">{p.title}</span>
+					) : (
+						<a
+							class="truncate text-textColor/70 transition-colors hover:text-accent"
+							href={`/posts/${p.slug}/`}
+						>
+							{p.title}
+						</a>
+					)}
+				</li>
+			))
+		}
+	</ol>
+</details>
