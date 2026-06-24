@@ -94,3 +94,27 @@ const socialImageURL = new URL(ogImage ? ogImage : "/social-card.png", Astro.url
 }
 
 <meta content={Astro.generator} name="generator" />
+
+{/* Structured data: site + author */}
+<script
+	is:inline
+	type="application/ld+json"
+	set:html={JSON.stringify({
+		"@context": "https://schema.org",
+		"@graph": [
+			{
+				"@type": "WebSite",
+				name: siteConfig.title,
+				url: Astro.site?.href,
+				description: siteConfig.description,
+			},
+			{
+				"@type": "Person",
+				name: siteConfig.author,
+				url: Astro.site?.href,
+				jobTitle: "Co-founder & CTO, Elevarm",
+				sameAs: ["https://github.com/agilajah/"],
+			},
+		],
+	})}
+/>
