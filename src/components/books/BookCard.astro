@@ -16,6 +16,7 @@ const isRead = status?.toLowerCase() === "read";
 	class="lib-item group"
 	data-author={author.toLowerCase()}
 	data-date={book.data.publishDate.getTime()}
+	data-slug={book.slug}
 	data-status={status}
 	data-tags={tags.join(" ")}
 	data-title={title.toLowerCase()}

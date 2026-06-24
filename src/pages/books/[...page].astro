@@ -5,6 +5,7 @@ import type { CollectionEntry } from "astro:content";
 import PageLayout from "@/layouts/Base.astro";
 import BookCard from "@/components/books/BookCard.astro";
 import CategoryList from "@/components/CategoryList.astro";
+import { spineData } from "../../data/spine-data";
 import {
 	getAllBooks,
 	getUniqueTagsBooks,
@@ -42,6 +43,26 @@ const { page, uniqueTags, statusStats, tagsWithCount, tagCount } = Astro.props;
 const total = page.data.length;
 const topTags = tagsWithCount.slice(0, 30);
 
+const shelfYears = [];
+for (const book of [...page.data]) {
+	const year = book.data.publishDate.getFullYear();
+	const last = shelfYears[shelfYears.length - 1];
+	if (last && last[0] === year) last[1].push(book);
+	else shelfYears.push([year, [book]]);
+}
+const spineHash = (sl) => [...sl].reduce((a, c) => a + c.charCodeAt(0), 0);
+const spineH = (sl) => 15 + (spineHash(sl) % 8); // height 15-22 rem (varied)
+// width tracks page count (thicker = longer book); fallback to a hashed width
+const spineW = (sl) => {
+	const pages = spineData[sl]?.pages;
+	if (pages) return (1.55 + Math.min(1.9, (Math.max(90, pages) - 90) / 763 * 1.9)).toFixed(2);
+	return (1.9 + (spineHash(sl) % 10) / 10).toFixed(2);
+};
+// cover accent hue/sat (0 sat = greyscale cover -> neutral spine)
+const spineHue = (sl) => spineData[sl]?.hue ?? 0;
+const spineSat = (sl) => spineData[sl]?.sat ?? 0;
+
+
 const meta = {
 	title: "Library",
 	description: `A personal library of ${total} books — what I've read, am reading, and own.`,
@@ -55,11 +76,57 @@ const statCell =
 
 <PageLayout meta={meta}>
 	<section>
+		<div class="mb-12">
+		<div class="mb-3 flex items-end justify-between gap-4">
+			<nav class="year-nav flex flex-wrap items-center gap-x-2 gap-y-1 text-sm text-textColor/45" aria-label="Jump to year">
+				{shelfYears.map(([year]) => (
+					<a class="year-jump transition-colors hover:text-accent" data-year-jump={year} href={`#shelf-${year}`}>{year}</a>
+				))}
+			</nav>
+			<div class="flex shrink-0 gap-1">
+				<button aria-label="Scroll left" class="shelf-arrow" data-dir="-1" type="button">&lsaquo;</button>
+				<button aria-label="Scroll right" class="shelf-arrow" data-dir="1" type="button">&rsaquo;</button>
+			</div>
+		</div>
+		<div class="spine-shelf" id="spine-shelf">
+			{shelfYears.map(([year, books]) => (
+				<Fragment>
+					<div class="year-divider" id={`shelf-${year}`}>
+						<span>{year} <span class="year-count">({books.length})</span></span>
+					</div>
+					{books.map((b) => (
+						<a
+							class="spine"
+							data-author={b.data.author.toLowerCase()}
+							data-cover={b.data.cover ?? ""}
+							data-slug={b.slug}
+							data-status={b.data.status}
+							data-tags={b.data.tags.join(" ")}
+							data-title={b.data.title.toLowerCase()}
+							href={`/books/${b.slug}`}
+							style={`--spine-h:${spineH(b.slug)}rem;--spine-w:${spineW(b.slug)}rem;--spine-hue:${spineHue(b.slug)};--spine-sat:${spineSat(b.slug)}%`}
+							title={b.data.title}
+						>
+							<span class="spine-author">{b.data.author}</span>
+							<span class="spine-title">{b.data.title}</span>
+						</a>
+					))}
+				</Fragment>
+			))}
+		</div>
+
+		</div>
+		<div class="spine-preview" id="spine-preview" aria-hidden="true"><img alt="" decoding="async" /></div>
 		<h1 class="title mb-2 flex items-baseline gap-3">
 			Library
 			<span class="text-base font-normal text-textColor/50">{total}</span>
 		</h1>
-		<p class="mb-8 text-textColor/70">What I've read, am reading, and own — all opinions my own.</p>
+		<p class="mb-8 max-w-2xl text-textColor/70">
+			A running shelf of what I'm reading and have read. I love poking around other people's
+			bookshelves — there's almost always a title or two I end up chasing down myself. If any of
+			these catch your eye, or you have something I should read,
+			<a class="cactus-link" href="mailto:febiagil@gmail.com">tell me about it.</a>
+		</p>
 
 		{/* ===== Control panel ===== */}
 		<div class="mb-8 border border-textColor/15">
@@ -200,6 +267,9 @@ const statCell =
 			document.querySelectorAll<HTMLElement>(".lib-stat[data-status]"),
 		);
 		const viewButtons = Array.from(document.querySelectorAll<HTMLElement>(".lib-view"));
+		const spines = Array.from(document.querySelectorAll<HTMLElement>(".spine"));
+		const cardBySlug = new Map<string, HTMLElement>();
+		items.forEach((el) => el.dataset.slug && cardBySlug.set(el.dataset.slug, el));
 
 		let status = "all";
 		let view = "grid";
@@ -226,34 +296,52 @@ const statCell =
 			// drop any year headers from a previous render
 			grid.querySelectorAll(".lib-year-head").forEach((h) => h.remove());
 
-			let visible = 0;
-			let lastYear: number | null = null;
-			for (const el of sorted) {
+			const matchEl = (el: HTMLElement) => {
 				const matchQ =
 					!q || (el.dataset.title || "").includes(q) || (el.dataset.author || "").includes(q);
 				const matchS = status === "all" || el.dataset.status === status;
 				const matchC = cat === "all" || (el.dataset.tags || "").split(" ").includes(cat);
-				const show = matchQ && matchS && matchC;
+				return matchQ && matchS && matchC;
+			};
 
-				if (view === "year" && show) {
+			// pass 1: which items show + per-year counts (for year-view headers)
+			const yearCount = new Map<number, number>();
+			let visible = 0;
+			const shows = sorted.map((el) => {
+				const show = matchEl(el);
+				if (show) {
+					visible++;
+					const yr = new Date(Number(el.dataset.date || 0)).getFullYear();
+					yearCount.set(yr, (yearCount.get(yr) || 0) + 1);
+				}
+				return show;
+			});
+
+			// pass 2: render (+ inject counted year headers in year view)
+			let lastYear: number | null = null;
+			sorted.forEach((el, i) => {
+				if (view === "year" && shows[i]) {
 					const yr = new Date(Number(el.dataset.date || 0)).getFullYear();
 					if (yr !== lastYear) {
 						const head = document.createElement("li");
 						head.className = "lib-year-head";
-						head.textContent = String(yr);
+						head.innerHTML = `${yr} <span class="lib-year-count">(${yearCount.get(yr) || 0})</span>`;
 						grid.appendChild(head);
 						lastYear = yr;
 					}
 				}
 				grid.appendChild(el);
-				el.style.display = show ? "" : "none";
-				if (show) visible++;
-			}
+				el.style.display = shows[i] ? "" : "none";
+			});
 
 			if (countEl) countEl.textContent = String(visible);
 			if (emptyEl) emptyEl.classList.toggle("hidden", visible > 0);
 			tagButtons.forEach((b) => b.classList.toggle("is-active", b.dataset.tag === cat));
 			statButtons.forEach((b) => b.classList.toggle("is-active", b.dataset.status === status));
+
+			// interlink: dim shelf spines that don't match the active filters
+			const filtering = q !== "" || status !== "all" || cat !== "all";
+			spines.forEach((sp) => sp.classList.toggle("is-dim", filtering && !matchEl(sp)));
 		}
 
 		function setView(v: string) {
@@ -294,6 +382,49 @@ const statCell =
 			savedView = localStorage.getItem("lib-view") || "grid";
 		} catch {}
 		setView(savedView); // calls apply()
+
+		// ----- Browse shelf: arrows + year jump -----
+		const shelf = document.getElementById("spine-shelf");
+		if (shelf) {
+			document.querySelectorAll(".shelf-arrow").forEach((btn) =>
+				btn.addEventListener("click", () => {
+					const dir = Number((btn as HTMLElement).dataset.dir);
+					shelf.scrollBy({ left: dir * shelf.clientWidth * 0.8, behavior: "smooth" });
+				}),
+			);
+			document.querySelectorAll(".year-jump").forEach((a) =>
+				a.addEventListener("click", (e) => {
+					e.preventDefault();
+					const y = (a as HTMLElement).dataset.yearJump;
+					document
+						.getElementById("shelf-" + y)
+						?.scrollIntoView({ behavior: "smooth", inline: "start", block: "nearest" });
+				}),
+			);
+			// hovering a spine pops a floating cover preview (no scrolling)
+			const preview = document.getElementById("spine-preview");
+			const previewImg = preview?.querySelector("img") as HTMLImageElement | null;
+			spines.forEach((sp) => {
+				sp.addEventListener("mouseenter", () => {
+					if (!preview || !previewImg) return;
+					const cover = (sp as HTMLElement).dataset.cover;
+					if (!cover) {
+						preview.classList.remove("is-visible");
+						return;
+					}
+					previewImg.src = `/assets/books/${cover}`;
+					preview.classList.add("is-visible");
+					const r = sp.getBoundingClientRect();
+					const pw = preview.offsetWidth;
+					const ph = preview.offsetHeight;
+					const left = Math.max(8, Math.min(r.left + r.width / 2 - pw / 2, window.innerWidth - pw - 8));
+					const top = r.top - ph - 10 < 8 ? r.bottom + 10 : r.top - ph - 10;
+					preview.style.left = `${left}px`;
+					preview.style.top = `${top}px`;
+				});
+				sp.addEventListener("mouseleave", () => preview?.classList.remove("is-visible"));
+			});
+		}
 	}
 
 	document.addEventListener("astro:page-load", initLibrary);
