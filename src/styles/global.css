@@ -301,6 +301,61 @@ body.wide-layout {
 	transform: rotate(90deg);
 }
 
+/* ---- Collapsible series box ---- */
+.series-nav > summary {
+	list-style: none;
+}
+.series-nav > summary::-webkit-details-marker {
+	display: none;
+}
+.series-nav[open] .series-chevron {
+	transform: rotate(90deg);
+}
+
+/* ---- Side notes (`:::sidenote`) ----
+   Numbered aside set apart from the body text. On very wide viewports it
+   floats into the left margin (progressive enhancement); otherwise it sits
+   inline as a compact bordered note. */
+.prose .sidenote {
+	position: relative;
+	margin: 1.25rem 0;
+	border-inline-start: 2px solid hsl(var(--theme-accent) / 0.5);
+	padding-inline-start: 0.85rem;
+	font-size: 0.8125rem;
+	line-height: 1.5;
+	color: hsl(var(--theme-text) / 0.7);
+}
+.prose .sidenote-num {
+	font-weight: 700;
+	color: hsl(var(--theme-accent));
+	margin-inline-end: 0.4rem;
+}
+.prose .sidenote-body {
+	display: inline;
+}
+.prose .sidenote-body > :first-child {
+	display: inline;
+}
+.prose .sidenote-body > :last-child {
+	margin-bottom: 0;
+}
+@media (min-width: 1380px) {
+	.prose .sidenote {
+		float: left;
+		clear: left;
+		width: 11rem;
+		margin: 0.25rem 0 0.75rem;
+		margin-inline-start: -13rem;
+		border-inline-start: 0;
+		padding-inline-start: 0;
+		text-align: end;
+	}
+	.prose .sidenote-body,
+	.prose .sidenote-body > :first-child {
+		display: block;
+	}
+}
+
 /* ---- Reading experience (blog posts) ---- */
 /* Top scroll-progress bar (width driven by ReadingEnhancements.astro). */
 #reading-progress {
@@ -334,10 +389,25 @@ body.wide-layout {
 	color: hsl(var(--theme-text) / 0.5);
 }
 
-/* view toggle (grid / list) active button */
+/* view toggle (grid / list / year) active button */
 .lib-view.is-active {
 	background: hsl(var(--theme-accent));
 	color: hsl(var(--theme-bg));
+}
+
+/* Year headers injected in the "by year" library view (span the full row). */
+.lib-year-head {
+	grid-column: 1 / -1;
+	margin-top: 1.75rem;
+	border-bottom: 1px solid hsl(var(--theme-text) / 0.12);
+	padding-bottom: 0.4rem;
+	font-size: 1.125rem;
+	font-weight: 700;
+	font-variant-numeric: tabular-nums;
+	color: hsl(var(--theme-accent-2));
+}
+.lib-year-head:first-child {
+	margin-top: 0;
 }
 
 /* When active (accent fill), don't let the hover:text-accent utility repaint
