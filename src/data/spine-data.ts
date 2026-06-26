@@ -26,6 +26,11 @@ export const spineData: Record<string, { hue: number; sat: number; pages: number
     "sat": 23,
     "pages": 336
   },
+  "a-monetary-and-fiscal-history-of-the-united-states-alan-blinder": {
+    "hue": 210,
+    "sat": 42,
+    "pages": 432
+  },
   "a-tale-of-two-cities-charles-dickens": {
     "hue": 127,
     "sat": 33,
@@ -125,6 +130,11 @@ export const spineData: Record<string, { hue: number; sat: number; pages: number
     "hue": 42,
     "sat": 40,
     "pages": null
+  },
+  "concorde-mike-bannister": {
+    "hue": 200,
+    "sat": 39,
+    "pages": 451
   },
   "connections-james-burke": {
     "hue": 28,
@@ -231,6 +241,11 @@ export const spineData: Record<string, { hue: number; sat: number; pages: number
     "sat": 35,
     "pages": 224
   },
+  "how-to-find-a-higgs-boson-ivo-van-vulpen": {
+    "hue": 198,
+    "sat": 42,
+    "pages": 268
+  },
   "how-to-get-ideas-jack-foster": {
     "hue": 88,
     "sat": 42,
@@ -276,6 +291,11 @@ export const spineData: Record<string, { hue: number; sat: number; pages: number
     "sat": 17,
     "pages": 256
   },
+  "molecules-theodore-gray": {
+    "hue": 298,
+    "sat": 26,
+    "pages": 229
+  },
   "mythos-stephen-fry": {
     "hue": 39,
     "sat": 21,
@@ -306,6 +326,11 @@ export const spineData: Record<string, { hue: number; sat: number; pages: number
     "sat": 14,
     "pages": null
   },
+  "on-palestine-noam-chomsky": {
+    "hue": 101,
+    "sat": 19,
+    "pages": 168
+  },
   "paradise-lost-john-milton": {
     "hue": 34,
     "sat": 22,
@@ -315,6 +340,11 @@ export const spineData: Record<string, { hue: number; sat: number; pages: number
     "hue": 48,
     "sat": 16,
     "pages": 256
+  },
+  "physics-in-minutes-giles-sparrow": {
+    "hue": 39,
+    "sat": 33,
+    "pages": 416
   },
   "plagues-upon-the-earth-kyle-harper": {
     "hue": 5,
@@ -340,6 +370,11 @@ export const spineData: Record<string, { hue: number; sat: number; pages: number
     "hue": 193,
     "sat": 28,
     "pages": null
+  },
+  "reactions-theodore-gray": {
+    "hue": 22,
+    "sat": 27,
+    "pages": 212
   },
   "rogue-states-noam-chomsky": {
     "hue": 2,
@@ -420,6 +455,11 @@ export const spineData: Record<string, { hue: number; sat: number; pages: number
     "hue": 195,
     "sat": 40,
     "pages": 96
+  },
+  "the-elements-theodore-gray": {
+    "hue": 278,
+    "sat": 19,
+    "pages": 240
   },
   "the-elements-we-live-by-anja-royne": {
     "hue": 356,
@@ -615,6 +655,11 @@ export const spineData: Record<string, { hue: number; sat: number; pages: number
     "hue": 224,
     "sat": 14,
     "pages": 256
+  },
+  "war-what-is-it-good-for-ian-morris": {
+    "hue": 7,
+    "sat": 40,
+    "pages": 748
   },
   "water-40-past-present-future-david-sedlak": {
     "hue": 212,
