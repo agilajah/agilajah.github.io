@@ -84,7 +84,7 @@ export const spineData: Record<string, { hue: number; sat: number; pages: number
   "austrian-economics-an-introduction-steven-horwitz": {
     "hue": 52,
     "sat": 42,
-    "pages": 92
+    "pages": 167
   },
   "barbarians-at-the-gate-bryan-burrough": {
     "hue": 354,
@@ -494,7 +494,7 @@ export const spineData: Record<string, { hue: number; sat: number; pages: number
   "revolutionary-russia-orlando-figes": {
     "hue": 39,
     "sat": 36,
-    "pages": 384
+    "pages": 324
   },
   "rogue-states-noam-chomsky": {
     "hue": 2,
@@ -619,7 +619,7 @@ export const spineData: Record<string, { hue: number; sat: number; pages: number
   "the-general-theory-of-employment-interest-and-money-john-maynard-keynes": {
     "hue": 35,
     "sat": 29,
-    "pages": 472
+    "pages": 403
   },
   "the-god-effect-brian-clegg": {
     "hue": 332,
