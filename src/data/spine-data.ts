@@ -6,6 +6,11 @@ export const spineData: Record<string, { hue: number; sat: number; pages: number
     "sat": 16,
     "pages": 480
   },
+  "a-brief-history-of-the-earths-climate-steven-earle": {
+    "hue": 10,
+    "sat": 23,
+    "pages": 248
+  },
   "a-crack-in-creation-jennifer-doudna": {
     "hue": 256,
     "sat": 31,
@@ -21,10 +26,20 @@ export const spineData: Record<string, { hue: number; sat: number; pages: number
     "sat": 37,
     "pages": null
   },
+  "a-history-of-federal-reserve-2-book-1-allan-meltzer": {
+    "hue": 230,
+    "sat": 42,
+    "pages": 736
+  },
   "a-mind-for-numbers-barbara-oakley": {
     "hue": 252,
     "sat": 23,
     "pages": 336
+  },
+  "a-monetary-and-fiscal-history-of-the-united-states-alan-blinder": {
+    "hue": 210,
+    "sat": 42,
+    "pages": 432
   },
   "a-tale-of-two-cities-charles-dickens": {
     "hue": 127,
@@ -51,10 +66,30 @@ export const spineData: Record<string, { hue: number; sat: number; pages: number
     "sat": 17,
     "pages": 256
   },
+  "americana-bhu-srinivasan": {
+    "hue": 29,
+    "sat": 42,
+    "pages": 575
+  },
+  "apple-in-china-patrick-mcgee": {
+    "hue": 358,
+    "sat": 34,
+    "pages": 448
+  },
   "ask-your-developer-jeff-lawson": {
     "hue": 356,
     "sat": 42,
     "pages": 304
+  },
+  "austrian-economics-an-introduction-steven-horwitz": {
+    "hue": 52,
+    "sat": 42,
+    "pages": 167
+  },
+  "barbarians-at-the-gate-bryan-burrough": {
+    "hue": 354,
+    "sat": 40,
+    "pages": 592
   },
   "barking-up-the-wrong-tree-eric-barker": {
     "hue": 17,
@@ -101,10 +136,20 @@ export const spineData: Record<string, { hue: number; sat: number; pages: number
     "sat": 34,
     "pages": null
   },
+  "calculus-made-easy-silvanus-thompson": {
+    "hue": 38,
+    "sat": 34,
+    "pages": 250
+  },
   "capitalism-and-freedom-milton-friedman": {
     "hue": 73,
     "sat": 30,
     "pages": 202
+  },
+  "capitalism-socialism-and-democracy-joseph-schumpeter": {
+    "hue": 227,
+    "sat": 42,
+    "pages": 637
   },
   "chip-war-chris-miller": {
     "hue": 31,
@@ -126,6 +171,16 @@ export const spineData: Record<string, { hue: number; sat: number; pages: number
     "sat": 40,
     "pages": null
   },
+  "complexity-m-mitchell-waldrop": {
+    "hue": 0,
+    "sat": 39,
+    "pages": 384
+  },
+  "concorde-mike-bannister": {
+    "hue": 200,
+    "sat": 39,
+    "pages": 451
+  },
   "connections-james-burke": {
     "hue": 28,
     "sat": 34,
@@ -141,10 +196,20 @@ export const spineData: Record<string, { hue: number; sat: number; pages: number
     "sat": 31,
     "pages": 124
   },
+  "critical-mass-philip-ball": {
+    "hue": 57,
+    "sat": 42,
+    "pages": 640
+  },
   "crossing-the-chasm-geoffrey-moore": {
     "hue": 15,
     "sat": 42,
     "pages": 234
+  },
+  "diary-of-a-very-bad-year-keith-gessen": {
+    "hue": 1,
+    "sat": 42,
+    "pages": 256
   },
   "drawdown-paul-hawken": {
     "hue": 194,
@@ -165,6 +230,11 @@ export const spineData: Record<string, { hue: number; sat: number; pages: number
     "hue": 31,
     "sat": 42,
     "pages": null
+  },
+  "energy-a-beginners-guide-vaclav-smil": {
+    "hue": 195,
+    "sat": 42,
+    "pages": 256
   },
   "engineering-management-sarah-drasner": {
     "hue": 249,
@@ -195,6 +265,16 @@ export const spineData: Record<string, { hue: number; sat: number; pages: number
     "hue": 77,
     "sat": 42,
     "pages": null
+  },
+  "free-to-choose-milton-friedman": {
+    "hue": 161,
+    "sat": 20,
+    "pages": 338
+  },
+  "from-silk-to-silicon-jeffrey-garten": {
+    "hue": 40,
+    "sat": 42,
+    "pages": 400
   },
   "genome-autobiography-of-a-species-matt-ridley": {
     "hue": 35,
@@ -231,10 +311,30 @@ export const spineData: Record<string, { hue: number; sat: number; pages: number
     "sat": 35,
     "pages": 224
   },
+  "how-the-world-really-works-vaclav-smil": {
+    "hue": 42,
+    "sat": 42,
+    "pages": 336
+  },
+  "how-to-find-a-higgs-boson-ivo-van-vulpen": {
+    "hue": 198,
+    "sat": 42,
+    "pages": 268
+  },
   "how-to-get-ideas-jack-foster": {
     "hue": 88,
     "sat": 42,
     "pages": null
+  },
+  "how-to-hide-an-empire-daniel-immerwahr": {
+    "hue": 30,
+    "sat": 30,
+    "pages": 528
+  },
+  "how-to-randall-munroe": {
+    "hue": 206,
+    "sat": 29,
+    "pages": 320
   },
   "how-will-you-measure-your-life-clayton-christensen": {
     "hue": 21,
@@ -251,6 +351,11 @@ export const spineData: Record<string, { hue: number; sat: number; pages: number
     "sat": 15,
     "pages": 272
   },
+  "its-a-gas-mark-miodownik": {
+    "hue": 131,
+    "sat": 23,
+    "pages": 336
+  },
   "its-a-numberful-world-eddie-woo": {
     "hue": 358,
     "sat": 42,
@@ -260,6 +365,16 @@ export const spineData: Record<string, { hue: number; sat: number; pages: number
     "hue": 17,
     "sat": 19,
     "pages": 404
+  },
+  "linear-algebra-done-right-sheldon-axler": {
+    "hue": 67,
+    "sat": 42,
+    "pages": 390
+  },
+  "lords-of-finance-liaquat-ahamed": {
+    "hue": 83,
+    "sat": 20,
+    "pages": 576
   },
   "macroeconomics-felipe-larrain": {
     "hue": 1,
@@ -275,6 +390,16 @@ export const spineData: Record<string, { hue: number; sat: number; pages: number
     "hue": 174,
     "sat": 17,
     "pages": 256
+  },
+  "molecules-theodore-gray": {
+    "hue": 298,
+    "sat": 26,
+    "pages": 229
+  },
+  "more-money-than-god-sebastian-mallaby": {
+    "hue": 77,
+    "sat": 26,
+    "pages": 496
   },
   "mythos-stephen-fry": {
     "hue": 39,
@@ -306,6 +431,16 @@ export const spineData: Record<string, { hue: number; sat: number; pages: number
     "sat": 14,
     "pages": null
   },
+  "oil-a-beginners-guide-vaclav-smil": {
+    "hue": 46,
+    "sat": 42,
+    "pages": 229
+  },
+  "on-palestine-noam-chomsky": {
+    "hue": 101,
+    "sat": 19,
+    "pages": 168
+  },
   "paradise-lost-john-milton": {
     "hue": 34,
     "sat": 22,
@@ -316,10 +451,20 @@ export const spineData: Record<string, { hue: number; sat: number; pages: number
     "sat": 16,
     "pages": 256
   },
+  "physics-in-minutes-giles-sparrow": {
+    "hue": 39,
+    "sat": 33,
+    "pages": 416
+  },
   "plagues-upon-the-earth-kyle-harper": {
     "hue": 5,
     "sat": 42,
     "pages": 124
+  },
+  "political-order-and-political-decay-francis-fukuyama": {
+    "hue": 302,
+    "sat": 39,
+    "pages": 672
   },
   "power-systems-noam-chomsky": {
     "hue": 7,
@@ -340,6 +485,16 @@ export const spineData: Record<string, { hue: number; sat: number; pages: number
     "hue": 193,
     "sat": 28,
     "pages": null
+  },
+  "reactions-theodore-gray": {
+    "hue": 22,
+    "sat": 27,
+    "pages": 212
+  },
+  "revolutionary-russia-orlando-figes": {
+    "hue": 39,
+    "sat": 36,
+    "pages": 324
   },
   "rogue-states-noam-chomsky": {
     "hue": 2,
@@ -421,6 +576,16 @@ export const spineData: Record<string, { hue: number; sat: number; pages: number
     "sat": 40,
     "pages": 96
   },
+  "the-economic-way-of-looking-at-behavior-gary-becker": {
+    "hue": 226,
+    "sat": 24,
+    "pages": null
+  },
+  "the-elements-theodore-gray": {
+    "hue": 278,
+    "sat": 19,
+    "pages": 240
+  },
   "the-elements-we-live-by-anja-royne": {
     "hue": 356,
     "sat": 42,
@@ -430,6 +595,11 @@ export const spineData: Record<string, { hue: number; sat: number; pages: number
     "hue": 43,
     "sat": 31,
     "pages": 289
+  },
+  "the-federal-reserve-a-new-history-robert-hetzel": {
+    "hue": 63,
+    "sat": 25,
+    "pages": 752
   },
   "the-flight-of-the-iguana-david-quammen": {
     "hue": 42,
@@ -445,6 +615,11 @@ export const spineData: Record<string, { hue: number; sat: number; pages: number
     "hue": 58,
     "sat": 36,
     "pages": 605
+  },
+  "the-general-theory-of-employment-interest-and-money-john-maynard-keynes": {
+    "hue": 35,
+    "sat": 29,
+    "pages": 403
   },
   "the-god-effect-brian-clegg": {
     "hue": 332,
@@ -496,10 +671,20 @@ export const spineData: Record<string, { hue: number; sat: number; pages: number
     "sat": 42,
     "pages": 609
   },
+  "the-little-book-of-mathematical-principles-robert-solomon": {
+    "hue": 42,
+    "sat": 33,
+    "pages": 224
+  },
   "the-loom-of-time-robert-d-kaplan": {
     "hue": 78,
     "sat": 35,
     "pages": 400
+  },
+  "the-new-map-daniel-yergin": {
+    "hue": 4,
+    "sat": 42,
+    "pages": 512
   },
   "the-nvidia-way-tae-kim": {
     "hue": 212,
@@ -546,6 +731,11 @@ export const spineData: Record<string, { hue: number; sat: number; pages: number
     "sat": 25,
     "pages": 762
   },
+  "the-rise-and-fall-of-the-british-empire-lawrence-james": {
+    "hue": 49,
+    "sat": 34,
+    "pages": 704
+  },
   "the-socrates-express-eric-weiner": {
     "hue": 60,
     "sat": 42,
@@ -560,6 +750,16 @@ export const spineData: Record<string, { hue: number; sat: number; pages: number
     "hue": 19,
     "sat": 42,
     "pages": 430
+  },
+  "the-sweaty-startup-nick-huber": {
+    "hue": 58,
+    "sat": 38,
+    "pages": null
+  },
+  "the-technological-republic-alexander-karp": {
+    "hue": 40,
+    "sat": 42,
+    "pages": 320
   },
   "the-visual-mba-jason-barron": {
     "hue": 120,
@@ -616,6 +816,11 @@ export const spineData: Record<string, { hue: number; sat: number; pages: number
     "sat": 14,
     "pages": 256
   },
+  "war-what-is-it-good-for-ian-morris": {
+    "hue": 7,
+    "sat": 40,
+    "pages": 748
+  },
   "water-40-past-present-future-david-sedlak": {
     "hue": 212,
     "sat": 23,
@@ -625,6 +830,16 @@ export const spineData: Record<string, { hue: number; sat: number; pages: number
     "hue": 214,
     "sat": 30,
     "pages": null
+  },
+  "what-has-government-done-to-our-money-murray-rothbard": {
+    "hue": 53,
+    "sat": 18,
+    "pages": 119
+  },
+  "why-the-west-rules-for-now-ian-morris": {
+    "hue": 32,
+    "sat": 35,
+    "pages": 768
   },
   "your-next-five-moves-patrick-bet-david": {
     "hue": 197,

@@ -2,11 +2,18 @@
 import SocialList from "@/components/SocialList.astro";
 import PostArchive from "@/components/blog/PostArchive.astro";
 import PageLayout from "@/layouts/Base.astro";
-import { getAllPosts, sortMDByDate } from "@/utils";
+import { getAllBooks, getAllPosts, sortMDByDate, sortMDByDateBooks } from "@/utils";
 
 const MAX_POSTS = 15;
 const allPosts = await getAllPosts();
 const allPostsByDate = sortMDByDate(allPosts).slice(0, MAX_POSTS);
+
+const SHOWCASE = 6;
+const allBooks = await getAllBooks();
+const reading = sortMDByDateBooks(
+	allBooks.filter((b) => b.data.status === "Currently Reading"),
+).slice(0, SHOWCASE);
+const totalBooks = allBooks.length;
 ---
 
 <PageLayout
@@ -26,8 +33,46 @@ const allPostsByDate = sortMDByDate(allPosts).slice(0, MAX_POSTS);
 		</p>
 		<SocialList />
 	</section>
+
+	{
+		reading.length > 0 && (
+			<section aria-label="Currently reading" class="mt-16">
+				<div class="mb-4 flex items-baseline justify-between gap-4">
+					<h2 class="title text-xl">Currently reading</h2>
+					<a class="cactus-link whitespace-nowrap text-sm" href="/books/">
+						{totalBooks} in the library &rarr;
+					</a>
+				</div>
+				<ul class="flex flex-wrap gap-x-5 gap-y-6">
+					{reading.map((b) => (
+						<li class="w-[4.5rem] shrink-0">
+							<a class="group block" href={`/books/${b.slug}`} title={b.data.title}>
+								<div class="aspect-[2/3] overflow-hidden rounded-md bg-textColor/5 ring-1 ring-textColor/10 transition-all duration-300 group-hover:-translate-y-1.5 group-hover:shadow-[0_10px_24px_-10px_hsl(var(--theme-accent)/0.55)] group-hover:ring-accent">
+									{b.data.cover && (
+										<img
+											alt={`${b.data.title} by ${b.data.author}`}
+											class="h-full w-full object-cover"
+											height="180"
+											loading="lazy"
+											src={`/assets/books/${b.data.cover}`}
+											width="120"
+										/>
+									)}
+								</div>
+								<p class="mt-2 line-clamp-2 text-xs font-medium leading-snug text-textColor/80 group-hover:text-accent">
+									{b.data.title}
+								</p>
+								<p class="line-clamp-1 text-[0.7rem] text-textColor/50">{b.data.author}</p>
+							</a>
+						</li>
+					))}
+				</ul>
+			</section>
+		)
+	}
+
 	<section aria-label="Blog post list" class="mt-16">
-		<h2 class="title mb-4 text-xl">Posts</h2>
+		<h2 class="title mb-4 text-xl">Writing</h2>
 		<h3 class="subtitle text-m mb-3">Things I wrote recently...</h3>
 		<PostArchive posts={allPostsByDate} />
 	</section>
