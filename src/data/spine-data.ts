@@ -81,6 +81,11 @@ export const spineData: Record<string, { hue: number; sat: number; pages: number
     "sat": 42,
     "pages": 304
   },
+  "austrian-economics-an-introduction-steven-horwitz": {
+    "hue": 52,
+    "sat": 42,
+    "pages": 92
+  },
   "barbarians-at-the-gate-bryan-burrough": {
     "hue": 354,
     "sat": 40,
@@ -260,6 +265,11 @@ export const spineData: Record<string, { hue: number; sat: number; pages: number
     "hue": 77,
     "sat": 42,
     "pages": null
+  },
+  "free-to-choose-milton-friedman": {
+    "hue": 161,
+    "sat": 20,
+    "pages": 338
   },
   "from-silk-to-silicon-jeffrey-garten": {
     "hue": 40,
@@ -481,6 +491,11 @@ export const spineData: Record<string, { hue: number; sat: number; pages: number
     "sat": 27,
     "pages": 212
   },
+  "revolutionary-russia-orlando-figes": {
+    "hue": 39,
+    "sat": 36,
+    "pages": 384
+  },
   "rogue-states-noam-chomsky": {
     "hue": 2,
     "sat": 19,
@@ -601,6 +616,11 @@ export const spineData: Record<string, { hue: number; sat: number; pages: number
     "sat": 36,
     "pages": 605
   },
+  "the-general-theory-of-employment-interest-and-money-john-maynard-keynes": {
+    "hue": 35,
+    "sat": 29,
+    "pages": 472
+  },
   "the-god-effect-brian-clegg": {
     "hue": 332,
     "sat": 23,
@@ -711,6 +731,11 @@ export const spineData: Record<string, { hue: number; sat: number; pages: number
     "sat": 25,
     "pages": 762
   },
+  "the-rise-and-fall-of-the-british-empire-lawrence-james": {
+    "hue": 49,
+    "sat": 34,
+    "pages": 704
+  },
   "the-socrates-express-eric-weiner": {
     "hue": 60,
     "sat": 42,
@@ -805,6 +830,11 @@ export const spineData: Record<string, { hue: number; sat: number; pages: number
     "hue": 214,
     "sat": 30,
     "pages": null
+  },
+  "what-has-government-done-to-our-money-murray-rothbard": {
+    "hue": 53,
+    "sat": 18,
+    "pages": 119
   },
   "why-the-west-rules-for-now-ian-morris": {
     "hue": 32,
