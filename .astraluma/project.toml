@@ -1,0 +1,6 @@
+name = "agilajah.github.io"
+repo = "git@github.com:agilajah/agilajah.github.io.git"
+kind = "TODO"
+check = "TODO"
+deploy = "TODO"
+digest = "daily"
